@@ -13,6 +13,15 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      screens: {
+        cell: { max: "479px" },
+        // => @media (max-width: 479px) { ... }
+      },
+      colors: {
+        complentary: "#ffcf40",
+        complementaryBright: "#fde68a",
+        complementaryDark: "#a67c00",
+      },
     },
   },
   plugins: [],
