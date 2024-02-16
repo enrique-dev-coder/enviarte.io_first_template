@@ -8,6 +8,8 @@ import Recepción from "@/components/sections/Recepcion";
 import Itinerario from "@/components/sections/Itinerario";
 import BannerConFoto from "@/components/sections/BannerConFoto";
 import MesaDeRegalos from "@/components/sections/MesaDeRegalos";
+import ConfirmacionForm from "@/components/sections/ConfirmacionForm";
+import SpotifyPlayer from "@/components/sections/SpotifyPlayer";
 
 const IndexPage = () => {
   const fechaEvento = new Date("2024-05-18T00:00:00");
@@ -26,6 +28,8 @@ const IndexPage = () => {
       <Itinerario />
       <BannerConFoto />
       <MesaDeRegalos />
+      <ConfirmacionForm />
+      <SpotifyPlayer />
     </InvitationContainer>
   );
 };
