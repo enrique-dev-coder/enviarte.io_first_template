@@ -1,19 +1,15 @@
 "use client";
 import React from "react";
-import { dancing } from "@/fonts";
 import { MapPin } from "lucide-react";
 import Button from "../UI/Button";
+import AnimatedTitle from "../UI/AnimatedTitle";
 
-// TODO: hacer los titulos como animados en un componente
 const Iglesia = () => {
   return (
     <section className="py-6">
       <div className="flex flex-col gap-2 justify-center items-center ">
-        <h3
-          className={`${dancing.className} text-complementaryDark font-bold  text-center text-4xl py-1 cell:text-3xl cell:px-4`}
-        >
-          Ceremonia Religiosa
-        </h3>
+        <AnimatedTitle title="Ceremonia Religiosa" />
+
         <p className=" text-2xl cell:text-xl cell:px-2 cell:font-bold ">
           Iglesia San José de los Cerritos{" "}
         </p>

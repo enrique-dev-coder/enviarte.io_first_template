@@ -1,4 +1,5 @@
-import { lora } from "@/fonts";
+"use client";
+import { motion } from "framer-motion";
 
 const FechaBoda = ({
   day,
@@ -14,14 +15,13 @@ const FechaBoda = ({
   year: number;
 }) => {
   return (
-    // <div className="flex flex-col items-center justify-center">
-    //   <h3 className="text-white text-2xl">{mes}</h3>
-    //   <h3 className={` text-white text-4xl`}>
-    //     <span>{day}</span> <span>{numberDate}</span> <span>{hour} hrs</span>
-    //   </h3>
-    //   <h3 className="text-white text-2xl">{year}</h3>
-    // </div>
-    <div className="flex  items-center justify-center">
+    <motion.div
+      initial={{ opacity: 0, y: 5 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ ease: "easeInOut", duration: 1, delay: 1.5 }}
+      viewport={{ once: true }}
+      className="flex  items-center justify-center"
+    >
       <h3 className={` text-white text-4xl cell:text-2xl`}>{day}</h3>
       <div className=" flex flex-col items-center justify-center  p-2">
         <h3 className="text-white text-2xl">{mes}</h3>
@@ -31,7 +31,7 @@ const FechaBoda = ({
         <h3 className="text-white text-2xl">{year}</h3>
       </div>
       <h3 className={` text-white text-4xl cell:text-2xl`}>{hour} hrs</h3>
-    </div>
+    </motion.div>
   );
 };
 

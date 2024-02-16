@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 const Versiculos = ({ frase, autor }: { frase: string; autor: string }) => {
   return (
     <div
@@ -5,8 +9,24 @@ const Versiculos = ({ frase, autor }: { frase: string; autor: string }) => {
     cell:h-auto cell:text-3xl cell:my-5
     "
     >
-      <q className="px-8">{frase}</q>
-      <p className="my-4">{autor}</p>
+      <motion.q
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 0.5 }}
+        viewport={{ once: true }}
+        className="px-8"
+      >
+        {frase}
+      </motion.q>
+      <motion.p
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 0.5, delay: 0.5 }}
+        viewport={{ once: true }}
+        className="my-4"
+      >
+        {autor}
+      </motion.p>
     </div>
   );
 };

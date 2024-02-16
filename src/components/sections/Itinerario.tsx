@@ -1,11 +1,7 @@
+"use client";
 import React from "react";
-import { dancing } from "@/fonts";
-// 5:00 ceremonia ⛪️
-// 7:00 civil
-// 8:00 recepción
-// 9:00 vals
-// 9:30 cena
-// 10:00 a bailar!
+import AnimatedTitle from "../UI/AnimatedTitle";
+import { motion } from "framer-motion";
 
 interface ActividadProps {
   hora: string;
@@ -36,11 +32,8 @@ const Actividad = ({ hora, descripcion, position, left }: ActividadProps) => {
 const Itinerario = () => {
   return (
     <section className=" cell:hidden">
-      <h3
-        className={`${dancing.className} text-complementaryDark font-bold  text-center text-4xl py-1`}
-      >
-        Itinerario
-      </h3>
+      <AnimatedTitle title="Itinerario" />
+
       <div className=" relative w-[60%] my-2 mx-auto h-[200px] flex items-center">
         <Actividad
           hora="5:00 pm"
