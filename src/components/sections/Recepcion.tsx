@@ -20,7 +20,10 @@ const Recepción = () => {
             Cuarta Peral #311 san Ignacio, Arteaga coahuila
           </p>
         </div>
-        <Button text="Cómo llegar" />
+        <Button
+          externalLink="https://maps.app.goo.gl/v2skNKmZkmViXQeM9?g_st=iw"
+          text="Cómo llegar"
+        />
       </div>
       {/*TODO: Preguntar si quieren foto de la iglesia, no lo veo necesario peor bueno  */}
     </section>

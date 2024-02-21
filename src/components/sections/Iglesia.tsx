@@ -24,7 +24,10 @@ const Iglesia = () => {
             Saltillo, Coah.
           </p>
         </div>
-        <Button text="Cómo llegar" />
+        <Button
+          externalLink="https://maps.app.goo.gl/jjf2tmv5mme1ZreR8?g_st=iw"
+          text="Cómo llegar"
+        />
       </div>
       {/*TODO: Preguntar si quieren foto de la iglesia, no lo veo necesario peor bueno  */}
 

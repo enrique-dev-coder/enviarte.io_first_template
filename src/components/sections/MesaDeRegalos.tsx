@@ -6,9 +6,6 @@ import amazon from "../../../public/assets/images/amazon_logo-removebg-preview.p
 import Button from "../UI/Button";
 import AnimatedTitle from "../UI/AnimatedTitle";
 
-// TODO: agregar link de mesa de regalos
-// TODO: mejroar logo de amazon
-
 const MesaDeRegalos = () => {
   return (
     <div className="h-[300px] flex flex-col items-center justify-center cell:h-auto cell:py-4">
@@ -19,11 +16,17 @@ const MesaDeRegalos = () => {
         </div>
         <div className=" w-1/3 flex flex-col justify-center items-center cell:w-11/12 cell:mx-auto cell:flex-col cell:justify-center">
           <Image alt="sobre" src={liverpool} className="w-[90%] cell:w-full" />
-          <Button text="Ver Mesa" />
+          <Button
+            externalLink="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51200971"
+            text="Ver Mesa"
+          />
         </div>
         <div className=" w-1/3  flex flex-col justify-center items-center cell:w-11/12 cell:mx-auto cell:flex-col cell:justify-center  ">
           <Image alt="sobre" src={amazon} className="w-[80%] cell:w-full" />
-          <Button text="Ver Mesa" />
+          <Button
+            externalLink="https://www.amazon.com.mx/wedding/share/DanielayJosePablo"
+            text="Ver Mesa"
+          />
         </div>
       </div>
     </div>
