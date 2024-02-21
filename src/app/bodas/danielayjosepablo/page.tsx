@@ -10,6 +10,7 @@ import BannerConFoto from "@/components/sections/BannerConFoto";
 import MesaDeRegalos from "@/components/sections/MesaDeRegalos";
 import ConfirmacionForm from "@/components/sections/ConfirmacionForm";
 import SpotifyPlayer from "@/components/sections/SpotifyPlayer";
+import InfromacionAdicional from "@/components/sections/InfromacionAdicional";
 
 const IndexPage = () => {
   const fechaEvento = new Date("2024-05-18T00:00:00");
@@ -28,6 +29,7 @@ const IndexPage = () => {
       <Itinerario />
       <BannerConFoto />
       <MesaDeRegalos />
+      <InfromacionAdicional />
       <ConfirmacionForm />
       <SpotifyPlayer />
     </InvitationContainer>

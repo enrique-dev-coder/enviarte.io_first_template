@@ -3,13 +3,12 @@ import React from "react";
 const BannerConFoto = () => {
   return (
     <div
-      style={{
-        backgroundImage: "url(../../../assets/images/banner.jpg)",
-      }}
       className="
-     w-full h-[400px]
-     bg-fixed   bg-top bg-no-repeat bg-cover 
-     
+        bg-[url('/assets/images/bannerPC.jpeg')]
+        cell:bg-[url('/assets/images/bannerCell.jpeg')]
+        w-full h-[400px]  bg-center
+        cell:bg-fixed   cell:bg-top bg-no-repeat bg-cover 
+        cell:h-screen
     "
     ></div>
   );

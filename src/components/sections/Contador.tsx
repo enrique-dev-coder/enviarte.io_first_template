@@ -9,33 +9,33 @@ const Contador = ({ fechaEvento }: { fechaEvento: any }) => {
 
   return (
     <div
-      style={{
-        backgroundImage: "url(../../../assets/images/hero.jpg)",
-      }}
-      className="mt-10 flex flex-col items-center justify-center w-full h-[300px]
-         bg-no-repeat     
+      className="mt-10 flex flex-col items-center justify-center w-full h-[700px]
+         bg-no-repeat  bg-cover bg-center  bg-stone-300 bg-blend-multiply  
          cell:h-auto  cell:mt-0 cell:my-5 cell:py-4
+         bg-[url('/assets/images/contador.jpeg')]
       "
     >
-      <p className={`${dancing.className} text-center text-5xl cell:text-3xl`}>
+      <p
+        className={`${dancing.className} text-white text-center text-6xl cell:text-3xl`}
+      >
         Solo faltan:
       </p>
-      <div className="flex gap-4 py-4">
+      <div className="flex gap-4 py-4 text-white">
         <div className=" flex flex-col justify-center items-center">
-          <p className=" text-6xl mb-4 cell:text-3xl">{days}</p>{" "}
-          <p className="text-xl uppercase cell:text-lg">días</p>
+          <p className=" text-7xl mb-4 cell:text-2xl">{days}</p>{" "}
+          <p className="text-2xl uppercase cell:text-base">días</p>
         </div>
         <div className=" flex flex-col justify-center items-center">
-          <p className=" text-6xl mb-4 cell:text-3xl">{hours}</p>
-          <p className="text-xl uppercase cell:text-lg">horas</p>
+          <p className=" text-7xl mb-4 cell:text-2xl">{hours}</p>
+          <p className="text-2xl uppercase cell:text-base">horas</p>
         </div>
         <div className=" flex flex-col justify-center items-center">
-          <p className=" text-6xl mb-4 cell:text-3xl">{minutes}</p>
-          <p className="text-xl uppercase cell:text-lg">minutos</p>
+          <p className=" text-7xl mb-4 cell:text-2xl">{minutes}</p>
+          <p className="text-2xl uppercase cell:text-base">minutos</p>
         </div>
         <div className=" flex flex-col justify-center items-center">
-          <p className=" text-6xl mb-4 cell:text-3xl">{seconds}</p>
-          <p className="text-xl uppercase cell:text-lg">segundos</p>
+          <p className=" text-7xl mb-4 cell:text-2xl">{seconds}</p>
+          <p className="text-2xl uppercase cell:text-base">segundos</p>
         </div>
       </div>
     </div>

@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import AnimatedTitle from "../UI/AnimatedTitle";
-import { motion } from "framer-motion";
 
 interface ActividadProps {
   hora: string;
