@@ -9,7 +9,7 @@ import Itinerario from "@/components/sections/Itinerario";
 import BannerConFoto from "@/components/sections/BannerConFoto";
 import MesaDeRegalos from "@/components/sections/MesaDeRegalos";
 import ConfirmacionForm from "@/components/sections/ConfirmacionForm";
-import SpotifyPlayer from "@/components/sections/SpotifyPlayer";
+import SongPlayer from "@/components/sections/SongPlayer";
 import InfromacionAdicional from "@/components/sections/InfromacionAdicional";
 
 const IndexPage = () => {
@@ -31,7 +31,7 @@ const IndexPage = () => {
       <MesaDeRegalos />
       <InfromacionAdicional />
       <ConfirmacionForm />
-      <SpotifyPlayer />
+      <SongPlayer />
     </InvitationContainer>
   );
 };

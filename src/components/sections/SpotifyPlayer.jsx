@@ -10,8 +10,8 @@ const SpotifyPlayer = () => {
       let element = document.getElementById("embed-iframe");
       let options = {
         uri: "spotify:track:6bUAaVkmBr9xrsWkeTLu03",
-        width: "0%",
-        height: "0px",
+        width: "100%",
+        height: "400px",
       };
       let callback = (EmbedController) => {
         setController(EmbedController);
