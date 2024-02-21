@@ -15,7 +15,7 @@ const config: Config = {
       },
       screens: {
         cell: { max: "479px" },
-        // => @media (max-width: 479px) { ... }
+        // => @media (max-width: 600px) { ... }
       },
       colors: {
         complentary: "#ffcf40",

@@ -13,7 +13,7 @@ const InvitationHero = () => {
       }}
       className="
        w-full h-screen
-       bg-fixed bg-center bg-no-repeat bg-cover bg-stone-300 bg-blend-multiply
+      bg-center bg-no-repeat bg-cover bg-stone-300 bg-blend-multiply
        flex flex-col items-center justify-center    
       "
     >
