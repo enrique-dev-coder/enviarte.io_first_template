@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import NoviosName from "../UI/NoviosName";
 import NoviosIniciales from "../UI/NoviosIniciales";
 import FechaBoda from "../UI/FechaBoda";
