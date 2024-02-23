@@ -11,6 +11,12 @@ import MesaDeRegalos from "@/components/sections/MesaDeRegalos";
 import ConfirmacionForm from "@/components/sections/ConfirmacionForm";
 import SongPlayer from "@/components/sections/SongPlayer";
 import InfromacionAdicional from "@/components/sections/InfromacionAdicional";
+import { Metadata } from "next/types";
+
+export const metadata: Metadata = {
+  title: "Daniela y JosePablo",
+  description: "Bodas",
+};
 
 const IndexPage = () => {
   const fechaEvento = new Date("2024-05-18T00:00:00");

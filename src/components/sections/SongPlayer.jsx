@@ -1,13 +1,12 @@
 "use client";
 import { useState } from "react";
-import ReactHowler from "react-howler";
+
 import { Volume2Icon, VolumeXIcon } from "lucide-react";
 const SongPlayer = () => {
   const [playing, setPlaying] = useState(false);
-  console.log(playing);
   return (
     <div className="fixed   z-10 top-[50%] cel:top-0 right-0 mt-4 ">
-      <ReactHowler src="/song.ogg" playing={playing} loop={true} />
+      <audio src="/song.ogg" controls />
       <button
         onClick={() => {
           setPlaying(!playing);
