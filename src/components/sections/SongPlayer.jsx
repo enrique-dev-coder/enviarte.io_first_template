@@ -6,7 +6,7 @@ const SongPlayer = () => {
   const [playing, setPlaying] = useState(false);
   return (
     <div className="fixed   z-10 top-[50%] cel:top-0 right-0 mt-4 ">
-      <audio src="/song.ogg" controls />
+      <audio src="/song.mp3" controls />
       <button
         onClick={() => {
           setPlaying(!playing);
