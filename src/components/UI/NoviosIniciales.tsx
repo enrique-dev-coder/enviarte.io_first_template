@@ -1,6 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
 import { lora } from "@/fonts";
+import { useContext } from "react";
+import { StartAnimation } from "@/contexts/AnimationContext";
 
 const NoviosIniciales = ({
   novio1,
@@ -9,11 +11,13 @@ const NoviosIniciales = ({
   novio1: string;
   novio2: string;
 }) => {
+  const { controls } = useContext(StartAnimation);
+
   return (
     <motion.h2
       initial={{ opacity: 0, y: 5 }}
-      whileInView={{ opacity: 1, y: 0 }}
       transition={{ ease: "easeInOut", duration: 1 }}
+      animate={controls}
       viewport={{ once: true }}
       className=" text-complentary text-7xl tracking-widest  my-1 "
     >

@@ -1,4 +1,4 @@
-import InvitationContainer from "@/components/sections/InvitationContainer";
+import InvitationContainer from "@/components/wrappers/InvitationContainer";
 import InvitationHero from "@/components/sections/InvitationHero";
 import Versiculos from "@/components/UI/Versiculos";
 import Contador from "@/components/sections/Contador";
@@ -11,6 +11,7 @@ import MesaDeRegalos from "@/components/sections/MesaDeRegalos";
 import ConfirmacionForm from "@/components/sections/ConfirmacionForm";
 import SongPlayer from "@/components/sections/SongPlayer";
 import InfromacionAdicional from "@/components/sections/InfromacionAdicional";
+import IngresarBoton from "@/components/sections/IngresarBoton";
 import { Metadata } from "next/types";
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ const IndexPage = () => {
 
   return (
     <InvitationContainer>
+      <IngresarBoton />
       <InvitationHero />
       <Versiculos
         frase="Así que ya no son dos, sino uno solo. Por tanto, lo que Dios ha unido, que no lo separe el hombre"

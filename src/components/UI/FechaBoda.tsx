@@ -1,5 +1,7 @@
 "use client";
+import { useContext } from "react";
 import { motion } from "framer-motion";
+import { StartAnimation } from "@/contexts/AnimationContext";
 
 const FechaBoda = ({
   day,
@@ -14,10 +16,12 @@ const FechaBoda = ({
   mes: string;
   year: number;
 }) => {
+  const { controls } = useContext(StartAnimation);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 5 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      animate={controls}
       transition={{ ease: "easeInOut", duration: 1, delay: 1.5 }}
       viewport={{ once: true }}
       className="flex  items-center justify-center"

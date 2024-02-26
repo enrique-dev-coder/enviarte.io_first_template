@@ -27,7 +27,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/components/sections/SpotifyPlayer.jsx",
-    "src/components/sections/SongPlayer.jsx"
+    "src/components/sections/SongPlayer.jsx",
+    "src/contexts/AudioContext.tsx"
   ],
   "exclude": ["node_modules"]
 }

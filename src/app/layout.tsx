@@ -15,10 +15,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} scroll-smooth`}>
-        <script
+        {/* <script
           src="https://open.spotify.com/embed/iframe-api/v1"
           async
-        ></script>
+        ></script> */}
 
         {children}
       </body>

@@ -3,8 +3,12 @@ import NoviosName from "../UI/NoviosName";
 import NoviosIniciales from "../UI/NoviosIniciales";
 import FechaBoda from "../UI/FechaBoda";
 import { motion } from "framer-motion";
+import { useContext } from "react";
+import { StartAnimation } from "@/contexts/AnimationContext";
 
 const InvitationHero = () => {
+  const { controls } = useContext(StartAnimation);
+
   return (
     <div
       style={{
@@ -22,7 +26,7 @@ const InvitationHero = () => {
           <NoviosIniciales novio1="D" novio2="JP" />
           <motion.p
             initial={{ opacity: 0, y: 5 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={controls}
             transition={{ ease: "easeInOut", duration: 1, delay: 0.5 }}
             viewport={{ once: true }}
             className="text-white  my-2  text-2xl cell:text-base cell:text-center cell:px-4"

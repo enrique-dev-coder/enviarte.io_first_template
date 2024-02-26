@@ -1,22 +1,12 @@
 "use client";
-import { useState, useRef, useEffect } from "react";
+import { useContext } from "react";
 import { Volume2Icon, VolumeXIcon } from "lucide-react";
-
+import { AudioPlayerContext } from "@/contexts/AudioContext";
 const SongPlayer = () => {
-  const [playing, setPlaying] = useState();
-  const audioRef = useRef();
-
-  useEffect(() => {
-    if (playing) {
-      audioRef.current.play();
-    } else {
-      audioRef.current.pause();
-    }
-  }, [playing, audioRef]);
+  const { playing, setPlaying } = useContext(AudioPlayerContext);
 
   return (
     <div className="fixed   z-10 top-[50%] cel:top-0 right-0 mt-4 ">
-      <audio src="/song.mp3" ref={audioRef} />
       <button
         onClick={() => {
           setPlaying(!playing);
