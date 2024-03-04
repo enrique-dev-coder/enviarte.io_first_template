@@ -38,12 +38,9 @@ const getInvitationId = async (name: string) => {
 const IndexPage = async () => {
   const fechaEvento = new Date("2024-05-18T00:00:00");
   // obtener  el pathname del middleware
-  // TODO: borrar los clg
   const headersList = headers();
   const pathname = headersList.get("x-pathname"); // ejemplo: /boda/danielayjosepablo
-  console.log(pathname);
   const invitationIdForQuery = await getInvitationId(pathname as string); // { id: '65df62e264903d5c4bb5053e' }
-  console.log(invitationIdForQuery);
 
   return (
     <InvitationContainer>

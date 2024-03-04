@@ -22,6 +22,7 @@ const ConfirmacionForm = ({
   pasesAsigandos: number;
 }) => {
   const [confirmacion, setConfirmacion] = useState(false);
+  // NOTE: dejo este log por si acaso se necesita para debugear
   console.log(invitationId);
   const {
     register,
@@ -143,7 +144,10 @@ const ConfirmacionForm = ({
         </div>
       </form>
       {confirmacion ? (
-        <ConfirmationModal closeModal={() => setConfirmacion(false)} />
+        <ConfirmationModal
+          pasesConfirmados={Number(watch("pasesConfirmados"))}
+          closeModal={() => setConfirmacion(false)}
+        />
       ) : null}
     </section>
   );
