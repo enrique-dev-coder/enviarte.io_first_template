@@ -21,7 +21,7 @@ const ConfirmacionForm = ({
   invitationId: { id: string };
   pasesAsigandos: number;
 }) => {
-  const [confirmacion, setConfirmacion] = useState(true);
+  const [confirmacion, setConfirmacion] = useState(false);
   console.log(invitationId);
   const {
     register,
