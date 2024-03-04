@@ -1,10 +1,9 @@
 // @ts-nocheck
 "use client";
-import { useState, useContext } from "react";
+import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { dancing, inter } from "@/fonts";
 import axios from "axios";
-import { InvitationData } from "@/contexts/InvitationDataContext";
 import { useMutation } from "@tanstack/react-query";
 import ConfirmationModal from "./ConfirmationModal";
 
@@ -22,9 +21,7 @@ const ConfirmacionForm = ({
   invitationId: { id: string };
   pasesAsigandos: number;
 }) => {
-  const [confirmacion, setConfirmacion] = useState(false);
-  const { pathname } = useContext(InvitationData);
-  console.log(pathname);
+  const [confirmacion, setConfirmacion] = useState(true);
   console.log(invitationId);
   const {
     register,
@@ -145,7 +142,9 @@ const ConfirmacionForm = ({
           </button>
         </div>
       </form>
-      {confirmacion ? <ConfirmationModal /> : null}
+      {confirmacion ? (
+        <ConfirmationModal closeModal={() => setConfirmacion(false)} />
+      ) : null}
     </section>
   );
 };
