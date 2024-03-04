@@ -6,8 +6,7 @@ import amazon from "../../../public/assets/images/amazon_logo-removebg-preview.p
 import Button from "../UI/Button";
 import AnimatedTitle from "../UI/AnimatedTitle";
 import { inter } from "@/fonts";
-// Daniela Vazquez Gaytan
-// 4152 3141 9031 7340 BBVA
+
 const MesaDeRegalos = () => {
   return (
     <div className=" flex flex-col items-center justify-center h-auto py-4">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { inter } from "@/fonts";
+import ReactQueryContainer from "@/components/wrappers/ReactQueryContainer";
 
 export const metadata: Metadata = {
   title: "EnviArte",
@@ -15,12 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} scroll-smooth`}>
-        {/* <script
-          src="https://open.spotify.com/embed/iframe-api/v1"
-          async
-        ></script> */}
-
-        {children}
+        <ReactQueryContainer>{children}</ReactQueryContainer>
       </body>
     </html>
   );

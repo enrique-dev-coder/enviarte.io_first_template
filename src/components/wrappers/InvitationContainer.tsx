@@ -6,16 +6,19 @@ import StylingContextProvider, {
   StylesContext,
 } from "@/contexts/StylingContext";
 import { play } from "@/fonts";
+import InvitationDataProvider from "@/contexts/InvitationDataContext";
 
 const InvitationContainer = ({ children }: { children: ReactNode }) => {
   return (
-    <AudioContextProvider>
-      <StartAnimationProvider>
-        <StylingContextProvider>
-          <MainContainer>{children}</MainContainer>
-        </StylingContextProvider>
-      </StartAnimationProvider>
-    </AudioContextProvider>
+    <InvitationDataProvider>
+      <AudioContextProvider>
+        <StartAnimationProvider>
+          <StylingContextProvider>
+            <MainContainer>{children}</MainContainer>
+          </StylingContextProvider>
+        </StartAnimationProvider>
+      </AudioContextProvider>
+    </InvitationDataProvider>
   );
 };
 

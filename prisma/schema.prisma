@@ -10,5 +10,28 @@ datasource db {
 model User {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   name String
+  evento String
+  rol String
+  invitacion Invitacion? @relation(fields: [invitacionId], references: [id])
+  invitacionId String? @unique @db.ObjectId
 }
 
+model Invitacion {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  link String
+  invitationName String // usar para obtener el id
+  user User? // Ya no necesitas la relación aquí
+  userId String @db.ObjectId
+  invitados Invitados[]
+}
+
+
+model Invitados{
+    id String @id @default(auto()) @map("_id") @db.ObjectId
+    nombre String
+    pasesAsignados Int
+    tel String
+    pasesConfirmados Int
+    invitacionId String @db.ObjectId
+    invitacion Invitacion @relation(fields:[invitacionId],references: [id])
+}
