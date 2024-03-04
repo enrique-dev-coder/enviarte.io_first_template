@@ -6,6 +6,7 @@ import { dancing, inter } from "@/fonts";
 import axios from "axios";
 import { useMutation } from "@tanstack/react-query";
 import ConfirmationModal from "./ConfirmationModal";
+import { Loader } from "lucide-react";
 
 type ConfirmacionFormInputs = {
   nombre: string;
@@ -31,7 +32,7 @@ const ConfirmacionForm = ({
     formState: { errors },
   } = useForm();
 
-  const { mutate: registrarInvitado } = useMutation({
+  const { mutate: registrarInvitado, isPending } = useMutation({
     mutationFn: (invitadoRegistrado) => {
       return axios.post("/api/invitados/register", invitadoRegistrado);
     },
@@ -39,9 +40,10 @@ const ConfirmacionForm = ({
       // mostrar modal de confirmacion de evento
       setConfirmacion(true);
     },
+    // spinner mientras carga
     onError: (err) => console.log(err),
   });
-
+  console.log("isPEnding", isPending);
   const onSubmit: SubmitHandler<ConfirmacionFormInputs> = (data) =>
     registrarInvitado({
       ...data,
@@ -134,13 +136,20 @@ const ConfirmacionForm = ({
           </div>
         </div>
         <div className="py-2 cell:w-full">
-          <button
-            type="submit"
-            disabled={!usuarioClickEnPases}
-            className=" disabled:bg-complementaryDark/50 bg-complementaryDark text-white px-6 text-lg rounded-full py-2 cell:w-full"
-          >
-            Confirmar
-          </button>
+          {!isPending ? (
+            <button
+              type="submit"
+              disabled={!usuarioClickEnPases}
+              className=" disabled:bg-complementaryDark/50 bg-complementaryDark text-white px-6 text-lg rounded-full py-2 cell:w-full"
+            >
+              Confirmar
+            </button>
+          ) : (
+            <div className="flex  gap-2">
+              <Loader className=" animate-spin" />
+              <p>Confirmando ...</p>
+            </div>
+          )}
         </div>
       </form>
       {confirmacion ? (
