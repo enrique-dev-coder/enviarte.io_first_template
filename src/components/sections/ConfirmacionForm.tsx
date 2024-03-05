@@ -43,7 +43,7 @@ const ConfirmacionForm = ({
     // spinner mientras carga
     onError: (err) => console.log(err),
   });
-  console.log("isPEnding", isPending);
+
   const onSubmit: SubmitHandler<ConfirmacionFormInputs> = (data) =>
     registrarInvitado({
       ...data,
@@ -104,8 +104,8 @@ const ConfirmacionForm = ({
           <label className="text-xl font-medium cell:text-lg">
             Personas que asistirán:
           </label>
-          <div className="flex gap-2">
-            <div className="flex gap-2 items-center">
+          <div className="flex gap-2 cell:flex-col">
+            <div className="flex gap-2  items-center">
               <div className="flex gap-2 items-center">
                 <input
                   {...register("pasesConfirmados")}
@@ -115,6 +115,8 @@ const ConfirmacionForm = ({
                 />
                 <label className=" font-bold">No asistiré 😥</label>
               </div>
+            </div>
+            <div className="flex gap-2 items-center">
               <input
                 {...register("pasesConfirmados")}
                 type="radio"
@@ -122,7 +124,7 @@ const ConfirmacionForm = ({
                 value="1"
                 className=""
               />
-              <label className=" font-bold">1 pase</label>
+              <label className=" font-bold">1 persona</label>
             </div>
             <div className="flex gap-2 items-center">
               <input
@@ -131,7 +133,7 @@ const ConfirmacionForm = ({
                 id="2"
                 value="2"
               />
-              <label className="font-bold">2 pases</label>
+              <label className="font-bold">2 personas</label>
             </div>
           </div>
         </div>
