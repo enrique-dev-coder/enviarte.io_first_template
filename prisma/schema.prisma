@@ -11,6 +11,7 @@ model User {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   name String
   evento String
+  password String
   rol String
   invitacion Invitacion? @relation(fields: [invitacionId], references: [id])
   invitacionId String? @unique @db.ObjectId
