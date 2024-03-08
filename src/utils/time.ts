@@ -11,3 +11,11 @@ export const calcularTiempoRestante = (
   const segundos = Math.floor((tiempoRestante % (1000 * 60)) / 1000);
   return { dias, horas, minutos, segundos };
 };
+
+// Suma un año a la fecha actual para obtener la fecha de expiración de cookie
+const currentDate = new Date();
+export const expirationDate = new Date(
+  currentDate.getFullYear() + 1,
+  currentDate.getMonth(),
+  currentDate.getDate()
+);

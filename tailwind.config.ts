@@ -21,6 +21,8 @@ const config: Config = {
         complentary: "#ffcf40",
         complementaryBright: "#fde68a",
         complementaryDark: "#a67c00",
+        dashboardMainDark: "#7c3aed",
+        dashboardMainSoft: "#a78bfa",
       },
     },
   },

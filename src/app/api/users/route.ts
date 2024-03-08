@@ -9,6 +9,7 @@ export async function POST(req: NextRequest) {
         name: body.name,
         evento: body.evento,
         rol: body.evento,
+        password:body.password
       },
     });
     return NextResponse.json(newUser, { status: 200 });
