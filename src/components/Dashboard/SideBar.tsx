@@ -5,11 +5,25 @@ import { usePathname } from "next/navigation";
 import { useCookies } from "react-cookie";
 import Link from "next/link";
 
+const menuLinks = [
+  { id: "1", link: "/dashboard/home", icon: <HomeIcon />, title: "Inicio" },
+  {
+    id: "2",
+    link: "/dashboard/invitados",
+    icon: <PartyPopperIcon />,
+    title: "Invitados Confirmados",
+  },
+  {
+    id: "3",
+    link: "/dashboard/enviar",
+    icon: <SendIcon />,
+    title: "Enviar Invitacion",
+  },
+];
+
 const SideBar = () => {
   const currentPath = usePathname();
-  console.log(currentPath);
   const [cookies] = useCookies(["invitandofacil"]);
-  console.log(cookies);
   return (
     <div className="w-2/12  h-screen bg-purple-50 flex flex-col border-r-2">
       <div className="m-3 text-lg">
@@ -19,27 +33,20 @@ const SideBar = () => {
         </p>
       </div>
       <div className="my-2">
-        <Link href="/dashboard/home">
-          <div
-            className={`flex px-3 py-2 items-center gap-2 cursor-pointer
-          ${
-            currentPath === "/dashboard/home" &&
-            "bg-dashboardMainDark text-white"
-          }
-          hover:text-white hover:bg-dashboardMainDark/75`}
-          >
-            <HomeIcon />
-            <p>Inicio</p>
-          </div>
-        </Link>
-        <div className="flex px-3 py-2 items-center gap-2 cursor-pointer hover:text-white hover:bg-dashboardMainDark/75">
-          <PartyPopperIcon />
-          <p>Invitados Confirmados</p>
-        </div>
-        <div className="flex px-3 py-2 items-center gap-2 cursor-pointer hover:text-white hover:bg-dashboardMainDark/75">
-          <SendIcon />
-          <p>Enviar invitacion</p>
-        </div>
+        {menuLinks.map((menuItem) => {
+          return (
+            <Link href={menuItem.link} id={menuItem.id}>
+              <div
+                className={`flex px-3 py-2 items-center gap-2 cursor-pointer
+            ${currentPath === menuItem.link && " bg-purple-950 text-white"}
+            hover:text-white hover:bg-purple-950`}
+              >
+                {menuItem.icon}
+                <p>{menuItem.title}</p>
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </div>
   );
