@@ -1,3 +1,4 @@
+//@ts-nocheck
 "use client";
 import React, { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
@@ -24,6 +25,7 @@ const InvitadosConfirmados = () => {
     error,
     data: invitadosConfirmados,
     isLoading,
+    isSuccess,
   } = useQuery({
     queryKey: ["invitationData"],
     queryFn: () => {
@@ -87,13 +89,16 @@ const InvitadosConfirmados = () => {
   // console.log(invitadosConfirmados?.data);
 
   useEffect(() => {
-    // validar que no este undefined el array, si no empieza a mamar
-    if (invitadosConfirmados?.data) {
+    // usar este validacion para que no este mamando con el undefined.reduce
+    if (isSuccess && invitadosConfirmados.data.length > 0) {
       setInvitadosConfirmadosTotales(
-        sumarPasesConfirmados(invitadosConfirmados.data)
+        invitadosConfirmados?.data?.reduce(function (total, invitado) {
+          // Sumamos el valor de pasesConfirmados de cada objeto al total
+          return total + invitado.pasesConfirmados;
+        }, 0)
       );
-    }
-  }, [invitadosConfirmados]);
+    } else null;
+  }, [invitadosConfirmados, isSuccess]);
 
   return (
     <>

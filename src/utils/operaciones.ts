@@ -1,7 +1,6 @@
 import { Invitado } from "@/types";
 
-// Definimos una función que reciba el array de invitados como argumento
-export function sumarPasesConfirmados(invitados: Array<Invitado>) {
+export function sumarPasesConfirmados(invitados) {
   // Utilizamos reduce para sumar los pases confirmados
   return invitados.reduce(function (total, invitado) {
     // Sumamos el valor de pasesConfirmados de cada objeto al total
