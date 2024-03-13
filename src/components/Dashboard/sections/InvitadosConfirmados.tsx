@@ -92,10 +92,7 @@ const InvitadosConfirmados = () => {
     // usar este validacion para que no este mamando con el undefined.reduce
     if (isSuccess && invitadosConfirmados.data.length > 0) {
       setInvitadosConfirmadosTotales(
-        invitadosConfirmados?.data?.reduce(function (total, invitado) {
-          // Sumamos el valor de pasesConfirmados de cada objeto al total
-          return total + invitado.pasesConfirmados;
-        }, 0)
+        sumarPasesConfirmados(invitadosConfirmados.data)
       );
     } else null;
   }, [invitadosConfirmados, isSuccess]);
