@@ -4,7 +4,7 @@ import { inter } from "@/fonts";
 import ReactQueryContainer from "@/components/wrappers/ReactQueryContainer";
 
 export const metadata: Metadata = {
-  title: "EnviArte",
+  title: "InvitandoFacil",
   description: "Invitaciones digitales para eventos",
 };
 
