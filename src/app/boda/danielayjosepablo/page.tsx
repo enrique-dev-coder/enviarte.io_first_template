@@ -35,7 +35,14 @@ const getInvitationId = async (name: string) => {
   return invitationId as { id: string };
 };
 
-const IndexPage = async () => {
+const IndexPage = async ({ searchParams }: any) => {
+  // obtener params para personalizar la invitacion
+  // dejarlos como posiblemente undefined por si se usa una  invitacion sin search params
+  // TODO: con esto que llegan del link generar los pases asignados, nombre del invitado y tel en el form
+  const nombre = searchParams?.nombre;
+  const tel = searchParams?.tel;
+  const pasesAsignados = searchParams?.pasesAsignados;
+
   const fechaEvento = new Date("2024-05-18T00:00:00");
   // obtener  el pathname del middleware
   const headersList = headers();

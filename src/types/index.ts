@@ -4,3 +4,9 @@ export type Invitado = {
   pasesAsignados: number;
   pasesConfirmados: number;
 };
+
+export type InvitadoParaLink = {
+  name: string;
+  tel?: string;
+  pasesAsignados: number;
+};
