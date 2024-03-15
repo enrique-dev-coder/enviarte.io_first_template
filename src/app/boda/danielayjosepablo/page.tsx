@@ -66,8 +66,10 @@ const IndexPage = async ({ searchParams }: any) => {
       <MesaDeRegalos />
       <InfromacionAdicional />
       <ConfirmacionForm
-        pasesAsigandos={2}
+        pasesAsignados={pasesAsignados}
         invitationId={invitationIdForQuery}
+        nombreInvitado={nombre}
+        telInvitado={tel}
       />
       <SongPlayer />
     </InvitationContainer>

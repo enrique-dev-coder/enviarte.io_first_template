@@ -15,7 +15,7 @@ const DialogTrigger = DialogPrimitive.Trigger;
 const DialogPortal = DialogPrimitive.Portal;
 
 const DialogClose = DialogPrimitive.Close;
-console.log(DialogPortal);
+
 const DialogOverlay = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
@@ -29,6 +29,7 @@ const DialogOverlay = React.forwardRef<
     {...props}
   />
 ));
+DialogOverlay.displayName = DialogPrimitive.Overlay.displayName;
 const MyDialogOverlay = ({ className, ...props }) => (
   <div
     className={cn(
