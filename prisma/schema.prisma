@@ -24,6 +24,7 @@ model Invitacion {
   user User? // Ya no necesitas la relación aquí
   userId String @db.ObjectId
   invitados Invitados[]
+  invitacionEnviadaConWhatsApp  InvitacionEnviadaConWhatsApp[]
 }
 
 
@@ -35,4 +36,12 @@ model Invitados{
     pasesConfirmados Int
     invitacionId String @db.ObjectId
     invitacion Invitacion @relation(fields:[invitacionId],references: [id])
+}
+
+model InvitacionEnviadaConWhatsApp {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  nombre String
+  tel String
+  invitacion Invitacion @relation(fields: [invitacionId], references: [id])
+  invitacionId String @db.ObjectId
 }
