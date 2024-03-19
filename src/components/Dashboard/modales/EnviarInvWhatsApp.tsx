@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
 import { useCookies } from "react-cookie";
-
+import { TypesForSendingWhatsAppInvite } from "@/types";
 import {
   Dialog,
   DialogContent,
@@ -23,12 +23,7 @@ import axios from "axios";
 
 // TODO: agregar un +tipo preview del whatsapp con la pantallita y un mensaje por default o igual y solo un mensajito en la parte de abajo
 // TODO: ver con lalo y dani que debe decir el mensaje
-interface TypesForSendingWhatsAppInvite {
-  nombre: string;
-  tel: string;
-  invitacionId: string;
-  whatsMessage: string;
-}
+
 const EnviarInvWhatsApp = () => {
   const {
     register,

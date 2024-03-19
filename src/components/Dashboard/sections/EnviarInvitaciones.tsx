@@ -3,6 +3,7 @@ import Image from "next/image";
 import EnviarInvManual from "../modales/EnviarInvManual";
 import EnviarInvWhatsApp from "../modales/EnviarInvWhatsApp";
 import ExcelIcon from "/public/assets/images/icons8-ms-excel.svg";
+import UploadZone from "../EnviarLista/UploadZone";
 
 // TODO:
 // hacer algo como modal para enviar mensaje mediante la api del digybot
@@ -22,7 +23,7 @@ import ExcelIcon from "/public/assets/images/icons8-ms-excel.svg";
 
 const EnviarInvitaciones = () => {
   return (
-    <div className="p-2">
+    <div className="p-2 flex flex-col h-full gap-2">
       <div className="flex gap-4  justify-between">
         <div className="w-4/12">
           <EnviarInvManual />
@@ -43,8 +44,12 @@ const EnviarInvitaciones = () => {
           </p>
         </button>
       </div>
+      <div className=" flex-1">
+        <UploadZone />
+      </div>
 
       {/*TODO: Modal para subir el archivo de xlsx y convertir a tabla, la tabla trae lo del modal pero como lista*/}
+      {/*TODO: USAR EL SCROLLABLE VIEW DE SHADCN PARA NO BATALLAR TANTO CON LA TABLA SOLO HAY QIE VER COMO GAURDAR EL ESTADO  */}
       {/*TODO: poner como una opcion del submenu la de ver la lsita de invitaciones enviadas*/}
 
       {/*TODO: En esa tabla validar si ya se mando antes la invitacion  ?? igual y al momento de subir usar un findmany o algo asi, de todas formas se valida al enviar la peticion  */}
