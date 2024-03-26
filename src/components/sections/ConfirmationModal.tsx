@@ -1,7 +1,7 @@
 import React from "react";
 import { DotLottiePlayer } from "@dotlottie/react-player";
 import { motion } from "framer-motion";
-import { dancing } from "@/fonts";
+import { dancing, inter } from "@/fonts";
 const ConfirmationModal = ({
   closeModal,
   pasesConfirmados,
@@ -56,6 +56,12 @@ const ConfirmationModal = ({
             Lamentamos que no puedas acompañarnos, porfavor contáctanos si
             cambias de opinión.
           </h2>
+          <h2
+            className={`${inter.className} text-center font-semibold text-3xl cell:text-lg`}
+          >
+            Tel. 844 133 9405
+          </h2>
+
           <div>
             <button
               onClick={closeModal}

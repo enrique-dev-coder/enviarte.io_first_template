@@ -18,7 +18,7 @@ const Contador = ({ fechaEvento }: { fechaEvento: any }) => {
       <p
         className={`${dancing.className} text-white text-center text-6xl cell:text-3xl`}
       >
-        Solo faltan:
+        Sólo faltan:
       </p>
       <div className="flex gap-4 py-4 text-white">
         <div className=" flex flex-col justify-center items-center">

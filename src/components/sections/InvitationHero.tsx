@@ -35,7 +35,7 @@ const InvitationHero = () => {
           </motion.p>
         </div>
         <div className="flex-1 flex flex-col justify-center items-center">
-          <NoviosName novio1="Daniela" novio2="Jose Pablo" />
+          <NoviosName novio1="Daniela" novio2="José Pablo" />
           <FechaBoda
             day="Sábado"
             numberDate={18}

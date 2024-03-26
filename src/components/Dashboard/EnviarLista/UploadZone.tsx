@@ -25,7 +25,6 @@ const UploadZone = () => {
       });
     },
     onSuccess: (data) => setListaDeInvitados(data.data.data),
-    // TODO: como sacar la data parseada de esa respuesta
   });
   const [cookies] = useCookies(["invitandofacil"]);
 

@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import prisma from "../../../../prisma";
 
-// agregar nuevo invitado a la lista
+// TODO: aqui mas bien deberia solo mandar el invitation id  y luego hacer validacion desde el server
+// esto  como la aplicacion de los planners
 
 export async function POST(request: NextRequest) {
   const body = await request.json();

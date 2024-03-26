@@ -5,13 +5,7 @@ import EnviarInvWhatsApp from "../modales/EnviarInvWhatsApp";
 import ExcelIcon from "/public/assets/images/icons8-ms-excel.svg";
 import UploadZone from "../EnviarLista/UploadZone";
 
-// TODO:
-// hacer algo como modal para enviar mensaje mediante la api del digybot
-// opcion de generar el link y copiar para que el usuario lo mande el solo (✔)
-// Subir tus datos de invitados mediante un excel , igual y que te aparezca esa tablita lista
-// por ejemplo --> subes datos en un excel ---> opcion de Guardar --> quedan guardados --> ahi se puede revisar si ya se envio mediante el telefono
-// TODO:
-// Validadiones
+// REVIEW
 // Cuando se usa la api que se quede registrado en la base de datos de enviados
 // para que no envien mensajes al mismo y no saturar la API
 // limitar el numero de usos de la api por usuario  a unos 20 por dia o aumentar por paquete
