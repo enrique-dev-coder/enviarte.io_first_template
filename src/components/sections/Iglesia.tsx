@@ -16,7 +16,6 @@ const Iglesia = () => {
         <p className=" text-2xl cell:text-xl cell:px-2 cell:font-bold">
           17:00 hrs
         </p>
-        {/*TODO: Dirección con iconito de ubicacion */}
         <div className=" flex items-center cell:w-[90%] cell:mx-auto cell:flex-col">
           <MapPin className=" text-complementaryDark font-bold " />
           <p className=" text-xl text-center cell:text-base ">

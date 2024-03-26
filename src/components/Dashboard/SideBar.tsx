@@ -8,16 +8,16 @@ import Link from "next/link";
 const menuLinks = [
   { id: "1", link: "/dashboard/home", icon: <HomeIcon />, title: "Inicio" },
   {
-    id: "2",
-    link: "/dashboard/invitados",
-    icon: <PartyPopperIcon />,
-    title: "Invitados Confirmados",
-  },
-  {
     id: "3",
     link: "/dashboard/enviar",
     icon: <SendIcon />,
     title: "Enviar Invitacion",
+  },
+  {
+    id: "2",
+    link: "/dashboard/invitados",
+    icon: <PartyPopperIcon />,
+    title: "Invitados Confirmados",
   },
 ];
 

@@ -4,6 +4,7 @@ import { useCookies } from "react-cookie";
 import { useRouter } from "next/navigation";
 
 // TODO: el metodo de verificacion esta muy rustico pero es algo
+// TODO: verificar con cookies desde el server con funciones de next
 
 const DashboardAuthClientValidator = ({
   children,
