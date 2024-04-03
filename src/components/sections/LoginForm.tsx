@@ -49,7 +49,7 @@ const LoginForm = () => {
           {...register("name")}
           type="text"
           className="  border-dashboardMainSoft rounded-sm border-2  focus:border-dashboardMainDark focus:border-2 focus:ring-0"
-          placeholder="danielayjosepablo"
+          placeholder=""
         />
       </div>
       <div className="flex flex-col gap-1">

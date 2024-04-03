@@ -10,7 +10,9 @@ async function EnviarAtravesDeLaWhatsAp(tel: string, message: string) {
       {
         number: `52${tel}`,
         // TODO: aqui desde el cliente se forma el link y se manda en el body del request
-        body: message,
+        body: `Hola! Estas cordialmente invitado a la boda de Daniela y José Pablo, puedes revisar todos los detalles en nuestra invitación digital: 
+        ${message}
+        *Favor de confirmar tu asistencia en el formulario de confirmación al final de la invitación* `,
       },
       {
         headers: {
