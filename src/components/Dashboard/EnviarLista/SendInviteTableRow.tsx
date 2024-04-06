@@ -82,9 +82,7 @@ const SendInviteTableRow = ({
           <p
             ref={generatedLinkRef}
             className="w-10/12 overflow-hidden p-1 border border-slate-300"
-          >{`https://www.invitandofacil.com/boda/danielayjosepablo?${objetoAParametrosURL(
-            { nombre, tel, pasesAsignados }
-          )}`}</p>
+          >{`${objetoAParametrosURL({ nombre, tel, pasesAsignados })}`}</p>
 
           <div className="flex flex-col justify-center items-center ">
             <ClipboardCopyIcon />

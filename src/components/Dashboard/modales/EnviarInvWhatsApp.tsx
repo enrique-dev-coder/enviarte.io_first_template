@@ -59,9 +59,7 @@ const EnviarInvWhatsApp = () => {
       nombre: data.nombre,
       tel: data.tel,
       invitacionId: invitacionIdCookie,
-      whatsMessage: `https://www.invitandofacil.com/boda/danielayjosepablo?${objetoAParametrosURL(
-        data
-      )}`,
+      whatsMessage: `${objetoAParametrosURL(data)}`,
     });
   };
 
