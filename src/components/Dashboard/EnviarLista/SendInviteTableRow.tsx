@@ -105,9 +105,11 @@ const SendInviteTableRow = ({
                   invitacionId,
                   nombre,
                   tel: tel.toString(),
-                  whatsMessage: `https://www.invitandofacil.com/boda/danielayjosepablo?${objetoAParametrosURL(
-                    { nombre, tel, pasesAsignados }
-                  )}`,
+                  whatsMessage: `${objetoAParametrosURL({
+                    nombre,
+                    tel,
+                    pasesAsignados,
+                  })}`,
                 })
               }
               className=" w-full flex items-center justify-center px-1 gap-1 disabled:cursor-not-allowed disabled:bg-red-100 disabled:group-hover:bg-red-100  bg-emerald-200 group-hover:bg-emerald-600  rounded-lg py-2 font-medium"
