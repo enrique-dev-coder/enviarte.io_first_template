@@ -35,10 +35,10 @@ const SendInviteTableRow = ({
   // por el momento lo dejare hardcodeado
 
   const generatedLinkRef = useRef(null);
-  console.log(tel);
   const {
     mutate: enviarInvitacionPorApiWhats,
     isPending,
+    isSuccess,
     error,
   } = useMutation({
     mutationFn: (invitacionEnviada: TypesForSendingWhatsAppInvite) => {
@@ -82,7 +82,9 @@ const SendInviteTableRow = ({
           <p
             ref={generatedLinkRef}
             className="w-10/12 overflow-hidden p-1 border border-slate-300"
-          >{`${objetoAParametrosURL({ nombre, tel, pasesAsignados })}`}</p>
+          >{`https://www.invitandofacil.com/boda/danielayjosepablo?${objetoAParametrosURL(
+            { nombre, tel, pasesAsignados }
+          )}`}</p>
 
           <div className="flex flex-col justify-center items-center ">
             <ClipboardCopyIcon />
@@ -98,37 +100,44 @@ const SendInviteTableRow = ({
           </p>
         ) : (
           <>
-            <button
-              disabled={disableButton}
-              onClick={() =>
-                enviarInvitacionPorApiWhats({
-                  invitacionId,
-                  nombre,
-                  tel: tel.toString(),
-                  whatsMessage: `${objetoAParametrosURL({
+            {isSuccess ? (
+              <p className=" font-medium  text-sm text-emerald-700">
+                Invitacion enviada 🥳
+              </p>
+            ) : (
+              <button
+                disabled={disableButton}
+                onClick={() =>
+                  enviarInvitacionPorApiWhats({
+                    invitacionId,
                     nombre,
-                    tel,
-                    pasesAsignados,
-                  })}`,
-                })
-              }
-              className=" w-full flex items-center justify-center px-1 gap-1 disabled:cursor-not-allowed disabled:bg-red-100 disabled:group-hover:bg-red-100  bg-emerald-200 group-hover:bg-emerald-600  rounded-lg py-2 font-medium"
-            >
-              {isPending ? (
-                <LoaderIcon className="animate-spin" />
-              ) : (
-                <>
-                  <WhatsIcon
-                    className={
-                      "group-hover:fill-emerald-50 disabled:group-hover:fill-black"
-                    }
-                  />
-                  <p className=" text-lg group-hover:text-emerald-50 disabled:group-hover:text-black">
-                    Enviar
-                  </p>
-                </>
-              )}
-            </button>
+                    tel: tel.toString(),
+                    whatsMessage: `${objetoAParametrosURL({
+                      nombre,
+                      tel,
+                      pasesAsignados,
+                    })}`,
+                  })
+                }
+                className=" w-full flex items-center justify-center px-1 gap-1 disabled:cursor-not-allowed disabled:bg-red-100 disabled:group-hover:bg-red-100  bg-emerald-200 group-hover:bg-emerald-600  rounded-lg py-2 font-medium"
+              >
+                {isPending ? (
+                  <LoaderIcon className="animate-spin" />
+                ) : (
+                  <>
+                    <WhatsIcon
+                      className={
+                        "group-hover:fill-emerald-50 disabled:group-hover:fill-black"
+                      }
+                    />
+                    <p className=" text-lg group-hover:text-emerald-50 disabled:group-hover:text-black">
+                      Enviar
+                    </p>
+                  </>
+                )}
+              </button>
+            )}
+
             <button>
               <Popover>
                 <PopoverTrigger>
