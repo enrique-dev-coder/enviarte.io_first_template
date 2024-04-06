@@ -6,17 +6,37 @@ import prisma from "../../../../../prisma";
 async function EnviarAtravesDeLaWhatsAp(tel: string, message: string) {
   try {
     return await axios.post(
-      "https://api.digybot.io/api/messages/send",
+      `https://graph.facebook.com/v19.0/${process.env.ACCOUNT_ID}/messages`,
       {
-        number: `52${tel}`,
-        // TODO: aqui desde el cliente se forma el link y se manda en el body del request
-        body: `Hola! Estas cordialmente invitado a la boda de Daniela y José Pablo, puedes revisar todos los detalles en nuestra invitación digital: 
-        ${message}
-        *Favor de confirmar tu asistencia en el formulario de confirmación al final de la invitación* `,
+        messaging_product: "whatsapp",
+        to: `+52${tel}`, // numero de telefono
+        type: "template",
+        template: {
+          name: "invitacion_boda", // nombre de la plantilla
+          language: {
+            code: "es_MX",
+            policy: "deterministic",
+          },
+          components: [
+            {
+              type: "body", // variables para el body
+              parameters: [
+                {
+                  type: "text",
+                  text: "Daniela y José Pablo",
+                },
+                {
+                  type: "text",
+                  text: `${message}`,
+                },
+              ],
+            },
+          ],
+        },
       },
       {
         headers: {
-          Authorization: `Bearer ${"7e2d233c206fd31dc14a20a726947655"}`,
+          Authorization: `Bearer ${process.env.TOKEN}`,
         },
       }
     );
@@ -42,7 +62,7 @@ export async function POST(req: NextRequest) {
         body.tel,
         body.whatsMessage
       );
-      if (respuestaWhatsapp?.response?.status === 400) {
+      if (respuestaWhatsapp?.status === 400) {
         return NextResponse.json(
           {
             message:
@@ -51,7 +71,6 @@ export async function POST(req: NextRequest) {
           { status: 400 }
         );
       }
-      // ejecutar promesas en paralelo
       const invitacionCreada = await prisma.invitacionEnviadaConWhatsApp.create(
         {
           data: {
@@ -65,7 +84,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(
         {
           invitacionCreadaenBD: { ...invitacionCreada },
-          enviadaPorWhats: respuestaWhatsapp.data.message,
+          enviadoPorWhats: respuestaWhatsapp.data.messages[0].message_status,
         },
         {
           status: 200,
