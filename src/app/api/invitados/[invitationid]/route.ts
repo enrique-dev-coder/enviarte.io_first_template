@@ -9,7 +9,36 @@ export async function GET(
   req: NextRequest,
   params: { params: { invitationid: string } }
 ) {
+  const nombreInvitadoBuscado = req.nextUrl.searchParams.get("nombre");
   const { invitationid } = params.params;
+
+  if (nombreInvitadoBuscado) {
+    try {
+      const invitadosConfirmados = await prisma.invitados.findMany({
+        where: {
+          invitacionId: invitationid,
+          nombre: { contains: nombreInvitadoBuscado },
+        },
+        select: {
+          nombre: true,
+          pasesAsignados: true,
+          pasesConfirmados: true,
+          tel: true,
+        },
+      });
+      return NextResponse.json(invitadosConfirmados, {
+        status: 200,
+      });
+    } catch (error) {
+      return NextResponse.json(
+        { error, mensaje: "No se pudieron cargar los invitados" },
+        {
+          status: 500,
+        }
+      );
+    }
+  }
+
   try {
     const invitadosConfirmados = await prisma.invitados.findMany({
       where: {

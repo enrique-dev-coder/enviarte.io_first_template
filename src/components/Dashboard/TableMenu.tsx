@@ -2,8 +2,10 @@ import React from "react";
 import { SearchIcon } from "lucide-react";
 const TableMenu = ({
   sumatoriaPasesConfirmados,
+  filtrarInvitadoPorNombre,
 }: {
   sumatoriaPasesConfirmados: number;
+  filtrarInvitadoPorNombre: Function;
 }) => {
   return (
     <div className="py-2 rounded-lg flex items-center gap-4 w-full bg-violet-50 my-2  shadow-sm">
@@ -12,6 +14,7 @@ const TableMenu = ({
           <div className="flex gap-2 items-center p-1 ml-2">
             <SearchIcon size={20} className=" text-violet-900" />
             <input
+              onChange={(e) => filtrarInvitadoPorNombre(e.target.value)}
               className="m-0 p-0 border-0 border-b-2 border-violet-800 bg-transparent  
               placeholder:text-gray-700  
               focus:ring-0 focus:border-violet-950"
