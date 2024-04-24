@@ -5,7 +5,7 @@ import { AudioPlayerContext } from "@/contexts/AudioContext";
 import { StartAnimation } from "@/contexts/AnimationContext";
 import { StylesContext } from "@/contexts/StylingContext";
 
-const IngresarBoton = () => {
+const IngresarBoton = ({ text }: { text: string }) => {
   const { setPlaying } = useContext(AudioPlayerContext);
   const [showModal, setShowModal] = useState(true);
   const { setAnimateNow } = useContext(StartAnimation);
@@ -27,7 +27,7 @@ const IngresarBoton = () => {
               className={`${dancing.className}   text-complementaryDark font-bold  text-center text-5xl py-1 cell:text-4xl cell:px-0 cell:font-black 
       `}
             >
-              Daniela y Jose Pablo
+              {text}
             </h2>
             <button
               onClick={handleModalButtonClick}

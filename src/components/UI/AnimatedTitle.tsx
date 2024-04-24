@@ -16,9 +16,9 @@ const AnimatedTitle = ({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ ease: "easeInOut", duration: 1 }}
       viewport={{ once: true }}
-      className={`${dancing.className}   text-complementaryDark font-bold  text-center text-4xl py-1 cell:text-3xl cell:px-4
-      ${extraStyles}
-      `}
+      className={`${extraStyles} ${dancing.className} 
+      text-complementaryDark font-bold  text-center text-4xl py-1 
+      cell:text-3xl cell:px-4`}
     >
       {title}
     </motion.h2>

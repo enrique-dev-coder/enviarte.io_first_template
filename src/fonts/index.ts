@@ -3,9 +3,11 @@ import {
   Dancing_Script,
   Lora,
   Playfair_Display,
+  Great_Vibes,
 } from "next/font/google";
 
 export const inter = Inter({ subsets: ["latin"] });
+export const greatVibes = Great_Vibes({ weight: "400", subsets: ["latin"] });
 export const dancing = Dancing_Script({ subsets: ["latin"] });
 export const lora = Lora({ subsets: ["latin"] });
 export const play = Playfair_Display({ subsets: ["latin"] });

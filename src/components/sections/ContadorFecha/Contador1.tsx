@@ -1,7 +1,7 @@
 "use client";
 import { useTimer } from "react-timer-hook";
 import { dancing } from "@/fonts";
-const Contador = ({ fechaEvento }: { fechaEvento: any }) => {
+const Contador1 = ({ fechaEvento }: { fechaEvento: any }) => {
   const { seconds, minutes, hours, days } = useTimer({
     expiryTimestamp: fechaEvento,
     onExpire: () => console.warn("El contador ha expirado"), // Puedes personalizar esto según tu necesidad
@@ -42,4 +42,4 @@ const Contador = ({ fechaEvento }: { fechaEvento: any }) => {
   );
 };
 
-export default Contador;
+export default Contador1;

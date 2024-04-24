@@ -7,7 +7,7 @@ const Recepción = () => {
   return (
     <section className="py-6">
       <div className="flex flex-col gap-2 justify-center items-center ">
-        <AnimatedTitle title="Recepción" />
+        <AnimatedTitle title="Recepción" extraStyles={` text-5xl`} />
         <p className=" text-2xl cell:text-xl cell:px-2 cell:font-bold">
           Quinta Veneto
         </p>

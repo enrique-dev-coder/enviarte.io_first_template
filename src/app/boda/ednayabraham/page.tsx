@@ -2,7 +2,6 @@ import InvitationContainer from "@/components/wrappers/InvitationContainer";
 import InvitationHeroManager from "@/components/sections/InvitationHero";
 import Versiculos from "@/components/UI/Versiculos";
 import ContadorManager from "@/components/sections/ContadorFecha";
-import Contador from "@/components/sections/ContadorFecha/Contador1";
 import Padres from "@/components/sections/Padres";
 import Iglesia from "@/components/sections/Iglesia";
 import Recepción from "@/components/sections/Recepcion";
@@ -16,11 +15,14 @@ import IngresarBoton from "@/components/sections/IngresarBoton";
 // next js
 import { Metadata } from "next/types";
 import { headers } from "next/headers";
+import Image from "next/image";
 // db
 import prisma from "../../../../prisma";
-
+import PadresVersion2 from "@/components/sections/PadresVersion2";
+// Images
+import FlowerDivider from "/public/assets/images/floral/floral_divider-removebg-preview.png";
 export const metadata: Metadata = {
-  title: "Daniela y JosePablo",
+  title: "Edna y Abraham",
   description: "Bodas",
 };
 // server fucntions
@@ -51,16 +53,29 @@ const IndexPage = async ({ searchParams }: any) => {
 
   return (
     <InvitationContainer>
-      <IngresarBoton text="Daniela y Jose Pablo" />
-      <InvitationHeroManager model={1} />
-      <Versiculos
+      <IngresarBoton text="Edna y Abraham" />
+      <InvitationHeroManager model={2} />
+      <ContadorManager model={2} fechaEvento={fechaEvento} />
+      {/* <Versiculos
         frase="Así que ya no son dos, sino uno solo. Por tanto, lo que Dios ha unido, que no lo separe el hombre"
         autor="Mateo 19,6"
-      />
-      <ContadorManager model={1} fechaEvento={fechaEvento} />
-      <Padres />
-      <Iglesia />
-      <Recepción />
+      /> */}
+      <div className="bg-gradient-to-r from-[#DAB060]   relative to-[#C28E4D]  text-white">
+        <PadresVersion2 />
+        <p className="text-center">
+          Aqui pueden poner mas nombre como padrinos etc
+        </p>
+      </div>
+      <div>
+        <Iglesia />
+        <Image
+          src={FlowerDivider}
+          alt="Invitaciones digitales"
+          width={200}
+          className="mx-auto"
+        />
+        <Recepción />
+      </div>
       <Itinerario />
       <BannerConFoto />
       <MesaDeRegalos />
