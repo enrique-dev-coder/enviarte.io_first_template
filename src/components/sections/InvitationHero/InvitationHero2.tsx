@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useContext } from "react";
 import { StartAnimation } from "@/contexts/AnimationContext";
 import WeedingRing from "/public/assets/images/wedding-ring-1.webp";
-import LogoBoda from "/public/assets/images/floral/logo_boda.png";
+import LogoBoda from "/public/assets/images/floral/logo_boda_fix.png";
 import Divider from "/public/assets/images/floral/white_floral_divider_short.png";
 
 const InvitationHero2 = () => {
@@ -47,14 +47,14 @@ const InvitationHero2 = () => {
             transition={{ ease: "easeInOut", duration: 1, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <Image src={WeedingRing} alt="weeding" className=" w-20" />
+            <Image src={WeedingRing} alt="weeding" className=" w-16" />
           </motion.div>
           <motion.p
             initial={{ opacity: 0, y: 5 }}
             animate={controls}
             transition={{ ease: "easeInOut", duration: 1, delay: 0.5 }}
             viewport={{ once: true }}
-            className=" text-white uppercase font-bold text-2xl"
+            className=" text-white uppercase font-bold text-xl"
           >
             Nos casamos
           </motion.p>

@@ -6,6 +6,23 @@ import { motion } from "framer-motion";
 import FlowerOrnament from "/public/assets/images/floral/floral_divider_short-removebg-preview.png";
 import FlowerCorner from "/public/assets/images/floral/floral_corner-removebg-preview.png";
 
+const Numero = ({ num, desc }: { num: any; desc: string }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 5 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ ease: "easeInOut", duration: 1 }}
+      viewport={{ once: true }}
+      className=" flex flex-col justify-center items-center text-slate-950"
+    >
+      <div className=" bg-complementaryDark w-[80px] flex  justify-center rounded-md">
+        <p className=" text-6xl mb-4 cell:text-2xl text-yellow-50 ">{num}</p>{" "}
+      </div>
+      <p className="text-xl uppercase cell:text-base">{desc}</p>
+    </motion.div>
+  );
+};
+
 const Contador2 = ({ fechaEvento }: { fechaEvento: any }) => {
   const { seconds, minutes, hours, days } = useTimer({
     expiryTimestamp: fechaEvento,
@@ -42,9 +59,9 @@ const Contador2 = ({ fechaEvento }: { fechaEvento: any }) => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
-        className={`${lora.className}  text-complementaryDark text-center text-5xl mb-[32px] cell:text-3xl`}
+        className={`${greatVibes.className}  text-complementaryDark text-center text-7xl mb-[32px] cell:text-3xl`}
       >
-        Viernes 23 de Agosto, 2024
+        07 de Septiembre, 2024
       </motion.p>
       {/* <p
         className={`${greatVibes.className}  text-complementaryDark text-center text-6xl cell:text-3xl`}
@@ -56,47 +73,11 @@ const Contador2 = ({ fechaEvento }: { fechaEvento: any }) => {
         alt="adorno"
         className=" w-[200px] mt-6 mb-4 rotate-180"
       />
-      <div className="flex gap-4 py-2 text-slate-950">
-        <motion.div
-          initial={{ opacity: 0, y: 5 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ ease: "easeInOut", duration: 1 }}
-          viewport={{ once: true }}
-          className=" flex flex-col justify-center items-center"
-        >
-          <p className=" text-7xl mb-4 cell:text-2xl">{days}</p>{" "}
-          <p className="text-2xl uppercase cell:text-base">días</p>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 5 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ ease: "easeInOut", duration: 1 }}
-          viewport={{ once: true }}
-          className=" flex flex-col justify-center items-center"
-        >
-          <p className=" text-7xl mb-4 cell:text-2xl">{hours}</p>
-          <p className="text-2xl uppercase cell:text-base">horas</p>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 5 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ ease: "easeInOut", duration: 1 }}
-          viewport={{ once: true }}
-          className=" flex flex-col justify-center items-center"
-        >
-          <p className=" text-7xl mb-4 cell:text-2xl">{minutes}</p>
-          <p className="text-2xl uppercase cell:text-base">minutos</p>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 5 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ ease: "easeInOut", duration: 1 }}
-          viewport={{ once: true }}
-          className=" flex flex-col justify-center items-center"
-        >
-          <p className=" text-7xl mb-4 cell:text-2xl">{seconds}</p>
-          <p className="text-2xl uppercase cell:text-base">segundos</p>
-        </motion.div>
+      <div className="flex gap-4 py-2">
+        <Numero desc="días" num={days} />
+        <Numero desc="horas" num={hours} />
+        <Numero desc="minutos" num={minutes} />
+        <Numero desc="segundos" num={seconds} />
       </div>
       <Image
         src={FlowerOrnament}

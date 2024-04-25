@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 const PadresVersion2 = () => {
   return (
-    <div className=" flex flex-col pt-10 pb-4 items-center justify-center cell:h-auto">
+    <div className=" flex text-yellow-50 flex-col pt-10 pb-4 items-center justify-center cell:h-auto">
       <Image
         src={Flowers}
         alt="invitaciones para eventos"
@@ -20,7 +20,7 @@ const PadresVersion2 = () => {
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
         className={`${greatVibes.className}   
-      text-white font-bold  text-center text-5xl mt-8 py-2 
+      text-yellow-50 font-bold  text-center text-5xl mt-8 py-2 
       cell:text-3xl cell:px-4`}
       >
         Con la bendición de <br /> nuestra familia

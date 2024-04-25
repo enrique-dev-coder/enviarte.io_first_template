@@ -1,9 +1,6 @@
 import InvitationContainer from "@/components/wrappers/InvitationContainer";
 import InvitationHeroManager from "@/components/sections/InvitationHero";
-import Versiculos from "@/components/UI/Versiculos";
 import ContadorManager from "@/components/sections/ContadorFecha";
-import Padres from "@/components/sections/Padres";
-import Iglesia from "@/components/sections/Iglesia";
 import Recepción from "@/components/sections/Recepcion";
 import Itinerario from "@/components/sections/Itinerario";
 import BannerConFoto from "@/components/sections/BannerConFoto";
@@ -16,11 +13,17 @@ import IngresarBoton from "@/components/sections/IngresarBoton";
 import { Metadata } from "next/types";
 import { headers } from "next/headers";
 import Image from "next/image";
+import { greatVibes } from "@/fonts";
 // db
 import prisma from "../../../../prisma";
 import PadresVersion2 from "@/components/sections/PadresVersion2";
 // Images
 import FlowerDivider from "/public/assets/images/floral/floral_divider-removebg-preview.png";
+import AnimatedTitle from "@/components/UI/AnimatedTitle";
+import Button from "@/components/UI/Button";
+import { MapPin } from "lucide-react";
+import ItinerarioUpdated from "@/components/sections/ItinerarioUpdated";
+
 export const metadata: Metadata = {
   title: "Edna y Abraham",
   description: "Bodas",
@@ -53,7 +56,7 @@ const IndexPage = async ({ searchParams }: any) => {
 
   return (
     <InvitationContainer>
-      <IngresarBoton text="Edna y Abraham" />
+      <IngresarBoton text="Edna & Abraham" />
       <InvitationHeroManager model={2} />
       <ContadorManager model={2} fechaEvento={fechaEvento} />
       {/* <Versiculos
@@ -67,16 +70,81 @@ const IndexPage = async ({ searchParams }: any) => {
         </p>
       </div>
       <div>
-        <Iglesia />
+        {/*Iglesia*/}
+        <section className="py-6">
+          <div className="flex flex-col gap-2 justify-center items-center ">
+            <AnimatedTitle
+              extraStyles={`${greatVibes.className}  text-6xl `}
+              title="Ceremonia Religiosa"
+            />
+            <p className=" text-2xl cell:text-xl cell:px-2 cell:font-bold ">
+              Iglesia San José de los Cerritos{" "}
+            </p>
+            <p className=" text-2xl cell:text-xl cell:px-2 cell:font-bold">
+              17:00 hrs
+            </p>
+            <div className=" flex items-center cell:w-[90%] cell:mx-auto cell:flex-col">
+              <MapPin className=" text-complementaryDark font-bold " />
+              <p className=" text-xl text-center cell:text-base ">
+                25019, Cam. Real SN-C DEPOSITO H.GOMEZ, San José de los
+                Cerritos, Saltillo, Coah.
+              </p>
+            </div>
+            <Button
+              externalLink="https://maps.app.goo.gl/jjf2tmv5mme1ZreR8?g_st=iw"
+              text="Ubicación"
+              extraStyles={`${greatVibes.className} text-yellow-50 text-2xl !bg-complementaryDark`}
+            />
+          </div>
+        </section>{" "}
         <Image
           src={FlowerDivider}
           alt="Invitaciones digitales"
           width={200}
           className="mx-auto"
         />
-        <Recepción />
+        <section className="py-6">
+          <div className="flex flex-col gap-2 justify-center items-center ">
+            <AnimatedTitle
+              title="Recepción"
+              extraStyles={`${greatVibes.className}  text-6xl `}
+            />
+            <p className=" text-2xl cell:text-xl cell:px-2 cell:font-bold">
+              Quinta Veneto
+            </p>
+            <p className=" text-2xl cell:text-xl cell:px-2 cell:font-bold">
+              20:30 hrs
+            </p>
+            <div className=" flex items-center cell:w-[90%] cell:mx-auto cell:flex-col">
+              <MapPin className=" text-complementaryDark font-bold" />
+              <p className=" text-xl text-center ">
+                Cuarta Peral #311 san Ignacio, Arteaga coahuila
+              </p>
+            </div>
+            <Button
+              externalLink="https://maps.app.goo.gl/v2skNKmZkmViXQeM9?g_st=iw"
+              text="Ubicación"
+              extraStyles={`${greatVibes.className} text-yellow-50 text-2xl !bg-complementaryDark`}
+            />
+          </div>
+          {/*TODO: Preguntar si quieren foto de la iglesia, no lo veo necesario peor bueno  */}
+        </section>
       </div>
-      <Itinerario />
+      <AnimatedTitle
+        extraStyles={`${greatVibes.className}  text-6xl  `}
+        title="Itinerario"
+      />
+      <div
+        className=""
+        style={{
+          backgroundColor: "#000000",
+          backgroundImage:
+            'url("http://www.zingerbugimages.com/backgrounds/white_marble_background_seamless.jpg")',
+          backgroundRepeat: "repeat",
+        }}
+      >
+        <ItinerarioUpdated />
+      </div>
       <BannerConFoto />
       <MesaDeRegalos />
       <InfromacionAdicional />
