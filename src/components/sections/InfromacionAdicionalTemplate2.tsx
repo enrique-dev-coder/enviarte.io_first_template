@@ -7,16 +7,16 @@ import AnimatedTitle from "../UI/AnimatedTitle";
 
 const InfromacionAdicionalTemplate2 = () => {
   return (
-    <section className="w-full pt-10 pb-20">
+    <section className="w-full pt-10 pb-20 cell:pb-4">
       <AnimatedTitle
         title="Código de vestimenta"
-        extraStyles={`${greatVibes.className}  text-6xl `}
+        extraStyles={`${greatVibes.className}  text-6xl  cell:text-5xl`}
       />
-      <p className=" uppercase  text-center text-slate-950  text-lg font-semibold py-4">
+      <p className=" uppercase  text-center text-slate-950  text-lg font-semibold py-4 cell:text-base">
         LOS COLORES beige y blanco son exclusivos PARA LA NOVIA
       </p>
       <div className="flex  flex-col items-center justify-center cell:w-full">
-        <div className=" w-8/12 flex justify-center my-10  h-[300px]  cell:flex-col cell:w-12/12 cell:gap-4">
+        <div className=" w-8/12 flex justify-center my-10  h-[300px] cell:h-auto  cell:flex-col cell:w-12/12 cell:gap-4">
           <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">
             {" "}
             <p className=" font-bold text-2xl text-complementaryDark">
@@ -26,7 +26,7 @@ const InfromacionAdicionalTemplate2 = () => {
             <Image
               src={Dress}
               alt="invitaciones digitales"
-              className="w-[50%]"
+              className="w-[50%] cell:w-[80%]"
             />
           </div>
           <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">
@@ -38,7 +38,7 @@ const InfromacionAdicionalTemplate2 = () => {
             <Image
               src={Suit}
               alt="invitaciones digitales"
-              className="w-[36%]"
+              className="w-[36%] cell:w-[60%]"
             />
           </div>
         </div>
@@ -46,7 +46,9 @@ const InfromacionAdicionalTemplate2 = () => {
       <div className="w-8/12 mx-auto flex items-center py-4 justify-center  cell:w-full cell:flex-col">
         <div className="flex  flex-col items-center justify-center  cell:w-full">
           <Image alt="no niños" src={noninos} />
-          <p className="text-lg font-bold">No niños</p>
+          <p className=" font-bold text-2xl text-complementaryDark ">
+            No niños
+          </p>
           <p className="text-lg text-center  cell:w-full cell:px-4">
             ¡Queremos que disfrutes junto con nosotros esa noche especial!
           </p>

@@ -35,7 +35,7 @@ const InvitationHero2 = () => {
             <Image
               src={LogoBoda}
               alt="invitaciones para bodas"
-              className="w-[120px]"
+              className="w-[120px] cell:w-[80px]"
             />
           </motion.div>
           <></>
@@ -47,14 +47,18 @@ const InvitationHero2 = () => {
             transition={{ ease: "easeInOut", duration: 1, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <Image src={WeedingRing} alt="weeding" className=" w-16" />
+            <Image
+              src={WeedingRing}
+              alt="weeding"
+              className=" w-16 cell:w-10"
+            />
           </motion.div>
           <motion.p
             initial={{ opacity: 0, y: 5 }}
             animate={controls}
             transition={{ ease: "easeInOut", duration: 1, delay: 0.5 }}
             viewport={{ once: true }}
-            className=" text-white uppercase font-bold text-xl"
+            className=" text-white uppercase font-bold text-xl cell:text-base"
           >
             Nos casamos
           </motion.p>
@@ -64,7 +68,11 @@ const InvitationHero2 = () => {
             transition={{ ease: "easeInOut", duration: 1, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <Image src={Divider} alt="weeding" className=" w-[200px] my-4" />
+            <Image
+              src={Divider}
+              alt="weeding"
+              className=" w-[200px] my-4 cell:w-[120px]"
+            />
           </motion.div>
           <NoviosName2 novio1="Edna" novio2="Abraham" />
         </div>

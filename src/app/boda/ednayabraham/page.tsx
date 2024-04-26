@@ -64,16 +64,13 @@ const IndexPage = async ({ searchParams }: any) => {
       /> */}
       <div className="bg-gradient-to-r from-[#DAB060]   relative to-[#C28E4D]  text-yellow-50">
         <PadresVersion2 />
-        <p className="text-center">
-          Aqui pueden poner mas nombre como padrinos etc
-        </p>
       </div>
       <div>
         {/*Iglesia*/}
         <section className="py-6">
           <div className="flex flex-col gap-2 justify-center items-center ">
             <AnimatedTitle
-              extraStyles={`${greatVibes.className}  text-6xl `}
+              extraStyles={`${greatVibes.className}  text-6xl cell:text-5xl `}
               title="Ceremonia Religiosa"
             />
             <p className=" text-2xl cell:text-xl cell:px-2 cell:font-bold ">
@@ -106,7 +103,7 @@ const IndexPage = async ({ searchParams }: any) => {
           <div className="flex flex-col gap-2 justify-center items-center ">
             <AnimatedTitle
               title="Recepción"
-              extraStyles={`${greatVibes.className}  text-6xl `}
+              extraStyles={`${greatVibes.className}  text-6xl cell:text-5xl `}
             />
             <p className=" text-2xl cell:text-xl cell:px-2 cell:font-bold">
               Quinta Veneto
@@ -130,7 +127,7 @@ const IndexPage = async ({ searchParams }: any) => {
         </section>
       </div>
       <AnimatedTitle
-        extraStyles={`${greatVibes.className}  text-6xl  `}
+        extraStyles={`${greatVibes.className}  text-6xl cell:text-5xl   `}
         title="Itinerario"
       />
       <div
