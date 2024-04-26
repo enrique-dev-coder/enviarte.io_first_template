@@ -142,7 +142,7 @@ const ItinerarioUpdated = () => {
   return (
     <div
       ref={ItinerarioRef}
-      className="w-full  my-10  relative  overflow-hidden  flex  gap-2 items-center justify-center"
+      className="w-full  mt-10  relative  overflow-hidden  flex  gap-2 items-center justify-center"
     >
       {/* <div className="w-[4px] h-[200vh] bg-red-500"></div> */}
       <motion.div

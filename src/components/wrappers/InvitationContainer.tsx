@@ -26,7 +26,7 @@ const MainContainer = ({ children }: { children: ReactNode }) => {
   const { allowScroll } = useContext(StylesContext);
   return (
     <main
-      className={`${play.className} max-w-screen-xl mx-auto grainy relative 
+      className={`${play.className} max-w-[1580px] mx-auto grainy relative 
       ${!allowScroll && "w-screen h-screen !overflow-hidden"}`}
     >
       {children}

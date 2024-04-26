@@ -1,10 +1,7 @@
 import InvitationContainer from "@/components/wrappers/InvitationContainer";
 import InvitationHeroManager from "@/components/sections/InvitationHero";
 import ContadorManager from "@/components/sections/ContadorFecha";
-import Recepción from "@/components/sections/Recepcion";
-import Itinerario from "@/components/sections/Itinerario";
 import BannerConFoto from "@/components/sections/BannerConFoto";
-import MesaDeRegalos from "@/components/sections/MesaDeRegalos";
 import ConfirmacionForm from "@/components/sections/ConfirmacionForm";
 import SongPlayer from "@/components/sections/SongPlayer";
 import InfromacionAdicional from "@/components/sections/InfromacionAdicional";
@@ -23,6 +20,8 @@ import AnimatedTitle from "@/components/UI/AnimatedTitle";
 import Button from "@/components/UI/Button";
 import { MapPin } from "lucide-react";
 import ItinerarioUpdated from "@/components/sections/ItinerarioUpdated";
+import MesaDeRegalosTemplate2 from "@/components/sections/MesaDeRegalosTemplate2";
+import InfromacionAdicionalTemplate2 from "@/components/sections/InfromacionAdicionalTemplate2";
 
 export const metadata: Metadata = {
   title: "Edna y Abraham",
@@ -63,7 +62,7 @@ const IndexPage = async ({ searchParams }: any) => {
         frase="Así que ya no son dos, sino uno solo. Por tanto, lo que Dios ha unido, que no lo separe el hombre"
         autor="Mateo 19,6"
       /> */}
-      <div className="bg-gradient-to-r from-[#DAB060]   relative to-[#C28E4D]  text-white">
+      <div className="bg-gradient-to-r from-[#DAB060]   relative to-[#C28E4D]  text-yellow-50">
         <PadresVersion2 />
         <p className="text-center">
           Aqui pueden poner mas nombre como padrinos etc
@@ -146,8 +145,10 @@ const IndexPage = async ({ searchParams }: any) => {
         <ItinerarioUpdated />
       </div>
       <BannerConFoto />
-      <MesaDeRegalos />
-      <InfromacionAdicional />
+      <div className="bg-gradient-to-r from-[#DAB060]   relative to-[#C28E4D]  text-yellow-50">
+        <MesaDeRegalosTemplate2 />
+      </div>
+      <InfromacionAdicionalTemplate2 />
       <ConfirmacionForm
         pasesAsignados={pasesAsignados}
         invitationId={invitationIdForQuery}
