@@ -1,6 +1,6 @@
 "use client";
 import { useRef } from "react";
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ChurchIcon, PartyPopperIcon, UtensilsCrossedIcon } from "lucide-react";
 
 function Item({
@@ -24,7 +24,7 @@ function Item({
   });
   if (position === "right") {
     return (
-      <div className="flex justify-center items-center  cell:ml-[10%] cell:gap-5 ml-[-82%] h-[200px] gap-10">
+      <div className="flex justify-center items-center  cell:ml-[0%] cell:gap-5 ml-[-82%] h-[200px] gap-10">
         <div
           className="w-[250px] cell:w-full cell:mr-0 cell:order-2   px-4 py-2 relative rounded-md shadow-md  bg-yellow-100 cell:h-auto h-[100px]
         cell:py-1 
@@ -82,7 +82,7 @@ function Item({
     );
   } else {
     return (
-      <div className="flex justify-center items-center cell:mr-0 cell:cell:ml-[10%] mr-[-80%] h-[200px] cell:gap-4 gap-10">
+      <div className="flex justify-center items-center cell:mr-0 cell:cell:ml-[0%] mr-[-80%] h-[200px] cell:gap-4 gap-10">
         <section className="relative">
           <section className="absolute z-50 top-[-19px] right-[-19px]">
             <div ref={ref}>
@@ -128,7 +128,7 @@ function Item({
           <p className="text-neutral-800   font-medium cell:text-sm">
             {hora} horas
           </p>
-          <p className="text-neutral-8  00   font-medium  cell:text-sm">
+          <p className="text-neutral-800   font-medium  cell:text-sm">
             {lugar}
           </p>
         </div>
@@ -141,12 +141,13 @@ const ItinerarioUpdated = () => {
   // div scrolleable
   const ItinerarioRef = useRef(null);
   const itemRef = useRef(null);
+
   const { scrollYProgress } = useScroll({
     offset: ["start center", "center start"],
     target: ItinerarioRef,
   });
 
-  // const scale = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const scale = useTransform(scrollYProgress, [0, 1], [0.2, 0.9]);
 
   return (
     <div
@@ -156,14 +157,14 @@ const ItinerarioUpdated = () => {
       {/* <div className="w-[4px] h-[200vh] bg-red-500"></div> */}
       <motion.div
         // scale line while scrolling
-        style={{ scaleY: scrollYProgress }}
-        className="absolute  w-[8px] top-[0] right-[50%]  cell:right-[90%]
+        style={{ scaleY: scale }}
+        className="absolute  w-[8px] top-[0] right-[50%]  cell:right-[80%]
          z-10  h-full  origin-top  bg-complementaryDark"
       />
       <motion.div
         // scale line while scrolling
-        className="absolute  w-[8px] top-[0] right-[50%] z-0  h-full  origin-top  bg-yellow-50 shadow-md
-        cell:right-[90%]  "
+        className="absolute  w-[8px] top-[0] right-[50%] z-0  h-[90%]  origin-top  bg-yellow-50 my-4 shadow-md
+        cell:right-[80%]  "
       />
       <div ref={itemRef} className="flex flex-col z-10 pt-3">
         <Item
