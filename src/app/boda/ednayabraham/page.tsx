@@ -26,6 +26,9 @@ import InfromacionAdicionalTemplate2 from "@/components/sections/InfromacionAdic
 export const metadata: Metadata = {
   title: "Edna y Abraham",
   description: "Bodas",
+  icons: {
+    icon: "/assets/images/floral/logo_boda_fix.png",
+  },
 };
 // server fucntions
 const getInvitationId = async (name: string) => {
@@ -133,10 +136,8 @@ const IndexPage = async ({ searchParams }: any) => {
       <div
         className=""
         style={{
-          backgroundColor: "#000000",
           backgroundImage:
             'url("http://www.zingerbugimages.com/backgrounds/white_marble_background_seamless.jpg")',
-          backgroundRepeat: "repeat",
         }}
       >
         <ItinerarioUpdated />
