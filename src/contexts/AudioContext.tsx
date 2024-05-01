@@ -11,7 +11,13 @@ export const AudioPlayerContext = createContext<StartAudioContextType>({
   setPlaying: () => {},
 });
 
-const AudioContextProvider = ({ children }: { children: ReactNode }) => {
+const AudioContextProvider = ({
+  children,
+  songLink,
+}: {
+  children: ReactNode;
+  songLink: string;
+}) => {
   const [playing, setPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -29,7 +35,11 @@ const AudioContextProvider = ({ children }: { children: ReactNode }) => {
   return (
     <AudioPlayerContext.Provider value={{ playing, setPlaying }}>
       <>
-        <audio src="/song.mp3" ref={audioRef} />
+        <audio
+          src={songLink}
+          // "/song.mp3"
+          ref={audioRef}
+        />
         {children}
       </>
     </AudioPlayerContext.Provider>

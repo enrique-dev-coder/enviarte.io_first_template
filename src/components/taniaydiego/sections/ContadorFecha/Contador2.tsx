@@ -64,7 +64,7 @@ const Contador2 = ({ fechaEvento }: { fechaEvento: any }) => {
         className={`${lora.className}  text-complementaryDark text-center text-7xl mb-[32px] 
         cell:text-5xl cell:mb-[18px] cell:w-[80%]`}
       >
-        07 de Septiembre, 2024
+        18 de Mayo, 2024
       </motion.p>
       {/* <p
         className={`${greatVibes.className}  text-complementaryDark text-center text-6xl cell:text-3xl`}

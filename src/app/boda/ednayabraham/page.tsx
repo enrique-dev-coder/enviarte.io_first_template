@@ -57,7 +57,7 @@ const IndexPage = async ({ searchParams }: any) => {
   const invitationIdForQuery = await getInvitationId(pathname as string); // { id: '65df62e264903d5c4bb5053e' }
 
   return (
-    <InvitationContainer>
+    <InvitationContainer songLink="/song.mp3">
       <IngresarBoton text="Edna & Abraham" />
       <InvitationHeroManager model={2} />
       <ContadorManager model={2} fechaEvento={fechaEvento} />

@@ -53,7 +53,7 @@ const IndexPage = async ({ searchParams }: any) => {
   const invitationIdForQuery = await getInvitationId(pathname as string); // { id: '65df62e264903d5c4bb5053e' }
 
   return (
-    <InvitationContainer>
+    <InvitationContainer songLink="/taniaydiego.mp4">
       <div className={`!${bavaria.className}`}>
         <IngresarBoton novia="Tania" novio="Diego" />
         <InvitationHero1 />

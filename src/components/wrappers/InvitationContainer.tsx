@@ -8,10 +8,16 @@ import StylingContextProvider, {
 import { play } from "@/fonts";
 import InvitationDataProvider from "@/contexts/InvitationDataContext";
 
-const InvitationContainer = ({ children }: { children: ReactNode }) => {
+const InvitationContainer = ({
+  children,
+  songLink,
+}: {
+  children: ReactNode;
+  songLink: string;
+}) => {
   return (
     <InvitationDataProvider>
-      <AudioContextProvider>
+      <AudioContextProvider songLink={songLink}>
         <StartAnimationProvider>
           <StylingContextProvider>
             <MainContainer>{children}</MainContainer>
