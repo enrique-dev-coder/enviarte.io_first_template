@@ -46,7 +46,8 @@ const IndexPage = async ({ searchParams }: any) => {
   const tel = searchParams?.tel;
   const pasesAsignados = searchParams?.pasesAsignados;
 
-  const fechaEvento = new Date("2024-05-18T00:00:00");
+  const fechaEvento = new Date("2024-05-18T00:00:00-05:00"); // Especifica la fecha y la zona horaria
+
   // obtener  el pathname del middleware
   const headersList = headers();
   const pathname = headersList.get("x-pathname"); // ejemplo: /boda/danielayjosepablo

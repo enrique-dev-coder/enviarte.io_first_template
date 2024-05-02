@@ -28,7 +28,6 @@ const Contador2 = ({ fechaEvento }: { fechaEvento: any }) => {
     expiryTimestamp: fechaEvento,
     onExpire: () => console.warn("El contador ha expirado"), // Puedes personalizar esto según tu necesidad
   });
-
   return (
     <div
       className="py-[100px] flex flex-col items-center justify-center w-full relative 
