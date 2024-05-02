@@ -21,6 +21,7 @@ import prisma from "../../../../prisma";
 import { bavaria, lora } from "@/fonts";
 import InfromacionAdicionalTemplate2 from "@/components/taniaydiego/sections/InfromacionAdicionalTemplate2";
 import AnimatedTitle from "@/components/UI/AnimatedTitle";
+import GaleriaFotos from "@/components/sections/GaleriaFotos";
 
 export const metadata: Metadata = {
   title: "Tania & Diego",
@@ -62,7 +63,8 @@ const IndexPage = async ({ searchParams }: any) => {
           autor="Mateo 19,6"
         /> */}
         <Contador2 fechaEvento={fechaEvento} />
-        <BannerConFoto />
+        {/* <BannerConFoto /> */}
+        <GaleriaFotos />
         <Padres />
         <Iglesia />
         <Recepción />
