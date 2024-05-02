@@ -11,7 +11,7 @@ const Padres = () => {
       />
       <div className="flex justify-evenly py-4 gap-4 w-1/2 mx-auto cell:w-full cell:px-4 cell:flex-col cell:items-center ">
         <div className="flex flex-col gap-1 text-3xl cell:text-2xl cell:text-center">
-          <p>Jorge Salvador Vázquez</p>
+          <p>Jesús Salvador Vázquez</p>
           <p>Patricia Mendoza</p>
         </div>
         <div className="w-[2px]  bg-complementaryDark h-full cell:h-[1px] cell:w-[80%]" />

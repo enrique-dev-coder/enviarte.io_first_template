@@ -12,9 +12,9 @@ const Recepción = () => {
           title="Recepción"
           extraStyles={`${lora.className} font-medium`}
         />
-        {/* <p className=" text-2xl cell:text-xl cell:px-2 cell:font-bold">
-          Quinta Veneto
-        </p> */}
+        <p className=" text-2xl cell:text-xl cell:px-2 cell:font-bold">
+          Los Membrillos
+        </p>
         <p className=" text-2xl cell:text-lg font-bold cell:px-2  ">
           20:30 horas{" "}
         </p>
@@ -24,12 +24,11 @@ const Recepción = () => {
             Calle 20 no. 1565 col. Lourdes,Frente al Club Campestre Lourdes{" "}
           </p>
         </div>
-        {/* <Button
-          externalLink="https://maps.app.goo.gl/v2skNKmZkmViXQeM9?g_st=iw"
+        <Button
+          externalLink="https://www.google.com/maps/place/Los+Membrillos/@25.38672,-100.997807,15z/data=!4m6!3m5!1s0x868873213573dfd7:0x756e415418f6e049!8m2!3d25.38672!4d-100.997807!16s%2Fg%2F1hc2pp60r?entry=ttu"
           text="Cómo llegar"
-        /> */}
+        />
       </div>
-      {/*TODO: Preguntar si quieren foto de la iglesia, no lo veo necesario peor bueno  */}
     </section>
   );
 };

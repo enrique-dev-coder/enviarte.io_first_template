@@ -79,11 +79,13 @@ const IndexPage = async ({ searchParams }: any) => {
             Al dar click seras redirigido a WhatsApp
           </p>
           <div className="flex flex-col justify-center items-center py-8">
-            <p className={`${bavaria.className} text-4xl font-bold`}>Planner</p>
-            <a href="https://api.whatsapp.com/send?phone=5218441339405">
+            <p className={`${bavaria.className} text-4xl font-bold`}>
+              Tania Vázquez
+            </p>
+            <a href="https://api.whatsapp.com/send?phone=5218445997949">
               <button className="flex items-center border-4 my-3 rounded-full px-4 py-2  border-complementaryDark">
                 <Image src={WhatsIcon} alt="invitacione para boda" width={48} />
-                <p className=" text-3xl">844 133 9405</p>
+                <p className=" text-3xl"> 844 599 79 49</p>
               </button>
             </a>
           </div>
