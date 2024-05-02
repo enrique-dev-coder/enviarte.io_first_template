@@ -14,7 +14,10 @@ const Iglesia = () => {
           title="Ceremonia Religiosa"
         />
         <p className=" text-2xl cell:text-lg cell:px-2  ">
-          Parroquia nuestra señora de la soledad{" "}
+          Parroquia Nuestra Señora de la Soledad{" "}
+        </p>
+        <p className=" text-2xl cell:text-lg font-bold cell:px-2  ">
+          19:00 horas{" "}
         </p>
 
         <div className=" flex items-center cell:w-[90%] cell:mx-auto cell:flex-col">

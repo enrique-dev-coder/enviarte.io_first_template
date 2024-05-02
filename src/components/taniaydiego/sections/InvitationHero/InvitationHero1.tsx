@@ -41,7 +41,7 @@ const InvitationHero1 = () => {
             animate={controls}
             transition={{ ease: "easeInOut", duration: 0.5, delay: 1 }}
             viewport={{ once: true }}
-            className={`${bavaria.className} text-8xl text-white my-2  font-light cell:text-4xl `}
+            className={`${bavaria.className} text-8xl text-white my-2  font-light cell:text-5xl `}
           >
             Tania{""}
             <span
@@ -52,13 +52,13 @@ const InvitationHero1 = () => {
             {""}
             Diego
           </motion.h2>
-          <FechaBoda
+          {/* <FechaBoda
             day="Sábado"
             numberDate={18}
             hour="18:00"
             year={2024}
             mes="Mayo"
-          />
+          /> */}
         </div>
       </div>
     </div>

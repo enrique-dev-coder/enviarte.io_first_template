@@ -1,15 +1,11 @@
 import InvitationContainer from "@/components/wrappers/InvitationContainer";
 import InvitationHero1 from "@/components/taniaydiego/sections/InvitationHero/InvitationHero1";
-import Versiculos from "@/components/UI/Versiculos";
 import Contador2 from "@/components/taniaydiego/sections/ContadorFecha/Contador2";
 import Padres from "@/components/taniaydiego/sections/Padres";
 import Iglesia from "@/components/taniaydiego/sections/Iglesia";
 import Recepción from "@/components/taniaydiego/sections/Recepcion";
-import Itinerario from "@/components/taniaydiego/sections/Itinerario";
-import BannerConFoto from "@/components/taniaydiego/sections/BannerConFoto";
-import MesaDeRegalos from "@/components/sections/MesaDeRegalos";
+import MesaDeRegalos from "@/components/taniaydiego/sections/MesaDeRegalos";
 import SongPlayer from "@/components/sections/SongPlayer";
-import InfromacionAdicional from "@/components/sections/InfromacionAdicional";
 import IngresarBoton from "@/components/taniaydiego/sections/IngresarBoton";
 import WhatsIcon from "/public/assets/images/Taniaydiego/whats_icon.png";
 // next js
@@ -26,6 +22,9 @@ import GaleriaFotos from "@/components/sections/GaleriaFotos";
 export const metadata: Metadata = {
   title: "Tania & Diego",
   description: "Bodas",
+  icons: {
+    icon: "/assets/images/Taniaydiego/TyD_logo.png",
+  },
 };
 // server fucntions
 const getInvitationId = async (name: string) => {

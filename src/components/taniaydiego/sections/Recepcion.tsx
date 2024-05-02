@@ -15,11 +15,13 @@ const Recepción = () => {
         {/* <p className=" text-2xl cell:text-xl cell:px-2 cell:font-bold">
           Quinta Veneto
         </p> */}
-
+        <p className=" text-2xl cell:text-lg font-bold cell:px-2  ">
+          20:30 horas{" "}
+        </p>
         <div className=" flex items-center cell:w-[90%] cell:mx-auto cell:flex-col">
           <MapPin className=" text-complementaryDark font-bold" />
           <p className=" text-xl text-center ">
-            Calle 20 no. 1565 col. Lourdes,Frente al club campestre lourdes{" "}
+            Calle 20 no. 1565 col. Lourdes,Frente al Club Campestre Lourdes{" "}
           </p>
         </div>
         {/* <Button
