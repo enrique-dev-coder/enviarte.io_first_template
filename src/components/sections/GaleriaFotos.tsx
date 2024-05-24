@@ -1,23 +1,21 @@
 "use client";
-import { lora } from "@/fonts";
 import { motion } from "framer-motion";
 import React from "react";
-import AnimatedTitle from "../UI/AnimatedTitle";
 import img1 from "/public/assets/images/Gabrielayraul/GyR_7.jpeg";
 import img2 from "/public/assets/images/Gabrielayraul/GyR_10.jpeg";
-import img3 from "/public/assets/images/Gabrielayraul/GyR_1.jpeg";
-import img4 from "/public/assets/images/Gabrielayraul/GyR_16.jpeg";
+import img3 from "/public/assets/images/Gabrielayraul/GyR_11.jpeg";
+import img4 from "/public/assets/images/Gabrielayraul/GyR_5.jpeg";
 
 import Image, { StaticImageData } from "next/image";
 
-const SingleFoto = ({ img }: { img: StaticImageData }) => {
+const SingleFoto = ({ img, col }: { img: StaticImageData; col: string }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 5, scale: 0 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ ease: "easeInOut", duration: 0.85 }}
       viewport={{ once: true }}
-      className=" col-span-6 cell:col-span-12"
+      className={`${col} cell:col-span-12`}
     >
       <Image
         src={img}
@@ -36,10 +34,10 @@ const GaleriaFotos = () => {
         extraStyles={`${lora.className} font-medium cell:text-xl`}
       /> */}
       <div className=" grid grid-cols-12 gap-2">
-        <SingleFoto img={img1} />
-        <SingleFoto img={img2} />
-        <SingleFoto img={img3} />
-        <SingleFoto img={img4} />
+        <SingleFoto col="col-span-6" img={img1} />
+        <SingleFoto col="col-span-6" img={img2} />
+        <SingleFoto col="col-span-6" img={img3} />
+        <SingleFoto col="col-span-6 " img={img4} />
       </div>
     </div>
   );
