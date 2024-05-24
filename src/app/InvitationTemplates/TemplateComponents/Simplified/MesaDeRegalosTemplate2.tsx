@@ -4,8 +4,8 @@ import { greatVibes } from "@/fonts";
 import envelope from "/public/assets/images/envelope_13487855.png";
 import liverpool from "/public/assets/images/liverpool-blanco.png";
 import amazon from "/public/assets/images/amazon_white.png";
-import Button from "../UI/Button";
-import AnimatedTitle from "../UI/AnimatedTitle";
+import Button from "./Button";
+import AnimatedTitle from "./AnimatedTitle";
 import { inter } from "@/fonts";
 
 const MesaDeRegalosTemplate2 = () => {
