@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import AnimatedTitle from "../UI/AnimatedTitle";
+import AnimatedTitle from "./AnimatedTitle";
 import { lora } from "@/fonts";
 
 interface ActividadProps {
