@@ -11,8 +11,8 @@ const InvitationHero1 = () => {
   return (
     <div
       className="
-      bg-[url('/assets/images/Gabrielayraul/hero.jpg')]
-      cell:bg-[url('/assets/images/Gabrielayraul/hero.jpg')]
+      bg-[url('/assets/images/Gabrielayraul/GyR_10.jpeg')]
+      cell:bg-[url('/assets/images/Gabrielayraul/GyR_10.jpeg')]
        w-full h-screen
       bg-center bg-no-repeat bg-cover bg-stone-500 bg-blend-multiply
        flex flex-col items-center justify-center    
