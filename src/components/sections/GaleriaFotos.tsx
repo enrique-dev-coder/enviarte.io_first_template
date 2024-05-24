@@ -3,10 +3,10 @@ import { lora } from "@/fonts";
 import { motion } from "framer-motion";
 import React from "react";
 import AnimatedTitle from "../UI/AnimatedTitle";
-import img1 from "/public/assets/images/Taniaydiego/banner_desk.jpg";
-import img2 from "/public/assets/images/Taniaydiego/img2.jpg";
-import img3 from "/public/assets/images/Taniaydiego/img3.jpg";
-import img4 from "/public/assets/images/Taniaydiego/img4.jpg";
+import img1 from "/public/assets/images/Gabrielayraul/GyR_7.jpeg";
+import img2 from "/public/assets/images/Gabrielayraul/GyR_10.jpeg";
+import img3 from "/public/assets/images/Gabrielayraul/GyR_1.jpeg";
+import img4 from "/public/assets/images/Gabrielayraul/GyR_16.jpeg";
 
 import Image, { StaticImageData } from "next/image";
 

@@ -13,4 +13,9 @@ export const themeColor: ThemeColor = {
     text: "text-white",
     backgroundDark: "bg-black",
   },
+  goldPalette: {
+    textDark: "text-[#a67c00]",
+    text: "text-white",
+    backgroundDark: "bg-[#a67c00]",
+  },
 };

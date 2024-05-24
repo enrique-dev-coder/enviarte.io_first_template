@@ -26,11 +26,11 @@ const InvitationHero1 = ({
   return (
     <div
       className="
-       bg-fixed
+      bg-fixed
       bg-[url('/assets/images/Taniaydiego/herotaniaydiego.jpg')]
       cell:bg-[url('/assets/images/Taniaydiego/herocell_tania.jpg')]
-       w-full h-screen
-      bg-center bg-no-repeat bg-cover
+       w-full h-screen  cell:py-4
+      bg-center bg-no-repeat bg-cover 
       bg-stone-500 bg-blend-multiply grayscale
       flex flex-col items-center justify-center    
       "
