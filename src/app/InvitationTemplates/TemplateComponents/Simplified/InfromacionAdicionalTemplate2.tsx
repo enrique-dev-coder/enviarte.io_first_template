@@ -12,10 +12,10 @@ const InfromacionAdicionalTemplate2 = () => {
         title="Código de vestimenta"
         extraStyles={`${lora.className} font-medium`}
       />
-      <p className=" uppercase  text-center text-slate-950  text-lg font-semibold py-4 cell:text-base">
-        LOS COLORES beige y blanco son exclusivos PARA LA NOVIA
+      <p className=" uppercase  text-center text-slate-950  text-5xl font-semibold py-4 cell:text-base">
+        Vestimenta Formal
       </p>
-      <div className="flex  flex-col items-center justify-center cell:w-full">
+      {/* <div className="flex  flex-col items-center justify-center cell:w-full">
         <div className=" w-8/12 flex justify-center my-10  cell:h-auto  cell:flex-col cell:w-12/12 cell:gap-4">
           <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">
             {" "}
@@ -39,10 +39,10 @@ const InfromacionAdicionalTemplate2 = () => {
             alt="eventos digitales"
           />
         </div>
-      </div>
+      </div> */}
       <div className="w-8/12 mx-auto flex items-center py-2 justify-center  cell:w-full cell:flex-col">
         <div className="flex   items-center justify-center cell:flex-col    cell:w-full">
-          <Image alt="no niños" src={noninos} />
+          {/* <Image alt="no niños" src={noninos} /> */}
           <div>
             <p className=" font-bold text-4xl text-complementaryDark  cell:text-xl cell: text-center">
               No niños
