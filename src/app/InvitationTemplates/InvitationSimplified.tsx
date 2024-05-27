@@ -50,7 +50,7 @@ const InvitationSimplified = () => {
           </p>
           <div className="flex flex-col justify-center items-center py-8">
             <p className={`${bavaria.className} text-4xl font-bold`}>
-              Viviana Amare
+              Wedding Planner <br /> Viviana Amare
             </p>
             <a href="https://api.whatsapp.com/send?phone=5218441339405">
               <button className="flex items-center border-4 my-3 rounded-full px-4 py-2  border-complementaryDark">
