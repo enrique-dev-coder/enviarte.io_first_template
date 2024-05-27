@@ -86,7 +86,7 @@ const CustomizedTemplate = () => {
         font: lora,
       },
       familias: {
-        novia: "Catañeda ",
+        novia: "Catañeda Sixto",
         novio: "López González",
         font: dancing,
         textColor: "text-[#ffcf40]",
