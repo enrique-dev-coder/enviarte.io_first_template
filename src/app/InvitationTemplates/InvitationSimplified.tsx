@@ -49,7 +49,9 @@ const InvitationSimplified = () => {
             Al dar click seras redirigido a WhatsApp
           </p>
           <div className="flex flex-col justify-center items-center py-8">
-            <p className={`${bavaria.className} text-4xl font-bold`}>
+            <p
+              className={`${bavaria.className} text-4xl font-bold text-center`}
+            >
               Wedding Planner <br /> Viviana Amare
             </p>
             <a href="https://api.whatsapp.com/send?phone=5218441339405">
