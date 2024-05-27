@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const DressCode = ({ dressCodeProps }: { dressCodeProps: DressCodeProps }) => {
   return (
     <section
-      className={`${dressCodeProps.backGround} w-full pt-10 pb-4 cell:pb-4`}
+      className={`${dressCodeProps.backGround} w-full  py-14   cell:pb-4`}
     >
       <motion.h2
         initial={{ opacity: 0, y: 5 }}

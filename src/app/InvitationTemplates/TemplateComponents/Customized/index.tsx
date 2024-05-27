@@ -171,7 +171,7 @@ const CustomizedTemplate = () => {
     DressCodeProps,
   } = invitationData;
   return (
-    <InvitationContainer songLink="/song.mp3">
+    <InvitationContainer songLink="/assets/songs/kyh.mp3">
       <IngresarBoton
         font={IngresarBotonProps.font}
         novia={IngresarBotonProps.novia}
