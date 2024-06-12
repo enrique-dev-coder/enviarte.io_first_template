@@ -47,4 +47,15 @@ export interface DressCodeProps {
     text: string;
     color: string;
   };
+  iconSection: {
+    show: boolean;
+    Mujeres: {
+      dressCodeImg: StaticImageData;
+      textColor: string;
+    };
+    Hombres: {
+      dressCodeImg: StaticImageData;
+      textColor: string;
+    };
+  };
 }
