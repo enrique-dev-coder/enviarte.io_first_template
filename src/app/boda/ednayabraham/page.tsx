@@ -2,7 +2,7 @@ import InvitationContainer from "@/components/wrappers/InvitationContainer";
 import InvitationHeroManager from "@/components/sections/InvitationHero";
 import ContadorManager from "@/components/sections/ContadorFecha";
 import BannerConFoto from "@/components/sections/BannerConFoto";
-import ConfirmacionForm from "@/components/sections/ConfirmacionForm";
+// import ConfirmacionForm from "@/components/sections/ConfirmacionForm";
 import SongPlayer from "@/components/sections/SongPlayer";
 import InfromacionAdicional from "@/components/sections/InfromacionAdicional";
 import IngresarBoton from "@/components/sections/IngresarBoton";
@@ -147,12 +147,12 @@ const IndexPage = async ({ searchParams }: any) => {
         <MesaDeRegalosTemplate2 />
       </div>
       <InfromacionAdicionalTemplate2 />
-      <ConfirmacionForm
+      {/* <ConfirmacionForm
         pasesAsignados={pasesAsignados}
         invitationId={invitationIdForQuery}
         nombreInvitado={nombre}
         telInvitado={tel}
-      />
+      /> */}
       <SongPlayer />
     </InvitationContainer>
   );
