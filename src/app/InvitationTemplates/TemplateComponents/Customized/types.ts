@@ -50,11 +50,11 @@ export interface DressCodeProps {
   iconSection: {
     show: boolean;
     Mujeres: {
-      dressCodeImg: StaticImageData;
+      dressCodeImg: StaticImageData | undefined;
       textColor: string;
     };
     Hombres: {
-      dressCodeImg: StaticImageData;
+      dressCodeImg: StaticImageData | undefined;
       textColor: string;
     };
   };

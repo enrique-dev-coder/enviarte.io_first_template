@@ -32,11 +32,13 @@ const DressCode = ({ dressCodeProps }: { dressCodeProps: DressCodeProps }) => {
           <div className=" w-8/12 flex justify-center my-10  cell:h-auto  cell:flex-col cell:w-12/12 cell:gap-4">
             <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">
               {" "}
-              <Image
-                alt="boda"
-                src={dressCodeProps.iconSection.Mujeres.dressCodeImg}
-                className="w-[50%]"
-              />
+              {dressCodeProps.iconSection.Mujeres.dressCodeImg && (
+                <Image
+                  alt="boda"
+                  src={dressCodeProps.iconSection.Mujeres.dressCodeImg}
+                  className="w-[50%]"
+                />
+              )}
               <p
                 className={`font-bold text-4xl ${dressCodeProps.iconSection.Mujeres.textColor} cell:text-2xl`}
               >
@@ -46,11 +48,13 @@ const DressCode = ({ dressCodeProps }: { dressCodeProps: DressCodeProps }) => {
             </div>
             <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">
               {" "}
-              <Image
-                alt="boda"
-                src={dressCodeProps.iconSection.Hombres.dressCodeImg}
-                className="w-[35%]"
-              />
+              {dressCodeProps.iconSection.Hombres.dressCodeImg && (
+                <Image
+                  alt="boda"
+                  src={dressCodeProps.iconSection.Hombres.dressCodeImg}
+                  className="w-[35%]"
+                />
+              )}
               <p
                 className={`font-bold text-4xl ${dressCodeProps.iconSection.Hombres.textColor} cell:text-2xl`}
               >

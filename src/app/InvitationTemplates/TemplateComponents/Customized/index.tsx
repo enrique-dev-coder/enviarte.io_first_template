@@ -157,11 +157,11 @@ const CustomizedTemplate = () => {
       iconSection: {
         show: false,
         Mujeres: {
-          dressCodeImg: "",
+          dressCodeImg: undefined,
           textColor: "",
         },
         Hombres: {
-          dressCodeImg: "",
+          dressCodeImg: undefined,
           textColor: "",
         },
       },
