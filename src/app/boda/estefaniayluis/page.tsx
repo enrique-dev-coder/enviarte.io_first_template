@@ -7,6 +7,10 @@ import { headers } from "next/headers";
 import prisma from "../../../../prisma";
 import InvitationModern from "@/app/InvitationTemplates/InvitationModern";
 import { InvitationDataTypes } from "@/types";
+//images
+import DressCodeMujeres from "/public/assets/images/Dress_icon.png";
+import DressCodeHombres from "/public/assets/images/suit_icon-removebg-preview.png";
+import Sobre from "/public/assets/images/email.png";
 
 export const metadata: Metadata = {
   title: "Estefanía y Luis",
@@ -49,12 +53,16 @@ const IndexPage = async ({ searchParams }: any) => {
     novio: "Luis",
     titleFont: dancing,
     spBackground: "flowers",
+    songLink: "/assets/songs/boda-estefania-luis.mp3",
     color: "blackPalette",
     fechaEvento: new Date("2024-09-28T00:00:00"),
     fechaString: "Sábado, 28 de septiembre 2024",
+    fotoContador: "bg-[url('/assets/images/estefaniayluis/contador.jpg')]",
     Hero: {
       frase: "Save the date",
       fecha: "Sábado, 28 de septiembre 2024",
+      fotoDesktop: "bg-[url('/assets/images/estefaniayluis/hero_pc.jpg')]",
+      fotoCell: "cell:bg-[url('/assets/images/estefaniayluis/hero_pc.jpg')]",
     },
     Iglesia: {
       desc: "Ceremonia Religiosa",
@@ -71,6 +79,59 @@ const IndexPage = async ({ searchParams }: any) => {
         "Lib. Óscar Flores Tapia 292-2, Colonia El Llano, 25350 Arteaga, Coah.",
       ubicacion: "https://maps.app.goo.gl/CBEapLYbc8Cxui7W9",
       hora: "8:00pm",
+    },
+    MesaRegalosProps: {
+      backGround: "bg-white",
+      title: {
+        font: dancing,
+        textColor: "text-black",
+      },
+      sobres: {
+        enabled: true,
+        textColor: "text-gray-500",
+        type: "modern",
+        img: Sobre,
+      },
+      transferencia: {
+        enabled: true,
+      },
+    },
+    DressCodeProps: {
+      backGround: "bg-white",
+      title: {
+        font: dancing,
+        textColor: "text-black",
+      },
+      desc: {
+        text: "Formal",
+        color: "text-gray-800",
+      },
+      iconSection: {
+        show: true,
+        Mujeres: {
+          dressCodeImg: DressCodeMujeres,
+          textColor: "text-black",
+        },
+        Hombres: {
+          dressCodeImg: DressCodeHombres,
+          textColor: "text-black",
+        },
+      },
+    },
+    ConfirmacionForm: {
+      nombre: nombre,
+      tel: tel,
+      pasesAsignados: pasesAsignados,
+      invitationId: "1",
+      styling: {
+        section: {
+          backgroundColor: "bg-gray-50",
+        },
+        confirmButton: {
+          backgroundColor: "bg-black",
+          disabledBackgroundColor: "disabled:bg-black/50",
+        },
+      },
     },
   };
 

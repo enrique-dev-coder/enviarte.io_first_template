@@ -18,6 +18,7 @@ import img4 from "/public/assets/images/karlayhector/kyh_9.jpeg";
 import BendicionFamilias from "./CommonComponents/BendicionFamilias";
 import Recepcion from "./CommonComponents/Recepcion";
 import BannerConFoto from "./CommonComponents/BannerConFoto";
+import envelope from "/public/assets/images/envelope_white.png";
 
 const CustomizedTemplate = () => {
   const invitationData = {
@@ -136,6 +137,11 @@ const CustomizedTemplate = () => {
       sobres: {
         enabled: true,
         textColor: "text-yellow-50",
+        type: "default",
+        img: envelope,
+      },
+      transferencia: {
+        enabled: false,
       },
     },
     DressCodeProps: {
@@ -147,6 +153,17 @@ const CustomizedTemplate = () => {
       desc: {
         text: "Temática black te pedimos asistir formal color negro",
         color: "text-yellow-50",
+      },
+      iconSection: {
+        show: false,
+        Mujeres: {
+          dressCodeImg: "",
+          textColor: "",
+        },
+        Hombres: {
+          dressCodeImg: "",
+          textColor: "",
+        },
       },
     },
     ConfimacionProps: {

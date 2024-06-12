@@ -1,5 +1,5 @@
 import { NextFont } from "next/dist/compiled/@next/font";
-
+import { StaticImageData } from "next/image";
 export type Invitado = {
   name: string;
   tel: string;
@@ -31,8 +31,10 @@ export interface InvitationDataTypes {
   fechaString?: string;
   spBackground?: coolBackground;
   color: colorPalette;
+  fotoContador: string;
+  songLink: string;
   fechaEvento: Date;
-  Hero: { frase: string; fecha: string };
+  Hero: { frase: string; fecha: string; fotoDesktop: string; fotoCell: string };
   Iglesia: {
     desc: string;
     nombre: string;
@@ -46,5 +48,58 @@ export interface InvitationDataTypes {
     direccion: string;
     ubicacion: string;
     hora: string;
+  };
+  MesaRegalosProps: {
+    backGround: string;
+    title: {
+      font: NextFont;
+      textColor: string;
+    };
+    sobres: {
+      enabled: boolean;
+      textColor: string;
+      type: string;
+      img: StaticImageData;
+    };
+    transferencia: {
+      enabled: boolean;
+    };
+  };
+  DressCodeProps: {
+    backGround: string;
+    title: {
+      font: NextFont;
+      textColor: string;
+    };
+    desc: {
+      text: string;
+      color: string;
+    };
+    iconSection: {
+      show: boolean;
+      Mujeres: {
+        dressCodeImg: StaticImageData;
+        textColor: string;
+      };
+      Hombres: {
+        dressCodeImg: StaticImageData;
+        textColor: string;
+      };
+    };
+  };
+  ConfirmacionForm: {
+    nombre: string;
+    tel: string;
+    pasesAsignados: string;
+    invitationId: string;
+    styling: {
+      section: {
+        backgroundColor: string;
+      };
+      confirmButton: {
+        backgroundColor: string;
+        disabledBackgroundColor: string;
+      };
+    };
   };
 }

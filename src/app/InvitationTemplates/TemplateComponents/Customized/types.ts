@@ -1,4 +1,5 @@
 import { NextFont } from "next/dist/compiled/@next/font";
+import { StaticImageData } from "next/image";
 
 export type templateModel = "simplified" | "modern" | "dafult" | "floral";
 
@@ -28,6 +29,11 @@ export interface MesaRegalosPropsTypes {
   sobres: {
     enabled: boolean;
     textColor: string;
+    type: string;
+    img: StaticImageData;
+  };
+  transferencia: {
+    enabled: boolean;
   };
 }
 

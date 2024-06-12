@@ -66,6 +66,15 @@ const IndexPage = async ({ searchParams }: any) => {
       <MesaDeRegalos />
       <InfromacionAdicional />
       <ConfirmacionForm
+        styling={{
+          section: {
+            backgroundColor: "bg-gray-50",
+          },
+          confirmButton: {
+            backgroundColor: "bg-black",
+            disabledBackgroundColor: "disabled:bg-black/50",
+          },
+        }}
         pasesAsignados={pasesAsignados}
         invitationId={invitationIdForQuery}
         nombreInvitado={nombre}

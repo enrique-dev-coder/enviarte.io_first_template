@@ -13,6 +13,8 @@ const InvitationHero1 = ({
   frase,
   font,
   fecha,
+  fotoDesktop,
+  fotoCell,
 }: {
   novia: string;
   novio: string;
@@ -20,20 +22,22 @@ const InvitationHero1 = ({
   frase: string;
   font: NextFont;
   fecha: string;
+  fotoDesktop: string;
+  fotoCell: string;
 }) => {
   const { controls } = useContext(StartAnimation);
 
   return (
     <div
-      className="
+      className={`
       bg-fixed
-      bg-[url('/assets/images/Taniaydiego/herotaniaydiego.jpg')]
-      cell:bg-[url('/assets/images/Taniaydiego/herocell_tania.jpg')]
+      ${fotoDesktop}
+      ${fotoCell}
        w-full h-screen  cell:py-4
       bg-center bg-no-repeat bg-cover 
-      bg-stone-500 bg-blend-multiply grayscale
-      flex flex-col items-center justify-center    
-      "
+       bg-blend-multiply grayscale
+      flex flex-col items-center justify-center  
+        `}
     >
       {/*informacion de la boda*/}
       <div className="flex flex-col  items-center  justify-center h-full pt-6 pb-10">

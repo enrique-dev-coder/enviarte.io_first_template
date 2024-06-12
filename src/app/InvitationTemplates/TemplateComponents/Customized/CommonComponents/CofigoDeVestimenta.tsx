@@ -1,7 +1,7 @@
 "use client";
 import { DressCodeProps } from "../types";
-import AnimatedTitle from "./AnimatedTitle";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const DressCode = ({ dressCodeProps }: { dressCodeProps: DressCodeProps }) => {
   return (
@@ -27,31 +27,41 @@ const DressCode = ({ dressCodeProps }: { dressCodeProps: DressCodeProps }) => {
       >
         {dressCodeProps.desc.text}
       </p>
-      {/* <div className="flex  flex-col items-center justify-center cell:w-full">
-        <div className=" w-8/12 flex justify-center my-10  cell:h-auto  cell:flex-col cell:w-12/12 cell:gap-4">
-          <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">
-            {" "}
-            <p className=" font-bold text-4xl text-complementaryDark cell:text-2xl">
-              Mujeres
-            </p>
-            <p className="  text-4xl mb-4 cell:text-xl cell:mb-1">Vestido</p>
-          </div>
-          <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">
-            {" "}
-            <p className=" font-bold text-4xl text-complementaryDark cell:text-2xl">
-              Hombres
-            </p>
-            <p className="  text-4xl mb-4 cell:mb-1 cell:text-xl">Traje</p>
+      {dressCodeProps.iconSection.show && (
+        <div className="flex  flex-col items-center justify-center cell:w-full">
+          <div className=" w-8/12 flex justify-center my-10  cell:h-auto  cell:flex-col cell:w-12/12 cell:gap-4">
+            <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">
+              {" "}
+              <Image
+                alt="boda"
+                src={dressCodeProps.iconSection.Mujeres.dressCodeImg}
+                className="w-[50%]"
+              />
+              <p
+                className={`font-bold text-4xl ${dressCodeProps.iconSection.Mujeres.textColor} cell:text-2xl`}
+              >
+                Mujeres
+              </p>
+              <p className="  text-4xl mb-4 cell:text-xl cell:mb-1">Vestido</p>
+            </div>
+            <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">
+              {" "}
+              <Image
+                alt="boda"
+                src={dressCodeProps.iconSection.Hombres.dressCodeImg}
+                className="w-[35%]"
+              />
+              <p
+                className={`font-bold text-4xl ${dressCodeProps.iconSection.Hombres.textColor} cell:text-2xl`}
+              >
+                Hombres
+              </p>
+              <p className="  text-4xl mb-4 cell:mb-1 cell:text-xl">Traje</p>
+            </div>
           </div>
         </div>
-        <div>
-          <Image
-            src={DressCode}
-            className="w-[80%] mx-auto cell:w-[80%]"
-            alt="eventos digitales"
-          />
-        </div>
-      </div> */}
+      )}
+
       <div className="w-8/12 mx-auto flex items-center py-2 justify-center  cell:w-full cell:flex-col">
         <div className="flex   items-center justify-center cell:flex-col    cell:w-full">
           {/* <Image alt="no niños" src={noninos} /> */}

@@ -28,10 +28,12 @@ const Contador = ({
   fechaEvento,
   fechaString,
   color,
+  fotoContador,
 }: {
   fechaEvento: Date;
   fechaString: string | undefined;
   color: colorPalette;
+  fotoContador: string;
 }) => {
   const { seconds, minutes, hours, days } = useTimer({
     expiryTimestamp: fechaEvento,
@@ -40,14 +42,14 @@ const Contador = ({
 
   return (
     <div
-      className="
+      className={`
       bg-fixed
-      bg-[url('/assets/images/contador.jpeg')]
+      ${fotoContador}
       bg-cover bg-center grayscale
       h-[100vh]
       flex flex-col items-center justify-center w-full relative 
       bg-stone-300 bg-blend-multiply 
-      cell:h-screen  cell:mt-0   cell:py-10 overflow-hidden"
+      cell:h-screen  cell:mt-0   cell:py-10 overflow-hidden`}
     >
       <div className="bg-black/70 text-white py-3 px-6 rounded-md">
         <motion.p

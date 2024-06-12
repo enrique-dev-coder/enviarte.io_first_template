@@ -20,11 +20,21 @@ const ConfirmacionForm = ({
   pasesAsignados,
   nombreInvitado,
   telInvitado,
+  styling,
 }: {
   invitationId: { id: string };
   pasesAsignados?: string;
   nombreInvitado?: string;
   telInvitado?: string;
+  styling: {
+    section: {
+      backgroundColor: string;
+    };
+    confirmButton: {
+      backgroundColor: string;
+      disabledBackgroundColor: string;
+    };
+  };
 }) => {
   const [confirmacion, setConfirmacion] = useState(false);
   // NOTE: dejo este log por si acaso se necesita para debugear
@@ -65,7 +75,7 @@ const ConfirmacionForm = ({
   ); // [1,2]
 
   return (
-    <section className=" h-auto py-8 bg-[#f8f4f1]">
+    <section className={`h-auto py-8 ${styling.section.backgroundColor}`}>
       <p
         className={`${dancing.className} underline font-bold  text-center text-5xl cell:text-3xl cell:px-4 `}
       >
@@ -155,7 +165,7 @@ const ConfirmacionForm = ({
             <button
               type="submit"
               disabled={!usuarioClickEnPases}
-              className=" disabled:bg-complementaryDark/50 bg-complementaryDark text-white px-6 text-lg rounded-full py-2 cell:w-full"
+              className={`${styling.confirmButton.backgroundColor} ${styling.confirmButton.disabledBackgroundColor} text-white px-6 text-lg rounded-full py-2 cell:w-full`}
             >
               Confirmar
             </button>
