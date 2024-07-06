@@ -15,6 +15,7 @@ import MesaDeRegalos from "./TemplateComponents/Customized/CommonComponents/Mesa
 import ConfirmacionForm from "@/components/sections/ConfirmacionForm";
 import GraciasBanner from "./TemplateComponents/Customized/Agradecimientos/GraciasBanner";
 import ItinerarioScrollable from "./TemplateComponents/Customized/Itinerarios/ItinerarioScrollable";
+import PadrinosDeBoda from "./TemplateComponents/Customized/PadrinosDeBoda";
 
 const InvitationModern = ({ data }: { data: InvitationDataTypes }) => {
   return (
@@ -69,6 +70,7 @@ const InvitationModern = ({ data }: { data: InvitationDataTypes }) => {
         eventData={data.ItinerarioScrollable.data}
       />
       <ModernBanner />
+      <PadrinosDeBoda />
       <MesaDeRegalos mesaDeRegalosProps={data.MesaRegalosProps} />
       <DressCode dressCodeProps={data.DressCodeProps} />
       <ConfirmacionForm
