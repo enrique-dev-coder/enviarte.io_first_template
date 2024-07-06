@@ -35,7 +35,7 @@ export interface MesaRegalosPropsTypes {
   transferencia: {
     enabled: boolean;
   };
-  fraseDeAgradecimientoInicio: {
+  fraseDeAgradecimientoInicio?: {
     enabled: boolean;
     text: string;
     styling: {
@@ -44,7 +44,7 @@ export interface MesaRegalosPropsTypes {
       color: string;
     };
   };
-  fraseDeAgradecimientoFinal: {
+  fraseDeAgradecimientoFinal?: {
     enabled: boolean;
     text: string;
     styling: {
