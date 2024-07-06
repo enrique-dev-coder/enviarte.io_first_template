@@ -36,7 +36,7 @@ const InvitationHero1 = ({
   return (
     <div
       className={`
-      bg-fixed
+     
       ${fotoDesktop}
       ${fotoCell}
        w-full h-screen  cell:py-4

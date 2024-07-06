@@ -43,7 +43,7 @@ const Contador = ({
   return (
     <div
       className={`
-      bg-fixed
+    
       ${fotoContador}
       bg-cover bg-center 
       h-[100vh]
