@@ -1,6 +1,6 @@
 "use client";
 import { useTimer } from "react-timer-hook";
-import { lora } from "@/fonts";
+import { lora, sofia } from "@/fonts";
 import { motion } from "framer-motion";
 import { colorPalette } from "@/types";
 import { themeColor } from "../../Theme/Colors";
@@ -45,7 +45,7 @@ const Contador = ({
       className={`
       bg-fixed
       ${fotoContador}
-      bg-cover bg-center grayscale
+      bg-cover bg-center 
       h-[100vh]
       flex flex-col items-center justify-center w-full relative 
       bg-stone-300 bg-blend-multiply 
@@ -57,12 +57,12 @@ const Contador = ({
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeInOut", duration: 1 }}
           viewport={{ once: true }}
-          className={`${lora.className}   text-center text-4xl mb-[32px] 
+          className={`${sofia.className}   text-center text-4xl mb-[32px] 
           cell:text-xl cell:mb-[18px] cell:w-[80%] cell:mx-auto`}
         >
           {fechaString}
         </motion.p>
-        <p className={`${lora.className}  text-center text-3xl cell:text-3xl`}>
+        <p className={`${sofia.className}  text-center text-3xl cell:text-3xl`}>
           Sólo faltan:
         </p>
 

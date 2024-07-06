@@ -1,5 +1,6 @@
 import { NextFont } from "next/dist/compiled/@next/font";
 import { StaticImageData } from "next/image";
+import { EventoItinerario } from "@/app/InvitationTemplates/TemplateComponents/Customized/types";
 export type Invitado = {
   name: string;
   tel: string;
@@ -34,17 +35,46 @@ export interface InvitationDataTypes {
   fotoContador: string;
   songLink: string;
   fechaEvento: Date;
-  Hero: { frase: string; fecha: string; fotoDesktop: string; fotoCell: string };
+  Hero: {
+    frase: {
+      content: string;
+      font: NextFont;
+    };
+    fecha: {
+      content: string;
+      font: NextFont;
+    };
+    fotoDesktop: string;
+    fotoCell: string;
+  };
   Iglesia: {
     desc: string;
-    nombre: string;
+    nombre: {
+      content: string;
+      font: NextFont;
+    };
     direccion: string;
     ubicacion: string;
     hora: string;
   };
+  GraciasBanner: {
+    frase: {
+      content: string;
+      font: NextFont;
+      styling: { color: string; size: string };
+    };
+    name: {
+      content: string;
+      font: NextFont;
+      styling: { color: string; size: string };
+    };
+  };
   Recepcion: {
     desc: string;
-    nombre: string;
+    nombre: {
+      content: string;
+      font: NextFont;
+    };
     direccion: string;
     ubicacion: string;
     hora: string;
@@ -63,6 +93,24 @@ export interface InvitationDataTypes {
     };
     transferencia: {
       enabled: boolean;
+    };
+    fraseDeAgradecimientoInicio: {
+      enabled: boolean;
+      text: string;
+      styling: {
+        font: NextFont;
+        size: string;
+        color: string;
+      };
+    };
+    fraseDeAgradecimientoFinal: {
+      enabled: boolean;
+      text: string;
+      styling: {
+        font: NextFont;
+        size: string;
+        color: string;
+      };
     };
   };
   DressCodeProps: {
@@ -101,5 +149,17 @@ export interface InvitationDataTypes {
         disabledBackgroundColor: string;
       };
     };
+  };
+  ItinerarioScrollable: {
+    sectionStyling: {
+      lineColor: string;
+      lineBg: string;
+      circleColor: string;
+      circleBg: string;
+      circleSoftStroke: string;
+      iconColor: string;
+      cardBg: string;
+    };
+    data: Array<EventoItinerario>;
   };
 }

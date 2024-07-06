@@ -1,6 +1,7 @@
 "use client";
 import { DressCodeProps } from "../types";
 import { motion } from "framer-motion";
+import { sofia } from "@/fonts";
 import Image from "next/image";
 
 const DressCode = ({ dressCodeProps }: { dressCodeProps: DressCodeProps }) => {
@@ -29,7 +30,7 @@ const DressCode = ({ dressCodeProps }: { dressCodeProps: DressCodeProps }) => {
       </p>
       {dressCodeProps.iconSection.show && (
         <div className="flex  flex-col items-center justify-center cell:w-full">
-          <div className=" w-8/12 flex justify-center my-10  cell:h-auto  cell:flex-col cell:w-12/12 cell:gap-4">
+          <div className=" w-8/12 flex justify-center my-10  cell:h-auto  cell:flex-col cell:w-12/12 cell:gap-10">
             <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">
               {" "}
               {dressCodeProps.iconSection.Mujeres.dressCodeImg && (
@@ -44,7 +45,12 @@ const DressCode = ({ dressCodeProps }: { dressCodeProps: DressCodeProps }) => {
               >
                 Mujeres
               </p>
-              <p className="  text-4xl mb-4 cell:text-xl cell:mb-1">Vestido</p>
+              <p className="  text-4xl mb-4 cell:text-xl cell:mb-1">
+                Vestido Largo
+              </p>
+              <p className="text-center text-4xl mb-4 cell:text-xl cell:mb-1">
+                * Color lila esta reservado para las damas
+              </p>
             </div>
             <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">
               {" "}
@@ -71,14 +77,15 @@ const DressCode = ({ dressCodeProps }: { dressCodeProps: DressCodeProps }) => {
           {/* <Image alt="no niños" src={noninos} /> */}
           <div>
             <p
-              className={`${dressCodeProps.title.font.className} ${dressCodeProps.title.textColor} font-bold text-4xl   cell:text-xl text-center`}
+              className={`${dressCodeProps.desc.color} ${sofia.className} w-8/12 mx-auto text-3xl text-center  cell:w-full cell:px-4 cell:text-2xl`}
             >
-              No niños
+              Esperamos contar con tu presencia en nuestra boda y los niños les
+              deseamos buenas noches en casa.{" "}
             </p>
             <p
-              className={`${dressCodeProps.desc.color} text-3xl text-center  cell:w-full cell:px-4 cell:text-lg`}
+              className={`${sofia.className} ${dressCodeProps.title.textColor} font-bold text-5xl cell:text-4xl text-center`}
             >
-              ¡Queremos que disfrutes junto con nosotros esa noche especial!
+              No niños
             </p>
           </div>
         </div>

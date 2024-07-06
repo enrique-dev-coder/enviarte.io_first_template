@@ -2,10 +2,10 @@
 import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
-import img1 from "/public/assets/images/estefaniayluis/img1.jpg";
-import img2 from "/public/assets/images/estefaniayluis/img2.jpg";
-import img3 from "/public/assets/images/estefaniayluis/img3.jpg";
-import img4 from "/public/assets/images/estefaniayluis/img4.jpg";
+import img1 from "/public/assets/images/estefaniayluis/img5.jpg";
+import img2 from "/public/assets/images/estefaniayluis/img6.jpg";
+import img3 from "/public/assets/images/estefaniayluis/img7.jpg";
+import img4 from "/public/assets/images/estefaniayluis/img8.jpg";
 
 const SingleFoto = ({ img, col }: { img: StaticImageData; col: string }) => {
   return (
@@ -16,7 +16,7 @@ const SingleFoto = ({ img, col }: { img: StaticImageData; col: string }) => {
       viewport={{ once: true }}
       className={`${col} cell:col-span-12`}
     >
-      <Image src={img} className="w-full grayscale" alt="galeria" />
+      <Image src={img} className="w-full" alt="galeria" />
     </motion.div>
   );
 };

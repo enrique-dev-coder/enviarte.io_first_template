@@ -2,6 +2,7 @@ import React from "react";
 import AnimatedTitle from "@/components/UI/AnimatedTitle";
 import { MapPin } from "lucide-react";
 import Button from "@/components/UI/Button";
+import { NextFont } from "next/dist/compiled/@next/font";
 
 const PlaceCard = ({
   desc,
@@ -11,7 +12,10 @@ const PlaceCard = ({
   hora,
 }: {
   desc: string;
-  nombre: string;
+  nombre: {
+    content: string;
+    font: NextFont;
+  };
   ubicacion: string;
   direccion: string;
   hora: string;
@@ -24,8 +28,13 @@ const PlaceCard = ({
       "
       >
         <AnimatedTitle extraStyles={` text-4xl !text-black`} title={desc} />
-        <p className=" text-2xl cell:text-xl cell:px-2 cell:font-bold  font-bold ">
-          {nombre}
+        <p
+          className={`
+          ${nombre.font.className}
+           text-2xl cell:text-xl cell:px-2 cell:font-bold  font-bold 
+          `}
+        >
+          {nombre.content}
         </p>
         <p className=" text-2xl cell:text-xl cell:px-2 cell:font-bold">
           {hora}

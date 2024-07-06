@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { dancing } from "@/fonts";
 import { MesaRegalosPropsTypes } from "../types";
 
 const MesaDeRegalos = ({
@@ -16,6 +17,17 @@ const MesaDeRegalos = ({
         flex flex-col items-center justify-center h-auto py-4
     `}
     >
+      {mesaDeRegalosProps.fraseDeAgradecimientoInicio?.enabled && (
+        <div
+          className={`text-center  w-8/12 cell:w-10/12 my-10
+            ${mesaDeRegalosProps.fraseDeAgradecimientoInicio?.styling.color} 
+            ${mesaDeRegalosProps.fraseDeAgradecimientoInicio?.styling.size} 
+            ${mesaDeRegalosProps.fraseDeAgradecimientoInicio?.styling.font.className} 
+          `}
+        >
+          {mesaDeRegalosProps.fraseDeAgradecimientoInicio?.text}
+        </div>
+      )}
       <motion.h2
         initial={{ opacity: 0, y: 5 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -47,11 +59,11 @@ const MesaDeRegalos = ({
           )}
         {mesaDeRegalosProps.sobres.enabled &&
           mesaDeRegalosProps.sobres.type === "modern" && (
-            <div className=" flex items-center justify-center  border shadow-md gap-2 flex-col  cell:justify-center">
+            <div className=" w-[400px] cell:w-[90%] text-center flex flex-col items-center text-3xl  my-6 border border-slate-700 rounded-md shadow-md py-4 px-7 cell:text-2xl cell:mx-2">
               <Image
                 alt="sobre"
                 src={mesaDeRegalosProps.sobres.img}
-                className="w-[20%]"
+                className="w-[22%]"
               />
               <p className={`text-3xl ${mesaDeRegalosProps.sobres.textColor}`}>
                 Lluvia de sobres
@@ -73,13 +85,29 @@ const MesaDeRegalos = ({
           />
         </div> */}
         {mesaDeRegalosProps.transferencia.enabled && (
-          <div className=" text-center text-3xl  my-6 border border-slate-700 rounded-md shadow-md py-4 px-7 cell:text-2xl cell:mx-2">
-            <p>Transferencia Bancaria</p>
-            <p> Daniela Vazquez Gaytan </p>
-            <b className={` text-2xl`}>4152 3141 9031 7340 BBVA</b>
+          <div className=" text-center text-3xl cell:w-[90%]  my-6 border border-slate-700 rounded-md shadow-md py-4 px-7 cell:text-2xl cell:mx-2">
+            <p className="cell:text-xl">Transferencia Bancaria</p>
+            <p className="cell:text-xl">Luis Alfredo Gonzalez Torrez</p>
+            <b className={` text-2xl`}>4152 3137 0293 1309 BBVA</b>
           </div>
         )}
       </div>
+      {mesaDeRegalosProps.fraseDeAgradecimientoFinal?.enabled && (
+        <div className="my-10 cell:my-2 flex flex-col items-center">
+          <h2 className={`${dancing.className} text-center text-4xl font-bold`}>
+            GRACIAS
+          </h2>
+          <div
+            className={`text-center  w-8/12  cell:w-10/12 
+            ${mesaDeRegalosProps.fraseDeAgradecimientoFinal?.styling.color} 
+            ${mesaDeRegalosProps.fraseDeAgradecimientoFinal?.styling.size} 
+            ${mesaDeRegalosProps.fraseDeAgradecimientoFinal?.styling.font.className} 
+          `}
+          >
+            {mesaDeRegalosProps.fraseDeAgradecimientoFinal?.text}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

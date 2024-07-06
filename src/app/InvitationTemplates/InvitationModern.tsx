@@ -13,6 +13,8 @@ import ModernBanner from "./TemplateComponents/Modern/ModernBanner";
 import DressCode from "./TemplateComponents/Customized/CommonComponents/CofigoDeVestimenta";
 import MesaDeRegalos from "./TemplateComponents/Customized/CommonComponents/MesaDeRegalos";
 import ConfirmacionForm from "@/components/sections/ConfirmacionForm";
+import GraciasBanner from "./TemplateComponents/Customized/Agradecimientos/GraciasBanner";
+import ItinerarioScrollable from "./TemplateComponents/Customized/Itinerarios/ItinerarioScrollable";
 
 const InvitationModern = ({ data }: { data: InvitationDataTypes }) => {
   return (
@@ -43,8 +45,11 @@ const InvitationModern = ({ data }: { data: InvitationDataTypes }) => {
         fechaString={data.fechaString}
         color="blackPalette"
       />
+      <GraciasBanner
+        frase={data.GraciasBanner.frase}
+        name={data.GraciasBanner.name}
+      />
       <SongButtonPlayer color={data.color} />
-      <Padres />
       <PlaceCard
         desc={data.Iglesia.desc}
         direccion={data.Iglesia.direccion}
@@ -58,6 +63,10 @@ const InvitationModern = ({ data }: { data: InvitationDataTypes }) => {
         hora={data.Recepcion.hora}
         nombre={data.Recepcion.nombre}
         ubicacion={data.Recepcion.ubicacion}
+      />
+      <ItinerarioScrollable
+        sectionStyling={data.ItinerarioScrollable.sectionStyling}
+        eventData={data.ItinerarioScrollable.data}
       />
       <ModernBanner />
       <MesaDeRegalos mesaDeRegalosProps={data.MesaRegalosProps} />

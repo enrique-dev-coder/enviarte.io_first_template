@@ -35,6 +35,24 @@ export interface MesaRegalosPropsTypes {
   transferencia: {
     enabled: boolean;
   };
+  fraseDeAgradecimientoInicio: {
+    enabled: boolean;
+    text: string;
+    styling: {
+      font: NextFont;
+      size: string;
+      color: string;
+    };
+  };
+  fraseDeAgradecimientoFinal: {
+    enabled: boolean;
+    text: string;
+    styling: {
+      font: NextFont;
+      size: string;
+      color: string;
+    };
+  };
 }
 
 export interface DressCodeProps {
@@ -58,4 +76,12 @@ export interface DressCodeProps {
       textColor: string;
     };
   };
+}
+
+export interface EventoItinerario {
+  id: number;
+  evento: string;
+  hora: string;
+  lugar?: string;
+  Icon: string;
 }
