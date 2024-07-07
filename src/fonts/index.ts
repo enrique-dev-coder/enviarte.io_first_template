@@ -6,6 +6,7 @@ import {
   Courgette,
   Great_Vibes,
   Sofia,
+  Allura,
 } from "next/font/google";
 import localFont from "next/font/local";
 export const bavaria = localFont({
@@ -32,3 +33,4 @@ export const lora = Lora({ subsets: ["latin"] });
 export const play = Playfair_Display({ subsets: ["latin"] });
 export const courgette = Courgette({ weight: "400", subsets: ["latin"] });
 export const sofia = Sofia({ weight: "400", subsets: ["latin"] });
+export const allura = Allura({ weight: "400", subsets: ["latin"] });

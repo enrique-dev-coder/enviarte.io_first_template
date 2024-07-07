@@ -36,7 +36,7 @@ const BendicionFamilias = ({
         ${bendicionFamiliasProps.frase.font.className}
         ${bendicionFamiliasProps.frase.textColor}
         font-bold  text-center text-4xl py-1 
-        cell:text-3xl cell:px-4
+        cell:text-2xl cell:w-11/12  cell:px-4 cell:py-4
       `}
       >
         {bendicionFamiliasProps.frase.desc}

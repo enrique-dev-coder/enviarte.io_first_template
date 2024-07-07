@@ -37,7 +37,7 @@ const MesaDeRegalos = ({
         ${mesaDeRegalosProps.title.font.className}
         ${mesaDeRegalosProps.title.textColor}
           text-center text-5xl py-1 
-        cell:text-3xl cell:px-4
+        cell:text-2xl cell:px-4
       `}
       >
         Sugerencia de regalos
@@ -54,11 +54,22 @@ const MesaDeRegalos = ({
                   width={100}
                 />
               )}
-              <p className={`text-3xl ${mesaDeRegalosProps.sobres.textColor}`}>
+              <p
+                className={`text-3xl cell:text-xl ${mesaDeRegalosProps.sobres.textColor}`}
+              >
                 Lluvia de sobres
               </p>
             </div>
           )}
+        {mesaDeRegalosProps.regalo.enabled && (
+          <div className=" flex items-center gap-2  cell:justify-center cell:flex-col">
+            <p
+              className={`text-3xl cell:text-xl ${mesaDeRegalosProps.sobres.textColor}`}
+            >
+              Regalo
+            </p>
+          </div>
+        )}
         {mesaDeRegalosProps.sobres.enabled &&
           mesaDeRegalosProps.sobres.type === "modern" && (
             <div className=" w-[400px] cell:w-[90%] text-center flex flex-col items-center text-3xl  my-6 border border-slate-700 rounded-md shadow-md py-4 px-7 cell:text-2xl cell:mx-2">

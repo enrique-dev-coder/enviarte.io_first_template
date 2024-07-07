@@ -24,10 +24,10 @@ import hojita2 from "/public/assets/images/aleyjulian/hojita2-removebg-preview.p
 const CustomizedTemplate = () => {
   const invitationData = {
     IngresarBotonProps: {
-      font: analogist,
+      font: brilliant,
       novia: "Alejandra",
       novio: "Julián",
-      join: "y",
+      join: "&",
       color: {
         titleColor: "text-[#b3451e]",
         bgColor: "bg-[#b3451e]",
@@ -138,6 +138,9 @@ const CustomizedTemplate = () => {
       transferencia: {
         enabled: false,
       },
+      regalo: {
+        enabled: true,
+      },
     },
     DressCodeProps: {
       backGround: "bg-neutral-800",
@@ -245,18 +248,20 @@ const CustomizedTemplate = () => {
           ${brilliant.className}
           text-[#c5351b]
           text-center text-5xl py-1 
-          cell:text-3xl cell:px-4
+          cell:text-2xl cell:px-4
       `}
         >
           Código de Vestimenta
         </h2>
-        <p className={`text-3xl text-[#836d65] text-center`}>Formal</p>
+        <p className={`text-3xl cell:text-xl text-[#836d65] text-center`}>
+          Formal
+        </p>
       </div>
       <div className="relative">
         <Image
           alt="hojita"
           src={hojita2}
-          className="absolute z-50 left-0 w-[20%] top-[-44px]"
+          className="absolute z-50 left-0 w-[20%] top-[-180px]"
         />
         <div className=" bg-white py-8">
           <h2
@@ -264,12 +269,14 @@ const CustomizedTemplate = () => {
           ${brilliant.className}
           text-[#c5351b]
           text-center text-5xl py-1 
-          cell:text-3xl cell:px-4
+          cell:text-2xl cell:px-4
       `}
           >
             Confirmacion de Asistencia
           </h2>
-          <p className={`text-3xl cell:text-2xl text-[#836d65] text-center`}>
+          <p
+            className={`text-3xl cell:text-xl cellw-10/12 cell:mx-auto  text-[#836d65] text-center`}
+          >
             Confirma tu Asistencia antes de el dıá 12 de Julio en el siguiente
             link
           </p>
@@ -285,11 +292,13 @@ const CustomizedTemplate = () => {
                 className="flex items-center  my-3 rounded-full px-4 py-2  bg-[#c5351b]
 "
               >
-                <p className=" text-3xl text-white"> 844 133 9405</p>
+                <p className=" text-3xl text-white">844 700 6000</p>
               </button>
             </a>
           </div>
-          <p className={`text-3xl cell:text-2xl text-[#c5351b] text-center`}>
+          <p
+            className={`text-3xl cell:text-xl cell:w-10/12 cell:mx-auto text-[#c5351b] text-center`}
+          >
             En caso de no confirmar asistencia antes de la fecha mencionada
             entenderemos que amablemente estas declinando la invitación y
             cederemos su lugar a otro invitado.
@@ -311,10 +320,12 @@ const CustomizedTemplate = () => {
           className="absolute z-50 left-0 translate-x-[30px] w-[20%] bottom-[-60px]"
         />
         <div className=" bg-white py-8 flex flex-col justify-center">
-          <q className={`text-3xl cell:text-lg text-[#c5351b] text-center`}>
+          <q
+            className={`text-3xl cell:text-xl cell:w-10/12 cell:mx-auto text-[#c5351b] text-center`}
+          >
             Todo lo hizo hermoso en su tiempo; y a puesto eternidad en el
             corazon de ellos, sin que alcance el hombre a entender la obra que
-            ha hecho Dios desde el principio hasta el
+            ha hecho Dios desde el principio hasta el fin.
           </q>
           <p className={`text-3xl cell:text-lg text-[#c5351b] text-center`}>
             Eclesiastés 3:11{" "}
@@ -324,7 +335,7 @@ const CustomizedTemplate = () => {
           ${brilliant.className}
           text-[#836d65]
           text-center text-5xl py-3 
-          cell:text-3xl cell:px-4
+          cell:text-2xl cell:px-4
       `}
           >
             Gracias por ser parte de esta historia.
@@ -334,7 +345,7 @@ const CustomizedTemplate = () => {
           ${brilliant.className}
           text-[#c5351b]
           text-center text-5xl py-1 
-          cell:text-3xl cell:px-4
+          cell:text-2xl cell:px-4
       `}
           >
             Alejandra <span className="text-[#836d65]">&</span> Julian

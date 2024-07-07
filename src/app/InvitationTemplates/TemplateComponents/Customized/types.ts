@@ -35,6 +35,9 @@ export interface MesaRegalosPropsTypes {
   transferencia: {
     enabled: boolean;
   };
+  regalo: {
+    enabled: boolean;
+  };
   fraseDeAgradecimientoInicio?: {
     enabled: boolean;
     text: string;
