@@ -112,6 +112,9 @@ export interface InvitationDataTypes {
         color: string;
       };
     };
+    regalo: {
+      enabled: boolean;
+    };
   };
   DressCodeProps: {
     backGround: string;

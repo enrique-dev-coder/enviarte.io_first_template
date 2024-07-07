@@ -137,6 +137,9 @@ const IndexPage = async ({ searchParams }: any) => {
           color: "text-black",
         },
       },
+      regalo: {
+        enabled: false,
+      },
     },
     DressCodeProps: {
       backGround: "bg-white",
