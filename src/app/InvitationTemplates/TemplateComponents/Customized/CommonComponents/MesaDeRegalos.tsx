@@ -66,7 +66,7 @@ const MesaDeRegalos = ({
             <p
               className={`text-3xl cell:text-xl ${mesaDeRegalosProps.sobres.textColor}`}
             >
-              Regalo
+              o Regalo
             </p>
           </div>
         )}

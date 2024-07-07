@@ -251,7 +251,7 @@ const CustomizedTemplate = () => {
           cell:text-2xl cell:px-4
       `}
         >
-          Código de Vestimenta
+          Codigo de Vestimenta
         </h2>
         <p className={`text-3xl cell:text-xl text-[#836d65] text-center`}>
           Formal
