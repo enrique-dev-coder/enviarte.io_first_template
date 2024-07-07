@@ -18,8 +18,8 @@ import img2 from "/public/assets/images/aleyjulian/img2.jpeg";
 import img3 from "/public/assets/images/aleyjulian/img3.jpeg";
 import img4 from "/public/assets/images/aleyjulian/img4.jpeg";
 import img5 from "/public/assets/images/aleyjulian/hero2.jpeg";
-import img6 from "/public/assets/images/aleyjulian/img6.jpeg";
-import envelope from "/public/assets/images/envelope_white.png";
+import hojita from "/public/assets/images/aleyjulian/hojita-removebg-preview.png";
+import hojita2 from "/public/assets/images/aleyjulian/hojita2-removebg-preview.png";
 
 const CustomizedTemplate = () => {
   const invitationData = {
@@ -96,7 +96,7 @@ const CustomizedTemplate = () => {
       },
       sectionTextColor: "text-[#836d65]",
       nombre: "Hotel Hacienda La Concepción",
-      horas: "19:00 horas",
+      horas: "17:00 horas",
       direccion:
         "Guillermo Purcell 10, Altos de Bella Unión,  25350 Arteaga, Coah.",
       ubicacion: "https://maps.app.goo.gl/4EGYAmgDszKcK2oZ6",
@@ -196,7 +196,7 @@ const CustomizedTemplate = () => {
         className={`
         ${HeroSectionProps.simplified.backgroundPictures.desktop}
         ${HeroSectionProps.simplified.backgroundPictures.cell}
-        w-full h-screen
+        w-full h-screen  cell:h-[50vh]
         bg-center bg-no-repeat bg-cover bg-blend-multiply bg-stone-300 
         flex flex-col items-center justify-center 
       `}
@@ -207,11 +207,34 @@ const CustomizedTemplate = () => {
           {HeroSectionProps.simplified.fraseIncial.text}
         </p>
       </div>
-      <Contador model="floral" contadorPropsFloral={ContadorProps.floral} />
+      <div className="relative">
+        <Image
+          alt="hojita"
+          src={hojita}
+          className="absolute z-50 right-0 w-[25%] top-[-70px]"
+        />
+        <div className=" z-[60]">
+          <Contador model="floral" contadorPropsFloral={ContadorProps.floral} />
+        </div>
+      </div>
       <GaleriaFotos galeriaFotosProps={GaleriaFotosProps} />
       <BendicionFamilias bendicionFamiliasProps={Bendiciones} />
-      <Iglesia iglesiaProps={IglesiaProps} />
-      <Recepcion recepcionProps={RecepcionProps} />
+      <div className="relative">
+        <Image
+          alt="hojita"
+          src={hojita2}
+          className="absolute z-50 left-0 w-[15%] top-[40px]"
+        />
+        <Iglesia iglesiaProps={IglesiaProps} />
+      </div>
+      <div className="relative">
+        <Image
+          alt="hojita"
+          src={hojita}
+          className="absolute z-50 right-0 w-[35%] bottom-[-100px]"
+        />
+        <Recepcion recepcionProps={RecepcionProps} />
+      </div>
       <div className="bg-white">
         <Image alt="boda" src={img5} className="mx-auto " />
       </div>
@@ -229,75 +252,94 @@ const CustomizedTemplate = () => {
         </h2>
         <p className={`text-3xl text-[#836d65] text-center`}>Formal</p>
       </div>
-      <div className=" bg-white py-8">
-        <h2
-          className={`
+      <div className="relative">
+        <Image
+          alt="hojita"
+          src={hojita2}
+          className="absolute z-50 left-0 w-[20%] top-[-44px]"
+        />
+        <div className=" bg-white py-8">
+          <h2
+            className={`
           ${brilliant.className}
           text-[#c5351b]
           text-center text-5xl py-1 
           cell:text-3xl cell:px-4
       `}
-        >
-          Confirmacion de Asistencia
-        </h2>
-        <p className={`text-3xl cell:text-2xl text-[#836d65] text-center`}>
-          Confirma tu Asistencia antes de el dıá 12 de Julio en el siguiente
-          link
-        </p>
-
-        <div className="flex flex-col justify-center items-center py-8">
-          <p
-            className={`${analogist.className} text-[#c5351b] text-4xl cell:text-2xl text-center font-bold`}
           >
-            Wedding Planner <br /> Viviana Amare
+            Confirmacion de Asistencia
+          </h2>
+          <p className={`text-3xl cell:text-2xl text-[#836d65] text-center`}>
+            Confirma tu Asistencia antes de el dıá 12 de Julio en el siguiente
+            link
           </p>
-          <a href="https://api.whatsapp.com/send?phone=5218441339405">
-            <button
-              className="flex items-center  my-3 rounded-full px-4 py-2  bg-[#c5351b]
-"
+
+          <div className="flex flex-col justify-center items-center py-8">
+            <p
+              className={`${analogist.className} text-[#c5351b] text-4xl cell:text-2xl text-center font-bold`}
             >
-              <p className=" text-3xl text-white"> 844 133 9405</p>
-            </button>
-          </a>
+              Wedding Planner <br /> Viviana Amare
+            </p>
+            <a href="https://api.whatsapp.com/send?phone=5218441339405">
+              <button
+                className="flex items-center  my-3 rounded-full px-4 py-2  bg-[#c5351b]
+"
+              >
+                <p className=" text-3xl text-white"> 844 133 9405</p>
+              </button>
+            </a>
+          </div>
+          <p className={`text-3xl cell:text-2xl text-[#c5351b] text-center`}>
+            En caso de no confirmar asistencia antes de la fecha mencionada
+            entenderemos que amablemente estas declinando la invitación y
+            cederemos su lugar a otro invitado.
+          </p>
         </div>
-        <p className={`text-3xl cell:text-2xl text-[#c5351b] text-center`}>
-          En caso de no confirmar asistencia antes de la fecha mencionada
-          entenderemos que amablemente estas declinando la invitación y
-          cederemos su lugar a otro invitado.
-        </p>
       </div>
       <div className="bg-white">
         <Image alt="boda" src={img5} className="mx-auto " />
       </div>
-      <div className=" bg-white py-8 flex flex-col justify-center">
-        <q className={`text-3xl cell:text-lg text-[#c5351b] text-center`}>
-          Todo lo hizo hermoso en su tiempo; y a puesto eternidad en el corazon
-          de ellos, sin que alcance el hombre a entender la obra que ha hecho
-          Dios desde el principio hasta el
-        </q>
-        <p className={`text-3xl cell:text-lg text-[#c5351b] text-center`}>
-          Eclesiastés 3:11{" "}
-        </p>
-        <h2
-          className={`
+      <div className="relative">
+        <Image
+          alt="hojita"
+          src={hojita}
+          className="absolute z-50 right-0 w-[35%] rotate-180 top-[-130px]"
+        />
+        <Image
+          alt="hojita"
+          src={hojita}
+          className="absolute z-50 left-0 translate-x-[30px] w-[20%] bottom-[-60px]"
+        />
+        <div className=" bg-white py-8 flex flex-col justify-center">
+          <q className={`text-3xl cell:text-lg text-[#c5351b] text-center`}>
+            Todo lo hizo hermoso en su tiempo; y a puesto eternidad en el
+            corazon de ellos, sin que alcance el hombre a entender la obra que
+            ha hecho Dios desde el principio hasta el
+          </q>
+          <p className={`text-3xl cell:text-lg text-[#c5351b] text-center`}>
+            Eclesiastés 3:11{" "}
+          </p>
+          <h2
+            className={`
           ${brilliant.className}
           text-[#836d65]
           text-center text-5xl py-3 
           cell:text-3xl cell:px-4
       `}
-        >
-          Gracias por ser parte de esta historia.
-        </h2>
-        <h2
-          className={`
+          >
+            Gracias por ser parte de esta historia.
+          </h2>
+          <h2
+            className={`
           ${brilliant.className}
           text-[#c5351b]
           text-center text-5xl py-1 
           cell:text-3xl cell:px-4
       `}
-        >
-          Alejandra <span className="text-[#836d65]">&</span> Julian
-        </h2>
+          >
+            Alejandra <span className="text-[#836d65]">&</span> Julian
+          </h2>
+        </div>
       </div>
       <SongPlayer color="bg-[#c5351b]" />
     </InvitationContainer>
