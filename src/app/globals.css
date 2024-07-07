@@ -26,3 +26,7 @@ circle {
 .progress .indicator {
   stroke: red;
 }
+
+.textShadow {
+  text-shadow: 2px 2px 8px #371612;
+}

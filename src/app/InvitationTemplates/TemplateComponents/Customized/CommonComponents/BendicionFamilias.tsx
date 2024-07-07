@@ -10,7 +10,7 @@ interface BendicionesPropsTypes {
     textColor: string;
     font: NextFont;
   };
-  familias: {
+  familias?: {
     novia: String;
     novio: String;
     font: NextFont;
@@ -41,16 +41,18 @@ const BendicionFamilias = ({
       >
         {bendicionFamiliasProps.frase.desc}
       </motion.h2>
-      <div className="flex justify-evenly py-4 gap-4 w-1/2 mx-auto cell:w-full cell:px-4 cell:flex-col cell:items-center ">
-        <div className="flex flex-col gap-1 text-2xl cell:text-2xl cell:text-center ">
-          <p
-            className={`${bendicionFamiliasProps.familias.font.className} ${bendicionFamiliasProps.familias.textColor} text-6xl`}
-          >
-            {bendicionFamiliasProps.familias.novia} y{" "}
-            {bendicionFamiliasProps.familias.novio}
-          </p>
+      {bendicionFamiliasProps.familias && (
+        <div className="flex justify-evenly py-4 gap-4 w-1/2 mx-auto cell:w-full cell:px-4 cell:flex-col cell:items-center ">
+          <div className="flex flex-col gap-1 text-2xl cell:text-2xl cell:text-center ">
+            <p
+              className={`${bendicionFamiliasProps.familias.font.className} ${bendicionFamiliasProps.familias.textColor} text-6xl`}
+            >
+              {bendicionFamiliasProps.familias.novia} y{" "}
+              {bendicionFamiliasProps.familias.novio}
+            </p>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

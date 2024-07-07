@@ -12,6 +12,19 @@ export const bavaria = localFont({
   src: "../../public/customFonts/BavariaGates.otf",
 });
 
+export const adorage = localFont({
+  src: "../../public/customFonts/Adorage.ttf",
+});
+export const analogist = localFont({
+  src: "../../public/customFonts/Analogist-Regular.ttf",
+});
+export const brilliant = localFont({
+  src: "../../public/customFonts/BrilliantSoulmateRegular.ttf",
+});
+export const cambria = localFont({
+  src: "../../public/customFonts/Cambria.ttf",
+});
+
 export const inter = Inter({ subsets: ["latin"] });
 export const greatVibes = Great_Vibes({ weight: "400", subsets: ["latin"] });
 export const dancing = Dancing_Script({ subsets: ["latin"] });

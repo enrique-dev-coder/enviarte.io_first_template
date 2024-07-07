@@ -20,7 +20,7 @@ const Recepcion = ({
           className={`
         ${recepcionProps.title.font.className}
         ${recepcionProps.title.textColor}
-        font-bold  text-center text-5xl py-1 
+        text-center text-5xl py-1 
         cell:text-3xl cell:px-4
       `}
         >

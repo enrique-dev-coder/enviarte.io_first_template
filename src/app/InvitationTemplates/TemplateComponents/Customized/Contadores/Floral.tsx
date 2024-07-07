@@ -24,7 +24,7 @@ const Numero = ({
       viewport={{ once: true }}
       className=" flex flex-col justify-center items-center text-slate-950"
     >
-      <div className=" bg-complementaryDark w-[80px] cell:w-[48px] flex  justify-center rounded-md">
+      <div className=" bg-[#c5351b] w-[80px] cell:w-[48px] flex  justify-center rounded-md">
         <p className=" text-6xl mb-4 cell:text-3xl text-yellow-50 ">{num}</p>{" "}
       </div>
       <p className={`${color} text-xl uppercase cell:text-sm`}>{desc}</p>

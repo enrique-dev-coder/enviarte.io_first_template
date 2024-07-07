@@ -36,7 +36,7 @@ const MesaDeRegalos = ({
         className={`
         ${mesaDeRegalosProps.title.font.className}
         ${mesaDeRegalosProps.title.textColor}
-        font-bold  text-center text-5xl py-1 
+          text-center text-5xl py-1 
         cell:text-3xl cell:px-4
       `}
       >
@@ -46,12 +46,14 @@ const MesaDeRegalos = ({
         {mesaDeRegalosProps.sobres.enabled &&
           mesaDeRegalosProps.sobres.type === "default" && (
             <div className=" flex items-center gap-2  cell:justify-center cell:flex-col">
-              <Image
-                alt="sobre"
-                src={mesaDeRegalosProps.sobres.img}
-                className=""
-                width={100}
-              />
+              {mesaDeRegalosProps.sobres.img && (
+                <Image
+                  alt="sobre"
+                  src={mesaDeRegalosProps.sobres.img}
+                  className=""
+                  width={100}
+                />
+              )}
               <p className={`text-3xl ${mesaDeRegalosProps.sobres.textColor}`}>
                 Lluvia de sobres
               </p>
@@ -60,11 +62,14 @@ const MesaDeRegalos = ({
         {mesaDeRegalosProps.sobres.enabled &&
           mesaDeRegalosProps.sobres.type === "modern" && (
             <div className=" w-[400px] cell:w-[90%] text-center flex flex-col items-center text-3xl  my-6 border border-slate-700 rounded-md shadow-md py-4 px-7 cell:text-2xl cell:mx-2">
-              <Image
-                alt="sobre"
-                src={mesaDeRegalosProps.sobres.img}
-                className="w-[22%]"
-              />
+              {mesaDeRegalosProps.sobres.img && (
+                <Image
+                  alt="sobre"
+                  src={mesaDeRegalosProps.sobres.img}
+                  className="w-[22%]"
+                />
+              )}
+
               <p className={`text-3xl ${mesaDeRegalosProps.sobres.textColor}`}>
                 Lluvia de sobres
               </p>

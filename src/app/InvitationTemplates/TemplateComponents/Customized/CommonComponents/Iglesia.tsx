@@ -16,7 +16,7 @@ const Iglesia = ({ iglesiaProps }: { iglesiaProps: InfoSectionTypes }) => {
           className={`
         ${iglesiaProps.title.font.className}
         ${iglesiaProps.title.textColor}
-        font-bold  text-center text-5xl py-1 
+        text-center text-5xl py-1 
         cell:text-3xl cell:px-4
       `}
         >

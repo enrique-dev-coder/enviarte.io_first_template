@@ -19,7 +19,7 @@ const HeroSimplified = ({
         ${heroData.backgroundPictures.desktop}
         ${heroData.backgroundPictures.cell}
         w-full h-screen
-        bg-center bg-no-repeat bg-cover bg-stone-500 bg-blend-multiply
+        bg-center bg-no-repeat  bg-stone-500 bg-blend-multiply
         flex flex-col items-center justify-center 
       `}
     >

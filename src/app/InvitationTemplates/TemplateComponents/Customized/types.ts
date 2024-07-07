@@ -30,7 +30,7 @@ export interface MesaRegalosPropsTypes {
     enabled: boolean;
     textColor: string;
     type: string;
-    img: StaticImageData;
+    img?: StaticImageData;
   };
   transferencia: {
     enabled: boolean;

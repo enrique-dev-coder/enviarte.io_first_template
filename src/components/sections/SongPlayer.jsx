@@ -2,7 +2,7 @@
 import { useContext } from "react";
 import { Volume2Icon, VolumeXIcon } from "lucide-react";
 import { AudioPlayerContext } from "@/contexts/AudioContext";
-const SongPlayer = () => {
+const SongPlayer = ({ color = "bg-complementaryDark/90" }) => {
   const { playing, setPlaying } = useContext(AudioPlayerContext);
 
   return (
@@ -11,7 +11,7 @@ const SongPlayer = () => {
         onClick={() => {
           setPlaying(!playing);
         }}
-        className=" w-12 h-12 rounded-l-lg  flex justify-center items-center bg-complementaryDark/90"
+        className={`w-12 h-12 rounded-l-lg  flex justify-center items-center ${color}`}
       >
         {!playing ? (
           <Volume2Icon fill="#ffffff" className="  text-white  w-[60px]" />
