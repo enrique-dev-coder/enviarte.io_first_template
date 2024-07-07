@@ -143,6 +143,9 @@ const CustomizedTemplate = () => {
       transferencia: {
         enabled: false,
       },
+      regalo: {
+        enabled: false,
+      },
     },
     DressCodeProps: {
       backGround: "bg-neutral-800",
