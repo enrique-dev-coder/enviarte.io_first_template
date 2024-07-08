@@ -115,7 +115,7 @@ const CustomizedTemplate = () => {
       },
       sectionTextColor: "text-[#836d65]",
       nombre: "Hotel Hacienda La Concepción",
-      horas: "20:30 horas",
+      horas: "19:00 a 24:00 horas",
       direccion:
         "Guillermo Purcell 10, Altos de Bella Unión,  25350 Arteaga, Coah.",
       ubicacion: "https://maps.app.goo.gl/4EGYAmgDszKcK2oZ6",
