@@ -17,6 +17,7 @@ import img1 from "/public/assets/images/aleyjulian/img1.jpeg";
 import img2 from "/public/assets/images/aleyjulian/img2.jpeg";
 import img3 from "/public/assets/images/aleyjulian/img3.jpeg";
 import img4 from "/public/assets/images/aleyjulian/img4.jpeg";
+import img6 from "/public/assets/images/aleyjulian/img6.jpeg";
 import img5 from "/public/assets/images/aleyjulian/hero2.jpeg";
 import hojita from "/public/assets/images/aleyjulian/hojita-removebg-preview.png";
 import hojita2 from "/public/assets/images/aleyjulian/hojita2-removebg-preview.png";
@@ -306,7 +307,7 @@ const CustomizedTemplate = () => {
         </div>
       </div>
       <div className="bg-white">
-        <Image alt="boda" src={img5} className="mx-auto " />
+        <Image alt="boda" src={img6} className="mx-auto " />
       </div>
       <div className="relative">
         <Image
