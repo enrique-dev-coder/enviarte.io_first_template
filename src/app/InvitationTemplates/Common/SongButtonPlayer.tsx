@@ -14,7 +14,7 @@ const SongButtonPlayer = ({ color }: { color: colorPalette }) => {
         onClick={() => {
           setPlaying(!playing);
         }}
-        className={` w-12 h-12 rounded-l-lg  flex justify-center items-center  bg-black/70`}
+        className={` w-12 h-12 rounded-l-lg  flex justify-center items-center  bg-black/40`}
       >
         {!playing ? (
           <Volume2Icon fill="#ffffff" className="  text-white  w-[60px]" />

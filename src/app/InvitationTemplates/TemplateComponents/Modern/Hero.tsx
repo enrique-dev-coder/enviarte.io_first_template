@@ -35,6 +35,7 @@ const InvitationHero1 = ({
 
   return (
     <div
+      style={{ backgroundAttachment: "fixed" }}
       className={`
      
       ${fotoDesktop}

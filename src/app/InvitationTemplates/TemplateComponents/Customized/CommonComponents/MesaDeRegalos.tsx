@@ -37,7 +37,7 @@ const MesaDeRegalos = ({
         ${mesaDeRegalosProps.title.font.className}
         ${mesaDeRegalosProps.title.textColor}
           text-center text-5xl py-1 
-        cell:text-2xl cell:px-4
+        cell:text-4xl cell:px-4 font-bold
       `}
       >
         Sugerencia de regalos
@@ -111,7 +111,7 @@ const MesaDeRegalos = ({
       {mesaDeRegalosProps.fraseDeAgradecimientoFinal?.enabled && (
         <div className="my-10 cell:my-2 flex flex-col items-center">
           <h2 className={`${dancing.className} text-center text-4xl font-bold`}>
-            GRACIAS
+            Gracias
           </h2>
           <div
             className={`text-center  w-8/12  cell:w-10/12 

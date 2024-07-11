@@ -1,7 +1,7 @@
 "use client";
 import { DressCodeProps } from "../types";
 import { motion } from "framer-motion";
-import { sofia } from "@/fonts";
+import { sofia, analogist, dancing } from "@/fonts";
 import Image from "next/image";
 
 const DressCode = ({ dressCodeProps }: { dressCodeProps: DressCodeProps }) => {
@@ -77,13 +77,13 @@ const DressCode = ({ dressCodeProps }: { dressCodeProps: DressCodeProps }) => {
           {/* <Image alt="no niños" src={noninos} /> */}
           <div>
             <p
-              className={`${dressCodeProps.desc.color} ${sofia.className} w-8/12 mx-auto text-3xl text-center  cell:w-full cell:px-4 cell:text-2xl`}
+              className={`${dressCodeProps.desc.color} ${dancing.className} w-8/12 mx-auto text-3xl text-center  cell:w-full cell:px-4 cell:text-2xl`}
             >
               Esperamos contar con tu presencia en nuestra boda y los niños les
               deseamos buenas noches en casa.{" "}
             </p>
             <p
-              className={`${sofia.className} ${dressCodeProps.title.textColor} font-bold text-5xl cell:text-4xl text-center`}
+              className={`${analogist.className} ${dressCodeProps.title.textColor} font-bold text-5xl cell:text-4xl text-center`}
             >
               No niños
             </p>

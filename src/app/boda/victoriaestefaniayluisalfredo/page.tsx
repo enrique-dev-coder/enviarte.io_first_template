@@ -1,5 +1,5 @@
 // fonts
-import { dancing, sofia } from "@/fonts";
+import { analogist, dancing, sofia } from "@/fonts";
 // next js
 import { Metadata } from "next/types";
 import { headers } from "next/headers";
@@ -74,7 +74,7 @@ const IndexPage = async ({ searchParams }: any) => {
       desc: "Ceremonia Religiosa",
       nombre: {
         content: "Templo Santiago Apóstol",
-        font: sofia,
+        font: analogist,
       },
       direccion:
         "C. María Trinidad Sánchez 975, Los Valdez, 25209 Saltillo, Coah.",
@@ -85,7 +85,7 @@ const IndexPage = async ({ searchParams }: any) => {
       desc: "Recepción",
       nombre: {
         content: "Recepciones Cairo",
-        font: sofia,
+        font: analogist,
       },
       direccion:
         "Lib. Óscar Flores Tapia 292-2, Colonia El Llano, 25350 Arteaga, Coah.",
@@ -123,8 +123,8 @@ const IndexPage = async ({ searchParams }: any) => {
         enabled: true,
         text: "Nos sentimos bendecidos de tener amigos y familiares como tú en este día tan especial. Si quieres tener un detalle con nosotros te agradeceríamos un aporte financiero para ayudarnos a empezar nuestra vida juntos",
         styling: {
-          font: sofia,
-          size: "text-3xl cell:text-lg",
+          font: dancing,
+          size: "text-3xl cell:text-2xl",
           color: "text-black",
         },
       },
@@ -132,7 +132,7 @@ const IndexPage = async ({ searchParams }: any) => {
         enabled: true,
         text: "Por tu muestra de cariño, esperamos verte para disfrutar este gran día",
         styling: {
-          font: sofia,
+          font: analogist,
           size: "text-3xl cell:text-2xl",
           color: "text-black",
         },

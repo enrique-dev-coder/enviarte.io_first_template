@@ -25,7 +25,7 @@ const GraciasBanner = ({
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
-        className={`${frase.font.className} text-center ${frase.styling.color}  ${frase.styling.size} py-4 `}
+        className={`${frase.font.className} text-center ${frase.styling.color} font-bold ${frase.styling.size} py-4 `}
       >
         {frase.content}
       </motion.h2>

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { dancing, sofia } from "@/fonts";
+import { dancing, analogist } from "@/fonts";
 import { ChevronLeftCircleIcon, ChevronRightCircleIcon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -21,7 +21,7 @@ const PadrinoCard = ({
       transition={{ ease: "easeInOut", duration: 0.85 }}
       className="bg-white flex flex-col items-center gap-2 p-4 shadow-xl cell:w-[80%]"
     >
-      <div className={`${sofia.className} text-center text-xl`}>
+      <div className={`${analogist.className} text-center text-xl`}>
         <p>{madrina}</p>
         <p>&</p>
         <p>{padrino}</p>
