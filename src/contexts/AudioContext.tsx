@@ -22,7 +22,7 @@ const AudioContextProvider = ({
   const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
-    // esto es para que ts deje de chillar
+    // Esto es para que TypeScript deje de quejarse
     if (audioRef.current) {
       if (playing) {
         audioRef.current.play();
@@ -30,16 +30,32 @@ const AudioContextProvider = ({
         audioRef.current.pause();
       }
     }
-  }, [playing, audioRef]);
+  }, [playing]);
+
+  useEffect(() => {
+    const handleEnded = () => {
+      if (audioRef.current) {
+        audioRef.current.currentTime = 0; // Reinicia el tiempo de reproducción
+        audioRef.current.play(); // Vuelve a reproducir el audio
+      }
+    };
+
+    const currentAudio = audioRef.current;
+    if (currentAudio) {
+      currentAudio.addEventListener("ended", handleEnded);
+    }
+
+    return () => {
+      if (currentAudio) {
+        currentAudio.removeEventListener("ended", handleEnded);
+      }
+    };
+  }, []);
 
   return (
     <AudioPlayerContext.Provider value={{ playing, setPlaying }}>
       <>
-        <audio
-          src={songLink}
-          // "/song.mp3"
-          ref={audioRef}
-        />
+        <audio src={songLink} ref={audioRef} />
         {children}
       </>
     </AudioPlayerContext.Provider>

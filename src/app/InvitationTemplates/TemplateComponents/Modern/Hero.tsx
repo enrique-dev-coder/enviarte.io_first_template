@@ -71,7 +71,7 @@ const InvitationHero1 = ({
             transition={{ ease: "easeInOut", duration: 1, delay: 0.5 }}
             viewport={{ once: true }}
             className={`${frase.font.className} 
-          text-white  my-2  text-4xl  text-center cell:px-4
+          text-white  my-2  text-4xl font-extrabold  text-center cell:px-4
           `}
           >
             {frase.content}
@@ -82,7 +82,7 @@ const InvitationHero1 = ({
             animate={controls}
             transition={{ ease: "easeInOut", duration: 1, delay: 0.5 }}
             viewport={{ once: true }}
-            className={`${fecha.font.className} text-white  my-2  text-3xl cell:text-2xl cell:text-center cell:px-4`}
+            className={`${fecha.font.className} text-white  my-2  text-4xl font-bold cell:text-2xl cell:text-center cell:px-4`}
           >
             {fecha.content}
           </motion.p>

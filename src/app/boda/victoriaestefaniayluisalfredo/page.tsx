@@ -61,11 +61,11 @@ const IndexPage = async ({ searchParams }: any) => {
     Hero: {
       frase: {
         content: "Save the date",
-        font: sofia,
+        font: dancing,
       },
       fecha: {
         content: "Sábado, 28 de septiembre 2024",
-        font: sofia,
+        font: dancing,
       },
       fotoDesktop: "bg-[url('/assets/images/estefaniayluis/hero_pc_2.jpg')]",
       fotoCell: "cell:bg-[url('/assets/images/estefaniayluis/hero_pc_2.jpg')]",
