@@ -278,7 +278,7 @@ const CustomizedTemplate = () => {
           <p
             className={`text-3xl cell:text-xl cellw-10/12 cell:mx-auto  text-[#836d65] text-center`}
           >
-            Confirma tu Asistencia antes de el dıá 12 de Julio en el siguiente
+            Confirma tu Asistencia antes de el dıá 15 de Julio en el siguiente
             link
           </p>
 
