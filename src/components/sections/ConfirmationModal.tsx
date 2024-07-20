@@ -1,7 +1,10 @@
+"use client";
 import React from "react";
 import { DotLottiePlayer } from "@dotlottie/react-player";
 import { motion } from "framer-motion";
 import { dancing, inter } from "@/fonts";
+import { useRouter } from "next/navigation";
+
 const ConfirmationModal = ({
   closeModal,
   pasesConfirmados,
@@ -9,6 +12,8 @@ const ConfirmationModal = ({
   closeModal: () => void;
   pasesConfirmados: number;
 }) => {
+  const { refresh } = useRouter();
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -26,7 +31,10 @@ const ConfirmationModal = ({
             </h2>
             <div>
               <button
-                onClick={closeModal}
+                onClick={() => {
+                  closeModal();
+                  refresh();
+                }}
                 className=" text-white text-3xl rounded-lg px-3 py-1 bg-complementaryDark cell:text-xl"
               >
                 Regresar

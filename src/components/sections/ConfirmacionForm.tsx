@@ -6,7 +6,9 @@ import { dancing, inter } from "@/fonts";
 import axios from "axios";
 import { useMutation } from "@tanstack/react-query";
 import ConfirmationModal from "./ConfirmationModal";
+import { useCookies } from "react-cookie";
 import { Loader } from "lucide-react";
+import { expirationDate } from "@/utils/time";
 
 type ConfirmacionFormInputs = {
   nombre: string;
@@ -38,9 +40,10 @@ const ConfirmacionForm = ({
 }) => {
   const [confirmacion, setConfirmacion] = useState(false);
   // NOTE: dejo este log por si acaso se necesita para debugear
-  console.log(invitationId);
-  // TODO: deberia guardar un cookie para bloquear el form si ya confirmaste????
-  // porque puedo hacer que aparezca otro mensaje si el cookie trae el nombre de usuario y el tel igual a los params del url
+  // console.log(invitationId);
+  const [cookies, setCookie] = useCookies(["invitandofacil_invitado"]);
+  // console.log("cookie invitacion", cookies);
+
   const {
     register,
     handleSubmit,
@@ -52,7 +55,12 @@ const ConfirmacionForm = ({
     mutationFn: (invitadoRegistrado) => {
       return axios.post("/api/invitados/register", invitadoRegistrado);
     },
-    onSuccess: () => {
+    onSuccess: (response) => {
+      console.log(response);
+      // pasar al cookie de lado de cliente  el id de invitado
+      setCookie("invitandofacil_invitado", response.data, {
+        expires: expirationDate,
+      });
       // mostrar modal de confirmacion de evento
       setConfirmacion(true);
     },
@@ -128,54 +136,69 @@ const ConfirmacionForm = ({
           <p className=" text-sm  text-red-500 px-2">{errors?.tel?.message}</p>
         </div>
         {/* seccion de confirmacion de pases */}
-        <div className={`${inter.className} flex flex-col  w-full gap-4 `}>
-          <label className="text-xl font-medium cell:text-lg">
-            Personas que asistirán:
-          </label>
-          <div className="flex gap-2 cell:flex-col flex-wrap">
-            <div className="flex gap-2  items-center">
-              <div className="flex gap-2 items-center">
-                <input
-                  {...register("pasesConfirmados")}
-                  type="radio"
-                  id="0"
-                  value="0"
-                />
-                <label className=" font-bold">No asistiré 😥</label>
-              </div>
-            </div>
-            {ArrayPases.map((i) => (
-              <div key={i} className="flex gap-2 items-center">
-                <input
-                  {...register("pasesConfirmados")}
-                  type="radio"
-                  id={i}
-                  value={i}
-                  className=""
-                />
-                <label className=" font-bold">{`${i} ${
-                  i === 1 ? "persona" : "personas"
-                }`}</label>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="py-2 cell:w-full">
-          {!isPending ? (
-            <button
-              type="submit"
-              disabled={!usuarioClickEnPases}
-              className={`${styling.confirmButton.backgroundColor} ${styling.confirmButton.disabledBackgroundColor} text-white px-6 text-lg rounded-full py-2 cell:w-full`}
+        <>
+          {cookies?.invitandofacil_invitado?.id ? (
+            <div
+              className={`${dancing.className} text-center text-2xl font-bold`}
             >
-              Confirmar
-            </button>
-          ) : (
-            <div className="flex  gap-2">
-              <Loader className=" animate-spin" />
-              <p>Confirmando ...</p>
+              Muchas gracias por confirmar tu asistencia, si cambias de opinion
+              favor de comunicarte con nosotros{" "}
             </div>
+          ) : (
+            <>
+              <div
+                className={`${inter.className} flex flex-col  w-full gap-4 `}
+              >
+                <label className="text-xl font-medium cell:text-lg">
+                  Personas que asistirán:
+                </label>
+                <div className="flex gap-2 cell:flex-col flex-wrap">
+                  <div className="flex gap-2  items-center">
+                    <div className="flex gap-2 items-center">
+                      <input
+                        {...register("pasesConfirmados")}
+                        type="radio"
+                        id="0"
+                        value="0"
+                      />
+                      <label className=" font-bold">No asistiré 😥</label>
+                    </div>
+                  </div>
+                  {ArrayPases.map((i) => (
+                    <div key={i} className="flex gap-2 items-center">
+                      <input
+                        {...register("pasesConfirmados")}
+                        type="radio"
+                        id={i}
+                        value={i}
+                        className=""
+                      />
+                      <label className=" font-bold">{`${i} ${
+                        i === 1 ? "persona" : "personas"
+                      }`}</label>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="py-2 cell:w-full">
+                {!isPending ? (
+                  <button
+                    type="submit"
+                    disabled={!usuarioClickEnPases}
+                    className={`${styling.confirmButton.backgroundColor} ${styling.confirmButton.disabledBackgroundColor} text-white px-6 text-lg rounded-full py-2 cell:w-full`}
+                  >
+                    Confirmar
+                  </button>
+                ) : (
+                  <div className="flex  gap-2">
+                    <Loader className=" animate-spin" />
+                    <p>Confirmando ...</p>
+                  </div>
+                )}
+              </div>
+            </>
           )}
-        </div>
+        </>
       </form>
       {confirmacion ? (
         <ConfirmationModal

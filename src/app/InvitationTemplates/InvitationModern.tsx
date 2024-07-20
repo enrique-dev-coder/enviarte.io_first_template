@@ -77,7 +77,7 @@ const InvitationModern = ({ data }: { data: InvitationDataTypes }) => {
         invitationId={{ id: data.ConfirmacionForm.invitationId }}
         nombreInvitado={data.ConfirmacionForm.nombre}
         pasesAsignados={data.ConfirmacionForm.pasesAsignados}
-        telInvitado={data.ConfirmacionForm.pasesAsignados}
+        telInvitado={data.ConfirmacionForm.tel}
         styling={data.ConfirmacionForm.styling}
       />
     </InvitationContainer>
