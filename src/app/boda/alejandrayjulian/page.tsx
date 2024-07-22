@@ -133,8 +133,10 @@ const CustomizedTemplate = () => {
       },
       sobres: {
         enabled: true,
+        frase: "Lluvia de sobres",
         textColor: "text-[#836d65]",
         type: "default",
+        img: "",
       },
       transferencia: {
         enabled: false,
@@ -142,7 +144,26 @@ const CustomizedTemplate = () => {
       regalo: {
         enabled: true,
       },
+      fraseDeAgradecimientoInicio: {
+        enabled: false,
+        text: "",
+        styling: {
+          font: dancing,
+          size: "",
+          color: "",
+        },
+      },
+      fraseDeAgradecimientoFinal: {
+        enabled: false,
+        text: "",
+        styling: {
+          font: dancing,
+          size: "",
+          color: "",
+        },
+      },
     },
+
     DressCodeProps: {
       backGround: "bg-neutral-800",
       title: {
@@ -195,7 +216,6 @@ const CustomizedTemplate = () => {
         join={IngresarBotonProps.join}
         color={IngresarBotonProps.color}
       />
-
       <div
         className={`
         ${HeroSectionProps.simplified.backgroundPictures.desktop}
@@ -242,7 +262,48 @@ const CustomizedTemplate = () => {
       <div className="bg-white">
         <Image alt="boda" src={img5} className="mx-auto " />
       </div>
-      <MesaDeRegalos mesaDeRegalosProps={MesaRegalosProps} />
+      <MesaDeRegalos
+        FraseAgradecimientoFinalColor={
+          MesaRegalosProps.fraseDeAgradecimientoFinal?.styling?.color
+        }
+        FraseAgradecimientoFinalFont={
+          MesaRegalosProps.fraseDeAgradecimientoFinal.styling?.font
+        }
+        FraseAgradecimientoFinalText={
+          MesaRegalosProps.fraseDeAgradecimientoFinal.text
+        }
+        FraseAgradecimientoInicioFont={
+          MesaRegalosProps.fraseDeAgradecimientoInicio.styling?.font
+        }
+        FraseAgradecimientoFinalSize={
+          MesaRegalosProps.fraseDeAgradecimientoFinal.styling?.size
+        }
+        FraseAgradecimientoInicioColor={
+          MesaRegalosProps.fraseDeAgradecimientoInicio.styling?.color
+        }
+        FraseAgradecimientoInicioSize={
+          MesaRegalosProps.fraseDeAgradecimientoInicio.styling?.size
+        }
+        FraseAgradecimientoInicioText={
+          MesaRegalosProps.fraseDeAgradecimientoInicio.text
+        }
+        ShowFraseDeAgradecimientoFinal={
+          MesaRegalosProps.fraseDeAgradecimientoFinal.enabled
+        }
+        ShowFraseDeAgradecimientoInicio={
+          MesaRegalosProps.fraseDeAgradecimientoInicio.enabled
+        }
+        ShowRegalo={MesaRegalosProps.regalo.enabled}
+        ShowSobres={MesaRegalosProps.sobres.enabled}
+        ShowTransferencia={MesaRegalosProps.transferencia.enabled}
+        SobresImg={MesaRegalosProps.sobres?.img}
+        SobresTextColor={MesaRegalosProps.sobres.textColor}
+        SobresTextContent={MesaRegalosProps.sobres.frase}
+        SobresType={MesaRegalosProps.sobres.type}
+        SectionTitleColor={MesaRegalosProps.title.textColor}
+        SectionTitleFont={MesaRegalosProps.title.font}
+        backGround={MesaRegalosProps.backGround}
+      />{" "}
       <div className=" bg-white">
         <h2
           className={`

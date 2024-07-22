@@ -4,7 +4,6 @@ import axios from "axios";
 import prisma from "../../../../../prisma";
 
 async function EnviarAtravesDeLaWhatsAp(tel: string, message: string) {
-  console.log(message);
   try {
     return await axios.post(
       `https://graph.facebook.com/v19.0/${process.env.ACCOUNT_ID}/messages`,

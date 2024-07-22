@@ -10,6 +10,8 @@ const PlaceCard = ({
   ubicacion,
   direccion,
   hora,
+  titleColor,
+  bgButtonColor,
 }: {
   desc: string;
   nombre: {
@@ -19,6 +21,8 @@ const PlaceCard = ({
   ubicacion: string;
   direccion: string;
   hora: string;
+  titleColor: string;
+  bgButtonColor: string;
 }) => {
   return (
     <section className="py-6">
@@ -27,7 +31,7 @@ const PlaceCard = ({
       cell:w-full
       "
       >
-        <AnimatedTitle extraStyles={` text-4xl !text-black`} title={desc} />
+        <AnimatedTitle extraStyles={` text-4xl ${titleColor}`} title={desc} />
         <p
           className={`
           ${nombre.font.className}
@@ -44,7 +48,9 @@ const PlaceCard = ({
           <p className=" text-xl text-center cell:text-base ">{direccion}</p>
         </div>
         <a href={ubicacion}>
-          <button className="bg-black text-white py-2 px-4 rounded-full">
+          <button
+            className={`${bgButtonColor} text-white py-2 px-4 rounded-full`}
+          >
             Cómo llegar
           </button>
         </a>

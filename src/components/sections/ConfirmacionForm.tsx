@@ -24,11 +24,11 @@ const ConfirmacionForm = ({
   telInvitado,
   styling,
 }: {
-  invitationId: { id: string };
+  invitationId: { id: string | undefined };
   pasesAsignados?: string;
   nombreInvitado?: string;
   telInvitado?: string;
-  styling: {
+  styling?: {
     section: {
       backgroundColor: string;
     };
@@ -56,7 +56,6 @@ const ConfirmacionForm = ({
       return axios.post("/api/invitados/register", invitadoRegistrado);
     },
     onSuccess: (response) => {
-      console.log(response);
       // pasar al cookie de lado de cliente  el id de invitado
       setCookie("invitandofacil_invitado", response.data, {
         expires: expirationDate,

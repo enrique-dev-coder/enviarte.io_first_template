@@ -1,31 +1,69 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
 import { dancing } from "@/fonts";
-import { MesaRegalosPropsTypes } from "../types";
+import { NextFont } from "next/dist/compiled/@next/font";
 
 const MesaDeRegalos = ({
-  mesaDeRegalosProps,
+  backGround,
+  ShowFraseDeAgradecimientoInicio,
+  FraseAgradecimientoInicioColor,
+  FraseAgradecimientoInicioSize,
+  FraseAgradecimientoInicioFont,
+  FraseAgradecimientoInicioText,
+  SectionTitleFont,
+  SectionTitleColor,
+  ShowSobres,
+  SobresType,
+  SobresImg,
+  SobresTextColor,
+  SobresTextContent,
+  ShowRegalo,
+  ShowTransferencia,
+  ShowFraseDeAgradecimientoFinal,
+  FraseAgradecimientoFinalColor,
+  FraseAgradecimientoFinalSize,
+  FraseAgradecimientoFinalFont,
+  FraseAgradecimientoFinalText,
 }: {
-  mesaDeRegalosProps: MesaRegalosPropsTypes;
+  backGround: string;
+  ShowFraseDeAgradecimientoInicio: boolean;
+  FraseAgradecimientoInicioColor: string | undefined;
+  FraseAgradecimientoInicioSize: string | undefined;
+  FraseAgradecimientoInicioFont: NextFont | undefined;
+  FraseAgradecimientoInicioText: string | undefined;
+  SectionTitleFont: NextFont;
+  SectionTitleColor: string;
+  ShowSobres: boolean;
+  SobresType: string;
+  SobresImg: StaticImageData | string;
+  SobresTextColor: string;
+  SobresTextContent: string;
+  ShowRegalo: boolean;
+  ShowTransferencia: boolean;
+  ShowFraseDeAgradecimientoFinal: boolean;
+  FraseAgradecimientoFinalColor: string | undefined;
+  FraseAgradecimientoFinalSize: string | undefined;
+  FraseAgradecimientoFinalFont: NextFont | undefined;
+  FraseAgradecimientoFinalText: string | undefined;
 }) => {
   return (
     <div
       className={`
-        ${mesaDeRegalosProps.backGround}
+        ${backGround}
         flex flex-col items-center justify-center h-auto py-4
     `}
     >
-      {mesaDeRegalosProps.fraseDeAgradecimientoInicio?.enabled && (
+      {ShowFraseDeAgradecimientoInicio && (
         <div
           className={`text-center  w-8/12 cell:w-10/12 my-10
-            ${mesaDeRegalosProps.fraseDeAgradecimientoInicio?.styling.color} 
-            ${mesaDeRegalosProps.fraseDeAgradecimientoInicio?.styling.size} 
-            ${mesaDeRegalosProps.fraseDeAgradecimientoInicio?.styling.font.className} 
+            ${FraseAgradecimientoInicioColor} 
+            ${FraseAgradecimientoInicioSize} 
+            ${FraseAgradecimientoInicioFont?.className} 
           `}
         >
-          {mesaDeRegalosProps.fraseDeAgradecimientoInicio?.text}
+          {FraseAgradecimientoInicioText}
         </div>
       )}
       <motion.h2
@@ -34,8 +72,8 @@ const MesaDeRegalos = ({
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
         className={`
-        ${mesaDeRegalosProps.title.font.className}
-        ${mesaDeRegalosProps.title.textColor}
+        ${SectionTitleFont.className}
+        ${SectionTitleColor}
           text-center text-5xl py-1 
         cell:text-4xl cell:px-4 font-bold
       `}
@@ -43,49 +81,35 @@ const MesaDeRegalos = ({
         Sugerencia de regalos
       </motion.h2>
       <div className="flex justify-evenly items-center py-4 gap-4 w-full  mx-auto cell:flex-col ">
-        {mesaDeRegalosProps.sobres.enabled &&
-          mesaDeRegalosProps.sobres.type === "default" && (
-            <div className=" flex items-center gap-2  cell:justify-center cell:flex-col">
-              {mesaDeRegalosProps.sobres.img && (
-                <Image
-                  alt="sobre"
-                  src={mesaDeRegalosProps.sobres.img}
-                  className=""
-                  width={100}
-                />
-              )}
-              <p
-                className={`text-3xl cell:text-xl ${mesaDeRegalosProps.sobres.textColor}`}
-              >
-                Lluvia de sobres
-              </p>
-            </div>
-          )}
-        {mesaDeRegalosProps.regalo.enabled && (
+        {ShowSobres && SobresType === "default" && (
           <div className=" flex items-center gap-2  cell:justify-center cell:flex-col">
-            <p
-              className={`text-3xl cell:text-xl ${mesaDeRegalosProps.sobres.textColor}`}
-            >
+            {SobresImg && (
+              <Image alt="sobre" src={SobresImg} className="" width={100} />
+            )}
+            <p className={`text-3xl cell:text-xl ${SobresTextColor}`}>
+              {SobresTextContent}
+            </p>
+          </div>
+        )}
+        {ShowRegalo && (
+          <div className=" flex items-center gap-2  cell:justify-center cell:flex-col">
+            <p className={`text-3xl cell:text-xl ${SobresTextColor}`}>
               o Regalo
             </p>
           </div>
         )}
-        {mesaDeRegalosProps.sobres.enabled &&
-          mesaDeRegalosProps.sobres.type === "modern" && (
-            <div className=" w-[400px] cell:w-[90%] text-center flex flex-col items-center text-3xl  my-6 border border-slate-700 rounded-md shadow-md py-4 px-7 cell:text-2xl cell:mx-2">
-              {mesaDeRegalosProps.sobres.img && (
-                <Image
-                  alt="sobre"
-                  src={mesaDeRegalosProps.sobres.img}
-                  className="w-[22%]"
-                />
-              )}
+        {ShowSobres && SobresType === "modern" && (
+          <div className=" w-[400px] cell:w-[90%] text-center flex flex-col items-center text-3xl  my-6 border border-slate-700 rounded-md shadow-md py-4 px-7 cell:text-2xl cell:mx-2">
+            {SobresImg && (
+              <Image alt="sobre" src={SobresImg} className="w-[22%]" />
+            )}
 
-              <p className={`text-3xl ${mesaDeRegalosProps.sobres.textColor}`}>
-                Lluvia de sobres
-              </p>
-            </div>
-          )}
+            <p className={`text-3xl ${SobresTextColor}`}>
+              {" "}
+              {SobresTextContent}
+            </p>
+          </div>
+        )}
         {/* <div className=" w-1/3 flex flex-col justify-center items-center cell:w-11/12 cell:mx-auto cell:flex-col cell:justify-center">
           <Image alt="sobre" src={liverpool} className="w-[90%] cell:w-full" />
           <Button
@@ -100,7 +124,7 @@ const MesaDeRegalos = ({
             text="Ver Mesa"
           />
         </div> */}
-        {mesaDeRegalosProps.transferencia.enabled && (
+        {ShowTransferencia && (
           <div className=" text-center text-3xl cell:w-[90%]  my-6 border border-slate-700 rounded-md shadow-md py-4 px-7 cell:text-2xl cell:mx-2">
             <p className="cell:text-xl">Transferencia Bancaria</p>
             <p className="cell:text-xl">Luis Alfredo Gonzalez Torrez</p>
@@ -108,19 +132,19 @@ const MesaDeRegalos = ({
           </div>
         )}
       </div>
-      {mesaDeRegalosProps.fraseDeAgradecimientoFinal?.enabled && (
+      {ShowFraseDeAgradecimientoFinal && (
         <div className="my-10 cell:my-2 flex flex-col items-center">
           <h2 className={`${dancing.className} text-center text-4xl font-bold`}>
             Gracias
           </h2>
           <div
             className={`text-center  w-8/12  cell:w-10/12 
-            ${mesaDeRegalosProps.fraseDeAgradecimientoFinal?.styling.color} 
-            ${mesaDeRegalosProps.fraseDeAgradecimientoFinal?.styling.size} 
-            ${mesaDeRegalosProps.fraseDeAgradecimientoFinal?.styling.font.className} 
+            ${FraseAgradecimientoFinalColor} 
+            ${FraseAgradecimientoFinalSize} 
+            ${FraseAgradecimientoFinalFont?.className} 
           `}
           >
-            {mesaDeRegalosProps.fraseDeAgradecimientoFinal?.text}
+            {FraseAgradecimientoFinalText}
           </div>
         </div>
       )}

@@ -33,11 +33,11 @@ function Item({
   actividad: string;
   hora: string;
   lugar?: string;
-  circleColor: string;
-  iconColor: string;
-  circleBg: string;
-  circleSoftStroke: string;
-  cardBg: string;
+  circleColor: string | undefined;
+  iconColor: string | undefined;
+  circleBg: string | undefined;
+  circleSoftStroke: string | undefined;
+  cardBg: string | undefined;
 }) {
   const ref = useRef(null);
 
@@ -189,17 +189,21 @@ function Item({
 const ItinerarioScrollable = ({
   sectionStyling,
   eventData,
+  showItinerario,
 }: {
-  sectionStyling: {
-    lineColor: string;
-    lineBg: string;
-    circleColor: string;
-    iconColor: string;
-    circleBg: string;
-    circleSoftStroke: string;
-    cardBg: string;
-  };
-  eventData: Array<EventoItinerario>;
+  showItinerario: boolean;
+  sectionStyling:
+    | {
+        lineColor: string;
+        lineBg: string;
+        circleColor: string;
+        iconColor: string;
+        circleBg: string;
+        circleSoftStroke: string;
+        cardBg: string;
+      }
+    | undefined;
+  eventData: Array<EventoItinerario> | undefined;
 }) => {
   // div scrolleable
   const ItinerarioRef = useRef(null);
@@ -212,7 +216,7 @@ const ItinerarioScrollable = ({
 
   const scale = useTransform(scrollYProgress, [0, 1], [0.2, 0.9]);
 
-  return (
+  return showItinerario ? (
     <>
       <motion.h2
         className={` ${dancing.className} 
@@ -230,33 +234,33 @@ const ItinerarioScrollable = ({
           // scale line while scrolling
           style={{ scaleY: scale }}
           className={`absolute  w-[8px] top-[0] right-[50%]  cell:right-[80%]
-         z-10  h-full  origin-top  ${sectionStyling.lineColor}`}
+         z-10  h-full  origin-top  ${sectionStyling?.lineColor}`}
         />
         <motion.div
           // scale line while scrolling
           className={`
-            absolute  w-[8px] top-[0] right-[50%] z-0  h-[90%]  origin-top  ${sectionStyling.lineBg} my-4 shadow-md
+            absolute  w-[8px] top-[0] right-[50%] z-0  h-[90%]  origin-top  ${sectionStyling?.lineBg} my-4 shadow-md
             cell:right-[80%]`}
         />
         <div ref={itemRef} className="flex flex-col z-10 pt-3">
-          {eventData.map((event) => (
+          {eventData?.map((event) => (
             <Item
               key={event.id}
               position={event.id % 2 === 0 ? "right" : "left"}
               Icon={Icons[event.Icon as IconKey]}
-              cardBg={sectionStyling.cardBg}
+              cardBg={sectionStyling?.cardBg}
               actividad={event.evento}
               hora={event.hora}
-              circleColor={sectionStyling.circleColor}
-              iconColor={sectionStyling.iconColor}
-              circleBg={sectionStyling.circleBg}
-              circleSoftStroke={sectionStyling.circleSoftStroke}
+              circleColor={sectionStyling?.circleColor}
+              iconColor={sectionStyling?.iconColor}
+              circleBg={sectionStyling?.circleBg}
+              circleSoftStroke={sectionStyling?.circleSoftStroke}
             />
           ))}
         </div>
       </div>
     </>
-  );
+  ) : null;
 };
 
 export default ItinerarioScrollable;

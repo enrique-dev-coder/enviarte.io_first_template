@@ -22,11 +22,13 @@ const InvitationHero1 = ({
   frase: {
     content: string;
     font: NextFont;
+    textColor: string;
   };
   font: NextFont;
   fecha: {
     content: string;
     font: NextFont;
+    textColor: string;
   };
   fotoDesktop: string;
   fotoCell: string;
@@ -70,8 +72,8 @@ const InvitationHero1 = ({
             animate={controls}
             transition={{ ease: "easeInOut", duration: 1, delay: 0.5 }}
             viewport={{ once: true }}
-            className={`${frase.font.className} 
-          text-white  my-2  text-4xl font-extrabold  text-center cell:px-4
+            className={`${frase.font.className} ${frase.textColor} 
+            my-2  text-4xl font-extrabold  text-center cell:px-4
           `}
           >
             {frase.content}
@@ -82,7 +84,7 @@ const InvitationHero1 = ({
             animate={controls}
             transition={{ ease: "easeInOut", duration: 1, delay: 0.5 }}
             viewport={{ once: true }}
-            className={`${fecha.font.className} text-white  my-2  text-4xl font-bold cell:text-2xl cell:text-center cell:px-4`}
+            className={`${fecha.font.className} ${fecha.textColor} my-2  text-4xl font-bold cell:text-2xl cell:text-center cell:px-4`}
           >
             {fecha.content}
           </motion.p>

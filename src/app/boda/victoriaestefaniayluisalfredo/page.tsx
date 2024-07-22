@@ -11,6 +11,11 @@ import { InvitationDataTypes } from "@/types";
 import DressCodeMujeres from "/public/assets/images/Dress_icon.png";
 import DressCodeHombres from "/public/assets/images/suit_icon-removebg-preview.png";
 import Sobre from "/public/assets/images/email.png";
+// image Gallery
+import img1 from "/public/assets/images/estefaniayluis/img5.jpg";
+import img2 from "/public/assets/images/estefaniayluis/img6.jpg";
+import img3 from "/public/assets/images/estefaniayluis/img7.jpg";
+import img4 from "/public/assets/images/estefaniayluis/img8.jpg";
 
 export const metadata: Metadata = {
   title: "Estefanía y Luis",
@@ -58,12 +63,19 @@ const IndexPage = async ({ searchParams }: any) => {
     fechaEvento: new Date("2024-09-28T00:00:00"),
     fechaString: "Sábado, 28 de septiembre 2024",
     fotoContador: "bg-[url('/assets/images/estefaniayluis/contador_2.jpg')]",
+    InfoBanner: {
+      enabled: true,
+      fraseBiblica: { enabled: true },
+      padres: { enabled: false },
+    },
     Hero: {
       frase: {
+        textColor: "text-white",
         content: "Save the date",
         font: dancing,
       },
       fecha: {
+        textColor: "text-white",
         content: "Sábado, 28 de septiembre 2024",
         font: dancing,
       },
@@ -71,6 +83,8 @@ const IndexPage = async ({ searchParams }: any) => {
       fotoCell: "cell:bg-[url('/assets/images/estefaniayluis/hero_pc_2.jpg')]",
     },
     Iglesia: {
+      titleColor: "text-[#000000]",
+      bgButtonColor: "bg-black",
       desc: "Ceremonia Religiosa",
       nombre: {
         content: "Templo Santiago Apóstol",
@@ -82,6 +96,8 @@ const IndexPage = async ({ searchParams }: any) => {
       hora: "5:00pm",
     },
     Recepcion: {
+      titleColor: "text-[#000000]",
+      bgButtonColor: "bg-black",
       desc: "Recepción",
       nombre: {
         content: "Recepciones Cairo",
@@ -93,6 +109,7 @@ const IndexPage = async ({ searchParams }: any) => {
       hora: "8:00pm",
     },
     GraciasBanner: {
+      enabled: true,
       frase: {
         content: "Estas cordialmente invitado",
         font: dancing,
@@ -112,6 +129,7 @@ const IndexPage = async ({ searchParams }: any) => {
       },
       sobres: {
         enabled: true,
+        frase: "Lluvia de sobres",
         textColor: "text-gray-500",
         type: "modern",
         img: Sobre,
@@ -164,6 +182,7 @@ const IndexPage = async ({ searchParams }: any) => {
       },
     },
     ConfirmacionForm: {
+      enabled: true,
       nombre: nombre,
       tel: tel,
       pasesAsignados: pasesAsignados,
@@ -179,6 +198,7 @@ const IndexPage = async ({ searchParams }: any) => {
       },
     },
     ItinerarioScrollable: {
+      enabled: true,
       sectionStyling: {
         lineColor: "bg-gray-900",
         lineBg: "bg-gray-200",
@@ -220,6 +240,18 @@ const IndexPage = async ({ searchParams }: any) => {
           Icon: "party",
         },
       ],
+    },
+    ImageGallery: {
+      img1: img1,
+      img2: img2,
+      img3: img3,
+      img4: img4,
+    },
+    PadrinosSlider: {
+      enabled: true,
+    },
+    ConfirmacionInvViviana: {
+      enabled: false,
     },
   };
 

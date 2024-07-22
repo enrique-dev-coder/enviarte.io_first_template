@@ -64,7 +64,7 @@ const MobileSlider = ({ slider }: { slider: number }) => {
   }
 };
 
-const PadrinosDeBoda = () => {
+const PadrinosDeBoda = ({ showSlider }: { showSlider: boolean }) => {
   const [slider, setSlider] = useState(1);
 
   const onSliderClick = (position: "right" | "left") => {
@@ -82,7 +82,7 @@ const PadrinosDeBoda = () => {
     }
   };
 
-  return (
+  return showSlider ? (
     <div className="my-10">
       <h2
         className={`${dancing.className} text-center text-4xl font-bold my-5`}
@@ -116,7 +116,7 @@ const PadrinosDeBoda = () => {
         <ChevronRightCircleIcon onClick={() => onSliderClick("right")} />
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default PadrinosDeBoda;

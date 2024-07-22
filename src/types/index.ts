@@ -1,6 +1,7 @@
 import { NextFont } from "next/dist/compiled/@next/font";
 import { StaticImageData } from "next/image";
 import { EventoItinerario } from "@/app/InvitationTemplates/TemplateComponents/Customized/types";
+
 export type Invitado = {
   name: string;
   tel: string;
@@ -21,7 +22,7 @@ export interface TypesForSendingWhatsAppInvite {
   whatsMessage: string;
 }
 
-export type colorPalette = "blackPalette" | "goldPalette";
+export type colorPalette = "blackPalette" | "goldPalette" | "pinkPalette";
 export type joinChar = "y" | "+" | "&";
 export type coolBackground = "grainy" | "flowers";
 export interface InvitationDataTypes {
@@ -37,18 +38,22 @@ export interface InvitationDataTypes {
   fechaEvento: Date;
   Hero: {
     frase: {
+      textColor: string;
       content: string;
       font: NextFont;
     };
     fecha: {
       content: string;
       font: NextFont;
+      textColor: string;
     };
     fotoDesktop: string;
     fotoCell: string;
   };
   Iglesia: {
     desc: string;
+    titleColor: string;
+    bgButtonColor: string;
     nombre: {
       content: string;
       font: NextFont;
@@ -57,13 +62,32 @@ export interface InvitationDataTypes {
     ubicacion: string;
     hora: string;
   };
-  GraciasBanner: {
-    frase: {
+  InfoBanner: {
+    enabled: boolean;
+    fraseBiblica: {
+      enabled: boolean;
+    };
+    padres: {
+      enabled: boolean;
+      title?: {
+        textColor: string;
+      };
+      padresText?: {
+        font: NextFont;
+        textColor: string;
+      };
+      padresNovia?: string;
+      padresNovio?: string;
+    };
+  };
+  GraciasBanner?: {
+    enabled: boolean;
+    frase?: {
       content: string;
       font: NextFont;
       styling: { color: string; size: string };
     };
-    name: {
+    name?: {
       content: string;
       font: NextFont;
       styling: { color: string; size: string };
@@ -71,6 +95,8 @@ export interface InvitationDataTypes {
   };
   Recepcion: {
     desc: string;
+    titleColor: string;
+    bgButtonColor: string;
     nombre: {
       content: string;
       font: NextFont;
@@ -86,6 +112,7 @@ export interface InvitationDataTypes {
       textColor: string;
     };
     sobres: {
+      frase: string;
       enabled: boolean;
       textColor: string;
       type: string;
@@ -96,8 +123,8 @@ export interface InvitationDataTypes {
     };
     fraseDeAgradecimientoInicio: {
       enabled: boolean;
-      text: string;
-      styling: {
+      text?: string;
+      styling?: {
         font: NextFont;
         size: string;
         color: string;
@@ -105,8 +132,8 @@ export interface InvitationDataTypes {
     };
     fraseDeAgradecimientoFinal: {
       enabled: boolean;
-      text: string;
-      styling: {
+      text?: string;
+      styling?: {
         font: NextFont;
         size: string;
         color: string;
@@ -139,11 +166,12 @@ export interface InvitationDataTypes {
     };
   };
   ConfirmacionForm: {
-    nombre: string;
-    tel: string;
-    pasesAsignados: string;
-    invitationId: string;
-    styling: {
+    enabled: boolean;
+    nombre?: string;
+    tel?: string;
+    pasesAsignados?: string;
+    invitationId?: string;
+    styling?: {
       section: {
         backgroundColor: string;
       };
@@ -154,7 +182,8 @@ export interface InvitationDataTypes {
     };
   };
   ItinerarioScrollable: {
-    sectionStyling: {
+    enabled: boolean;
+    sectionStyling?: {
       lineColor: string;
       lineBg: string;
       circleColor: string;
@@ -163,6 +192,18 @@ export interface InvitationDataTypes {
       iconColor: string;
       cardBg: string;
     };
-    data: Array<EventoItinerario>;
+    data?: Array<EventoItinerario>;
+  };
+  ImageGallery: {
+    img1: StaticImageData;
+    img2: StaticImageData;
+    img3: StaticImageData;
+    img4: StaticImageData;
+  };
+  PadrinosSlider: {
+    enabled: boolean;
+  };
+  ConfirmacionInvViviana: {
+    enabled: boolean;
   };
 }

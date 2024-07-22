@@ -135,6 +135,7 @@ const CustomizedTemplate = () => {
         textColor: "text-[#ffcf40]",
       },
       sobres: {
+        frase: "Lluvia de sobres o sobre",
         enabled: true,
         textColor: "text-yellow-50",
         type: "default",
@@ -145,6 +146,24 @@ const CustomizedTemplate = () => {
       },
       regalo: {
         enabled: false,
+      },
+      fraseDeAgradecimientoInicio: {
+        enabled: false,
+        text: "",
+        styling: {
+          font: dancing,
+          size: "",
+          color: "",
+        },
+      },
+      fraseDeAgradecimientoFinal: {
+        enabled: false,
+        text: "",
+        styling: {
+          font: dancing,
+          size: "",
+          color: "",
+        },
       },
     },
     DressCodeProps: {
@@ -209,7 +228,48 @@ const CustomizedTemplate = () => {
       <Iglesia iglesiaProps={IglesiaProps} />
       <Recepcion recepcionProps={RecepcionProps} />
       <BannerConFoto />
-      <MesaDeRegalos mesaDeRegalosProps={MesaRegalosProps} />
+      <MesaDeRegalos
+        FraseAgradecimientoFinalColor={
+          MesaRegalosProps.fraseDeAgradecimientoFinal?.styling?.color
+        }
+        FraseAgradecimientoFinalFont={
+          MesaRegalosProps.fraseDeAgradecimientoFinal.styling?.font
+        }
+        FraseAgradecimientoFinalText={
+          MesaRegalosProps.fraseDeAgradecimientoFinal.text
+        }
+        FraseAgradecimientoInicioFont={
+          MesaRegalosProps.fraseDeAgradecimientoInicio.styling?.font
+        }
+        FraseAgradecimientoFinalSize={
+          MesaRegalosProps.fraseDeAgradecimientoFinal.styling?.size
+        }
+        FraseAgradecimientoInicioColor={
+          MesaRegalosProps.fraseDeAgradecimientoInicio.styling?.color
+        }
+        FraseAgradecimientoInicioSize={
+          MesaRegalosProps.fraseDeAgradecimientoInicio.styling?.size
+        }
+        FraseAgradecimientoInicioText={
+          MesaRegalosProps.fraseDeAgradecimientoInicio.text
+        }
+        ShowFraseDeAgradecimientoFinal={
+          MesaRegalosProps.fraseDeAgradecimientoFinal.enabled
+        }
+        ShowFraseDeAgradecimientoInicio={
+          MesaRegalosProps.fraseDeAgradecimientoInicio.enabled
+        }
+        ShowRegalo={MesaRegalosProps.regalo.enabled}
+        ShowSobres={MesaRegalosProps.sobres.enabled}
+        ShowTransferencia={MesaRegalosProps.transferencia.enabled}
+        SobresImg={MesaRegalosProps.sobres.img}
+        SobresTextColor={MesaRegalosProps.sobres.textColor}
+        SobresTextContent={MesaRegalosProps.sobres.frase}
+        SobresType={MesaRegalosProps.sobres.type}
+        SectionTitleColor={MesaRegalosProps.title.textColor}
+        SectionTitleFont={MesaRegalosProps.title.font}
+        backGround={MesaRegalosProps.backGround}
+      />
       <DressCode dressCodeProps={DressCodeProps} />
       <Confirmacion model="soloPlanner" />
       <SongPlayer />

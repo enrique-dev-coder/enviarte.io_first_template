@@ -18,4 +18,9 @@ export const themeColor: ThemeColor = {
     text: "text-white",
     backgroundDark: "bg-[#a67c00]",
   },
+  pinkPalette: {
+    textDark: "text-[#4b5563]",
+    text: "text-white",
+    backgroundDark: "bg-[#fb7185]",
+  },
 };

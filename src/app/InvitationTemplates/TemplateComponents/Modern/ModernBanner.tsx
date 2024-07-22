@@ -2,10 +2,6 @@
 import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
-import img1 from "/public/assets/images/estefaniayluis/img5.jpg";
-import img2 from "/public/assets/images/estefaniayluis/img6.jpg";
-import img3 from "/public/assets/images/estefaniayluis/img7.jpg";
-import img4 from "/public/assets/images/estefaniayluis/img8.jpg";
 
 const SingleFoto = ({ img, col }: { img: StaticImageData; col: string }) => {
   return (
@@ -21,7 +17,17 @@ const SingleFoto = ({ img, col }: { img: StaticImageData; col: string }) => {
   );
 };
 
-const ModernBanner = () => {
+const ModernBanner = ({
+  img1,
+  img2,
+  img3,
+  img4,
+}: {
+  img1: StaticImageData;
+  img2: StaticImageData;
+  img3: StaticImageData;
+  img4: StaticImageData;
+}) => {
   return (
     <div>
       {/* <AnimatedTitle
