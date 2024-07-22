@@ -90,7 +90,7 @@ const IndexPage = async ({ searchParams }: any) => {
         font: analogist,
       },
       fecha: {
-        content: "Sábado, 28 de septiembre 2024",
+        content: "13 de septiembre 2024",
         font: analogist,
         textColor: "text-[#fff1f2]",
       },
@@ -100,9 +100,10 @@ const IndexPage = async ({ searchParams }: any) => {
     Iglesia: {
       titleColor: "text-[#f43f5e]",
       bgButtonColor: "bg-[#fb7185]",
+      titleFont: dancing,
       desc: "Ceremonia Religiosa",
       nombre: {
-        content: "Parroquia del Sagrario de la Catedral. ( Catedral )",
+        content: "Catedral Santiago Apóstol",
         font: analogist,
       },
       direccion: "Gral. Nicolás Bravo 127, Zona Centro, 25000 Saltillo, Coah.",
@@ -112,6 +113,7 @@ const IndexPage = async ({ searchParams }: any) => {
     Recepcion: {
       desc: "Recepción",
       titleColor: "text-[#f43f5e]",
+      titleFont: dancing,
       bgButtonColor: "bg-[#fb7185]",
       nombre: {
         content: "Quinta Alborada",
@@ -133,7 +135,7 @@ const IndexPage = async ({ searchParams }: any) => {
       },
       sobres: {
         enabled: true,
-        frase: "Lluvia de sobres o sobre",
+        frase: "Lluvia de sobres o regalo",
         textColor: "text-gray-500",
         type: "modern",
         img: Sobre,

@@ -64,6 +64,7 @@ const InvitationModern = ({ data }: { data: InvitationDataTypes }) => {
       <SongButtonPlayer color={data.color} />
       <PlaceCard
         titleColor={data.Iglesia.titleColor}
+        titleFont={data.Iglesia.titleFont}
         bgButtonColor={data.Iglesia.bgButtonColor}
         desc={data.Iglesia.desc}
         direccion={data.Iglesia.direccion}
@@ -74,6 +75,7 @@ const InvitationModern = ({ data }: { data: InvitationDataTypes }) => {
       <PlaceCard
         bgButtonColor={data.Recepcion.bgButtonColor}
         titleColor={data.Recepcion.titleColor}
+        titleFont={data.Recepcion.titleFont}
         desc={data.Recepcion.desc}
         direccion={data.Recepcion.direccion}
         hora={data.Recepcion.hora}

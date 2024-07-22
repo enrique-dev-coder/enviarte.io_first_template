@@ -84,6 +84,7 @@ const IndexPage = async ({ searchParams }: any) => {
     },
     Iglesia: {
       titleColor: "text-[#000000]",
+      titleFont: dancing,
       bgButtonColor: "bg-black",
       desc: "Ceremonia Religiosa",
       nombre: {
@@ -97,6 +98,7 @@ const IndexPage = async ({ searchParams }: any) => {
     },
     Recepcion: {
       titleColor: "text-[#000000]",
+      titleFont: dancing,
       bgButtonColor: "bg-black",
       desc: "Recepción",
       nombre: {

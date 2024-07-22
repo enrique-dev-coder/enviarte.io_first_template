@@ -1,8 +1,7 @@
 import React from "react";
-import AnimatedTitle from "@/components/UI/AnimatedTitle";
 import { MapPin } from "lucide-react";
-import Button from "@/components/UI/Button";
 import { NextFont } from "next/dist/compiled/@next/font";
+import { motion } from "framer-motion";
 
 const PlaceCard = ({
   desc,
@@ -12,6 +11,7 @@ const PlaceCard = ({
   hora,
   titleColor,
   bgButtonColor,
+  titleFont,
 }: {
   desc: string;
   nombre: {
@@ -23,6 +23,7 @@ const PlaceCard = ({
   hora: string;
   titleColor: string;
   bgButtonColor: string;
+  titleFont: NextFont;
 }) => {
   return (
     <section className="py-6">
@@ -31,7 +32,17 @@ const PlaceCard = ({
       cell:w-full
       "
       >
-        <AnimatedTitle extraStyles={` text-4xl ${titleColor}`} title={desc} />
+        <motion.h2
+          initial={{ opacity: 0, y: 5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeInOut", duration: 1 }}
+          viewport={{ once: true }}
+          className={`${titleColor} ${titleFont.className} 
+           font-bold  text-center text-4xl py-1 
+            cell:text-3xl cell:px-4`}
+        >
+          {desc}
+        </motion.h2>
         <p
           className={`
           ${nombre.font.className}

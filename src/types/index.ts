@@ -53,6 +53,7 @@ export interface InvitationDataTypes {
   Iglesia: {
     desc: string;
     titleColor: string;
+    titleFont: NextFont;
     bgButtonColor: string;
     nombre: {
       content: string;
@@ -96,6 +97,7 @@ export interface InvitationDataTypes {
   Recepcion: {
     desc: string;
     titleColor: string;
+    titleFont: NextFont;
     bgButtonColor: string;
     nombre: {
       content: string;

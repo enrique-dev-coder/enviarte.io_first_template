@@ -2,19 +2,30 @@ import React from "react";
 import WhatsIcon from "/public/assets/images/Taniaydiego/whats_icon.png";
 import Image from "next/image";
 import AnimatedTitle from "../Customized/CommonComponents/AnimatedTitle";
-import { lora, bavaria } from "@/fonts";
+import { lora, bavaria, analogist } from "@/fonts";
+import { motion } from "framer-motion";
+
 const ConfirmacionViviana = () => {
   return (
-    <div className="pt-4 pb-10 flex flex-col  items-center justify-center">
-      <AnimatedTitle
-        title="Favor de confirmar tu asistencia a los siguientes teléfonos"
-        extraStyles={`${lora.className} font-medium cell:text-lg`}
-      />
+    <div className="pt-4 pb-10 flex flex-col bg-white  items-center justify-center">
+      <motion.h2
+        initial={{ opacity: 0, y: 5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+        className={`
+      font-bold  text-center text-4xl py-1 
+      cell:text-2xl cell:px-4`}
+      >
+        Favor de confirmar tu asistencia con nuestra wedding planner
+      </motion.h2>
       <p className=" text-3xl cell:text-lg cell:text-center">
         Al dar click seras redirigido a WhatsApp
       </p>
       <div className="flex flex-col justify-center items-center py-8">
-        <p className={`${bavaria.className} text-4xl text-center font-bold`}>
+        <p
+          className={`${analogist.className} text-4xl cell:text-3xl text-center font-bold`}
+        >
           Wedding Planner <br /> Viviana Amare
         </p>
         <a href="https://api.whatsapp.com/send?phone=5218441339405">
