@@ -181,6 +181,7 @@ const CustomizedTemplate = () => {
         Mujeres: {
           dressCodeImg: undefined,
           textColor: "",
+          extraDesc: "",
         },
         Hombres: {
           dressCodeImg: undefined,
