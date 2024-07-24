@@ -18,15 +18,9 @@ const SingleFoto = ({ img, col }: { img: StaticImageData; col: string }) => {
 };
 
 const ModernBanner = ({
-  img1,
-  img2,
-  img3,
-  img4,
+  ImageGalleryList,
 }: {
-  img1: StaticImageData;
-  img2: StaticImageData;
-  img3: StaticImageData;
-  img4: StaticImageData;
+  ImageGalleryList: Array<StaticImageData>;
 }) => {
   return (
     <div>
@@ -35,10 +29,9 @@ const ModernBanner = ({
         extraStyles={`${lora.className} font-medium cell:text-xl`}
       /> */}
       <div className=" grid grid-cols-12 ">
-        <SingleFoto col="col-span-6" img={img1} />
-        <SingleFoto col="col-span-6" img={img2} />
-        <SingleFoto col="col-span-6" img={img3} />
-        <SingleFoto col="col-span-6" img={img4} />
+        {ImageGalleryList.map((img, i) => (
+          <SingleFoto key={i} col="col-span-6" img={img} />
+        ))}
       </div>
     </div>
   );

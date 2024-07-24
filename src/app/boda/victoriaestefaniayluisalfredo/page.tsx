@@ -59,6 +59,7 @@ const IndexPage = async ({ searchParams }: any) => {
     titleFont: dancing,
     spBackground: "flowers",
     songLink: "/assets/songs/boda-estefania-luis.mp3",
+    songplayerBgColor: "bg-black/30",
     color: "blackPalette",
     fechaEvento: new Date("2024-09-28T00:00:00"),
     fechaString: "Sábado, 28 de septiembre 2024",
@@ -176,6 +177,7 @@ const IndexPage = async ({ searchParams }: any) => {
         Mujeres: {
           dressCodeImg: DressCodeMujeres,
           textColor: "text-black",
+          extraDesc: "* Color lila esta reservado para las damas",
         },
         Hombres: {
           dressCodeImg: DressCodeHombres,
@@ -244,10 +246,7 @@ const IndexPage = async ({ searchParams }: any) => {
       ],
     },
     ImageGallery: {
-      img1: img1,
-      img2: img2,
-      img3: img3,
-      img4: img4,
+      list: [img1, img2, img3, img4],
     },
     PadrinosSlider: {
       enabled: true,

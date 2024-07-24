@@ -33,6 +33,7 @@ export interface InvitationDataTypes {
   fechaString?: string;
   spBackground?: coolBackground;
   color: colorPalette;
+  songplayerBgColor: string;
   fotoContador: string;
   songLink: string;
   fechaEvento: Date;
@@ -160,6 +161,7 @@ export interface InvitationDataTypes {
       Mujeres: {
         dressCodeImg: StaticImageData;
         textColor: string;
+        extraDesc: string | undefined;
       };
       Hombres: {
         dressCodeImg: StaticImageData;
@@ -197,10 +199,7 @@ export interface InvitationDataTypes {
     data?: Array<EventoItinerario>;
   };
   ImageGallery: {
-    img1: StaticImageData;
-    img2: StaticImageData;
-    img3: StaticImageData;
-    img4: StaticImageData;
+    list: Array<StaticImageData>;
   };
   PadrinosSlider: {
     enabled: boolean;

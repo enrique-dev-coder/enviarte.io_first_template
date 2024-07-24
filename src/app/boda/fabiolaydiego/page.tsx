@@ -12,10 +12,14 @@ import DressCodeMujeres from "/public/assets/images/Dress_icon.png";
 import DressCodeHombres from "/public/assets/images/suit_icon-removebg-preview.png";
 import Sobre from "/public/assets/images/email.png";
 // image gallery
+import img0 from "/public/assets/images/fabiolaydiego/counter.jpeg";
 import img1 from "/public/assets/images/fabiolaydiego/fyd_img_1.jpeg";
 import img2 from "/public/assets/images/fabiolaydiego/fyd_img_2.jpeg";
 import img3 from "/public/assets/images/fabiolaydiego/fyd_img_3.jpeg";
 import img4 from "/public/assets/images/fabiolaydiego/fyd_img_4.jpeg";
+import img5 from "/public/assets/images/fabiolaydiego/fyd_img_5.jpeg";
+import img6 from "/public/assets/images/fabiolaydiego/fyd_img_6.jpeg";
+import img8 from "/public/assets/images/fabiolaydiego/fyd_img_8.jpeg";
 
 export const metadata: Metadata = {
   title: "Fabiola y Diego",
@@ -59,10 +63,11 @@ const IndexPage = async ({ searchParams }: any) => {
     titleFont: dancing,
     spBackground: "flowers",
     songLink: "/assets/songs/boda-fabiola-diego.mp3",
+    songplayerBgColor: "bg-[#d5a1d3]/70",
     color: "pinkPalette",
     fechaEvento: new Date("2024-09-13T00:00:00"),
     fechaString: "Viernes, 13 de septiembre 2024",
-    fotoContador: "bg-[url('/assets/images/fabiolaydiego/contador.jpeg')]",
+    fotoContador: "bg-[url('/assets/images/fabiolaydiego/counter.jpeg')]",
     InfoBanner: {
       enabled: true,
       fraseBiblica: {
@@ -71,7 +76,7 @@ const IndexPage = async ({ searchParams }: any) => {
       padres: {
         enabled: true,
         title: {
-          textColor: "text-[#f43f5e]",
+          textColor: "text-[#d5a1d3]",
         },
         padresText: {
           font: analogist,
@@ -85,21 +90,21 @@ const IndexPage = async ({ searchParams }: any) => {
     },
     Hero: {
       frase: {
-        textColor: "text-[#fff1f2]",
+        textColor: "text-[#f8f0f8]",
         content: "Save the date",
         font: analogist,
       },
       fecha: {
         content: "13 de septiembre 2024",
         font: analogist,
-        textColor: "text-[#fff1f2]",
+        textColor: "text-[#f8f0f8]",
       },
       fotoDesktop: "bg-[url('/assets/images/fabiolaydiego/hero.jpeg')]",
       fotoCell: "cell:bg-[url('/assets/images/fabiolaydiego/hero.jpeg')]",
     },
     Iglesia: {
-      titleColor: "text-[#f43f5e]",
-      bgButtonColor: "bg-[#fb7185]",
+      titleColor: "text-[#d5a1d3]",
+      bgButtonColor: "bg-[#d5a1d3]",
       titleFont: dancing,
       desc: "Ceremonia Religiosa",
       nombre: {
@@ -112,9 +117,9 @@ const IndexPage = async ({ searchParams }: any) => {
     },
     Recepcion: {
       desc: "Recepción",
-      titleColor: "text-[#f43f5e]",
+      titleColor: "text-[#d5a1d3]",
       titleFont: dancing,
-      bgButtonColor: "bg-[#fb7185]",
+      bgButtonColor: "bg-[#d5a1d3]",
       nombre: {
         content: "Quinta Alborada",
         font: analogist,
@@ -131,7 +136,7 @@ const IndexPage = async ({ searchParams }: any) => {
       backGround: "bg-white",
       title: {
         font: dancing,
-        textColor: "text-[#f43f5e]",
+        textColor: "text-[#d5a1d3]",
       },
       sobres: {
         enabled: true,
@@ -157,7 +162,7 @@ const IndexPage = async ({ searchParams }: any) => {
       backGround: "bg-white",
       title: {
         font: dancing,
-        textColor: "text-black",
+        textColor: "text-[#d5a1d3]",
       },
       desc: {
         text: "Formal",
@@ -168,6 +173,7 @@ const IndexPage = async ({ searchParams }: any) => {
         Mujeres: {
           dressCodeImg: DressCodeMujeres,
           textColor: "text-black",
+          extraDesc: " ",
         },
         Hombres: {
           dressCodeImg: DressCodeHombres,
@@ -182,10 +188,7 @@ const IndexPage = async ({ searchParams }: any) => {
       enabled: false,
     },
     ImageGallery: {
-      img1: img1,
-      img2: img2,
-      img3: img3,
-      img4: img4,
+      list: [img0, img1, img2, img5, img3, img4, img6, img8],
     },
     PadrinosSlider: {
       enabled: false,

@@ -49,7 +49,7 @@ const DressCode = ({ dressCodeProps }: { dressCodeProps: DressCodeProps }) => {
                 Vestido Largo
               </p>
               <p className="text-center text-4xl mb-4 cell:text-xl cell:mb-1">
-                * Color lila esta reservado para las damas
+                {dressCodeProps.iconSection.Mujeres.extraDesc}
               </p>
             </div>
             <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">

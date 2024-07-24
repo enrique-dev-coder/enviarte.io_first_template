@@ -73,6 +73,7 @@ export interface DressCodeProps {
     Mujeres: {
       dressCodeImg: StaticImageData | undefined;
       textColor: string;
+      extraDesc: string | undefined;
     };
     Hombres: {
       dressCodeImg: StaticImageData | undefined;

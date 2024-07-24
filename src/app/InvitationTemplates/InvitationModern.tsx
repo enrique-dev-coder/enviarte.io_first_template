@@ -61,7 +61,7 @@ const InvitationModern = ({ data }: { data: InvitationDataTypes }) => {
         frase={data.GraciasBanner?.frase}
         name={data.GraciasBanner?.name}
       />
-      <SongButtonPlayer color={data.color} />
+      <SongButtonPlayer backgroundColor={data.songplayerBgColor} />
       <PlaceCard
         titleColor={data.Iglesia.titleColor}
         titleFont={data.Iglesia.titleFont}
@@ -87,12 +87,7 @@ const InvitationModern = ({ data }: { data: InvitationDataTypes }) => {
         sectionStyling={data.ItinerarioScrollable.sectionStyling}
         eventData={data.ItinerarioScrollable.data}
       />
-      <ModernBanner
-        img1={data.ImageGallery.img1}
-        img2={data.ImageGallery.img2}
-        img3={data.ImageGallery.img3}
-        img4={data.ImageGallery.img4}
-      />
+      <ModernBanner ImageGalleryList={data.ImageGallery.list} />
       <PadrinosDeBoda showSlider={data.PadrinosSlider.enabled} />
       <MesaDeRegalos
         FraseAgradecimientoFinalColor={
