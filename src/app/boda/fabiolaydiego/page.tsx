@@ -127,7 +127,7 @@ const IndexPage = async ({ searchParams }: any) => {
       direccion:
         'Quinta "La Alborada, Blvd. Luis Donaldo Colosio #265 Col, La Aurora, 25298 Saltillo, Coah.',
       ubicacion: "https://maps.app.goo.gl/U4DvRtv89MvJitSw5",
-      hora: " 7:30 pm civil - recepción 8:30 pm",
+      hora: " 7:30 pm civil - recepción 8:00 pm",
     },
     GraciasBanner: {
       enabled: false,
@@ -173,7 +173,8 @@ const IndexPage = async ({ searchParams }: any) => {
         Mujeres: {
           dressCodeImg: DressCodeMujeres,
           textColor: "text-black",
-          extraDesc: " ",
+          extraDesc:
+            "* Código de vestimenta: en esta boda los colores blanco y lila o derivados, los reservamos. Elige otros colores",
         },
         Hombres: {
           dressCodeImg: DressCodeHombres,
