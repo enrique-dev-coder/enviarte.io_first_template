@@ -66,7 +66,7 @@ const EnviarInvManual = () => {
                 onSubmit={handleSubmit((data) => {
                   setShowLink(true);
                   setGeneratedLink(
-                    `https://www.invitandofacil.com/boda/danielayjosepablo?${objetoAParametrosURL(
+                    `https://www.invitandofacil.com/boda/victoriaestefaniayluisalfredo?${objetoAParametrosURL(
                       data
                     )}`
                   );
