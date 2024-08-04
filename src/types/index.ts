@@ -46,6 +46,7 @@ export interface InvitationDataTypes {
       textColor: string;
       content: string;
       font: NextFont;
+      centerWithTranslateY: number;
     };
     fecha: {
       content: string;

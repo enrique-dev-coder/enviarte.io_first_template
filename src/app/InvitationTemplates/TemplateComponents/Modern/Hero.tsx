@@ -15,10 +15,12 @@ const InvitationHero1 = ({
   fecha,
   fotoDesktop,
   fotoCell,
+  translateYVal,
 }: {
   novia: string;
   novio: string;
   join: string;
+  translateYVal: number;
   frase: {
     content: string;
     font: NextFont;
@@ -50,22 +52,24 @@ const InvitationHero1 = ({
     >
       {/*informacion de la boda*/}
       <div className="flex flex-col  items-center   justify-between h-full pt-6 pb-10">
-        <motion.h2
-          initial={{ opacity: 0, y: 5 }}
-          animate={controls}
-          transition={{ ease: "easeInOut", duration: 0.5, delay: 1 }}
-          viewport={{ once: true }}
-          className={`${font.className} text-5xl text-white my-2  text-center font-light cell:text-5xl `}
-        >
-          {novia} <br />
-          <span
-            className={`${lora.className} text-white text-[44px] cell:text-[60px]`}
+        <div style={{ transform: `translateY(${translateYVal}px)` }}>
+          <motion.h2
+            initial={{ opacity: 0, y: 5 }}
+            animate={controls}
+            transition={{ ease: "easeInOut", duration: 0.5, delay: 1 }}
+            viewport={{ once: true }}
+            className={`${font.className} text-5xl text-white my-2  text-center font-light cell:text-5xl `}
           >
-            {join}
-          </span>{" "}
-          <br />
-          {novio}
-        </motion.h2>
+            {novia} <br />
+            <span
+              className={`${lora.className} text-white text-[44px] cell:text-[60px]`}
+            >
+              {join}
+            </span>{" "}
+            <br />
+            {novio}
+          </motion.h2>
+        </div>
         <div>
           <motion.p
             initial={{ opacity: 0, y: 5 }}

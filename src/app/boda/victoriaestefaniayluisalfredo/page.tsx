@@ -74,6 +74,7 @@ const IndexPage = async ({ searchParams }: any) => {
         textColor: "text-white",
         content: "Save the date",
         font: dancing,
+        centerWithTranslateY: 0,
       },
       fecha: {
         textColor: "text-white",

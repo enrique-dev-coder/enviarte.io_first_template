@@ -39,6 +39,7 @@ const InvitationModern = ({ data }: { data: InvitationDataTypes }) => {
         fecha={data.Hero.fecha}
         fotoDesktop={data.Hero.fotoDesktop}
         fotoCell={data.Hero.fotoCell}
+        translateYVal={data.Hero.frase.centerWithTranslateY}
       />
       <InfoBanner
         showBanner={data.InfoBanner?.enabled}
