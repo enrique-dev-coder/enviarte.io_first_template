@@ -4,6 +4,7 @@ import { NextFont } from "next/dist/compiled/@next/font";
 import { motion } from "framer-motion";
 
 const PlaceCard = ({
+  show,
   desc,
   nombre,
   ubicacion,
@@ -13,19 +14,22 @@ const PlaceCard = ({
   bgButtonColor,
   titleFont,
 }: {
-  desc: string;
-  nombre: {
-    content: string;
-    font: NextFont;
-  };
-  ubicacion: string;
-  direccion: string;
-  hora: string;
-  titleColor: string;
-  bgButtonColor: string;
-  titleFont: NextFont;
+  show: boolean;
+  desc: string | undefined;
+  nombre:
+    | {
+        content: string;
+        font: NextFont;
+      }
+    | undefined;
+  ubicacion: string | undefined;
+  direccion: string | undefined;
+  hora: string | undefined;
+  titleColor: string | undefined;
+  bgButtonColor: string | undefined;
+  titleFont: NextFont | undefined;
 }) => {
-  return (
+  return show ? (
     <section className="py-6">
       <div
         className="flex flex-col gap-2 justify-center items-center bg-white w-[45%] py-6 shadow-lg mx-auto 
@@ -37,7 +41,7 @@ const PlaceCard = ({
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeInOut", duration: 1 }}
           viewport={{ once: true }}
-          className={`${titleColor} ${titleFont.className} 
+          className={`${titleColor} ${titleFont?.className} 
            font-bold  text-center text-4xl py-1 
             cell:text-3xl cell:px-4`}
         >
@@ -45,11 +49,11 @@ const PlaceCard = ({
         </motion.h2>
         <p
           className={`
-          ${nombre.font.className}
+          ${nombre?.font.className}
            text-2xl cell:text-xl cell:px-2 cell:font-bold  font-bold 
           `}
         >
-          {nombre.content}
+          {nombre?.content}
         </p>
         <p className=" text-2xl cell:text-xl cell:px-2 cell:font-bold">
           {hora}
@@ -67,7 +71,7 @@ const PlaceCard = ({
         </a>
       </div>
     </section>
-  );
+  ) : null;
 };
 
 export default PlaceCard;

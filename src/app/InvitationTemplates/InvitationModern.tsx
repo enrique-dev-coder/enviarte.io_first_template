@@ -42,7 +42,7 @@ const InvitationModern = ({ data }: { data: InvitationDataTypes }) => {
       />
       <InfoBanner
         showBanner={data.InfoBanner?.enabled}
-        showPadres={data.InfoBanner?.padres.enabled}
+        showPadres={data.InfoBanner?.padres?.enabled}
         showFraseBibilica={data.InfoBanner?.fraseBiblica?.enabled}
         padresNovia={data.InfoBanner?.padres?.padresNovia}
         padresNovio={data.InfoBanner?.padres?.padresNovio}
@@ -63,16 +63,18 @@ const InvitationModern = ({ data }: { data: InvitationDataTypes }) => {
       />
       <SongButtonPlayer backgroundColor={data.songplayerBgColor} />
       <PlaceCard
-        titleColor={data.Iglesia.titleColor}
-        titleFont={data.Iglesia.titleFont}
-        bgButtonColor={data.Iglesia.bgButtonColor}
-        desc={data.Iglesia.desc}
-        direccion={data.Iglesia.direccion}
-        hora={data.Iglesia.hora}
-        nombre={data.Iglesia.nombre}
-        ubicacion={data.Iglesia.ubicacion}
+        show={data.Iglesia.enabled}
+        titleColor={data?.Iglesia?.titleColor}
+        titleFont={data?.Iglesia?.titleFont}
+        bgButtonColor={data?.Iglesia?.bgButtonColor}
+        desc={data?.Iglesia?.desc}
+        direccion={data?.Iglesia?.direccion}
+        hora={data?.Iglesia?.hora}
+        nombre={data?.Iglesia?.nombre}
+        ubicacion={data?.Iglesia?.ubicacion}
       />
       <PlaceCard
+        show={data.Recepcion.enabled}
         bgButtonColor={data.Recepcion.bgButtonColor}
         titleColor={data.Recepcion.titleColor}
         titleFont={data.Recepcion.titleFont}
@@ -141,7 +143,13 @@ const InvitationModern = ({ data }: { data: InvitationDataTypes }) => {
           styling={data.ConfirmacionForm.styling}
         />
       )}
-      {data.ConfirmacionInvViviana.enabled && <ConfirmacionViviana />}
+      {data.ConfirmacionInvViviana.enabled && (
+        <ConfirmacionViviana
+          descTextSize={data.ConfirmacionInvViviana.descStyling?.textSize}
+          descFontWeight={data.ConfirmacionInvViviana.descStyling?.fontWeight}
+          buttonBorderColor={data.ConfirmacionInvViviana.buttonStyling?.border}
+        />
+      )}
     </InvitationContainer>
   );
 };

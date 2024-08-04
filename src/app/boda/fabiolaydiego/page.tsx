@@ -103,6 +103,7 @@ const IndexPage = async ({ searchParams }: any) => {
       fotoCell: "cell:bg-[url('/assets/images/fabiolaydiego/hero.jpeg')]",
     },
     Iglesia: {
+      enabled: true,
       titleColor: "text-[#d5a1d3]",
       bgButtonColor: "bg-[#d5a1d3]",
       titleFont: dancing,
@@ -116,6 +117,7 @@ const IndexPage = async ({ searchParams }: any) => {
       hora: "5:00pm",
     },
     Recepcion: {
+      enabled: true,
       desc: "Recepción",
       titleColor: "text-[#d5a1d3]",
       titleFont: dancing,
@@ -196,6 +198,13 @@ const IndexPage = async ({ searchParams }: any) => {
     },
     ConfirmacionInvViviana: {
       enabled: true,
+      descStyling: {
+        textSize: "text-4xl cell:text-xl",
+        fontWeight: "font-semibold",
+      },
+      buttonStyling: {
+        border: "border-complementaryDark",
+      },
     },
   };
 

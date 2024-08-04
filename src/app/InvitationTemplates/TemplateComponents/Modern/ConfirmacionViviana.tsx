@@ -5,7 +5,15 @@ import AnimatedTitle from "../Customized/CommonComponents/AnimatedTitle";
 import { lora, bavaria, analogist } from "@/fonts";
 import { motion } from "framer-motion";
 
-const ConfirmacionViviana = () => {
+const ConfirmacionViviana = ({
+  descTextSize,
+  descFontWeight,
+  buttonBorderColor,
+}: {
+  descTextSize: string | undefined;
+  descFontWeight: string | undefined;
+  buttonBorderColor: string | undefined;
+}) => {
   return (
     <div className="pt-4 pb-10 flex flex-col bg-white  items-center justify-center">
       <motion.h2
@@ -14,8 +22,7 @@ const ConfirmacionViviana = () => {
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
         className={`
-      font-bold  text-center text-4xl py-1 
-      cell:text-2xl cell:px-4`}
+       ${descFontWeight} font-bold  text-center ${descTextSize}  py-1  cell:px-4`}
       >
         Favor de confirmar tu asistencia con nuestra wedding planner
       </motion.h2>
@@ -29,7 +36,9 @@ const ConfirmacionViviana = () => {
           Wedding Planner <br /> Viviana Amare
         </p>
         <a href="https://api.whatsapp.com/send?phone=5218441339405">
-          <button className="flex items-center border-4 my-3 rounded-full px-4 py-2  border-complementaryDark">
+          <button
+            className={`flex items-center border-4 my-3 rounded-full px-4 py-2 ${buttonBorderColor} `}
+          >
             <Image src={WhatsIcon} alt="invitacione para boda" width={48} />
             <p className=" text-3xl"> 844 133 9405</p>
           </button>

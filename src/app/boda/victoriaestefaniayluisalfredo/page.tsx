@@ -84,6 +84,7 @@ const IndexPage = async ({ searchParams }: any) => {
       fotoCell: "cell:bg-[url('/assets/images/estefaniayluis/hero_pc_2.jpg')]",
     },
     Iglesia: {
+      enabled: true,
       titleColor: "text-[#000000]",
       titleFont: dancing,
       bgButtonColor: "bg-black",
@@ -98,6 +99,7 @@ const IndexPage = async ({ searchParams }: any) => {
       hora: "5:00pm",
     },
     Recepcion: {
+      enabled: true,
       titleColor: "text-[#000000]",
       titleFont: dancing,
       bgButtonColor: "bg-black",

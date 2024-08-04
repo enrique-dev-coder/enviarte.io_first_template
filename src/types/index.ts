@@ -22,7 +22,11 @@ export interface TypesForSendingWhatsAppInvite {
   whatsMessage: string;
 }
 
-export type colorPalette = "blackPalette" | "goldPalette" | "pinkPalette";
+export type colorPalette =
+  | "blackPalette"
+  | "goldPalette"
+  | "pinkPalette"
+  | "bluePalette";
 export type joinChar = "y" | "+" | "&";
 export type coolBackground = "grainy" | "flowers";
 export interface InvitationDataTypes {
@@ -52,24 +56,25 @@ export interface InvitationDataTypes {
     fotoCell: string;
   };
   Iglesia: {
-    desc: string;
-    titleColor: string;
-    titleFont: NextFont;
-    bgButtonColor: string;
-    nombre: {
+    enabled: boolean;
+    desc?: string;
+    titleColor?: string;
+    titleFont?: NextFont;
+    bgButtonColor?: string;
+    nombre?: {
       content: string;
       font: NextFont;
     };
-    direccion: string;
-    ubicacion: string;
-    hora: string;
+    direccion?: string;
+    ubicacion?: string;
+    hora?: string;
   };
   InfoBanner: {
     enabled: boolean;
-    fraseBiblica: {
+    fraseBiblica?: {
       enabled: boolean;
     };
-    padres: {
+    padres?: {
       enabled: boolean;
       title?: {
         textColor: string;
@@ -96,6 +101,7 @@ export interface InvitationDataTypes {
     };
   };
   Recepcion: {
+    enabled: boolean;
     desc: string;
     titleColor: string;
     titleFont: NextFont;
@@ -206,5 +212,12 @@ export interface InvitationDataTypes {
   };
   ConfirmacionInvViviana: {
     enabled: boolean;
+    descStyling?: {
+      textSize: string;
+      fontWeight: string;
+    };
+    buttonStyling?: {
+      border: string;
+    };
   };
 }
