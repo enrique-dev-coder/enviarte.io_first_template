@@ -33,7 +33,7 @@ const IndexPage = async ({ searchParams }: any) => {
     titleFont: dancing,
     spBackground: "flowers",
     songLink: "/assets/songs/boda-america-christian.mp3",
-    songplayerBgColor: "bg-[#60a5fa]/70",
+    songplayerBgColor: "bg-[#3b82f6]/70",
     color: "bluePalette",
     fechaEvento: new Date("2024-09-14T00:00:00"),
     fechaString: "Sábado, 14 de septiembre 2024",
@@ -43,7 +43,7 @@ const IndexPage = async ({ searchParams }: any) => {
     },
     Hero: {
       frase: {
-        textColor: "text-[#7dd3fc]",
+        textColor: "text-[#2563eb]",
         content: "Save the date",
         font: analogist,
         centerWithTranslateY: 210,
@@ -51,7 +51,7 @@ const IndexPage = async ({ searchParams }: any) => {
       fecha: {
         content: "14 de septiembre 2024",
         font: analogist,
-        textColor: "text-[#7dd3fc]",
+        textColor: "text-[#2563eb]",
       },
       fotoDesktop: "bg-[url('/assets/images/americaychristian/hero.jpeg')]",
       fotoCell:
@@ -63,9 +63,9 @@ const IndexPage = async ({ searchParams }: any) => {
     Recepcion: {
       enabled: true,
       desc: "Recepción",
-      titleColor: "text-[#60a5fa]",
+      titleColor: "text-[#2563eb]",
       titleFont: dancing,
-      bgButtonColor: "bg-[#60a5fa]",
+      bgButtonColor: "bg-[#2563eb]",
       nombre: {
         content: "Eventos Jardín",
         font: analogist,
@@ -81,7 +81,7 @@ const IndexPage = async ({ searchParams }: any) => {
       backGround: "bg-white",
       title: {
         font: dancing,
-        textColor: "text-[#60a5fa]",
+        textColor: "text-[#2563eb]",
       },
       sobres: {
         enabled: true,
@@ -107,7 +107,7 @@ const IndexPage = async ({ searchParams }: any) => {
       backGround: "bg-white",
       title: {
         font: dancing,
-        textColor: "text-[#60a5fa]",
+        textColor: "text-[#2563eb]",
       },
       desc: {
         text: "Formal",
@@ -145,7 +145,7 @@ const IndexPage = async ({ searchParams }: any) => {
         fontWeight: "font-semibold",
       },
       buttonStyling: {
-        border: "border-[#60a5fa]",
+        border: "border-[#3b82f6]",
       },
     },
   };

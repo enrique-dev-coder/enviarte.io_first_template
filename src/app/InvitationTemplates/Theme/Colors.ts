@@ -26,6 +26,6 @@ export const themeColor: ThemeColor = {
   bluePalette: {
     textDark: "text-[#4b5563]",
     text: "text-white",
-    backgroundDark: "bg-[#93c5fd]",
+    backgroundDark: "bg-[#3b82f6]",
   },
 };
