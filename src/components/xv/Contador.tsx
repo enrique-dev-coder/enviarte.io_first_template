@@ -62,7 +62,7 @@ const Contador = ({
           transition={{ ease: "easeInOut", duration: 1 }}
           viewport={{ once: true }}
           className={`${lora.className}   text-center text-4xl mb-[32px] 
-          cell:text-xl cell:mb-[18px] cell:w-[80%] cell:mx-auto`}
+          cell:text-3xl cell:mb-[18px] cell:w-[80%] cell:mx-auto`}
         >
           {fechaString}
         </motion.p>

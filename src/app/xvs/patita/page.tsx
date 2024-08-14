@@ -63,7 +63,7 @@ const page = async ({ searchParams }: any) => {
           <div
             className={`  text-purple-900 relative z-20 text-[18px] font-bold w-10/12 mx-auto  `}
           >
-            <p className="">
+            <p className=" text-center">
               El camino que conduce a un mundo nuevo de ilusiones y esperanzas,
               un mundo de sueños realizados y afectos compartidos; ese es el
               camino que comienzo a transitar y que marcará un momento
@@ -101,14 +101,14 @@ const page = async ({ searchParams }: any) => {
             <p
               className={`${dancing.className} relative z-20 text-[#654ca7] font-bold text-center text-[48px]`}
             >
-              Octubre 5
+              Mis XV Años
             </p>
           </div>
         </div>
         <Contador
           color="pinkPalette"
           fechaEvento={new Date("2024-10-05T00:00:00")}
-          fechaString="Sábado, 5 de Octubre de 2024"
+          fechaString=" Sábado, 5 de Octubre"
           fotoContador="bg-[url('/assets/images/xvs/patita/contador.jpeg')]"
         />
         {/*Placecards con iglesia y fiesta*/}
@@ -226,6 +226,15 @@ const page = async ({ searchParams }: any) => {
             </p>
           </div>
         </section>
+
+        <p
+          className={` 
+          bg-purple-50
+           font-bold  text-center text-5xl py-1 text-purple-900
+            cell:text-2xl cell:px-4`}
+        >
+          * Fecha Límite de Confirmacion 20 de septiembre
+        </p>
         {/*Confirmacion*/}
         <ConfirmacionForm
           invitationId={{ id: "1" }}
