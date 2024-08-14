@@ -19,7 +19,7 @@ import SongButtonPlayer from "@/app/InvitationTemplates/Common/SongButtonPlayer"
 
 const IngresarBotonProps = {
   font: dancing,
-  novia: "XVs",
+  novia: "XV's",
   novio: "Ana Patricia",
   join: "",
   color: {
@@ -49,7 +49,7 @@ const page = async ({ searchParams }: any) => {
 
       <section className="max-w-[650px] mx-auto">
         {/* Hero container */}
-        <div className=" flex flex-col gap-4 relative items-center justify-center cell:w-full h-[70vh] z-20">
+        <div className=" flex flex-col gap-4 relative items-center justify-center cell:w-full h-auto py-10 z-20">
           <Image
             alt="adorno"
             src={adorno1}
@@ -66,28 +66,22 @@ const page = async ({ searchParams }: any) => {
             <p className="">
               El camino que conduce a un mundo nuevo de ilusiones y esperanzas,
               un mundo de sueños realizados y afectos compartidos; ese es el
-              camino que comienzo a transitar en esta noche que marcará un
-              momento inolvidable. Espero que me acompañes para compartirlo.
+              camino que comienzo a transitar y que marcará un momento
+              inolvidable. Espero que me acompañes para compartirlo.
             </p>
           </div>
-          <div>
-            <p
-              className={`${dancing.className} relative z-20 text-[#9650b3] font-bold text-center text-[48px]`}
-            >
-              Ana Patricia
-            </p>
-            {/* <div className="text-[#9650b3] text-center text-[22px]">
-            <p className="">
-              Te invito a celebrar conmigo este día tan especial
-            </p>
-            <p>¡No faltes!</p>
-          </div> */}
-            <p
-              className={`${dancing.className} relative z-20 text-[#654ca7] font-bold text-center text-[48px]`}
-            >
-              Octubre 5
-            </p>
-          </div>
+          <p
+            className={`w-[90%] mx-auto my-5 ${dancing.className} text-[#654ca7]  text-center relative z-20 text-3xl`}
+          >
+            <span className="text-[#9650b3]">
+              Con la bendición de Dios y de mis papás
+            </span>
+            <br />
+            <b className=" text-5xl">
+              Patrick
+              <br /> y Ana María
+            </b>
+          </p>
         </div>
         <div className="-mt-4 z-20 relative">
           <Image src={quince1} alt="invitaciones digitales" />
@@ -98,18 +92,18 @@ const page = async ({ searchParams }: any) => {
             src={adorno3}
             className=" absolute top-0 opacity-80  left-0 right-0"
           />
-          <p
-            className={`w-[80%] mx-auto my-10 ${dancing.className} text-[#654ca7]  text-center relative z-20 text-3xl`}
-          >
-            <span className="text-[#9650b3]">
-              Con la bendición de Dios y de mis papás
-            </span>
-            <br />
-            <b>
-              Patrick Abram Quinn
-              <br /> y Ana María Rosas Fonseca.
-            </b>
-          </p>
+          <div className="py-10">
+            <p
+              className={`${dancing.className} relative z-20 text-[#9650b3] font-bold text-center text-[64px]`}
+            >
+              Ana Patricia
+            </p>
+            <p
+              className={`${dancing.className} relative z-20 text-[#654ca7] font-bold text-center text-[48px]`}
+            >
+              Octubre 5
+            </p>
+          </div>
         </div>
         <Contador
           color="pinkPalette"
@@ -145,17 +139,17 @@ const page = async ({ searchParams }: any) => {
               </h2>
               <p
                 className={`
-           text-2xl text-center cell:text-xl cell:px-2 cell:font-bold  font-bold 
+           text-2xl text-center cell:text-xl cell:px-2 cell:font-bold  font-bold text-purple-900
           `}
               >
                 Iglesia del Ranchito del Rey y María Madre (Juaninos)
               </p>
-              <p className=" text-2xl cell:text-xl cell:px-2 cell:font-bold">
+              <p className=" text-2xl cell:text-xl cell:px-2 cell:font-bold text-purple-900">
                 3:00 pm
               </p>
               <div className=" flex items-center cell:w-[90%] cell:mx-auto cell:flex-col">
-                <MapPin className="  text-gray-700 font-bold " />
-                <p className=" text-xl text-center cell:text-base ">
+                <MapPin className="  text-purple-900 font-bold " />
+                <p className=" text-xl text-center cell:text-base text-purple-900 ">
                   Blvd. José Narro Robles s/n. Saltillo, Coah.
                 </p>
               </div>
@@ -179,23 +173,23 @@ const page = async ({ searchParams }: any) => {
               </h2>
               <p
                 className={`
-           text-2xl text-center cell:text-xl cell:px-2 cell:font-bold  font-bold 
+           text-2xl text-center cell:text-xl cell:px-2 cell:font-bold  font-bold text-purple-900
           `}
               >
                 Quinta Los Pastores{" "}
               </p>
-              <p className=" text-2xl cell:text-xl cell:px-2 cell:font-bold">
+              <p className=" text-2xl cell:text-xl cell:px-2 cell:font-bold text-purple-900">
                 8:00 pm
               </p>
               <div className=" flex items-center cell:w-[90%] cell:mx-auto cell:flex-col">
-                <MapPin className="  text-gray-700 font-bold " />
-                <p className=" text-xl text-center cell:text-base ">
+                <MapPin className="  text-purple-900  font-bold " />
+                <p className=" text-xl text-center cell:text-base text-purple-900 ">
                   Blvd. Los Pastores 3731. Saltillo, Coah{" "}
                 </p>
               </div>
               <a href="https://maps.app.goo.gl/pRUN6jyjZHNyoaa59">
                 <button
-                  className={` bg-[#654ca7] text-white py-2 px-4 rounded-full`}
+                  className={` bg-[#654ca7] text-white py-2 px-4 rounded-full `}
                 >
                   Cómo llegar
                 </button>
@@ -223,6 +217,13 @@ const page = async ({ searchParams }: any) => {
             >
               Formal
             </h2>
+            <p
+              className={` 
+           font-bold  text-center text-5xl py-1 text-[#9650b3]
+            cell:text-3xl cell:px-4`}
+            >
+              * Se reserva el color azul celeste
+            </p>
           </div>
         </section>
         {/*Confirmacion*/}
@@ -234,6 +235,8 @@ const page = async ({ searchParams }: any) => {
           styling={{
             section: {
               backgroundColor: "bg-purple-50",
+              textColor: "text-purple-900",
+              carita: "no",
             },
             confirmButton: {
               backgroundColor: "bg-[#654ca7]",

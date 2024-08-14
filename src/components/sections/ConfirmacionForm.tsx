@@ -31,6 +31,8 @@ const ConfirmacionForm = ({
   styling?: {
     section: {
       backgroundColor: string;
+      textColor?: string | "text-black";
+      carita?: string | "si";
     };
     confirmButton: {
       backgroundColor: string;
@@ -82,7 +84,9 @@ const ConfirmacionForm = ({
   ); // [1,2]
 
   return (
-    <section className={`h-auto py-8 ${styling.section.backgroundColor}`}>
+    <section
+      className={`h-auto py-8 ${styling.section.backgroundColor} ${styling?.section.textColor}`}
+    >
       <p
         className={`${dancing.className} underline font-bold  text-center text-5xl cell:text-3xl cell:px-4 `}
       >
@@ -160,7 +164,9 @@ const ConfirmacionForm = ({
                         id="0"
                         value="0"
                       />
-                      <label className=" font-bold">No asistiré 😥</label>
+                      <label className=" font-bold">
+                        No asistiré {styling?.section.carita === "si" && "😥"}
+                      </label>
                     </div>
                   </div>
                   {ArrayPases.map((i) => (
