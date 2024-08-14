@@ -12,11 +12,13 @@ const IngresarBoton = ({
   join,
   font,
   color,
+  buttonText,
 }: {
   novio: string;
   novia: string;
   font: NextFont;
   join: string;
+  buttonText: string;
   color: { titleColor: string; bgColor: string; textButtonColor: string };
 }) => {
   const { setPlaying } = useContext(AudioPlayerContext);
@@ -46,7 +48,7 @@ const IngresarBoton = ({
               onClick={handleModalButtonClick}
               className={`${color.bgColor}  shadow-md ${color.textButtonColor} text-2xl rounded-lg px-6 py-1 cell:text-lg cell:py-1 cell:px-3`}
             >
-              Ingresar
+              {buttonText}
             </button>
           </div>
         </div>

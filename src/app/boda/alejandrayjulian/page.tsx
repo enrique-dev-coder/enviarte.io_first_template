@@ -210,6 +210,7 @@ const CustomizedTemplate = () => {
   return (
     <InvitationContainer songLink="/assets/songs/aleyjulian.mp3">
       <IngresarBoton
+        buttonText="Ingresar"
         font={IngresarBotonProps.font}
         novia={IngresarBotonProps.novia}
         novio={IngresarBotonProps.novio}

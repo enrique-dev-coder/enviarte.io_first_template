@@ -4,8 +4,8 @@ import Image from "next/image";
 // componentes
 import InvitationContainer from "@/components/wrappers/InvitationContainer";
 import IngresarBoton from "@/app/InvitationTemplates/TemplateComponents/Customized/CommonComponents/IngresarBoton";
-import Contador from "@/components/xv/Contador";
-import ConfirmacionForm from "@/components/sections/ConfirmacionForm";
+import Contador from "@/components/xv/en/Contador";
+import ConfirmacionForm from "@/components/sections/en/ConfirmacionForm";
 import { MapPin } from "lucide-react";
 // imagenes para adornar
 import adorno1 from "/public/assets/images/xvs/patita/adorno_1_sin_fondo.png";
@@ -42,7 +42,7 @@ const page = async ({ searchParams }: any) => {
     >
       <SongButtonPlayer backgroundColor="bg-[#9650b3]" />
       <IngresarBoton
-        buttonText="Ingresar"
+        buttonText="Enter"
         color={IngresarBotonProps.color}
         font={IngresarBotonProps.font}
         novia={IngresarBotonProps.novia}
@@ -67,22 +67,22 @@ const page = async ({ searchParams }: any) => {
             className={`  text-purple-900 relative z-20 text-[18px] font-bold w-10/12 mx-auto  `}
           >
             <p className=" text-center">
-              El camino que conduce a un mundo nuevo de ilusiones y esperanzas,
-              un mundo de sueños realizados y afectos compartidos; ese es el
-              camino que comienzo a transitar y que marcará un momento
-              inolvidable. Espero que me acompañes para compartirlo.
+              The path that leads to a new world of illusions and hopes, a world
+              of dreams realized and love shared; that's the path I begin to
+              travel and that will mark a moment unforgettable. I hope you will
+              join me in sharing it.
             </p>
           </div>
           <p
             className={`w-[90%] mx-auto my-5 ${dancing.className} text-[#654ca7]  text-center relative z-20 text-3xl`}
           >
             <span className="text-[#9650b3]">
-              Con la bendición de Dios y de mis papás
+              With the blessing of God and my parents
             </span>
             <br />
             <b className=" text-5xl">
               Patrick
-              <br /> y Ana María
+              <br /> and Ana María
             </b>
           </p>
         </div>
@@ -104,14 +104,14 @@ const page = async ({ searchParams }: any) => {
             <p
               className={`${dancing.className} relative z-20 text-[#654ca7] font-bold text-center text-[48px]`}
             >
-              Mis XV Años
+              My XV Year Party
             </p>
           </div>
         </div>
         <Contador
           color="pinkPalette"
           fechaEvento={new Date("2024-10-05T00:00:00")}
-          fechaString=" Sábado, 5 de Octubre"
+          fechaString=" Saturday, October 5th"
           fotoContador="bg-[url('/assets/images/xvs/patita/contador.jpeg')]"
         />
         {/*Placecards con iglesia y fiesta*/}
@@ -138,7 +138,7 @@ const page = async ({ searchParams }: any) => {
            font-bold  text-center text-5xl py-1 text-[#654ca7]
             cell:text-5xl cell:px-4`}
               >
-                Misa
+                Church
               </h2>
               <p
                 className={`
@@ -160,7 +160,7 @@ const page = async ({ searchParams }: any) => {
                 <button
                   className={` bg-[#654ca7] text-white py-2 px-4 rounded-full`}
                 >
-                  Cómo llegar
+                  location
                 </button>
               </a>
             </div>
@@ -172,7 +172,7 @@ const page = async ({ searchParams }: any) => {
            font-bold  text-center text-5xl py-1 text-[#654ca7]
             cell:text-5xl cell:px-4`}
               >
-                Recepción
+                Party
               </h2>
               <p
                 className={`
@@ -194,7 +194,7 @@ const page = async ({ searchParams }: any) => {
                 <button
                   className={` bg-[#654ca7] text-white py-2 px-4 rounded-full `}
                 >
-                  Cómo llegar
+                  Location
                 </button>
               </a>
             </div>
@@ -225,7 +225,7 @@ const page = async ({ searchParams }: any) => {
            font-bold  text-center text-5xl py-1 text-[#9650b3]
             cell:text-3xl cell:px-4`}
             >
-              * Se reserva el color azul celeste
+              * Sky blue color reserved
             </p>
           </div>
         </section>
@@ -236,7 +236,7 @@ const page = async ({ searchParams }: any) => {
            font-bold  text-center text-5xl py-1 text-[#654ca7]
             cell:text-5xl cell:px-4`}
             >
-              Sugerencia de regalos
+              Gift Suggestion
             </h2>
             <Image src={sobre} alt="sobre" className="w-[30%] p-4" />
             <h2
@@ -255,7 +255,7 @@ const page = async ({ searchParams }: any) => {
            font-bold  text-center text-5xl py-1 text-purple-900
             cell:text-2xl cell:px-4`}
         >
-          * Fecha Límite de Confirmacion 20 de septiembre
+          * Confirmation Deadline September 20
         </p>
         {/*Confirmacion*/}
         <ConfirmacionForm
