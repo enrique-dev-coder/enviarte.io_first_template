@@ -68,7 +68,7 @@ const page = async ({ searchParams }: any) => {
           >
             <p className=" text-center">
               The path that leads to a new world of illusions and hopes, a world
-              of dreams realized and love shared; that's the path I begin to
+              of dreams realized and love shared; that is the path I begin to
               travel and that will mark a moment unforgettable. I hope you will
               join me in sharing it.
             </p>
