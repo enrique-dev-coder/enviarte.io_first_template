@@ -28,7 +28,7 @@ export type colorPalette =
   | "pinkPalette"
   | "bluePalette";
 export type joinChar = "y" | "+" | "&";
-export type coolBackground = "grainy" | "flowers";
+export type coolBackground = "grainy" | "flowers" | "none";
 export interface InvitationDataTypes {
   novia: string;
   join: joinChar;
