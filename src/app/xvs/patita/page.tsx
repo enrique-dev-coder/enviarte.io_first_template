@@ -36,7 +36,7 @@ const page = async ({ searchParams }: any) => {
   return (
     <InvitationContainer
       spBackground="none"
-      songLink="/assets/songs/patita.mp3"
+      songLink="/assets/songs/patita2.mp3"
     >
       <SongButtonPlayer backgroundColor="bg-[#9650b3]" />
       <IngresarBoton
@@ -61,11 +61,14 @@ const page = async ({ searchParams }: any) => {
             className=" absolute top-[30%] opacity-80 z-0 left-0 right-0"
           />
           <div
-            className={` text-[#654ca7] relative z-20 text-[44px] leading-[60px]  italic `}
+            className={`  text-purple-900 relative z-20 text-[18px] font-bold w-10/12 mx-auto  `}
           >
-            <p className=" -translate-x-6">Mis</p>
-            <p className=" italic  text-[84px]">XV</p>
-            <p className=" translate-x-10">años</p>
+            <p className="">
+              El camino que conduce a un mundo nuevo de ilusiones y esperanzas,
+              un mundo de sueños realizados y afectos compartidos; ese es el
+              camino que comienzo a transitar en esta noche que marcará un
+              momento inolvidable. Espero que me acompañes para compartirlo.
+            </p>
           </div>
           <div>
             <p
