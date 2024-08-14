@@ -7,7 +7,7 @@ const SongButtonPlayer = ({ backgroundColor }: { backgroundColor: string }) => {
   const { playing, setPlaying } = useContext(AudioPlayerContext);
 
   return (
-    <div className="fixed   z-10 top-[50%] cell:top-[80%] right-0 mt-4 ">
+    <div className="fixed   z-30 top-[50%] cell:top-[80%] right-0 mt-4 ">
       <button
         onClick={() => {
           setPlaying(!playing);

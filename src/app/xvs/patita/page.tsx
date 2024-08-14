@@ -15,15 +15,16 @@ import adorno4 from "/public/assets/images/xvs/patita/adorno_4_sin_fondo.png";
 // imagenes de la quinceañera
 import quince1 from "/public/assets/images/xvs/patita/patita_1.jpeg";
 import quince2 from "/public/assets/images/xvs/patita/patita_2.jpeg";
+import SongButtonPlayer from "@/app/InvitationTemplates/Common/SongButtonPlayer";
 
 const IngresarBotonProps = {
   font: dancing,
-  novia: "Alejandra",
-  novio: "Julián",
-  join: "&",
+  novia: "XVs",
+  novio: "Ana Patricia",
+  join: "",
   color: {
-    titleColor: "text-[#b3451e]",
-    bgColor: "bg-[#b3451e]",
+    titleColor: "text-[#9650b3]",
+    bgColor: "bg-[#9650b3]",
     textButtonColor: "text-white",
   },
 };
@@ -33,7 +34,11 @@ const page = async ({ searchParams }: any) => {
   const pasesAsignados = searchParams?.pasesAsignados;
 
   return (
-    <InvitationContainer spBackground="none" songLink="/taniaydiego.mp4">
+    <InvitationContainer
+      spBackground="none"
+      songLink="/assets/songs/patita.mp3"
+    >
+      <SongButtonPlayer backgroundColor="bg-[#9650b3]" />
       <IngresarBoton
         color={IngresarBotonProps.color}
         font={IngresarBotonProps.font}
