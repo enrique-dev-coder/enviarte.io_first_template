@@ -77,13 +77,11 @@ const page = async ({ searchParams }: any) => {
             className={`w-[90%] mx-auto my-5 ${dancing.className} text-[#654ca7]  text-center relative z-20 text-3xl`}
           >
             <span className="text-[#9650b3]">
-              Con la bendición de Dios y de mis papás
+              Con la bendición de Dios y<br />
+              de mis papás
             </span>
             <br />
-            <b className=" text-5xl">
-              Patrick
-              <br /> y Ana María
-            </b>
+            <b className=" text-4xl">Patrick y Ana María</b>
           </p>
         </div>
         <div className="-mt-4 z-20 relative">
@@ -111,7 +109,7 @@ const page = async ({ searchParams }: any) => {
         <Contador
           color="pinkPalette"
           fechaEvento={new Date("2024-10-05T00:00:00")}
-          fechaString=" Sábado, 5 de Octubre"
+          fechaString=" Sábado 5 de Octubre"
           fotoContador="bg-[url('/assets/images/xvs/patita/contador.jpeg')]"
         />
         {/*Placecards con iglesia y fiesta*/}
@@ -236,16 +234,9 @@ const page = async ({ searchParams }: any) => {
            font-bold  text-center text-5xl py-1 text-[#654ca7]
             cell:text-5xl cell:px-4`}
             >
-              Sugerencia de regalos
+              Sugerencia de regalo
             </h2>
             <Image src={sobre} alt="sobre" className="w-[30%] p-4" />
-            <h2
-              className={` ${dancing.className} 
-           font-bold  text-center text-5xl py-1 text-[#9650b3]
-            cell:text-5xl cell:px-4`}
-            >
-              Sobre
-            </h2>
           </div>
         </section>
 
@@ -255,7 +246,7 @@ const page = async ({ searchParams }: any) => {
            font-bold  text-center text-5xl py-1 text-purple-900
             cell:text-2xl cell:px-4`}
         >
-          * Fecha Límite de Confirmacion 20 de septiembre
+          * Fecha límite de confirmación 20 de septiembre
         </p>
         {/*Confirmacion*/}
         <ConfirmacionForm

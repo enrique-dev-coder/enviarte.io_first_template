@@ -63,28 +63,25 @@ const page = async ({ searchParams }: any) => {
             src={adorno3}
             className=" absolute top-[30%] opacity-80 z-0 left-0 right-0"
           />
+          <p
+            className={`w-[90%] mx-auto mt-[80px] ${dancing.className} text-[#654ca7]   text-center relative z-20 text-3xl`}
+          >
+            <b className=" text-4xl">Patrick and Ana María</b>
+          </p>
           <div
             className={`  text-purple-900 relative z-20 text-[18px] font-bold w-10/12 mx-auto  `}
           >
             <p className=" text-center">
-              The path that leads to a new world of illusions and hopes, a world
-              of dreams realized and love shared; that is the path I begin to
-              travel and that will mark a moment unforgettable. I hope you will
-              join me in sharing it.
+              are happy to invite you and your family to celebrate the 15th
+              birthday
             </p>
+            <p
+              className={`w-[90%] mx-auto mt-[20px] ${dancing.className} text-[#654ca7]   text-center relative z-20 text-3xl`}
+            >
+              <b className=" text-5xl">Quinceañera</b>
+            </p>
+            <p className=" text-center">of their daughter</p>
           </div>
-          <p
-            className={`w-[90%] mx-auto my-5 ${dancing.className} text-[#654ca7]  text-center relative z-20 text-3xl`}
-          >
-            <span className="text-[#9650b3]">
-              With the blessing of God and my parents
-            </span>
-            <br />
-            <b className=" text-5xl">
-              Patrick
-              <br /> and Ana María
-            </b>
-          </p>
         </div>
         <div className="-mt-4 z-20 relative">
           <Image src={quince1} alt="invitaciones digitales" />
@@ -101,17 +98,12 @@ const page = async ({ searchParams }: any) => {
             >
               Ana Patricia
             </p>
-            <p
-              className={`${dancing.className} relative z-20 text-[#654ca7] font-bold text-center text-[48px]`}
-            >
-              My XV Year Party
-            </p>
           </div>
         </div>
         <Contador
           color="pinkPalette"
           fechaEvento={new Date("2024-10-05T00:00:00")}
-          fechaString=" Saturday, October 5th"
+          fechaString=" Saturday October 5th"
           fotoContador="bg-[url('/assets/images/xvs/patita/contador.jpeg')]"
         />
         {/*Placecards con iglesia y fiesta*/}
@@ -239,13 +231,6 @@ const page = async ({ searchParams }: any) => {
               Gift Suggestion
             </h2>
             <Image src={sobre} alt="sobre" className="w-[30%] p-4" />
-            <h2
-              className={` ${dancing.className} 
-           font-bold  text-center text-5xl py-1 text-[#9650b3]
-            cell:text-5xl cell:px-4`}
-            >
-              Sobre
-            </h2>
           </div>
         </section>
 
