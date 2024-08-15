@@ -3,7 +3,13 @@ import { NextRequest, NextResponse } from "next/server";
 import axios from "axios";
 import prisma from "../../../../../prisma";
 
-async function EnviarAtravesDeLaWhatsAp(tel: string, message: string) {
+async function EnviarAtravesDeLaWhatsAp(
+  tel: string,
+  message: string,
+  nombreWhats: string,
+  linkInvitacion: string,
+  evento: string
+) {
   try {
     return await axios.post(
       `https://graph.facebook.com/v19.0/${process.env.ACCOUNT_ID}/messages`,
@@ -24,12 +30,20 @@ async function EnviarAtravesDeLaWhatsAp(tel: string, message: string) {
                 // intro
                 {
                   type: "text",
-                  text: "Victoria Estefania y Luis Alfredo",
+                  text: `${nombreWhats}`,
                 },
                 {
-                  // editar el link
+                  // params del link nombre=Enriquetel
                   type: "text",
                   text: `${message}`,
+                },
+                {
+                  type: "text",
+                  text: `${linkInvitacion}`,
+                },
+                {
+                  type: "text",
+                  text: `${evento}`,
                 },
               ],
             },
@@ -49,6 +63,7 @@ async function EnviarAtravesDeLaWhatsAp(tel: string, message: string) {
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
+  console.log(body);
   // si el numero de telefono ya existe en la bd  de invitaciones enviadas con ese id de invitacion entonces no se usa el api de whats
   const verificarSiLaInvitacionYaFueEnviada =
     await prisma.invitacionEnviadaConWhatsApp.findFirst({
@@ -62,7 +77,10 @@ export async function POST(req: NextRequest) {
     try {
       const respuestaWhatsapp = await EnviarAtravesDeLaWhatsAp(
         body.tel,
-        body.whatsMessage
+        body.whatsMessage,
+        body.nombreWhats,
+        body.linkInvitacion,
+        body.evento
       );
       if (respuestaWhatsapp?.status === 400) {
         return NextResponse.json(

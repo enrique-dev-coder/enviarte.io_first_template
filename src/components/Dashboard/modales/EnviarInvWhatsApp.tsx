@@ -24,7 +24,7 @@ import axios from "axios";
 // TODO: agregar un +tipo preview del whatsapp con la pantallita y un mensaje por default o igual y solo un mensajito en la parte de abajo
 // TODO: ver con lalo y dani que debe decir el mensaje
 
-const EnviarInvWhatsApp = () => {
+const EnviarInvWhatsApp = ({ nombreWhats, linkParaEnviar, evento }) => {
   const {
     register,
     handleSubmit,
@@ -57,6 +57,9 @@ const EnviarInvWhatsApp = () => {
   const onSubmit: SubmitHandler<TypesForSendingWhatsAppInvite> = (data) => {
     enviarInvitacionPorApiWhats({
       nombre: data.nombre,
+      nombreWhats: nombreWhats,
+      linkInvitacion: linkParaEnviar,
+      evento: evento,
       tel: data.tel,
       invitacionId: invitacionIdCookie,
       whatsMessage: `${objetoAParametrosURL(data)}`,

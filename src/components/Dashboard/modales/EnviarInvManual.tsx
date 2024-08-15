@@ -21,7 +21,8 @@ import {
 
 import { objetoAParametrosURL } from "@/utils/operaciones";
 
-const EnviarInvManual = () => {
+const EnviarInvManual = ({ invitacionLink }: { invitacionLink: string }) => {
+  console.log(invitacionLink);
   const {
     register,
     handleSubmit,
@@ -33,8 +34,17 @@ const EnviarInvManual = () => {
   const disableButton = !watch("nombre") || !watch("pasesAsignados");
   const [showLink, setShowLink] = useState(false);
   const [generatedLink, setGeneratedLink] = useState("");
-
+  console.log(generatedLink);
+  const [linkEnglish, setLinkEnglish] = useState(false);
+  console.log(linkEnglish);
   const generatedLinkRef = useRef(null);
+
+  // TODO: mejorar el multidioma
+
+  const validacionIngles =
+    invitacionLink === "https://www.invitandofacil.com/xvs/patita";
+  console.log(validacionIngles);
+
   // TODO: ver si puedo quitar que se cierre el modal cuando se le pica en el overlay
   return (
     <div>
@@ -66,9 +76,11 @@ const EnviarInvManual = () => {
                 onSubmit={handleSubmit((data) => {
                   setShowLink(true);
                   setGeneratedLink(
-                    `https://www.invitandofacil.com/boda/victoriaestefaniayluisalfredo?${objetoAParametrosURL(
-                      data
-                    )}`
+                    `${
+                      !linkEnglish
+                        ? invitacionLink
+                        : "https://www.invitandofacil.com/xvs/en/patita"
+                    }?${objetoAParametrosURL(data)}`
                   );
                 })}
                 className="py-1 flex flex-col gap-4 "
@@ -123,6 +135,18 @@ const EnviarInvManual = () => {
                     />
                   </div>
                 </div>
+                {validacionIngles ? (
+                  <div>
+                    <button
+                      onClick={() => setLinkEnglish(!linkEnglish)}
+                      className={`cursor-pointer ${
+                        linkEnglish ? "bg-purple-900" : "bg-purple-900/40"
+                      }  text-white rounded-full px-4`}
+                    >
+                      Usa Link en Ingles
+                    </button>
+                  </div>
+                ) : null}
                 <button
                   // dato curioso:
                   // usar el type submit para que no se pongan lo que envias como params en la url
@@ -141,15 +165,17 @@ const EnviarInvManual = () => {
             {showLink ? (
               <>
                 <div
-                  className=" bg-purple-100 w-[95%] rounded-md cursor-pointer "
+                  className=" bg-purple-100 py-4 w-[95%] rounded-md cursor-pointer "
                   onClick={() => {
                     const textToCopy = generatedLinkRef.current.outerText;
                     navigator.clipboard.writeText(textToCopy);
                   }}
                 >
-                  <p className=" text-center font-medium">
-                    Click para copiar tu link!
-                  </p>
+                  <div>
+                    <p className=" text-center font-medium">
+                      Click para copiar tu link!
+                    </p>
+                  </div>
 
                   <div className="flex  border-2 border-solid  border-purple-950 rounded-sm  cursor-pointer items-center bg-white p-2 m-2 ">
                     {/*si esto empieza ya con el link se desborda el texto , por obras misteriosas de html y css*/}

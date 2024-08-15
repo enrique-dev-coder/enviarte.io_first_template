@@ -13,6 +13,7 @@ model User {
   evento String
   password String
   rol String
+  nombreWhats String?
   invitacion Invitacion? @relation(fields: [invitacionId], references: [id])
   invitacionId String? @unique @db.ObjectId
 }

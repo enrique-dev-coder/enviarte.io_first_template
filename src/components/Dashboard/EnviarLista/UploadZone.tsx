@@ -8,7 +8,7 @@ import SendInviteTableRow from "./SendInviteTableRow";
 import axios from "axios";
 import { useCookies } from "react-cookie";
 
-const UploadZone = () => {
+const UploadZone = ({ nombreWhats, linkParaEnviar, evento }) => {
   const [listaDeInvitados, setListaDeInvitados] = useState([]);
   const {
     mutate: subirListaDeInvitados,
@@ -54,6 +54,9 @@ const UploadZone = () => {
           </div>
           {listaDeInvitados.map((item, i) => (
             <SendInviteTableRow
+              nombreWhats={nombreWhats}
+              linkParaEnviar={linkParaEnviar}
+              evento={evento}
               key={i}
               invitacionId={invitacionIdCookie}
               nombre={item.nombre}

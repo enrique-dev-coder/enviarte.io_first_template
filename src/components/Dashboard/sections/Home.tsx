@@ -2,6 +2,7 @@
 import React from "react";
 import { useCookies } from "react-cookie";
 import { useQuery } from "@tanstack/react-query";
+import { useRouter } from "next/navigation";
 import axios from "axios";
 import { LoaderIcon, MousePointerClick } from "lucide-react";
 const Home = () => {
@@ -10,6 +11,11 @@ const Home = () => {
   // endpoint que me mande el link de la invitacion, pases confirmados etc
 
   const [cookies] = useCookies(["invitandofacil"]);
+  const router = useRouter();
+
+  if (!cookies?.invitandofacil) {
+    router.push("/login");
+  }
 
   const invitacionId = cookies?.invitandofacil.verificarUsuario.invitacionId;
 
@@ -45,13 +51,12 @@ const Home = () => {
             </a>
           </div>
           {/*info adicional*/}
-          <div className="flex  mx-4 gap-2">
-            {/*pases confirmados*/}
+          {/*TODO: hacer esta parte dinamica, por lo pronto se comenta para no confundir*/}
+          {/* <div className="flex  mx-4 gap-2">
             <div className="w-4/12 bg-purple-100 rounded-lg h-[124px]  pl-6 py-4 ">
               <p className="text-lg font-bold">Invitados Confirmados</p>
               <p className=" text-6xl text-purple-900 ">200</p>
             </div>
-            {/*pases confirmados*/}
             <div className="w-4/12 bg-purple-100 rounded-lg h-[124px]  pl-6 py-4 ">
               <p className="text-lg font-bold">Fecha???</p>
               <p className=" text-6xl text-purple-900 ">18-08-2024</p>
@@ -60,7 +65,7 @@ const Home = () => {
               <p className="text-lg font-bold">que otra info?</p>
               <p className=" text-2xl text-purple-900 ">Instrucciones</p>
             </div>
-          </div>
+          </div> */}
         </div>
       )}
     </>

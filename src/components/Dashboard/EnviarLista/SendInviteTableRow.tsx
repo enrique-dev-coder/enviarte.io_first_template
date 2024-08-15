@@ -25,11 +25,17 @@ const SendInviteTableRow = ({
   tel,
   pasesAsignados,
   invitacionId,
+  nombreWhats,
+  linkParaEnviar,
+  evento,
 }: {
   nombre: string;
   tel: string;
   pasesAsignados: string;
   invitacionId: string;
+  nombreWhats: string;
+  linkParaEnviar: string;
+  evento: string;
 }) => {
   // TODO: aqui se tiene que mandar el nombre de invitacion para hacer link
   // por el momento lo dejare hardcodeado
@@ -82,9 +88,11 @@ const SendInviteTableRow = ({
           <p
             ref={generatedLinkRef}
             className="w-10/12 overflow-hidden p-1 border border-slate-300"
-          >{`https://www.invitandofacil.com/boda/danielayjosepablo?${objetoAParametrosURL(
-            { nombre, tel, pasesAsignados }
-          )}`}</p>
+          >{`${linkParaEnviar}?${objetoAParametrosURL({
+            nombre,
+            tel,
+            pasesAsignados,
+          })}`}</p>
 
           <div className="flex flex-col justify-center items-center ">
             <ClipboardCopyIcon />
@@ -112,6 +120,9 @@ const SendInviteTableRow = ({
                     invitacionId,
                     nombre,
                     tel: tel.toString(),
+                    nombreWhats: nombreWhats,
+                    linkInvitacion: linkParaEnviar,
+                    evento: evento,
                     whatsMessage: `${objetoAParametrosURL({
                       nombre,
                       tel,
