@@ -1,5 +1,5 @@
 import React from "react";
-import { analogist, dancing } from "@/fonts";
+import { analogist, dancing, lora } from "@/fonts";
 import Image from "next/image";
 // componentes
 import InvitationContainer from "@/components/wrappers/InvitationContainer";
@@ -64,9 +64,11 @@ const page = async ({ searchParams }: any) => {
             className=" absolute top-[30%] opacity-80 z-0 left-0 right-0"
           />
           <p
-            className={`w-[90%] mx-auto mt-[80px] ${dancing.className} text-[#654ca7]   text-center relative z-20 text-3xl`}
+            className={`w-full mx-auto mt-[80px] ${dancing.className} text-[#654ca7] font-bold  text-center relative z-20 text-3xl`}
           >
-            <b className=" text-4xl">Patrick and Ana María</b>
+            Patrick Abram{" "}
+            <span className={`${analogist.className} font-light`}>&</span> Ana
+            María
           </p>
           <div
             className={`  text-purple-900 relative z-20 text-[18px] font-bold w-10/12 mx-auto  `}
