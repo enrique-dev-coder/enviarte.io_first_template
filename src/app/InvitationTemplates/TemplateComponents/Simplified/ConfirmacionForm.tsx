@@ -28,7 +28,6 @@ const ConfirmacionForm = ({
 }) => {
   const [confirmacion, setConfirmacion] = useState(false);
   // NOTE: dejo este log por si acaso se necesita para debugear
-  console.log(invitationId);
   // TODO: deberia guardar un cookie para bloquear el form si ya confirmaste????
   // porque puedo hacer que aparezca otro mensaje si el cookie trae el nombre de usuario y el tel igual a los params del url
   const {

@@ -1,6 +1,12 @@
 import React from "react";
+// next
 import { analogist, dancing } from "@/fonts";
+import { Metadata } from "next/types";
 import Image from "next/image";
+import { headers } from "next/headers";
+
+// orm
+import prisma from "../../../../prisma";
 // componentes
 import InvitationContainer from "@/components/wrappers/InvitationContainer";
 import IngresarBoton from "@/app/InvitationTemplates/TemplateComponents/Customized/CommonComponents/IngresarBoton";
@@ -13,7 +19,6 @@ import adorno2 from "/public/assets/images/xvs/patita/adorno_2_sin_fondo.png";
 import adorno3 from "/public/assets/images/xvs/patita/adorno_3_sin_fondo.png";
 import adorno4 from "/public/assets/images/xvs/patita/adorno_4_sin_fondo.png";
 import sobre from "/public/assets/images/xvs/patita/sobre.svg";
-
 // imagenes de la quinceañera
 import quince1 from "/public/assets/images/xvs/patita/patita_1.jpeg";
 import quince2 from "/public/assets/images/xvs/patita/patita_2.jpeg";
@@ -30,10 +35,31 @@ const IngresarBotonProps = {
     textButtonColor: "text-white",
   },
 };
+export const metadata: Metadata = {
+  title: "XV´s Ana Patricia",
+  description: "Bodas",
+};
+// server fucntions
+const getInvitationId = async (name: string) => {
+  const invitationId = await prisma.invitacion.findFirst({
+    where: {
+      invitationName: name,
+    },
+    select: {
+      id: true,
+    },
+  });
+  return invitationId as { id: string };
+};
+
 const page = async ({ searchParams }: any) => {
   const nombre = searchParams?.nombre;
   const tel = searchParams?.tel;
   const pasesAsignados = searchParams?.pasesAsignados;
+
+  const headersList = headers();
+  const pathname = headersList.get("x-pathname"); // ejemplo: /boda/danielayjosepablo
+  const invitationIdForQuery = await getInvitationId(pathname as string); // { id: '65df62e264903d5c4bb5
 
   return (
     <InvitationContainer
@@ -250,7 +276,7 @@ const page = async ({ searchParams }: any) => {
         </p>
         {/*Confirmacion*/}
         <ConfirmacionForm
-          invitationId={{ id: "1" }}
+          invitationId={{ id: invitationIdForQuery.id }}
           nombreInvitado={nombre}
           pasesAsignados={pasesAsignados}
           telInvitado={tel}

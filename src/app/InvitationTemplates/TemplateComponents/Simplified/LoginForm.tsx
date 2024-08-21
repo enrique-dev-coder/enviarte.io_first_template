@@ -28,7 +28,6 @@ const LoginForm = () => {
       setCookie("invitandofacil", response.data, {
         expires: expirationDate,
       });
-      console.log(response);
       push("/dashboard/home");
     },
     onError: (err) => {

@@ -40,7 +40,6 @@ const IndexPage = async ({ searchParams }: any) => {
   const nombre = searchParams?.nombre;
   const tel = searchParams?.tel;
   const pasesAsignados = searchParams?.pasesAsignados;
-  console.log(tel, pasesAsignados);
   const fechaEvento = new Date("2024-05-18T00:00:00");
 
   // obtener  el pathname del middleware

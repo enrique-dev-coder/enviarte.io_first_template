@@ -63,7 +63,6 @@ async function EnviarAtravesDeLaWhatsAp(
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
-  console.log(body);
   // si el numero de telefono ya existe en la bd  de invitaciones enviadas con ese id de invitacion entonces no se usa el api de whats
   const verificarSiLaInvitacionYaFueEnviada =
     await prisma.invitacionEnviadaConWhatsApp.findFirst({
