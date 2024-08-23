@@ -31,9 +31,7 @@ const IngresarBotonProps = {
   },
 };
 const page = async ({ searchParams }: any) => {
-  const nombre = searchParams?.nombre;
-  const tel = searchParams?.tel;
-  const pasesAsignados = searchParams?.pasesAsignados;
+  const name = searchParams?.name;
 
   return (
     <InvitationContainer
@@ -235,33 +233,21 @@ const page = async ({ searchParams }: any) => {
             <Image src={sobre} alt="sobre" className="w-[30%] p-4" />
           </div>
         </section>
-
-        <p
-          className={` 
-          bg-purple-50
-           font-bold  text-center text-5xl py-1 text-purple-900
-            cell:text-2xl cell:px-4`}
-        >
-          * Confirmation Deadline September 20
-        </p>
         {/*Confirmacion*/}
-        <ConfirmacionForm
-          invitationId={{ id: "1" }}
-          nombreInvitado={nombre}
-          pasesAsignados={pasesAsignados}
-          telInvitado={tel}
-          styling={{
-            section: {
-              backgroundColor: "bg-purple-50",
-              textColor: "text-purple-900",
-              carita: "no",
-            },
-            confirmButton: {
-              backgroundColor: "bg-[#654ca7]",
-              disabledBackgroundColor: "disabled:bg-[#654ca7]/50",
-            },
-          }}
-        />
+        <div className="bg-purple-50  py-20 px-10">
+          <p
+            className={` 
+           font-bold  text-center text-5xl py-1 mb-4 text-purple-900
+            cell:text-2xl cell:px-4`}
+          >
+            We are happy to invite you
+          </p>
+          <p
+            className={` text-center text-5xl font-bold ${dancing.className} text-purple-900`}
+          >
+            {name}
+          </p>
+        </div>
       </section>
     </InvitationContainer>
   );
