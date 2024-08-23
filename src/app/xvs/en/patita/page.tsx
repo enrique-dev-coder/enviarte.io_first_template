@@ -234,20 +234,22 @@ const page = async ({ searchParams }: any) => {
           </div>
         </section>
         {/*Confirmacion*/}
-        <div className="bg-purple-50  py-20 px-10">
-          <p
-            className={` 
+        {name && (
+          <div className="bg-purple-50  py-20 px-10">
+            <p
+              className={` 
            font-bold  text-center text-5xl py-1 mb-4 text-purple-900
             cell:text-2xl cell:px-4`}
-          >
-            We are happy to invite you
-          </p>
-          <p
-            className={` text-center text-5xl font-bold ${dancing.className} text-purple-900`}
-          >
-            {name}
-          </p>
-        </div>
+            >
+              We are happy to invite you
+            </p>
+            <p
+              className={` text-center text-5xl font-bold ${dancing.className} text-purple-900`}
+            >
+              {name}
+            </p>
+          </div>
+        )}
       </section>
     </InvitationContainer>
   );
