@@ -60,7 +60,7 @@ const IndexPage = async ({ searchParams }: any) => {
     songLink: "/assets/songs/boda-estefania-luis.mp3",
     songplayerBgColor: "bg-black/30",
     color: "blackPalette",
-    fechaEvento: new Date("2024-09-28T00:00:00"),
+    fechaEvento: new Date("2024-09-29T00:00:00"),
     fechaString: "Sábado, 28 de septiembre 2024",
     fotoContador: "bg-[url('/assets/images/estefaniayluis/contador_2.jpg')]",
     InfoBanner: {
