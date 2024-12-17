@@ -34,9 +34,8 @@ const EnviarInvManual = ({ invitacionLink }: { invitacionLink: string }) => {
   const disableButton = !watch("nombre") || !watch("pasesAsignados");
   const [showLink, setShowLink] = useState(false);
   const [generatedLink, setGeneratedLink] = useState("");
-  console.log(generatedLink);
   const [linkEnglish, setLinkEnglish] = useState(false);
-  console.log(linkEnglish);
+
   const generatedLinkRef = useRef(null);
 
   // TODO: mejorar el multidioma

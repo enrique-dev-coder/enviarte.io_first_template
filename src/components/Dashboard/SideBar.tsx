@@ -1,6 +1,11 @@
 "use client";
 import React from "react";
-import { HomeIcon, PartyPopperIcon, SendIcon } from "lucide-react";
+import {
+  HomeIcon,
+  PartyPopperIcon,
+  SendIcon,
+  UtensilsIcon,
+} from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useCookies } from "react-cookie";
 import Link from "next/link";
@@ -18,6 +23,12 @@ const menuLinks = [
     link: "/dashboard/invitados",
     icon: <PartyPopperIcon />,
     title: "Invitados Confirmados",
+  },
+  {
+    id: "3",
+    link: "/dashboard/mesas",
+    icon: <UtensilsIcon />,
+    title: "Mesas de Invitados",
   },
 ];
 

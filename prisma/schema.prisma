@@ -7,6 +7,16 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Mesa {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  nombre String
+  invitados  Invitados[]   // Relación nombrada
+  invitacion Invitacion @relation(fields: [invitacionId], references: [id])
+  invitacionId String @db.ObjectId
+  numeroMesa String
+  invitadosJSON String 
+}
+
 model User {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   name String
@@ -21,22 +31,24 @@ model User {
 model Invitacion {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   link String
-  invitationName String // usar para obtener el id
-  user User? // Ya no necesitas la relación aquí
+  invitationName String
+  user User?
   userId String @db.ObjectId
   invitados Invitados[]
+  mesas Mesa[] // Relación con el modelo Mesa
   invitacionEnviadaConWhatsApp  InvitacionEnviadaConWhatsApp[]
 }
 
-
-model Invitados{
-    id String @id @default(auto()) @map("_id") @db.ObjectId
-    nombre String
-    pasesAsignados Int
-    tel String
-    pasesConfirmados Int
-    invitacionId String @db.ObjectId
-    invitacion Invitacion @relation(fields:[invitacionId],references: [id])
+model Invitados {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  nombre String
+  pasesAsignados Int
+  tel String
+  pasesConfirmados Int
+  invitacionId String @db.ObjectId
+  invitacion Invitacion @relation(fields: [invitacionId], references: [id])
+  mesa Mesa? @relation(fields: [mesaId], references: [id]) // Relación inversa nombrada
+  mesaId String? @db.ObjectId
 }
 
 model InvitacionEnviadaConWhatsApp {

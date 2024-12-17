@@ -45,6 +45,7 @@ export async function GET(
         invitacionId: invitationid,
       },
       select: {
+        id: true,
         nombre: true,
         pasesAsignados: true,
         pasesConfirmados: true,
