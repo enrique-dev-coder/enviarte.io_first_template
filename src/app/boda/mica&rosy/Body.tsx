@@ -10,6 +10,7 @@ import imgPago2 from "/public/assets/images/micayrosy/pago2.jpeg";
 import imgPago3 from "/public/assets/images/micayrosy/pago3.jpeg";
 import imgEscaleras1 from "/public/assets/images/micayrosy/Escaleras1.jpg";
 import imgEscaleras2 from "/public/assets/images/micayrosy/escaleras2.jpg";
+import imgEscaleras3 from "/public/assets/images/micayrosy/escaleras3.jpg";
 import imgAmorEterno from "/public/assets/images/micayrosy/amorEterno.jpg";
 import imgFut from "/public/assets/images/micayrosy/Fut.jpg";
 import whatsLogo from "/public/assets/images/micayrosy/whatslogo-removebg-preview.png";
@@ -231,13 +232,14 @@ const Body = () => {
       >
         <Image alt="boda" src={imgEscaleras2} />
       </motion.div>
+      {/* Cambiar esa foto */}
       <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
       >
-        <Image alt="boda" src={imgEscaleras1} />
+        <Image alt="boda" src={imgEscaleras3} />
       </motion.div>
       <motion.div
         initial={{ scale: 0 }}
