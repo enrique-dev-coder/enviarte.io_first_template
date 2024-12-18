@@ -1,9 +1,9 @@
+"use client";
 import React from "react";
 import InvitationContainer from "@/components/wrappers/InvitationContainer";
 import SongButtonPlayer from "@/app/InvitationTemplates/Common/SongButtonPlayer";
 import IngresarBoton from "@/app/InvitationTemplates/TemplateComponents/Customized/CommonComponents/IngresarBoton";
 import { lora, montse } from "@/fonts";
-import img1 from "/public/assets/images/micayrosy/introupdate.png";
 import imgAnillo from "/public/assets/images/micayrosy/anillo.jpg";
 import imgCarro from "/public/assets/images/micayrosy/carro.jpeg";
 import imgLogo from "/public/assets/images/micayrosy/logo-removebg-preview.png";
@@ -15,14 +15,13 @@ import imgEscaleras1 from "/public/assets/images/micayrosy/Escaleras1.jpg";
 import imgEscaleras2 from "/public/assets/images/micayrosy/escaleras2.jpg";
 import imgAmorEterno from "/public/assets/images/micayrosy/amorEterno.jpg";
 import imgFut from "/public/assets/images/micayrosy/Fut.jpg";
-import { Metadata } from "next/types";
 import whatsLogo from "/public/assets/images/micayrosy/whatslogo-removebg-preview.png";
-
+import Hero from "./Hero";
 import Image from "next/image";
-export const metadata: Metadata = {
-  title: "Mica y Rosy",
-  description: "Bodas",
-};
+// animation
+
+import { motion } from "framer-motion";
+
 const page = () => {
   const invitationData = {
     IngresarBotonProps: {
@@ -38,7 +37,7 @@ const page = () => {
     },
   };
   const { IngresarBotonProps } = invitationData;
-  // comentario alvvvv x2
+
   return (
     <InvitationContainer songLink="/assets/songs/micayrosy.m4a">
       <IngresarBoton
@@ -49,43 +48,31 @@ const page = () => {
         join={IngresarBotonProps.join}
         color={IngresarBotonProps.color}
       />
-      <div className=" w-full  bg-[#A48066]  py-8">
-        {/*Intro*/}
-        <div className="text-center mx-auto">
-          <h1 className=" uppercase  text-white font-semibold  text-[48px] leading-[60px] ">
-            Mica
-            <span className=" text-[64px]">&</span>
-            Rosy
-          </h1>
-          <p className="uppercase text-white my-2 text-[40px]">Nos Casamos</p>
-        </div>
-      </div>
-      {/*Picture 1*/}
-      <div>
-        <Image alt="boda" src={img1} />
-      </div>
-      <div className="bg-stone-50 text-[#AB765A] text-center text-[22px] px-4 py-6">
-        <p className={`${montse.className}`}>
-          &quot;El destino nos ha unido, y ahora queremos que tú formes parte de
-          nuestra historia en un lugar mágico.&quot;
-        </p>
-        <p className={`${montse.className}`}>
-          ¡Nos encantaría contar con tu presencia, nuestra boda es en playa!
-        </p>
-      </div>
+      <Hero />
+
       {/*Poner el contador, despues cuando haya mas tiempo??*/}
       <div className=" w-full  bg-[#A48066] py-4">
         <div className="text-center mx-auto flex flex-col gap-4">
-          <h1 className="   text-white  text-[44px] leading-[60px] ">
+          <motion.h1
+            initial={{ opacity: 0, y: 5 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ ease: "easeInOut", duration: 1 }}
+            viewport={{ once: true }}
+            className="   text-white  text-[44px] leading-[60px] "
+          >
             Save the date!
-          </h1>
-          <h1
+          </motion.h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 5 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ ease: "easeInOut", duration: 1 }}
+            viewport={{ once: true }}
             className={`${montse.className} text-white  text-[64px] leading-[60px]`}
           >
             16 de Mayo
             <br />
             2026
-          </h1>
+          </motion.h1>
           <div className="w-10/12 mx-auto h-[3px] bg-white"></div>
           <p className="uppercase text-white my-2 text-[32px] px-3">
             PUERTO VALLARTA, JALISCO
@@ -93,45 +80,80 @@ const page = () => {
         </div>
       </div>
       {/*Mas Fotos*/}
-      <div>
+      <motion.div
+        initial={{ opacity: 0, y: 5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+      >
         <Image alt="boda" src={imgAnillo} />
-      </div>
+      </motion.div>
       <div
         style={{
           backgroundImage: `url(${imgCarro.src})`,
         }}
         className=" h-screen bg-cover bg-center  bg-no-repeat  bg-black/20 bg-blend-overlay "
       >
-        <div className=" h-full flex flex-col justify-between items-center">
+        <motion.div
+          initial={{ opacity: 0, y: 5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeInOut", duration: 1 }}
+          viewport={{ once: true }}
+          className=" h-full flex flex-col justify-between items-center"
+        >
           <Image alt="boda" src={imgLogo} className=" w-8/12" />
           <div className=" text-[28px] text-white font-bold pb-10">
             <p>Save the date</p>
             <p>16 Mayo 2026 </p>
           </div>
-        </div>
+        </motion.div>
       </div>
-      <div>
+      <motion.div
+        initial={{ opacity: 0, y: 5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+      >
         <Image alt="boda" src={imgCalle} />
-      </div>
+      </motion.div>
       {/* {Hoteles y precios} */}
-      <div
+      <motion.div
+        initial={{ opacity: 0, y: 5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
         className={`${montse.className} bg-stone-50 text-[#AB765A] text-center text-[28px] px-4 py-6`}
       >
         <p>PUERTO VALLARTA, JALISCO</p>
         <p className=" font-bold text-[36px]">15, 16 y 17</p>
         <p className=" font-bold">Mayo 2026</p>
         <p>Hotel Krystal Grand Nuevo Vallarta</p>
-      </div>
+      </motion.div>
       {/* Tarifas y plan de pagos*/}
-      <div>
+      <motion.div
+        initial={{ opacity: 0, y: 5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+      >
         <Image alt="boda" src={imgPago2} />
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+      >
         <Image alt="boda" src={imgPago1} />
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+      >
         <Image alt="boda" src={imgPago3} />
-      </div>
+      </motion.div>
       {/*Reservar asistencia*/}
       <div
         className={`${montse.className} bg-stone-50 text-[#AB765A] text-center text-[28px] px-4 py-6`}
@@ -155,24 +177,45 @@ const page = () => {
         <p className=" font-bold underline">30 DE MARZO 2025</p>
       </div>
       {/*Mas fotos*/}
-      <div>
+      <motion.div
+        initial={{ opacity: 0, y: 5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+      >
         <Image alt="boda" src={imgEscaleras2} />
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+      >
         <Image alt="boda" src={imgEscaleras1} />
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+      >
         <Image alt="boda" src={imgAmorEterno} />
-      </div>
+      </motion.div>
       {/*Final*/}
       <div className="bg-stone-50 text-[#AB765A] text-center text-[28px] px-4 py-6">
         <p>Nos encantará,</p>
         <p>contar con tu presencia...</p>
-        <h1 className=" uppercase  text-[#AB765A]  text-[64px] leading-[60px]  my-4">
+        <motion.h1
+          initial={{ opacity: 0, y: 5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeInOut", duration: 1 }}
+          viewport={{ once: true }}
+          className=" uppercase  text-[#AB765A]  text-[54px] leading-[60px]  my-4"
+        >
           Mica
           <span className="">&</span>
           Rosy
-        </h1>
+        </motion.h1>
       </div>
       <div>
         <Image alt="boda" src={imgFut} />
