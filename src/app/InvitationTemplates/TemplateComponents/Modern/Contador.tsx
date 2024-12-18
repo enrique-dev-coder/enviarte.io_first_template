@@ -52,20 +52,29 @@ const Contador = ({
       bg-stone-300 bg-blend-multiply 
       cell:h-screen  cell:mt-0   cell:py-10 overflow-hidden`}
     >
-      <div className="bg-black/70 text-white py-3 px-6 rounded-md">
+      <div className="bg-[#A48066]/80 w-11/12 text-white py-3 px-6 rounded-md">
         <motion.p
-          initial={{ opacity: 0, y: 5 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
           transition={{ ease: "easeInOut", duration: 1 }}
           viewport={{ once: true }}
-          className={`${dancing.className}   text-center text-4xl mb-[32px] 
-          cell:text-xl cell:mb-[18px] cell:w-[80%] cell:mx-auto`}
+          className={`${lora.className}   text-center text-[40px] mb-[32px] 
+          cell:text-[40px] cell:mb-[18px] cell:w-[80%] cell:mx-auto`}
+        >
+          Save the date!
+        </motion.p>
+        <motion.p
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          transition={{ ease: "easeInOut", duration: 1 }}
+          viewport={{ once: true }}
+          className={`${lora.className}   text-center text-[40px] font-bold mb-[32px] 
+
+           cell:mb-[18px] cell:w-[80%] cell:mx-auto`}
         >
           {fechaString}
         </motion.p>
-        <p
-          className={`${dancing.className}  text-center text-3xl cell:text-3xl`}
-        >
+        <p className={`${lora.className}  text-center text-3xl cell:text-3xl`}>
           Sólo faltan:
         </p>
 
@@ -75,6 +84,17 @@ const Contador = ({
           <Numero desc="minutos" num={minutes} />
           <Numero desc="segundos" num={seconds} />
         </div>
+        <div className="w-full h-[3px] bg-white"></div>
+        <motion.div
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          transition={{ ease: "easeInOut", duration: 1 }}
+          viewport={{ once: true }}
+          className="text-center text-[32px]"
+        >
+          {" "}
+          PUERTO VALLARTA, JALISCO
+        </motion.div>
       </div>
     </div>
   );
