@@ -3,7 +3,7 @@ import InvitationContainer from "@/components/wrappers/InvitationContainer";
 import SongButtonPlayer from "@/app/InvitationTemplates/Common/SongButtonPlayer";
 import IngresarBoton from "@/app/InvitationTemplates/TemplateComponents/Customized/CommonComponents/IngresarBoton";
 import { lora, montse } from "@/fonts";
-import img1 from "/public/assets/images/micayrosy/intro.png";
+import img1 from "/public/assets/images/micayrosy/introupdate.png";
 import imgAnillo from "/public/assets/images/micayrosy/anillo.jpg";
 import imgCarro from "/public/assets/images/micayrosy/carro.jpeg";
 import imgLogo from "/public/assets/images/micayrosy/logo-removebg-preview.png";
