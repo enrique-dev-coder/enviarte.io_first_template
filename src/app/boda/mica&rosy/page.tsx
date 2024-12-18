@@ -38,7 +38,7 @@ const page = () => {
     },
   };
   const { IngresarBotonProps } = invitationData;
-  // comentario alvvvv
+  // comentario alvvvv x2
   return (
     <InvitationContainer songLink="/assets/songs/micayrosy.m4a">
       <IngresarBoton
