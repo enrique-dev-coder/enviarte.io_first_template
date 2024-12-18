@@ -30,8 +30,9 @@ const Mesas = async () => {
     <div className=" p-4">
       <ModalAgregarMesa invitacionId={invitacionId} />
       <div className="mt-4 flex gap-2 flex-wrap">
-        {mesasAgregadas.map((mesa) => (
+        {mesasAgregadas.map((mesa, i) => (
           <TablitaMesa
+            key={i}
             nombre={mesa.nombre}
             numeroMesa={mesa.numeroMesa}
             invitadosJSON={mesa.invitadosJSON}

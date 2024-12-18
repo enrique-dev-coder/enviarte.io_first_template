@@ -66,8 +66,8 @@ const page = () => {
       </div>
       <div className="bg-stone-50 text-[#AB765A] text-center text-[22px] px-4 py-6">
         <p className={`${montse.className}`}>
-          "El destino nos ha unido, y ahora queremos que tú formes parte de
-          nuestra historia en un lugar mágico."
+          &quot;El destino nos ha unido, y ahora queremos que tú formes parte de
+          nuestra historia en un lugar mágico.&quot;
         </p>
         <p className={`${montse.className}`}>
           ¡Nos encantaría contar con tu presencia, nuestra boda es en playa!
