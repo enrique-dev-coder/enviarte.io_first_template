@@ -264,6 +264,7 @@ const CustomizedTemplate = () => {
         <Image alt="boda" src={img5} className="mx-auto " />
       </div>
       <MesaDeRegalos
+        ShowLiverpool={false}
         FraseAgradecimientoFinalColor={
           MesaRegalosProps.fraseDeAgradecimientoFinal?.styling?.color
         }
