@@ -231,6 +231,7 @@ const CustomizedTemplate = () => {
       <Recepcion recepcionProps={RecepcionProps} />
       <BannerConFoto />
       <MesaDeRegalos
+        ShowLiverpool={false}
         FraseAgradecimientoFinalColor={
           MesaRegalosProps.fraseDeAgradecimientoFinal?.styling?.color
         }
