@@ -218,16 +218,16 @@ const ItinerarioScrollable = ({
 
   return showItinerario ? (
     <>
-      <motion.h2
+      {/* <motion.h2
         className={` ${dancing.className} 
       text-black font-bold  text-center text-4xl py-1 
       cell:text-3xl cell:px-4`}
       >
         Itinerario
-      </motion.h2>
+      </motion.h2> */}
       <div
         ref={ItinerarioRef}
-        className="w-full  mt-10  relative  overflow-hidden  flex  gap-2 items-center justify-center"
+        className="max-w-[375px] mx-auto mt-10  relative  overflow-hidden  flex  gap-2 items-center justify-center"
       >
         {/* <div className="w-[4px] h-[200vh] bg-red-500"></div> */}
         <motion.div

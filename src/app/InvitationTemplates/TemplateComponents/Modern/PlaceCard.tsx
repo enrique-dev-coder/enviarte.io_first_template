@@ -13,6 +13,7 @@ const PlaceCard = ({
   titleColor,
   bgButtonColor,
   titleFont,
+  horaDos,
 }: {
   show: boolean;
   desc: string | undefined;
@@ -28,6 +29,7 @@ const PlaceCard = ({
   titleColor: string | undefined;
   bgButtonColor: string | undefined;
   titleFont: NextFont | undefined;
+  horaDos?: string | undefined;
 }) => {
   return show ? (
     <section className="py-6">
@@ -50,13 +52,16 @@ const PlaceCard = ({
         <p
           className={`
           ${nombre?.font.className}
-           text-2xl cell:text-xl cell:px-2 cell:font-bold  font-bold 
+           text-2xl text-center cell:text-xl cell:px-2 cell:font-bold  font-bold 
           `}
         >
           {nombre?.content}
         </p>
         <p className=" text-2xl cell:text-xl cell:px-2 cell:font-bold">
           {hora}
+        </p>
+        <p className=" text-2xl cell:text-xl cell:px-2 cell:font-bold">
+          {horaDos}
         </p>
         <div className=" flex items-center cell:w-[90%] cell:mx-auto cell:flex-col">
           <MapPin className=" text-black font-bold " />

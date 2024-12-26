@@ -4,6 +4,7 @@ import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
 import { dancing } from "@/fonts";
 import { NextFont } from "next/dist/compiled/@next/font";
+import liverpool from "/public/assets/images/liverpool.webp";
 
 const MesaDeRegalos = ({
   backGround,
@@ -26,6 +27,9 @@ const MesaDeRegalos = ({
   FraseAgradecimientoFinalSize,
   FraseAgradecimientoFinalFont,
   FraseAgradecimientoFinalText,
+  datosTransferencia,
+  ShowLiverpool,
+  liverpoolNoEvento,
 }: {
   backGround: string;
   ShowFraseDeAgradecimientoInicio: boolean;
@@ -47,6 +51,12 @@ const MesaDeRegalos = ({
   FraseAgradecimientoFinalSize: string | undefined;
   FraseAgradecimientoFinalFont: NextFont | undefined;
   FraseAgradecimientoFinalText: string | undefined;
+  datosTransferencia?: {
+    owner: string | undefined;
+    numero: string | undefined;
+  };
+  ShowLiverpool: boolean;
+  liverpoolNoEvento?: string | undefined;
 }) => {
   return (
     <div
@@ -99,7 +109,7 @@ const MesaDeRegalos = ({
           </div>
         )}
         {ShowSobres && SobresType === "modern" && (
-          <div className=" w-[400px] cell:w-[90%] text-center flex flex-col items-center text-3xl  my-6 border border-slate-700 rounded-md shadow-md py-4 px-7 cell:text-2xl cell:mx-2">
+          <div className=" w-[400px] bg-white cell:w-[90%] text-center flex flex-col items-center text-3xl   border border-slate-700 rounded-md shadow-md py-4 px-7 cell:text-2xl cell:mx-2">
             {SobresImg && (
               <Image alt="sobre" src={SobresImg} className="w-[22%]" />
             )}
@@ -108,6 +118,17 @@ const MesaDeRegalos = ({
               {" "}
               {SobresTextContent}
             </p>
+          </div>
+        )}
+        {ShowLiverpool && (
+          <div className=" bg-white w-[400px] cell:w-[90%] text-center flex flex-col items-center text-3xl   border border-slate-700 rounded-md shadow-md py-4 px-7 cell:text-2xl cell:mx-2">
+            {SobresImg && (
+              <Image alt="sobre" src={liverpool} className="w-[80%]" />
+            )}
+
+            <p className={`text-2xl ${SobresTextColor}`}> Mesa de Regalo</p>
+            <p className={`text-xl`}> No.Evento:</p>
+            <p className={`text-xl font-bold`}> {liverpoolNoEvento}</p>
           </div>
         )}
         {/* <div className=" w-1/3 flex flex-col justify-center items-center cell:w-11/12 cell:mx-auto cell:flex-col cell:justify-center">
@@ -125,10 +146,10 @@ const MesaDeRegalos = ({
           />
         </div> */}
         {ShowTransferencia && (
-          <div className=" text-center text-3xl cell:w-[90%]  my-6 border border-slate-700 rounded-md shadow-md py-4 px-7 cell:text-2xl cell:mx-2">
+          <div className=" bg-white text-center text-3xl cell:w-[90%]   border border-slate-700 rounded-md shadow-md py-4 px-7 cell:text-2xl cell:mx-2">
             <p className="cell:text-xl">Transferencia Bancaria</p>
-            <p className="cell:text-xl">Luis Alfredo Gonzalez Torrez</p>
-            <b className={` text-2xl`}>4152 3137 0293 1309 BBVA</b>
+            <p className="cell:text-xl">{datosTransferencia?.owner}</p>
+            <b className={` text-2xl`}>{datosTransferencia?.numero}</b>
           </div>
         )}
       </div>

@@ -2,6 +2,7 @@
 import React from "react";
 import AnimatedTitle from "@/components/UI/AnimatedTitle";
 import { motion } from "framer-motion";
+import { lora } from "@/fonts";
 
 const Card = ({
   padresde,
@@ -32,18 +33,18 @@ const Padres = () => {
     <div className=" py-14 cell:py-4 flex flex-col items-center justify-center cell:h-auto">
       <AnimatedTitle
         title="Con la bendición de nuestros padres:"
-        extraStyles="!text-black"
+        extraStyles={`${lora.className} !text-[#014b66]`}
       />
       <div className="flex justify-evenly pb-4 pt-8  gap-[80px] cell:gap-[20px] cell:w-full cell:px-0 cell:flex-col cell:items-center ">
         <Card
           padresde="Padres de la novia"
-          papa="Jorge Vázques"
-          mama="Daniela Gaytan"
+          papa="Hector Adrian Nieto Velázquez"
+          mama="María Antonieta Acosta Godínez "
         />
         <Card
           padresde="Padres de el novio"
-          papa="Jorge Vázques"
-          mama="Daniela Gaytan"
+          papa="Yolanda Elizabeth Castro Robles "
+          mama="José Aníbal Aleman Pérez"
         />
       </div>
     </div>

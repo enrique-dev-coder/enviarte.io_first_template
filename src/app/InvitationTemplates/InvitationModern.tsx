@@ -91,8 +91,28 @@ const InvitationModern = ({ data }: { data: InvitationDataTypes }) => {
         eventData={data.ItinerarioScrollable.data}
       />
       <ModernBanner ImageGalleryList={data.ImageGallery.list} />
-      <PadrinosDeBoda showSlider={data.PadrinosSlider.enabled} />
+      <PadrinosDeBoda
+        showSlider={true}
+        padrinos={[
+          {
+            madrina: "Karina Gonzalez",
+            padrino: "Ricardo Nieto",
+            tema: "Padrinos de Velación",
+          },
+          {
+            madrina: "Martha Hernandez",
+            padrino: "Juventino Gonzalez",
+            tema: "Padrinos de Arras y lazo",
+          },
+          {
+            madrina: "Elida Galaviz",
+            padrino: "Victor Aguilar",
+            tema: "Padrinos de Argollas",
+          },
+        ]}
+      />
       <MesaDeRegalos
+        ShowLiverpool={false}
         FraseAgradecimientoFinalColor={
           data.MesaRegalosProps.fraseDeAgradecimientoFinal?.styling?.color
         }
