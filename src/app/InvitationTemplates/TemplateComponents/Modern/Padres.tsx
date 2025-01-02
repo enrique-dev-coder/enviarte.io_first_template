@@ -43,8 +43,8 @@ const Padres = () => {
         />
         <Card
           padresde="Padres de el novio"
-          papa="Yolanda Elizabeth Castro Robles "
-          mama="José Aníbal Aleman Pérez"
+          papa="José Aníbal Aleman Pérez"
+          mama="Yolanda Elizabeth Castro Robles "
         />
       </div>
     </div>

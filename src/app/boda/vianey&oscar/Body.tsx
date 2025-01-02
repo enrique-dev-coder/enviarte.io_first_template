@@ -136,6 +136,43 @@ const Body = () => {
         }}
         ubicacion={"https://maps.app.goo.gl/N7Q935PSz4eEBR2J6"}
       />
+      {/* Info Extra */}
+      <div className="bg-white">
+        <p className="text-center  text-xl mb-4 cell:text-xl cell:mb-1">
+          ¿Hace cuanto no tienen una noche solos?
+        </p>
+        <p className="text-center  text-lg mb-4  cell:mb-1">
+          Ya tienen a quien echarle la culpa, ¡díganles a sus hijos que no
+          dejaremos entrar a los niños!{" "}
+        </p>
+        <p className="text-center  text-lg mb-4 cell:mb-1">NO NIÑOS</p>
+        <p className="text-center  text-lg mb-6 cell:mb-1">
+          (Evítanos la pena de que se les niegue la entrada)
+        </p>
+        <div className="w-full h-[2px] my-4 bg-[#014b66]"></div>
+        <p className="text-center px-4 text-lg">
+          ¡Para ayudarte podemos recomendarte a una agencia para el cuidado de
+          tus niños, va hasta tu hotel o casa!
+          <br /> Agenda con tiempo y pregunta por nuestros precios especiales
+          mencionando que es para la boda de Vianey & Alejandro
+        </p>
+        <div>
+          <Image src={imgCas} alt="Cas" className="w-[50%] mx-auto" />
+        </div>
+        <motion.a
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          transition={{ ease: "easeInOut", duration: 1 }}
+          viewport={{ once: true }}
+          href="https://api.whatsapp.com/send?phone=5218442762180&text=Servicio%20de%20ni%C3%B1era%20para%20la%20boda%20de%20Vianey%20y%20Oscar"
+        >
+          <div className="flex bg-[#014b66] text-white items-center justify-around m-4 p-2 rounded-md text-[20px]">
+            <Image alt="whats logo" src={whatsLogo} className="w-[20%]" />
+            Casandra Cárdenas
+            <br /> “Babysitter CAS”
+          </div>
+        </motion.a>
+      </div>
       <motion.h2
         initial={{ opacity: 0, y: 5 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -196,68 +233,52 @@ const Body = () => {
         showSlider={true}
         padrinos={[
           {
+            madrinasRamos: false,
             madrina: "Rosa Clementina Nieto Velázquez ",
             padrino: "José Luis Alcalá González",
             tema: "Padrinos de Velación",
           },
           {
+            madrinasRamos: false,
             madrina: "Jonatan Isai Valdez Alvarez",
             padrino: "Ricardo David Martínez Hernández ",
             tema: "PADRINOS DE ANILLOS",
           },
           {
+            madrinasRamos: false,
             madrina: "Carolina Elizabeth Aleman Castro",
             padrino: "Abraham Anibal Aleman Castro",
             tema: "PADRINOS DE ARRAS",
           },
           {
+            madrinasRamos: false,
             madrina: "Patricia Alejandra Urzua Flores",
             padrino: "",
             tema: "MADRINA DE BIBLIA Y ROSARIO",
           },
           {
+            madrinasRamos: false,
             madrina: "María Fernanda Sánchez Aguillón",
             padrino: "Natalia María Gómez Herrera",
             tema: "MADRINAS DE COJIN",
           },
           {
+            madrinasRamos: false,
+            madrina: "María Fernanda Murua Ceja",
+            padrino: "José Efraín Gaona Flores",
+            tema: "PADRINOS DE LAZO",
+          },
+          {
+            madrinasRamos: true,
             madrina:
               "Monserrat Nieto Acosta Andrea Guadalupe Vega Méndez María Fernanda Ramírez Nieto ",
             padrino: "",
-            tema: "MADRINAS DE Ramo",
+            tema: "MADRINAS DE RAMO",
           },
         ]}
       />
       {/* Sugerencia de Regalos */}
 
-      <MesaDeRegalos
-        FraseAgradecimientoFinalColor=""
-        FraseAgradecimientoFinalFont={undefined}
-        FraseAgradecimientoFinalSize=""
-        FraseAgradecimientoFinalText=""
-        FraseAgradecimientoInicioColor=""
-        FraseAgradecimientoInicioFont={undefined}
-        FraseAgradecimientoInicioSize=""
-        FraseAgradecimientoInicioText=""
-        SectionTitleColor="text-[#014b66]"
-        SectionTitleFont={lora}
-        ShowFraseDeAgradecimientoFinal={false}
-        ShowFraseDeAgradecimientoInicio={false}
-        ShowRegalo={false}
-        ShowSobres={true}
-        ShowTransferencia={true}
-        datosTransferencia={{
-          numero: "4152 3142 8041 5020 BBVA",
-          owner: "Vianey Nieto",
-        }}
-        SobresImg={Sobre}
-        SobresTextColor=""
-        SobresTextContent="Lluvia de sobres"
-        SobresType="modern"
-        backGround=""
-        ShowLiverpool={true}
-        liverpoolNoEvento="51579492"
-      />
       <motion.h2
         initial={{ opacity: 0, y: 5 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -352,52 +373,34 @@ const Body = () => {
           </div>
         </div>
       </div>
-      {/* Info Extra */}
-      <div className="bg-white">
-        <motion.h2
-          initial={{ opacity: 0, y: 5 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ ease: "easeInOut", duration: 1 }}
-          viewport={{ once: true }}
-          className={`${lora.className} text-center underline text-[#014b66] font-bold   text-4xl cell:text-2xl py-4 `}
-        >
-          NO NIÑOS EN MISA NI EN LA RECEPCION
-        </motion.h2>
-        <p className="text-center  text-xl mb-4 cell:text-xl cell:mb-1">
-          ¿Hace cuanto no tienen una noche solos?
-        </p>
-        <p className="text-center  text-lg mb-4  cell:mb-1">
-          Ya tienen a quien echarle la culpa, ¡díganles a sus hijos que no
-          dejaremos entrar a los niños!{" "}
-        </p>
-        <p className="text-center  text-lg mb-4 cell:mb-1">NO NIÑOS</p>
-        <p className="text-center  text-lg mb-6 cell:mb-1">
-          (Evítanos la pena de que se les niegue la entrada)
-        </p>
-        <div className="w-full h-[2px] my-4 bg-[#014b66]"></div>
-        <p className="text-center px-4 text-lg">
-          ¡Para ayudarte podemos recomendarte a una agencia para el cuidado de
-          tus niños, va hasta tu hotel o casa!
-          <br /> Agenda con tiempo y pregunta por nuestros precios especiales
-          mencionando que es para la boda de Vianey & Alejandro
-        </p>
-        <div>
-          <Image src={imgCas} alt="Cas" className="w-[50%] mx-auto" />
-        </div>
-        <motion.a
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
-          transition={{ ease: "easeInOut", duration: 1 }}
-          viewport={{ once: true }}
-          href="https://api.whatsapp.com/send?phone=5218442762180&text=Servicio%20de%20ni%C3%B1era%20para%20la%20boda%20de%20Vianey%20y%20Oscar"
-        >
-          <div className="flex bg-[#014b66] text-white items-center justify-around m-4 p-2 rounded-md text-[20px]">
-            <Image alt="whats logo" src={whatsLogo} className="w-[20%]" />
-            Casandra Cárdenas
-            <br /> “Babysitter CAS”
-          </div>
-        </motion.a>
-      </div>
+      <MesaDeRegalos
+        FraseAgradecimientoFinalColor=""
+        FraseAgradecimientoFinalFont={undefined}
+        FraseAgradecimientoFinalSize=""
+        FraseAgradecimientoFinalText=""
+        FraseAgradecimientoInicioColor=""
+        FraseAgradecimientoInicioFont={undefined}
+        FraseAgradecimientoInicioSize=""
+        FraseAgradecimientoInicioText=""
+        SectionTitleColor="text-[#014b66]"
+        SectionTitleFont={lora}
+        ShowFraseDeAgradecimientoFinal={false}
+        ShowFraseDeAgradecimientoInicio={false}
+        ShowRegalo={false}
+        ShowSobres={true}
+        ShowTransferencia={true}
+        datosTransferencia={{
+          numero: "4152 3142 8041 5020 BBVA",
+          owner: "Vianey Nieto",
+        }}
+        SobresImg={Sobre}
+        SobresTextColor=""
+        SobresTextContent="Lluvia de sobres"
+        SobresType="modern"
+        backGround=""
+        ShowLiverpool={true}
+        liverpoolNoEvento="51579492"
+      />
       <ConfirmacionForm
         invitationId={{ id: "1" }}
         nombreInvitado="Vianey Nieto"
