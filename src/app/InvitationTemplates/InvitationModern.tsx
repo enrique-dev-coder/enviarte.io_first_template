@@ -95,16 +95,19 @@ const InvitationModern = ({ data }: { data: InvitationDataTypes }) => {
         showSlider={true}
         padrinos={[
           {
+            madrinasRamos: false,
             madrina: "Karina Gonzalez",
             padrino: "Ricardo Nieto",
             tema: "Padrinos de Velación",
           },
           {
+            madrinasRamos: false,
             madrina: "Martha Hernandez",
             padrino: "Juventino Gonzalez",
             tema: "Padrinos de Arras y lazo",
           },
           {
+            madrinasRamos: false,
             madrina: "Elida Galaviz",
             padrino: "Victor Aguilar",
             tema: "Padrinos de Argollas",
