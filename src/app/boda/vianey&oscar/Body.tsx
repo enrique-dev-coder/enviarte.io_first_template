@@ -390,8 +390,8 @@ const Body = () => {
         ShowSobres={true}
         ShowTransferencia={true}
         datosTransferencia={{
-          numero: "4152 3142 8041 5020 BBVA",
-          owner: "Vianey Nieto",
+          numero: "4152 3142 3205 7730 BBVA",
+          owner: "Oscar Alejandro Alemán",
         }}
         SobresImg={Sobre}
         SobresTextColor=""
