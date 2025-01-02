@@ -13,9 +13,9 @@ export const metadata = {
     url: "https://www.invitandofacil.com/boda/vianey&oscar",
     images: [
       {
-        url: "https://www.invitandofacil.com/assets/images/vianey&oscar/banner.png",
-        width: 425,
-        height: 256,
+        url: "https://www.invitandofacil.com/assets/images/vianey&oscar/introwa.jpg",
+        width: 256,
+        height: 425,
         alt: "Imagen de la boda de vianey y oscar",
       },
     ],
