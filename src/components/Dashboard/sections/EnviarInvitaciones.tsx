@@ -25,7 +25,7 @@ const EnviarInvitaciones = async () => {
     redirect("/");
   }
   const parsedCookie = cookieStore && JSON.parse(cookieStore.value);
-
+  console.log(parsedCookie);
   const user = await prisma.user.findFirst({
     where: {
       invitacionId: parsedCookie.verificarUsuario.invitacionId,

@@ -24,8 +24,17 @@ import Sobre from "/public/assets/images/email.png";
 import whatsLogo from "/public/assets/images/micayrosy/whatslogo-removebg-preview.png";
 import imgCas from "/public/assets/images/vianey&oscar/cas.jpeg";
 
-const Body = () => {
-  const name = "Vianey Nieto";
+const Body = ({
+  nombre,
+  tel,
+  pasesAsignados,
+  invitationIdForQuery,
+}: {
+  nombre: string;
+  tel: string;
+  pasesAsignados: string;
+  invitationIdForQuery: { id: string };
+}) => {
   return (
     <InvitationContainer songLink="/assets/songs/vianeyoscar.mp3">
       <IngresarBoton
@@ -84,7 +93,7 @@ const Body = () => {
           viewport={{ once: true }}
           className={` text-center text-[28px] font-bold py-4 px-8`}
         >
-          {name}
+          {nombre}
         </motion.p>
       </div>
       <Padres />
@@ -402,10 +411,10 @@ const Body = () => {
         liverpoolNoEvento="51579492"
       />
       <ConfirmacionForm
-        invitationId={{ id: "1" }}
-        nombreInvitado="Vianey Nieto"
-        pasesAsignados="3"
-        telInvitado="8441753173"
+        invitationId={{ id: invitationIdForQuery.id }}
+        nombreInvitado={nombre}
+        pasesAsignados={pasesAsignados}
+        telInvitado={tel}
         styling={{
           section: {
             backgroundColor: "bg-white",

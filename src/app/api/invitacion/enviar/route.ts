@@ -18,12 +18,24 @@ async function EnviarAtravesDeLaWhatsAp(
         to: `+52${tel}`, // numero de telefono
         type: "template",
         template: {
-          name: "invitacion_boda", // nombre de la plantilla
+          name: "invitacion_boda_img", // nombre de la plantilla
           language: {
             code: "es_MX",
             policy: "deterministic",
           },
           components: [
+            // media id vianey oscar 828470702708422
+            {
+              type: "header",
+              parameters: [
+                {
+                  type: "image",
+                  image: {
+                    link: "https://www.invitandofacil.com/assets/images/vianey&oscar/banner.png",
+                  },
+                },
+              ],
+            },
             {
               type: "body", // variables para el body
               parameters: [
@@ -81,6 +93,8 @@ export async function POST(req: NextRequest) {
         body.linkInvitacion,
         body.evento
       );
+      // debu
+      // console.log(respuestaWhatsapp.response.data);
       if (respuestaWhatsapp?.status === 400) {
         return NextResponse.json(
           {

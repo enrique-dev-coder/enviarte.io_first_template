@@ -7,7 +7,8 @@ const page = () => {
   return (
     <DashboardAuthClientValidator>
       <DashboardLayout>
-        <Mesas />
+        {/* <Mesas /> */}
+        <div className=" text-center text-4xl">Coming soon! 😥</div>
       </DashboardLayout>
     </DashboardAuthClientValidator>
   );
