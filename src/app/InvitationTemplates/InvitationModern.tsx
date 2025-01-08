@@ -116,6 +116,7 @@ const InvitationModern = ({ data }: { data: InvitationDataTypes }) => {
       />
       <MesaDeRegalos
         ShowLiverpool={false}
+        showAmazon={false}
         FraseAgradecimientoFinalColor={
           data.MesaRegalosProps.fraseDeAgradecimientoFinal?.styling?.color
         }

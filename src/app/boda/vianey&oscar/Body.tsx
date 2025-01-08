@@ -409,6 +409,7 @@ const Body = ({
         backGround=""
         ShowLiverpool={true}
         liverpoolNoEvento="51579492"
+        showAmazon={false}
       />
       <ConfirmacionForm
         invitationId={{ id: invitationIdForQuery.id }}
