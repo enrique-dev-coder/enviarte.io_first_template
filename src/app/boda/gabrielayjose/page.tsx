@@ -6,7 +6,7 @@ export const metadata = {
   description: "Invitaciones digitales para eventos",
   openGraph: {
     siteName: "Gabriela & Jose",
-    title: "Vianey & Oscar - Nuestra Boda",
+    title: "Gabriela & Jose - Nuestra Boda",
     description:
       "Te invitamos a celebrar nuestra boda. Haz clic para más detalles.",
     url: "https://www.invitandofacil.com/boda/gabrielayjose",
