@@ -9,10 +9,10 @@ export const metadata = {
     title: "Vianey & Oscar - Nuestra Boda",
     description:
       "Te invitamos a celebrar nuestra boda. Haz clic para más detalles.",
-    url: "https://www.invitandofacil.com/boda/vianey&oscar",
+    url: "https://www.invitandofacil.com/boda/gabrielayjose",
     images: [
       {
-        url: "https://www.invitandofacil.com/assets/images/vianey&oscar/introwa.jpg",
+        url: "https://www.invitandofacil.com/assets/images/joseygabriela/hero.jpeg",
         width: 256,
         height: 425,
         alt: "Imagen de la boda de vianey y oscar",
