@@ -32,6 +32,7 @@ const MesaDeRegalos = ({
   ShowLiverpool,
   liverpoolNoEvento,
   showAmazon,
+  linkAmazon,
 }: {
   backGround: string;
   ShowFraseDeAgradecimientoInicio: boolean;
@@ -60,6 +61,7 @@ const MesaDeRegalos = ({
   ShowLiverpool: boolean;
   liverpoolNoEvento?: string | undefined;
   showAmazon: boolean;
+  linkAmazon?: string | undefined;
 }) => {
   return (
     <div
@@ -143,7 +145,7 @@ const MesaDeRegalos = ({
             </p>
             <a
               className=" bg-black text-white rounded-full px-4 py-2 my-2"
-              href=""
+              href={linkAmazon}
               target="_blank"
               rel="nofollow noopener"
             >

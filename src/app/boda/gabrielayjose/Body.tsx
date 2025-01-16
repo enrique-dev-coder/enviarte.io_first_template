@@ -28,7 +28,10 @@ import DressCodeHombres from "/public/assets/images/suit_icon-removebg-preview.p
 
 const Body = () => {
   return (
-    <InvitationContainer spBackground="flowers" songLink={"/"}>
+    <InvitationContainer
+      spBackground="flowers"
+      songLink="/assets/songs/gabrielayjose.mp3"
+    >
       <IngresarBoton
         novio="José"
         novia="Gabriela"
@@ -51,7 +54,7 @@ const Body = () => {
           font: dancing,
         }}
         fotoDesktop="bg-[url('/assets/images/joseygabriela/hero.jpeg')]"
-        fotoCell="bg-[url('/assets/images/joseygabriela/hero.jpeg')]"
+        fotoCell="cell:bg-[url('/assets/images/joseygabriela/hero.jpeg')]"
         translateYVal={0}
       />
       <InfoBanner
@@ -200,7 +203,7 @@ const Body = () => {
             id: 2,
             evento: "⛪️ Cerenomia Civil",
             hora: "17:00 hrs",
-            Icon: "church",
+            Icon: "civil",
           },
           {
             id: 3,
@@ -258,6 +261,7 @@ const Body = () => {
         ShowLiverpool={true}
         liverpoolNoEvento="51462297"
         showAmazon={true}
+        linkAmazon="https://www.amazon.com.mx/wedding/registry/GAHU0ANQZDTQ"
       />
 
       <ConfirmacionForm

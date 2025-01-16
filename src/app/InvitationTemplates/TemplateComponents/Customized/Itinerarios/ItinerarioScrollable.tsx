@@ -1,10 +1,14 @@
 "use client";
 import { useRef } from "react";
 import { dancing } from "@/fonts";
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { DanceIcon, RecepcionIcon } from "../../CustomIcons";
 import { ChurchIcon, PartyPopperIcon, UtensilsCrossedIcon } from "lucide-react";
 import { EventoItinerario } from "../types";
+import CivilImg from "/public/assets/images/couple.png";
+
+const CivilIcon = () => <Image src={CivilImg} alt="boda" width={36} />;
 
 const Icons = {
   church: <ChurchIcon size={36} />,
@@ -12,6 +16,7 @@ const Icons = {
   dinner: <UtensilsCrossedIcon size={36} />,
   dance: <DanceIcon />,
   recepcion: <RecepcionIcon />,
+  civil: <CivilIcon />,
 };
 // Tipado explícito para las claves del objeto Icons
 type IconKey = keyof typeof Icons;

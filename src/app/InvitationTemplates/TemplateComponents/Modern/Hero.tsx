@@ -39,13 +39,16 @@ const InvitationHero1 = ({
 
   return (
     <div
-      style={{ backgroundAttachment: "fixed" }}
+      style={{
+        backgroundAttachment: "fixed",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
       className={`
-     
       ${fotoDesktop}
       ${fotoCell}
        w-full h-screen  cell:py-4
-      bg-center bg-no-repeat bg-cover 
+       bg-no-repeat  
       bg-blend-multiply  bg-neutral-200
       flex flex-col items-center justify-center  
         `}
