@@ -54,7 +54,7 @@ const Body = () => {
           font: dancing,
         }}
         fotoDesktop="bg-[url('/assets/images/joseygabriela/hero.jpeg')]"
-        fotoCell="cell:bg-[url('/assets/images/joseygabriela/hero.jpeg')]"
+        fotoCell="cell:bg-[url('/assets/images/joseygabriela/hero_mobile.png')]"
         translateYVal={0}
       />
       <InfoBanner
@@ -201,8 +201,8 @@ const Body = () => {
           },
           {
             id: 2,
-            evento: "⛪️ Cerenomia Civil",
-            hora: "17:00 hrs",
+            evento: "❤ Cerenomia Civil",
+            hora: "19:30  hrs",
             Icon: "civil",
           },
           {
