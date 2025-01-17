@@ -16,6 +16,7 @@ const InvitationHero1 = ({
   fotoDesktop,
   fotoCell,
   translateYVal,
+  isfixed = true,
 }: {
   novia: string;
   novio: string;
@@ -34,19 +35,20 @@ const InvitationHero1 = ({
   };
   fotoDesktop: string;
   fotoCell: string;
+  isfixed?: boolean | undefined;
 }) => {
   const { controls } = useContext(StartAnimation);
 
   return (
     <div
       style={{
-        backgroundAttachment: "fixed",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
       className={`
       ${fotoDesktop}
       ${fotoCell}
+      ${isfixed && "bg-fixed"}
        w-full h-screen  cell:py-4
        bg-no-repeat  
       bg-blend-multiply  bg-neutral-200

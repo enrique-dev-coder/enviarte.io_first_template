@@ -26,10 +26,12 @@ const Contador = ({
   fechaEvento,
   fechaString,
   fotoContador,
+  isfixed = true,
 }: {
   fechaEvento: Date;
   fechaString: string | undefined;
   fotoContador: string;
+  isfixed?: boolean | undefined;
 }) => {
   const { seconds, minutes, hours, days } = useTimer({
     expiryTimestamp: fechaEvento,
@@ -38,10 +40,10 @@ const Contador = ({
 
   return (
     <div
-      style={{ backgroundAttachment: "fixed" }}
       className={`
     
       ${fotoContador}
+      ${isfixed && "bg-fixed"}
       bg-cover bg-center 
       h-[100vh]
       flex flex-col items-center justify-center w-full relative 

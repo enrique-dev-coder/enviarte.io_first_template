@@ -39,6 +39,7 @@ const Body = () => {
         color="blackPalette"
       />
       <Hero
+        isfixed={false}
         frase={{
           content: "Save the date",
           font: dancing,
@@ -69,6 +70,7 @@ const Body = () => {
       />
 
       <Contador
+        isfixed={false}
         fotoContador="bg-[url('/assets/images/joseygabriela/save1.jpeg')]"
         fechaEvento={new Date("2025-05-16T00:00:00")}
         fechaString={"Viernes, 16 de Mayo de 2025"}
