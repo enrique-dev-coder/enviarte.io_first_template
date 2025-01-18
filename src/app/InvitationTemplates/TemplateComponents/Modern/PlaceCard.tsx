@@ -21,6 +21,7 @@ const PlaceCard = ({
     | {
         content: string;
         font: NextFont;
+        color?: string | undefined;
       }
     | undefined;
   ubicacion: string | undefined;
@@ -52,12 +53,16 @@ const PlaceCard = ({
         <p
           className={`
           ${nombre?.font.className}
+          ${!nombre?.color ? "text-black" : nombre?.color}
            text-2xl text-center cell:text-xl cell:px-2 cell:font-bold  font-bold 
           `}
         >
           {nombre?.content}
         </p>
-        <p className=" text-2xl cell:text-xl cell:px-2 cell:font-bold">
+        <p
+          className={`${!titleColor ? "text-black" : titleColor}
+          text-2xl cell:text-xl cell:px-2 cell:font-bold`}
+        >
           {hora}
         </p>
         <p className=" text-2xl cell:text-xl cell:px-2 cell:font-bold">
