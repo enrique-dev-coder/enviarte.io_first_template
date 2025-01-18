@@ -86,7 +86,7 @@ const Body = () => {
 
       <Contador
         fechaEvento={new Date("2025-04-12T00:00:00")}
-        fechaString="Sábadao, 12 de abril de 2025"
+        fechaString="Sábado, 12 de Abril de 2025"
         fotoContador="bg-[url('/assets/images/anelyroberto/save.png')]"
       />
 

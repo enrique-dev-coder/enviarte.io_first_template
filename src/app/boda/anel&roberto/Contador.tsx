@@ -57,7 +57,7 @@ const Contador = ({
           className={`${lora.className}   text-center text-[40px] mb-[32px] 
           cell:text-[40px] cell:mb-[18px] cell:w-[80%] cell:mx-auto`}
         >
-          Save the date!
+          Save the Date!
         </motion.p>
         <motion.p
           initial={{ scale: 0 }}
