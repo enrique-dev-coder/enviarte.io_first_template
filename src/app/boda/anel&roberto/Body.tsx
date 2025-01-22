@@ -23,7 +23,7 @@ import img6 from "/public/assets/images/anelyroberto/img_hrz3.png";
 import { WhatsIcon } from "@/components/Dashboard/EnviarLista/Icons";
 import Sobre from "/public/assets/images/email.png";
 import HotelCard from "./HotelCard";
-import DressCodeMujeres from "/public/assets/images/Dress_icon.png";
+import DressCodeMujeres from "/public/assets/images/vestidolargo.png";
 import DressCodeHombres from "/public/assets/images/suit_icon-removebg-preview.png";
 
 const Body = () => {
