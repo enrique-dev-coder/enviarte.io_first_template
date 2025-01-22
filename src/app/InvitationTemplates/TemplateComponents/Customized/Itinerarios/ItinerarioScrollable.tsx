@@ -7,8 +7,12 @@ import { DanceIcon, RecepcionIcon } from "../../CustomIcons";
 import { ChurchIcon, PartyPopperIcon, UtensilsCrossedIcon } from "lucide-react";
 import { EventoItinerario } from "../types";
 import CivilImg from "/public/assets/images/couple.png";
+import Coctel from "/public/assets/images/champagne-glass.png";
+import Flowers from "/public/assets/images/bouquet.png";
 
 const CivilIcon = () => <Image src={CivilImg} alt="boda" width={36} />;
+const CoctelIcon = () => <Image src={Coctel} alt="boda" width={36} />;
+const FlowersIcon = () => <Image src={Flowers} alt="boda" width={36} />;
 
 const Icons = {
   church: <ChurchIcon size={36} />,
@@ -17,6 +21,8 @@ const Icons = {
   dance: <DanceIcon />,
   recepcion: <RecepcionIcon />,
   civil: <CivilIcon />,
+  coctel: <CoctelIcon />,
+  flores: <FlowersIcon />,
 };
 // Tipado explícito para las claves del objeto Icons
 type IconKey = keyof typeof Icons;
@@ -79,7 +85,7 @@ function Item({
           </p>
         </div>
         <section className="relative">
-          <section className="absolute z-50 top-[-19px] right-[-19px]">
+          <section className="absolute z-50 top-[-19px] right-[-5px]">
             <div ref={ref}>
               <figure className="progress">
                 <svg
@@ -110,11 +116,11 @@ function Item({
           <div>
             <div
               className={`${circleBg}
-            w-[70px] shadow-sm flex justify-center items-center h-[70px] z-30  rounded-full
+            w-[70px] shadow-sm flex justify-center items-center h-[70px]  z-30  rounded-full
             `}
             >
               <div
-                className={`w-[61px] h-[61px] ${circleBg}  z-30  rounded-full flex justify-center items-center  ${iconColor}`}
+                className={`w-[61px] h-[61px] ${circleBg}  translate-x-[-15px] z-30  rounded-full flex justify-center items-center  ${iconColor}`}
               >
                 {Icon}
               </div>
@@ -127,7 +133,7 @@ function Item({
     return (
       <div className="flex justify-center items-center cell:mr-0 cell:cell:ml-[0%] mr-[-80%] h-[200px] cell:gap-4 gap-10">
         <section className="relative">
-          <section className="absolute z-50 top-[-19px] right-[-19px]">
+          <section className="absolute z-50 top-[-19px] right-[-5px]">
             <div ref={ref}>
               <figure className="progress">
                 <svg
@@ -158,7 +164,7 @@ function Item({
           <div>
             <div
               className={`${circleBg}
-                w-[70px] shadow-sm flex justify-center items-center h-[70px] z-30  rounded-full
+                w-[70px] shadow-sm flex justify-center items-center h-[70px]  translate-x-[-15px] z-30  rounded-full
             `}
             >
               <div>{Icon}</div>

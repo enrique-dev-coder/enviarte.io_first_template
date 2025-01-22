@@ -5,6 +5,7 @@ import IngresarBoton from "@/app/InvitationTemplates/TemplateComponents/Customiz
 import PlaceCard from "@/app/InvitationTemplates/TemplateComponents/Modern/PlaceCard";
 import MesaDeRegalos from "@/app/InvitationTemplates/TemplateComponents/Customized/CommonComponents/MesaDeRegalos";
 import SongButtonPlayer from "@/app/InvitationTemplates/Common/SongButtonPlayer";
+import ItinerarioScrollable from "@/app/InvitationTemplates/TemplateComponents/Customized/Itinerarios/ItinerarioScrollable";
 
 import { lora, montse, dancing } from "@/fonts";
 import Image from "next/image";
@@ -21,6 +22,7 @@ import img5 from "/public/assets/images/anelyroberto/img_hrz2.png";
 import img6 from "/public/assets/images/anelyroberto/img_hrz3.png";
 import { WhatsIcon } from "@/components/Dashboard/EnviarLista/Icons";
 import Sobre from "/public/assets/images/email.png";
+import HotelCard from "./HotelCard";
 
 const Body = () => {
   return (
@@ -63,7 +65,7 @@ const Body = () => {
             <p className="text-xl text-gray-800 font-medium">&</p>
 
             <p className="text-xl text-gray-800 font-medium">
-              Elsa Maria Galaz Espinoza
+              Elsa Maria Galaz Espinosa
             </p>
           </motion.div>
           <motion.div
@@ -83,13 +85,11 @@ const Body = () => {
           </motion.div>
         </div>
       </div>
-
       <Contador
         fechaEvento={new Date("2025-04-12T00:00:00")}
         fechaString="Sábado, 12 de Abril de 2025"
         fotoContador="bg-[url('/assets/images/anelyroberto/save.png')]"
       />
-
       <PlaceCard
         show={true}
         titleColor={"text-[#014b66]"}
@@ -113,102 +113,83 @@ const Body = () => {
       >
         <Image src={imgBanner} alt="boda" />
       </motion.div>
-      {/* Sugerencia de Regalos */}
-
-      {/* <motion.h2
+      <motion.h2
         initial={{ opacity: 0, y: 5 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
         className={`${lora.className} text-center text-[#014b66] font-bold   text-5xl cell:text-4xl py-4 `}
       >
-        Dress Code
+        Itinerario
       </motion.h2>
+      <ItinerarioScrollable
+        showItinerario={true}
+        eventData={[
+          {
+            id: 1,
+            evento: " Cóctel de bienvenida ",
+            hora: "7:30 pm",
+            Icon: "coctel",
+          },
+          {
+            id: 2,
+            evento: " Asignación de mesas",
+            hora: "8:00 pm",
+            Icon: "flores",
+          },
+          {
+            id: 3,
+            evento: " Vals de novios",
+            hora: "8:30 pm",
+            Icon: "civil",
+          },
+          {
+            id: 4,
+            evento: " Cena",
+            hora: "9:00 pm",
+            Icon: "dinner",
+          },
+          {
+            id: 5,
+            evento: "Inicia la fiesta",
+            hora: "10:00 pm",
+            Icon: "party",
+          },
+          {
+            id: 6,
+            evento: "Cierre del evento",
+            hora: "1:30 am",
+            Icon: "civil",
+          },
+        ]}
+        sectionStyling={{
+          lineColor: "bg-[#014b66]",
+          lineBg: "bg-[#00AEAE]/20",
+          circleColor: "stroke-[#014b66]",
+          circleBg: "bg-gray-50",
+          circleSoftStroke: "stroke-[#00AEAE]/20",
+          iconColor: "text-gray-900",
+          cardBg: "bg-white",
+        }}
+      />
+      <motion.div
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <Image src={img3} alt="boda" />
+      </motion.div>
       <motion.h2
         initial={{ opacity: 0, y: 5 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
-        className={`${lora.className} text-center text-[#014b66] font-bold underline   text-5xl cell:text-4xl py-4 `}
+        className={`${lora.className} text-center text-[#014b66] font-bold   text-5xl cell:text-4xl py-4 `}
       >
-        Formal Riguroso
+        Sugerencia de hoteles
       </motion.h2>
-      <div className="flex  flex-col items-center justify-center cell:w-full">
-        <div className=" w-11/12 flex justify-center my-4  cell:h-auto  cell:flex-col cell:w-12/12 cell:gap-10">
-          <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">
-            {" "}
-            <Image alt="boda" src={DressCodeMujeres} className="w-[50%]" />
-            <p className={`font-bold text-4xl text-[#014b66] cell:text-2xl`}>
-              Mujeres
-            </p>
-            <p className="  text-4xl mb-4 cell:text-xl cell:mb-1">
-              Vestido Largo
-            </p>
-          </div>
-          <p className="text-center uppercase underline text-xl mb-4 cell:text-xl cell:mb-1">
-            COLORES EXCLUSIVOS DE LAS DAMAS FAVOR DE NO UTILIZAR
-          </p>
-          <div className="w-6/12 mx-auto text-xl">
-            <div className="flex gap-2">
-              <div className=" w-[20px] h-[20px] rounded-full bg-[#00AEAE]"></div>
-              <p>Teal</p>
-            </div>
-            <div className="flex gap-2">
-              <div className=" w-[20px] h-[20px] rounded-full bg-[#014b66]"></div>
-              <p>Blue green</p>
-            </div>
-          </div>
-          <p className="text-center uppercase underline text-xl mb-4 cell:text-xl cell:mb-1">
-            Queda prohibido llevar
-          </p>
-          <div className="w-6/12 mx-auto text-xl">
-            <ul className=" list-disc">
-              <li>Rojo</li>
-              <li>Champagne Claro</li>
-              <li>Blush Pink muy claro</li>
-              <li>Baby Blue muy claro</li>
-              <li>Gris claro</li>
-              <li>Perla</li>
-              <li>Color hueso</li>
-              <li>Color Beige</li>
-              <li>Rosa Palo</li>
-            </ul>
-          </div>
-          <p className="text-center text-xl mb-4 cell:text-xl cell:mb-1">
-            ¡Prepárense para una boda llena de colores!
-          </p>
-          <p className="text-center text-[#014b66] underline text-xl mb-4 cell:text-xl cell:mb-1">
-            DEJEN EL BLANCO PARA LA NOVIA
-          </p>
-          <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">
-            {" "}
-            <Image alt="boda" src={DressCodeHombres} className="w-[35%]" />
-            <p className={`font-bold text-4xl text-[#014b66] cell:text-2xl`}>
-              Hombres
-            </p>
-            <p className="  text-4xl mb-4 cell:mb-1 cell:text-xl">
-              Traje Formal
-            </p>
-            <p className="text-center uppercase underline text-xl mb-4 cell:text-xl cell:mb-1">
-              Queda prohibido llevar
-            </p>
-            <div className="w-6/12 mx-auto text-xl">
-              <ul className=" list-disc">
-                <li>Botas vaqueras</li>
-                <li>Pantalones de mezclilla </li>
-              </ul>
-            </div>
-          </div>
-          <div>
-            <p className="text-center text-[#014b66]  text-xl cell:text-xl cell:mb-1">
-              ¡Nuestro equipo escoltara a los infractores hasta la puerta!
-            </p>
-            <p className="text-center text-[#014b66]  text-xl cell:text-xl cell:mb-1">
-              (Evítanos la pena de que se le niegue la entrada)
-            </p>
-          </div>
-        </div>
-      </div> */}
+      <HotelCard />
       <MesaDeRegalos
         FraseAgradecimientoFinalColor=""
         FraseAgradecimientoFinalFont={undefined}
@@ -238,14 +219,7 @@ const Body = () => {
         liverpoolNoEvento="51410837"
         showAmazon={false}
       />
-      <motion.div
-        initial={{ scale: 0 }}
-        whileInView={{ scale: 1 }}
-        transition={{ ease: "easeInOut", duration: 1 }}
-        viewport={{ once: true }}
-      >
-        <Image src={img3} alt="boda" />
-      </motion.div>
+
       <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
@@ -286,7 +260,7 @@ const Body = () => {
           <p
             className={`text-3xl cell:text-2xl cellw-10/12 cell:mx-auto  text-[#014b66] font-semibold underline text-center`}
           >
-            Confirma tu Asistencia antes de el dıá <br /> 17 de Febrero de 2025
+            Confirma tu Asistencia antes de el día <br /> 17 de Febrero de 2025
           </p>
 
           <div className="flex flex-col justify-center items-center py-8">
