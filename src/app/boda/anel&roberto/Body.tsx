@@ -23,6 +23,8 @@ import img6 from "/public/assets/images/anelyroberto/img_hrz3.png";
 import { WhatsIcon } from "@/components/Dashboard/EnviarLista/Icons";
 import Sobre from "/public/assets/images/email.png";
 import HotelCard from "./HotelCard";
+import DressCodeMujeres from "/public/assets/images/Dress_icon.png";
+import DressCodeHombres from "/public/assets/images/suit_icon-removebg-preview.png";
 
 const Body = () => {
   return (
@@ -61,11 +63,11 @@ const Body = () => {
             <p className="text-2xl font-bold text-[#014b66]">
               Papás de la novia
             </p>
-            <p className="text-xl  font-medium">Juan de Jesus Angel Ordoñez </p>
+            <p className="text-xl  font-medium">Juan de Jesús Angel Ordoñez </p>
             <p className="text-xl text-gray-800 font-medium">&</p>
 
             <p className="text-xl text-gray-800 font-medium">
-              Elsa Maria Galaz Espinosa
+              Elsa María Galaz Espinosa
             </p>
           </motion.div>
           <motion.div
@@ -244,6 +246,67 @@ const Body = () => {
       >
         <Image src={img6} alt="boda" />
       </motion.div>
+      <motion.h2
+        initial={{ opacity: 0, y: 5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+        className={`${lora.className} text-center text-[#014b66] font-bold   text-5xl cell:text-4xl py-4 `}
+      >
+        Dress Code
+      </motion.h2>
+      <motion.h2
+        initial={{ opacity: 0, y: 5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+        className={`${lora.className} text-center text-[#014b66] font-bold underline   text-5xl cell:text-4xl py-4 `}
+      >
+        Formal
+      </motion.h2>
+      <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">
+        {" "}
+        <Image alt="boda" src={DressCodeMujeres} className="w-[50%]" />
+        <p className={`font-bold text-4xl text-[#014b66] cell:text-2xl`}>
+          Mujeres
+        </p>
+        <p className="  text-4xl mb-4 cell:text-xl cell:mb-1">Vestido Largo</p>
+      </div>
+      <motion.h2
+        initial={{ opacity: 0, y: 5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+        className={`${lora.className} text-center text-[#014b66] font-bold underline   text-5xl cell:text-2xl py-4 `}
+      >
+        El color azul se reserva para las damas
+      </motion.h2>
+      <motion.h2
+        initial={{ opacity: 0, y: 5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+        className={`${lora.className} text-center text-[#014b66] font-bold underline   text-5xl cell:text-2xl py-4 `}
+      >
+        El Blanco es solo para la novia
+      </motion.h2>
+      <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">
+        {" "}
+        <Image alt="boda" src={DressCodeHombres} className="w-[35%]" />
+        <p className={`font-bold text-4xl text-[#014b66] cell:text-2xl`}>
+          Hombres
+        </p>
+        <p className="  text-4xl mb-4 cell:mb-1 cell:text-xl">Traje Formal</p>
+      </div>
+      <motion.h2
+        initial={{ opacity: 0, y: 5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+        className={`${lora.className} text-center text-[#014b66] font-bold underline   text-5xl cell:text-4xl py-4 `}
+      >
+        NO NIÑOS
+      </motion.h2>
       <div>
         <motion.p
           initial={{ scale: 0 }}

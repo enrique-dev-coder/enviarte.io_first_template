@@ -77,9 +77,7 @@ function Item({
           <p className=" text-neutral-900   font-bold text-lg  cell:text-base">
             {actividad}
           </p>
-          <p className="text-neutral-800   font-medium cell:text-sm">
-            {hora} horas
-          </p>
+          <p className="text-neutral-800   font-medium cell:text-sm">{hora}</p>
           <p className="text-neutral-8  00   font-medium cell:text-sm ">
             {lugar}
           </p>
@@ -185,9 +183,7 @@ function Item({
           <p className=" text-neutral-900   font-bold text-lg cell:text-base ">
             {actividad}
           </p>
-          <p className="text-neutral-800   font-medium cell:text-sm">
-            {hora} horas
-          </p>
+          <p className="text-neutral-800   font-medium cell:text-sm">{hora}</p>
           <p className="text-neutral-800   font-medium  cell:text-sm">
             {lugar}
           </p>
