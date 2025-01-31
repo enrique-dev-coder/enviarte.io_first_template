@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import SongButtonPlayer from "../../InvitationTemplates/Common/SongButtonPlayer";
 import Contador from "./Contador";
-import InfoBanner from "../../InvitationTemplates/TemplateComponents/Modern/InfoBanner";
+import InfoBanner from "./InfoBanner";
 import PlaceCard from "../../InvitationTemplates/TemplateComponents/Modern/PlaceCard";
 import ModernBanner from "../../InvitationTemplates/TemplateComponents/Modern/ModernBanner";
 import MesaDeRegalos from "../../InvitationTemplates/TemplateComponents/Customized/CommonComponents/MesaDeRegalos";
@@ -55,7 +55,7 @@ const Body = () => {
           font: dancing,
         }}
         fotoDesktop="bg-[url('/assets/images/joseygabriela/hero.jpeg')]"
-        fotoCell="cell:bg-[url('/assets/images/joseygabriela/hero_mobile.png')]"
+        fotoCell="cell:bg-[url('/assets/images/joseygabriela/hero.jpeg')]"
         translateYVal={0}
       />
       <InfoBanner
@@ -132,6 +132,10 @@ const Body = () => {
         }}
         ubicacion="https://maps.app.goo.gl/gtxAg9N53vywR7c89"
       />
+      <div className=" bg-white text-center px-6 py-6 font-semibold text-2xl">
+        Debido al espacio de nuestra locación nupcial, tenemos cupos reservados
+        solo para adultos. Agradecemos su comprensión.
+      </div>
       <motion.h2
         initial={{ opacity: 0, y: 5 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -161,7 +165,8 @@ const Body = () => {
             </p>
           </div>
           <p className="text-center uppercase underline text-xl mb-4 cell:text-xl cell:mb-1">
-            Queda prohibido llevar colores claros
+            El color blanco es hermoso pero en nuestra boda es exclusivo para la
+            novia.
           </p>
           <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">
             {" "}
@@ -170,16 +175,6 @@ const Body = () => {
             <p className="  text-4xl mb-4 cell:mb-1 cell:text-xl">
               Traje con corbata
             </p>
-            <p className="text-center uppercase underline text-xl mb-4 cell:text-xl cell:mb-1">
-              Queda prohibido llevar
-            </p>
-            <div className="w-6/12 mx-auto text-xl">
-              <ul className=" list-disc">
-                <li>Botas vaqueras</li>
-                <li>Pantalones de mezclilla </li>
-                <li>Sombreros</li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>

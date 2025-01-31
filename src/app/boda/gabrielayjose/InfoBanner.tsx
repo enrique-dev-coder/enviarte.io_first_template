@@ -3,6 +3,8 @@ import React from "react";
 import { dancing, sofia, allura, analogist, cambria } from "@/fonts";
 import { motion } from "framer-motion";
 import { NextFont } from "next/dist/compiled/@next/font";
+import Image from "next/image";
+import LazoNegro from "/public/assets/images/lazo-negro.png";
 const InfoBanner = ({
   showBanner,
   showFraseBibilica,
@@ -66,7 +68,14 @@ const InfoBanner = ({
               <p className="font-bold cell:text-xl">Padres de la Novia</p>
               <p className="cell:text-xl mb-4">{padresNovia}</p>
               <p className="font-bold cell:text-xl">Padres de el Novio</p>
-              <p className="cell:text-xl">{padresNovio}</p>
+              <p className="cell:text-xl">
+                Maria Isidra Rocha y{" "}
+                <span className="flex justify-center items-center">
+                  {" "}
+                  <Image src={LazoNegro} className="w-[8%]" alt="lazo negro" />
+                  Juan Francisco Pachicano
+                </span>
+              </p>
             </div>
           </div>
         )}
