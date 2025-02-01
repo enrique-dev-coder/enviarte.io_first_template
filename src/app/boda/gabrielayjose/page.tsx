@@ -1,4 +1,6 @@
 import Body from "./Body";
+import { headers } from "next/headers";
+import prisma from "../../../../prisma";
 
 export const metadata = {
   metadataBase: new URL("https://www.invitandofacil.com"),
@@ -20,9 +22,37 @@ export const metadata = {
     ],
   },
 };
+const getInvitationId = async (name: string) => {
+  const invitationId = await prisma.invitacion.findFirst({
+    where: {
+      invitationName: name,
+    },
+    select: {
+      id: true,
+    },
+  });
+  return invitationId as { id: string };
+};
 
-const page = () => {
-  return <Body />;
+const page = async ({ searchParams }: any) => {
+  const nombre = searchParams?.nombre;
+  const tel = searchParams?.tel;
+  const pasesAsignados = searchParams?.pasesAsignados;
+
+  // obtener  el pathname del middleware
+  const headersList = headers();
+  const pathname = headersList.get("x-pathname"); // ejemplo: /boda/danielayjosepablo
+  const invitationIdForQuery = await getInvitationId(pathname as string); // { id: '65df62e264903d5c4bb5053e' }
+  console.log(invitationIdForQuery);
+
+  return (
+    <Body
+      nombre={nombre}
+      tel={tel}
+      pasesAsignados={pasesAsignados}
+      invitationIdForQuery={invitationIdForQuery}
+    />
+  );
 };
 
 export default page;

@@ -26,7 +26,17 @@ import Sobre from "/public/assets/images/email.png";
 import DressCodeMujeres from "/public/assets/images/Dress_icon.png";
 import DressCodeHombres from "/public/assets/images/suit_icon-removebg-preview.png";
 
-const Body = () => {
+const Body = ({
+  nombre,
+  tel,
+  pasesAsignados,
+  invitationIdForQuery,
+}: {
+  nombre: string;
+  tel: string;
+  pasesAsignados: string;
+  invitationIdForQuery: { id: string };
+}) => {
   return (
     <InvitationContainer
       spBackground="flowers"
@@ -262,10 +272,10 @@ const Body = () => {
       />
 
       <ConfirmacionForm
-        invitationId={{ id: "1" }}
-        nombreInvitado={"Jose Pachicano"}
-        pasesAsignados="2"
-        telInvitado="8441753173"
+        invitationId={{ id: invitationIdForQuery.id }}
+        nombreInvitado={nombre}
+        pasesAsignados={pasesAsignados}
+        telInvitado={tel}
         styling={{
           section: {
             backgroundColor: "bg-white",
