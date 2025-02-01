@@ -15,6 +15,7 @@ export async function GET(
       },
       select: {
         invitationName: true,
+        linkFoto: true,
       },
     });
     return NextResponse.json(invitationInfo, {

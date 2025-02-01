@@ -8,7 +8,8 @@ async function EnviarAtravesDeLaWhatsAp(
   message: string,
   nombreWhats: string,
   linkInvitacion: string,
-  evento: string
+  evento: string,
+  linkFoto: string
 ) {
   try {
     return await axios.post(
@@ -31,7 +32,7 @@ async function EnviarAtravesDeLaWhatsAp(
                 {
                   type: "image",
                   image: {
-                    link: "https://www.invitandofacil.com/assets/images/vianey&oscar/banner.png",
+                    link: linkFoto,
                   },
                 },
               ],
@@ -83,7 +84,8 @@ export async function POST(req: NextRequest) {
         invitacionId: body.invitacionId,
       },
     });
-
+  // console.log(verificarSiLaInvitacionYaFueEnviada);
+  // TEST
   if (!verificarSiLaInvitacionYaFueEnviada) {
     try {
       const respuestaWhatsapp = await EnviarAtravesDeLaWhatsAp(
@@ -91,10 +93,11 @@ export async function POST(req: NextRequest) {
         body.whatsMessage,
         body.nombreWhats,
         body.linkInvitacion,
-        body.evento
+        body.evento,
+        body.linkFoto
       );
-      // debu
-      // console.log(respuestaWhatsapp.response.data);
+      // debug
+      // console.log(respuestaWhatsapp.data);
       if (respuestaWhatsapp?.status === 400) {
         return NextResponse.json(
           {

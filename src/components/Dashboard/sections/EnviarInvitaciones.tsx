@@ -42,9 +42,9 @@ const EnviarInvitaciones = async () => {
     },
     select: {
       link: true,
+      linkFoto: true,
     },
   });
-  console.log(user);
   const linkParaEnviar =
     invitationLink?.link ||
     "Si no aparece tu link favor de comunicarse al 8441753173";
@@ -59,6 +59,7 @@ const EnviarInvitaciones = async () => {
             nombreWhats={user?.nombreWhats}
             linkParaEnviar={linkParaEnviar}
             evento={user?.evento}
+            linkFoto={invitationLink?.linkFoto}
           />
         </div>
         {/*TODO: esto abre instrucciones de envio*/}
@@ -79,6 +80,7 @@ const EnviarInvitaciones = async () => {
           nombreWhats={user?.nombreWhats}
           linkParaEnviar={linkParaEnviar}
           evento={user?.evento}
+          linkFoto={invitationLink?.linkFoto}
         />
       </div>
 

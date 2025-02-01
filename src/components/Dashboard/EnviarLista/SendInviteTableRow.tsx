@@ -28,6 +28,7 @@ const SendInviteTableRow = ({
   nombreWhats,
   linkParaEnviar,
   evento,
+  linkFoto,
 }: {
   nombre: string;
   tel: string;
@@ -36,6 +37,7 @@ const SendInviteTableRow = ({
   nombreWhats: string;
   linkParaEnviar: string;
   evento: string;
+  linkFoto: string;
 }) => {
   // TODO: aqui se tiene que mandar el nombre de invitacion para hacer link
   // por el momento lo dejare hardcodeado
@@ -123,6 +125,7 @@ const SendInviteTableRow = ({
                     nombreWhats: nombreWhats,
                     linkInvitacion: linkParaEnviar,
                     evento: evento,
+                    linkFoto,
                     whatsMessage: `${objetoAParametrosURL({
                       nombre,
                       tel,

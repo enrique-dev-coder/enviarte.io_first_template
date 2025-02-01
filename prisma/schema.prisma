@@ -34,6 +34,7 @@ model Invitacion {
   invitationName String
   user User?
   userId String @db.ObjectId
+  linkFoto String?
   invitados Invitados[]
   mesas Mesa[] // Relación con el modelo Mesa
   invitacionEnviadaConWhatsApp  InvitacionEnviadaConWhatsApp[]
