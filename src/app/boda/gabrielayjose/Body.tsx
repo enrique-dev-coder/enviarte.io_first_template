@@ -258,7 +258,7 @@ const Body = ({
         ShowTransferencia={true}
         datosTransferencia={{
           numero: "Tarjeta 5579 1004 3721 0030 Clabe 014078606201564725",
-          owner: "Ceunta Bancaraia Santander",
+          owner: "Cuenta Santander",
         }}
         SobresImg={Sobre}
         SobresTextColor=""
