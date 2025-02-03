@@ -157,8 +157,12 @@ const MesaDeRegalos = ({
         {ShowTransferencia && (
           <div className=" bg-white text-center text-3xl cell:w-[90%]   border border-slate-700 rounded-md shadow-md py-4 px-7 cell:text-2xl cell:mx-2">
             <p className="cell:text-xl">Transferencia Bancaria</p>
-            <p className="cell:text-xl">{datosTransferencia?.owner}</p>
-            <b className={` text-2xl`}>{datosTransferencia?.numero}</b>
+            <p className="cell:text-xl whitespace-pre-line">
+              {datosTransferencia?.owner}
+            </p>
+            <b className={` text-2xl whitespace-pre-line`}>
+              {datosTransferencia?.numero}
+            </b>
           </div>
         )}
       </div>
