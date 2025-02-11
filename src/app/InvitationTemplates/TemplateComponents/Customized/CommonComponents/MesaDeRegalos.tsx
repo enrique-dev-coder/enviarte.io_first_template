@@ -33,6 +33,7 @@ const MesaDeRegalos = ({
   liverpoolNoEvento,
   showAmazon,
   linkAmazon,
+  linkLiverpool = "",
 }: {
   backGround: string;
   ShowFraseDeAgradecimientoInicio: boolean;
@@ -62,6 +63,7 @@ const MesaDeRegalos = ({
   liverpoolNoEvento?: string | undefined;
   showAmazon: boolean;
   linkAmazon?: string | undefined;
+  linkLiverpool?: string | undefined;
 }) => {
   return (
     <div
@@ -134,6 +136,16 @@ const MesaDeRegalos = ({
             <p className={`text-2xl ${SobresTextColor}`}> Mesa de Regalo</p>
             <p className={`text-xl`}> No.Evento:</p>
             <p className={`text-xl font-bold`}> {liverpoolNoEvento}</p>
+            {linkLiverpool && (
+              <a
+                className=" bg-black text-white rounded-full px-4 py-2 my-2"
+                href={linkLiverpool}
+                target="_blank"
+                rel="nofollow noopener"
+              >
+                Visitar Mesa!
+              </a>
+            )}
           </div>
         )}
         {showAmazon && (

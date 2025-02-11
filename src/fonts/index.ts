@@ -27,6 +27,10 @@ export const cambria = localFont({
   src: "../../public/customFonts/Cambria.ttf",
 });
 
+export const champagne = localFont({
+  src: "../../public/customFonts/Champagne&Limousines.ttf",
+});
+
 export const inter = Inter({ subsets: ["latin"] });
 export const greatVibes = Great_Vibes({ weight: "400", subsets: ["latin"] });
 export const dancing = Dancing_Script({ subsets: ["latin"] });

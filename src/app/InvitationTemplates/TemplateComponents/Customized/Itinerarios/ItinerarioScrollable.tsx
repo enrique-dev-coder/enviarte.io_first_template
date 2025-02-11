@@ -74,7 +74,7 @@ function Item({
           rotate-45 z-0 
           `}
           ></div>
-          <p className=" text-neutral-900   font-bold text-lg  cell:text-base">
+          <p className=" text-neutral-900 whitespace-pre-line  font-bold text-lg  cell:text-base">
             {actividad}
           </p>
           <p className="text-neutral-800   font-medium cell:text-sm">{hora}</p>
@@ -180,7 +180,7 @@ function Item({
           <div
             className={`absolute h-5 w-5 left-[-3%] top-[40%] ${cardBg} rotate-45 z-0`}
           ></div>
-          <p className=" text-neutral-900   font-bold text-lg cell:text-base ">
+          <p className=" text-neutral-900 whitespace-pre-line  font-bold text-lg cell:text-base ">
             {actividad}
           </p>
           <p className="text-neutral-800   font-medium cell:text-sm">{hora}</p>
