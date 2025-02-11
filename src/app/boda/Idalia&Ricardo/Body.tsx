@@ -17,6 +17,11 @@ import Contador from "./Contador";
 import imgBanner from "/public/assets/images/idaliayricardo/img2.png";
 import img3 from "/public/assets/images/idaliayricardo/img4.png";
 import img5 from "/public/assets/images/idaliayricardo/img5.png";
+import img6 from "/public/assets/images/idaliayricardo/img6.png";
+import img7 from "/public/assets/images/idaliayricardo/img7.png";
+import img8 from "/public/assets/images/idaliayricardo/img8.png";
+import img9 from "/public/assets/images/idaliayricardo/img9.png";
+import img10 from "/public/assets/images/idaliayricardo/img10.png";
 import { WhatsIcon } from "@/components/Dashboard/EnviarLista/Icons";
 import Sobre from "/public/assets/images/email.png";
 import HotelCard from "./HotelCard";
@@ -91,6 +96,16 @@ const Body = () => {
             <p className={`${champagne.className} text-xl  font-medium`}>
               Rosa María Sepúlveda{" "}
             </p>
+            <p
+              className={`${champagne.className} text-xl text-gray-800 font-medium`}
+            >
+              &
+            </p>
+            <p
+              className={`${champagne.className} text-xl text-gray-800 font-medium`}
+            >
+              Rodolfo García de León{" "}
+            </p>
           </motion.div>
         </div>
       </div>
@@ -104,7 +119,7 @@ const Body = () => {
         titleColor={textOlive}
         titleFont={champagne}
         bgButtonColor={bgOlive}
-        desc={"Bendición"}
+        desc={"Ceremonia de Bendición"}
         direccion={
           "Blvd. Jesús Valdez Sánchez 1861, El Olmo, 25294 Saltillo, Coah."
         }
@@ -121,11 +136,11 @@ const Body = () => {
         titleColor={textOlive}
         titleFont={champagne}
         bgButtonColor={bgOlive}
-        desc={"Recepción"}
+        desc={"Ceremonia Civil"}
         direccion={
           "Blvd. Jesús Valdez Sánchez 1861, El Olmo, 25294 Saltillo, Coah."
         }
-        hora={"7:00 pm "}
+        hora={"6:30 pm "}
         nombre={{
           content: "Xardin",
           color: textOlive,
@@ -140,7 +155,7 @@ const Body = () => {
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
       >
-        <Image src={imgBanner} alt="boda" />
+        <Image src={img10} alt="boda" />
       </motion.div>
       <motion.h2
         initial={{ opacity: 0, y: 5 }}
@@ -265,6 +280,49 @@ const Body = () => {
         <Image src={img5} alt="boda" />
       </motion.div>
 
+      <motion.div
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <Image src={img6} alt="boda" />
+      </motion.div>
+
+      <motion.div
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <Image src={img7} alt="boda" />
+      </motion.div>
+
+      <motion.div
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <Image src={img8} alt="boda" />
+      </motion.div>
+
+      <motion.div
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <Image src={img9} alt="boda" />
+      </motion.div>
+      <motion.div
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <Image src={imgBanner} alt="boda" />
+      </motion.div>
       <motion.h2
         initial={{ opacity: 0, y: 5 }}
         whileInView={{ opacity: 1, y: 0 }}
