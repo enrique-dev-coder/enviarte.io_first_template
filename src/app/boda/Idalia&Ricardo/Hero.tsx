@@ -33,7 +33,7 @@ const Hero = () => {
             <Image
               alt="boda"
               src={imgLogo}
-              className=" w-[90%] bg-[#808000]  px-4 py-4 mx-auto "
+              className=" w-[40%] bg-[#808000]  px-4 py-4 mx-auto "
             />
           </motion.div>
           <div className="text-center">
