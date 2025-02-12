@@ -19,7 +19,7 @@ import img3 from "/public/assets/images/idaliayricardo/img4.png";
 import img5 from "/public/assets/images/idaliayricardo/img5.png";
 import img6 from "/public/assets/images/idaliayricardo/img6.png";
 import img7 from "/public/assets/images/idaliayricardo/img7.png";
-import img8 from "/public/assets/images/idaliayricardo/img8.png";
+import img8 from "/public/assets/images/idaliayricardo/img8_2.png";
 import img9 from "/public/assets/images/idaliayricardo/img9.png";
 import img10 from "/public/assets/images/idaliayricardo/img10.png";
 import { WhatsIcon } from "@/components/Dashboard/EnviarLista/Icons";
