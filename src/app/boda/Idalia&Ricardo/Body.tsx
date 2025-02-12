@@ -72,7 +72,7 @@ const Body = () => {
               Papás de la novia
             </p>
             <p className={`${champagne.className} text-xl  font-medium`}>
-              Francisco de la fuente
+              Francisco De La Fuente
             </p>
             <p
               className={`${champagne.className} text-xl text-gray-800 font-medium`}
@@ -171,15 +171,15 @@ const Body = () => {
         eventData={[
           {
             id: 1,
-            evento: "Ceremonia Civil ",
+            evento: `Ceremonia de \n Bendición`,
             hora: "6:00 pm",
-            Icon: "recepcion",
+            Icon: "church",
           },
           {
             id: 2,
-            evento: `Ceremonia de \n Bendición`,
+            evento: "Ceremonia Civil ",
             hora: "6:30 pm",
-            Icon: "church",
+            Icon: "recepcion",
           },
           {
             id: 3,
@@ -257,7 +257,7 @@ const Body = () => {
         ShowSobres={true}
         ShowTransferencia={true}
         datosTransferencia={{
-          numero: `Tarjeta\n 5579 0701 3285 9151 \n Clabe\n 014078606040656221`,
+          numero: `Tarjeta Idalia de la Fuente\n 5579 0701 3285 9151 \n Clabe\n 014078606040656221`,
           owner: "Cuenta Santander",
         }}
         SobresImg={Sobre}
