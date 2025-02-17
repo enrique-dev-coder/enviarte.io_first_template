@@ -119,7 +119,7 @@ const Body = () => {
         titleColor={textOlive}
         titleFont={champagne}
         bgButtonColor={bgOlive}
-        desc={"Ceremonia de Bendición"}
+        desc={"Ceremonia Civil"}
         direccion={
           "Blvd. Jesús Valdez Sánchez 1861, El Olmo, 25294 Saltillo, Coah."
         }
@@ -136,7 +136,7 @@ const Body = () => {
         titleColor={textOlive}
         titleFont={champagne}
         bgButtonColor={bgOlive}
-        desc={"Ceremonia Civil"}
+        desc={"Ceremonia de Bendición"}
         direccion={
           "Blvd. Jesús Valdez Sánchez 1861, El Olmo, 25294 Saltillo, Coah."
         }
@@ -170,16 +170,16 @@ const Body = () => {
         showItinerario={true}
         eventData={[
           {
-            id: 1,
-            evento: `Ceremonia de \n Bendición`,
-            hora: "6:00 pm",
-            Icon: "church",
-          },
-          {
             id: 2,
             evento: "Ceremonia Civil ",
-            hora: "6:30 pm",
+            hora: "6:00 pm",
             Icon: "recepcion",
+          },
+          {
+            id: 1,
+            evento: `Ceremonia de \n Bendición`,
+            hora: "6:30 pm",
+            Icon: "church",
           },
           {
             id: 3,
