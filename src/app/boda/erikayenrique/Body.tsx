@@ -27,7 +27,7 @@ import { WhatsIcon } from "@/components/Dashboard/EnviarLista/Icons";
 import Sobre from "/public/assets/images/email.png";
 import DressCodeMujeres from "/public/assets/images/vestidolargo.png";
 import DressCodeHombres from "/public/assets/images/suit_icon-removebg-preview.png";
-
+import { PointerIcon } from "lucide-react";
 const textOlive = "text-[#7f5539]";
 const bgOlive = "bg-[#b08968]";
 // redeploy x2
@@ -353,27 +353,33 @@ const Body = () => {
           whileInView={{ scale: 1 }}
           transition={{ ease: "easeInOut", duration: 1 }}
           viewport={{ once: true }}
-          className={`${textOlive} uppercase text-center ${champagne.className}  text-[40px]`}
+          className={`${textOlive} uppercase text-center ${champagne.className}  text-[28px] p-4 font-bold`}
         >
-          Confirmación de Asistencia
+          Confirma tu asistencia en el siguiente botón
         </motion.p>
       </div>
       <div className="relative">
         <div className="  py-2">
+          <div className="flex flex-col justify-center items-center py-2">
+            <a href="https://api.whatsapp.com/send?phone=5218447006000">
+              <button
+                className={`${bgOlive} text-white flex items-center gap-3  my-3 rounded-full px-4 py-2`}
+              >
+                <PointerIcon />
+                <p className=" text-3xl text-white">Confirmar</p>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="relative pb-4">
+        <div>
           <div className="flex flex-col justify-center items-center py-2">
             <p
               className={`${lora.className}  text-4xl cell:text-2xl text-center font-bold`}
             >
               Wedding Planner <br /> Viviana Amare
             </p>
-            <a href="https://api.whatsapp.com/send?phone=5218447006000">
-              <button
-                className={`${bgOlive} flex items-center gap-3  my-3 rounded-full px-4 py-2`}
-              >
-                <WhatsIcon className="fill-white text-2xl " />
-                <p className=" text-3xl text-white">844 700 6000</p>
-              </button>
-            </a>
           </div>
         </div>
       </div>
