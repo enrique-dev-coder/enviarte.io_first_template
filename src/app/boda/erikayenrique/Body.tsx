@@ -191,7 +191,7 @@ const Body = () => {
           {
             id: 7,
             evento: "Entrada de novios",
-            hora: "9:00 pm",
+            hora: "8:30 pm",
             Icon: "civil",
           },
           {
