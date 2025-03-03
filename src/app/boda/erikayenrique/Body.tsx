@@ -247,10 +247,10 @@ const Body = () => {
         ShowFraseDeAgradecimientoInicio={false}
         ShowRegalo={false}
         ShowSobres={true}
-        ShowTransferencia={false}
+        ShowTransferencia={true}
         datosTransferencia={{
-          numero: `Tarjeta Idalia de la Fuente\n 5579 0701 3285 9151 \n Clabe\n 014078606040656221`,
-          owner: "Cuenta Santander",
+          numero: `Tarjeta Erika Gámez\n 5579 1003 9911 7124`,
+          owner: "",
         }}
         SobresImg={Sobre}
         SobresTextColor=""
