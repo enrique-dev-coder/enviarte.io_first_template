@@ -250,7 +250,7 @@ const Body = () => {
         ShowTransferencia={true}
         datosTransferencia={{
           numero: `Tarjeta Erika Gámez\n 5579 1003 9911 7124`,
-          owner: "",
+          owner: "Cuenta Santander",
         }}
         SobresImg={Sobre}
         SobresTextColor=""
