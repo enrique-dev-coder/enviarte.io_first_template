@@ -12,7 +12,7 @@ export const metadata = {
     url: "https://www.invitandofacil.com/boda/Idalia&Ricardo",
     images: [
       {
-        url: "https://www.invitandofacil.com/assets/images/idaliayricardo/introwa.jpg",
+        url: "https://www.invitandofacil.com/assets/images/erikayenrique/introwa.jpg",
         width: 256,
         height: 425,
         alt: "Imagen de la boda de Idalia y ricardo ",
