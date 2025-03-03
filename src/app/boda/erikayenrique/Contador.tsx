@@ -13,7 +13,7 @@ const Numero = ({ num, desc }: { num: any; desc: string }) => {
       className=" flex flex-col justify-center items-center text-slate-950"
     >
       <div
-        className={` w-[80px] h-[80px] cell:w-[48px] flex  justify-center items-center rounded-lg px-2`}
+        className={` w-[80px] h-[80px] cell:w-[48px] flex justify-center items-center rounded-lg px-2`}
       >
         <p className=" text-5xl mb-4 cell:text-3xl text-[#7f5539]  ">{num}</p>{" "}
       </div>
@@ -38,7 +38,6 @@ const Contador = ({
 
   return (
     <div
-      style={{ backgroundAttachment: "fixed" }}
       className={`
     
       ${fotoContador}

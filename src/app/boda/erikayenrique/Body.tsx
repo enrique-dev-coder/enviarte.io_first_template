@@ -25,7 +25,6 @@ import img10 from "/public/assets/images/erikayenrique/IMG_0258.png";
 
 import { WhatsIcon } from "@/components/Dashboard/EnviarLista/Icons";
 import Sobre from "/public/assets/images/email.png";
-import HotelCard from "./HotelCard";
 import DressCodeMujeres from "/public/assets/images/vestidolargo.png";
 import DressCodeHombres from "/public/assets/images/suit_icon-removebg-preview.png";
 
@@ -40,6 +39,7 @@ const Body = () => {
     >
       <IngresarBoton
         buttonText="Ingresar"
+        extraClases="!justify-start !mt-[16px] !bg-transparent"
         font={dancing}
         novia="Erika"
         novio="Enrique"
@@ -124,7 +124,7 @@ const Body = () => {
         direccion={
           "Calle Gral. Manuel Pérez Treviño 425, Zona Centro, 25000 Saltillo, Coah."
         }
-        hora={"5:00 pm "}
+        hora={"4:00 pm "}
         nombre={{
           content: "Santuario de Guadalupe",
           color: textOlive,
@@ -139,7 +139,7 @@ const Body = () => {
         bgButtonColor={bgOlive}
         desc={"Ceremonia Civil"}
         direccion={"Eulalio Gutiérrez 381, La Palmilla, 25204 Saltillo, Coah."}
-        hora={"7:30 pm "}
+        hora={"7:00 pm "}
         nombre={{
           content: "Quinta El Portal",
           color: textOlive,
@@ -179,13 +179,13 @@ const Body = () => {
           {
             id: 2,
             evento: "Ceremonia Religiosa ",
-            hora: "5:00 pm",
+            hora: "4:00 pm",
             Icon: "recepcion",
           },
           {
             id: 1,
             evento: `Ceremonia Civil`,
-            hora: "7:30 pm",
+            hora: "7:00 pm",
             Icon: "church",
           },
           {
