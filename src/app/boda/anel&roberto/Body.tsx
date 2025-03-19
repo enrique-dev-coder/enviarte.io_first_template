@@ -320,12 +320,6 @@ const Body = () => {
       </div>
       <div className="relative">
         <div className="  py-8">
-          <p
-            className={`text-3xl cell:text-2xl cellw-10/12 cell:mx-auto  text-[#014b66] font-semibold underline text-center`}
-          >
-            Confirma tu Asistencia antes de el día <br /> 17 de Febrero de 2025
-          </p>
-
           <div className="flex flex-col justify-center items-center py-8">
             <p
               className={`${lora.className} text-[#577BC1] text-4xl cell:text-2xl text-center font-bold`}
