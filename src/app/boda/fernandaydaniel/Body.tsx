@@ -245,7 +245,7 @@ const Body = () => {
         ShowFraseDeAgradecimientoInicio={false}
         ShowRegalo={false}
         ShowSobres={true}
-        ShowTransferencia={true}
+        ShowTransferencia={false}
         datosTransferencia={{
           numero: `Tarjeta Erika Gámez\n 5579 1003 9911 7124`,
           owner: "Cuenta Santander",
