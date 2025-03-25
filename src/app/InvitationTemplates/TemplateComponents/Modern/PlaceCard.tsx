@@ -14,6 +14,8 @@ const PlaceCard = ({
   bgButtonColor,
   titleFont,
   horaDos,
+  borderColor,
+  buttonTextColor = "text-white",
 }: {
   show: boolean;
   desc: string | undefined;
@@ -29,8 +31,10 @@ const PlaceCard = ({
   hora: string | undefined;
   titleColor: string | undefined;
   bgButtonColor: string | undefined;
+  borderColor?: string | undefined;
   titleFont: NextFont | undefined;
   horaDos?: string | undefined;
+  buttonTextColor?: string | "text-white";
 }) => {
   return show ? (
     <section className="py-6">
@@ -74,7 +78,11 @@ const PlaceCard = ({
         </div>
         <a href={ubicacion}>
           <button
-            className={`${bgButtonColor} text-white py-2 px-4 rounded-full`}
+            className={`
+              ${bgButtonColor} 
+              ${borderColor && `border-2 ${borderColor}`}
+              ${buttonTextColor}
+              py-2 px-4 rounded-full`}
           >
             Cómo llegar
           </button>

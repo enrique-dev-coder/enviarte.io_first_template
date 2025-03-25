@@ -20,7 +20,12 @@ const IngresarBoton = ({
   font: NextFont;
   join: string;
   buttonText: string;
-  color: { titleColor: string; bgColor: string; textButtonColor: string };
+  color: {
+    titleColor: string;
+    bgColor: string;
+    textButtonColor: string;
+    borderColor?: string | undefined;
+  };
   extraClases?: string | undefined;
 }) => {
   const { setPlaying } = useContext(AudioPlayerContext);
@@ -50,7 +55,11 @@ const IngresarBoton = ({
             </h2>
             <button
               onClick={handleModalButtonClick}
-              className={`${color.bgColor}  shadow-md ${color.textButtonColor} text-2xl rounded-lg px-6 py-1 cell:text-lg cell:py-1 cell:px-3`}
+              className={`${color.bgColor}  shadow-md ${
+                color.textButtonColor
+              } ${
+                color.borderColor && `border-2 ${color.borderColor}`
+              } text-2xl rounded-lg px-6 py-1 cell:text-lg cell:py-1 cell:px-3`}
             >
               {buttonText}
             </button>
