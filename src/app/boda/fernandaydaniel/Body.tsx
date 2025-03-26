@@ -139,7 +139,7 @@ const Body = () => {
         bgButtonColor={bgOlive}
         borderColor="border-[#b08968]"
         buttonTextColor={textOlive}
-        desc={"Ceremonia Civil"}
+        desc={"Ceremonia Civil y Recepción"}
         direccion={
           "Juan Luis Adolfo Cepeda 175, Torrecillas, 25298 Saltillo, Coah."
         }
@@ -188,7 +188,7 @@ const Body = () => {
           },
           {
             id: 1,
-            evento: `Ceremonia Civil`,
+            evento: `Ceremonia Civil\n y Recepción`,
             hora: "8:00 pm",
             Icon: "recepcion",
           },
@@ -235,20 +235,26 @@ const Body = () => {
         FraseAgradecimientoFinalFont={undefined}
         FraseAgradecimientoFinalSize=""
         FraseAgradecimientoFinalText=""
-        FraseAgradecimientoInicioColor=""
+        FraseAgradecimientoInicioColor={textOlive}
         FraseAgradecimientoInicioFont={undefined}
-        FraseAgradecimientoInicioSize=""
-        FraseAgradecimientoInicioText=""
+        FraseAgradecimientoInicioSize="text-xl"
+        FraseAgradecimientoInicioText="NUESTRO MEJOR REGALO SERÁ
+          CELEBRAR CONTIGO ESTE DÍA TAN
+          ESPECIAL. CUALQUIER DETALLE DE
+          TU PARTE SERÁ BIENVENIDO CON
+          MUCHO CARIÑO
+          LES DEJAMOS NUESTRAS
+          SUGERENCIAS:"
         SectionTitleColor={textOlive}
         SectionTitleFont={dancing}
         ShowFraseDeAgradecimientoFinal={false}
-        ShowFraseDeAgradecimientoInicio={false}
+        ShowFraseDeAgradecimientoInicio={true}
         ShowRegalo={false}
         ShowSobres={true}
-        ShowTransferencia={false}
+        ShowTransferencia={true}
         datosTransferencia={{
-          numero: `Tarjeta Erika Gámez\n 5579 1003 9911 7124`,
-          owner: "Cuenta Santander",
+          numero: `Fernanda Michelle Medina Ramírez\n 4915 6694 1164 1499`,
+          owner: "",
         }}
         SobresImg={Sobre}
         SobresTextColor=""
@@ -306,7 +312,7 @@ const Body = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
-        className={`${champagne.className} text-center ${textOlive} font-bold   text-5xl cell:text-4xl py-4 `}
+        className={`${dancing.className} text-center ${textOlive} font-bold   text-5xl cell:text-4xl py-4 `}
       >
         Dress Code
       </motion.h2>
@@ -336,15 +342,22 @@ const Body = () => {
         </p>
         <p className="  text-4xl mb-4 cell:mb-1 cell:text-xl">Traje Formal</p>
       </div>
-      <motion.h2
-        initial={{ opacity: 0, y: 5 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ ease: "easeInOut", duration: 1 }}
-        viewport={{ once: true }}
-        className={`${lora.className} text-center ${textOlive} font-bold underline   text-5xl cell:text-4xl py-4 `}
-      >
-        NO NIÑOS
-      </motion.h2>
+      <div className=" shadow-md text-center border-2  rounded-md m-2 p-2 border-[#b08968] ">
+        <motion.h2
+          initial={{ opacity: 0, y: 5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeInOut", duration: 1 }}
+          viewport={{ once: true }}
+          className={`${dancing.className} text-center ${textOlive}    text-5xl cell:text-3xl py-1 `}
+        >
+          No Niños
+        </motion.h2>
+        <p>Niños en casa descansando y padres disfrutando.</p>
+        <p>
+          Queremos que vivas este momento tan especial junto a nosotros, por
+          ello hemos decidido que el evento sea solo para adultos.
+        </p>
+      </div>
       <div>
         <motion.p
           initial={{ scale: 0 }}

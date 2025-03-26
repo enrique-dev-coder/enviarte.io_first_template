@@ -72,17 +72,6 @@ const MesaDeRegalos = ({
         flex flex-col items-center justify-center h-auto py-4
     `}
     >
-      {ShowFraseDeAgradecimientoInicio && (
-        <div
-          className={`text-center  w-8/12 cell:w-10/12 my-10
-            ${FraseAgradecimientoInicioColor} 
-            ${FraseAgradecimientoInicioSize} 
-            ${FraseAgradecimientoInicioFont?.className} 
-          `}
-        >
-          {FraseAgradecimientoInicioText}
-        </div>
-      )}
       <motion.h2
         initial={{ opacity: 0, y: 5 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -97,6 +86,18 @@ const MesaDeRegalos = ({
       >
         Sugerencia de regalos
       </motion.h2>
+      {ShowFraseDeAgradecimientoInicio && (
+        <div
+          className={`text-center  w-8/12 cell:w-10/12 my-10  
+            ${FraseAgradecimientoInicioColor} 
+            ${FraseAgradecimientoInicioSize} 
+            ${FraseAgradecimientoInicioFont?.className} 
+          `}
+        >
+          {FraseAgradecimientoInicioText}
+        </div>
+      )}
+
       <div className="flex justify-evenly items-center py-4 gap-4 w-full  mx-auto cell:flex-col ">
         {ShowSobres && SobresType === "default" && (
           <div className=" flex items-center gap-2  cell:justify-center cell:flex-col">
