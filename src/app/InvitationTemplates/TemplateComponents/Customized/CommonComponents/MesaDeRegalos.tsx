@@ -34,6 +34,8 @@ const MesaDeRegalos = ({
   showAmazon,
   linkAmazon,
   linkLiverpool = "",
+  customBorder = "",
+  bgLiverpoolButton = "",
 }: {
   backGround: string;
   ShowFraseDeAgradecimientoInicio: boolean;
@@ -64,6 +66,8 @@ const MesaDeRegalos = ({
   showAmazon: boolean;
   linkAmazon?: string | undefined;
   linkLiverpool?: string | undefined;
+  customBorder?: string | undefined;
+  bgLiverpoolButton?: string | undefined;
 }) => {
   return (
     <div
@@ -117,7 +121,11 @@ const MesaDeRegalos = ({
           </div>
         )}
         {ShowSobres && SobresType === "modern" && (
-          <div className=" w-[400px] bg-white cell:w-[90%] text-center flex flex-col items-center text-3xl   border border-slate-700 rounded-md shadow-md py-4 px-7 cell:text-2xl cell:mx-2">
+          <div
+            className={` w-[400px] bg-white cell:w-[90%] text-center flex flex-col items-center text-3xl border 
+              ${customBorder ? customBorder : "border-slate-700"} 
+              rounded-md shadow-md py-4 px-7 cell:text-2xl cell:mx-2`}
+          >
             {SobresImg && (
               <Image alt="sobre" src={SobresImg} className="w-[22%]" />
             )}
@@ -129,17 +137,23 @@ const MesaDeRegalos = ({
           </div>
         )}
         {ShowLiverpool && (
-          <div className=" bg-white w-[400px] cell:w-[90%] text-center flex flex-col items-center text-3xl   border border-slate-700 rounded-md shadow-md py-4 px-7 cell:text-2xl cell:mx-2">
+          <div
+            className={` w-[400px] bg-white cell:w-[90%] text-center flex flex-col items-center text-3xl border 
+         ${customBorder ? customBorder : "border-slate-700"} 
+         rounded-md shadow-md py-4 px-7 cell:text-2xl cell:mx-2`}
+          >
+            {" "}
             {SobresImg && (
               <Image alt="sobre" src={liverpool} className="w-[80%]" />
             )}
-
             <p className={`text-2xl ${SobresTextColor}`}> Mesa de Regalo</p>
             <p className={`text-xl`}> No.Evento:</p>
             <p className={`text-xl font-bold`}> {liverpoolNoEvento}</p>
             {linkLiverpool && (
               <a
-                className=" bg-black text-white rounded-full px-4 py-2 my-2"
+                className={`${
+                  bgLiverpoolButton ? bgLiverpoolButton : "bg-black"
+                }  text-white rounded-full px-4 py-2 my-2`}
                 href={linkLiverpool}
                 target="_blank"
                 rel="nofollow noopener"
@@ -150,7 +164,11 @@ const MesaDeRegalos = ({
           </div>
         )}
         {showAmazon && (
-          <div className=" bg-white w-[400px] cell:w-[90%] text-center flex flex-col items-center text-3xl   border border-slate-700 rounded-md shadow-md py-4 px-7 cell:text-2xl cell:mx-2">
+          <div
+            className={` w-[400px] bg-white cell:w-[90%] text-center flex flex-col items-center text-3xl border 
+            ${customBorder ? customBorder : "border-slate-700"} 
+            rounded-md shadow-md py-4 px-7 cell:text-2xl cell:mx-2`}
+          >
             <Image alt="sobre" src={amazon} className="w-[80%]" />
             <p className={`text-2xl ${SobresTextColor}`}>
               {" "}
@@ -168,7 +186,11 @@ const MesaDeRegalos = ({
         )}
 
         {ShowTransferencia && (
-          <div className=" bg-white text-center text-3xl cell:w-[90%]   border border-slate-700 rounded-md shadow-md py-4 px-7 cell:text-2xl cell:mx-2">
+          <div
+            className={` w-[400px] bg-white cell:w-[90%] text-center flex flex-col items-center text-3xl border 
+              ${customBorder ? customBorder : "border-slate-700"} 
+              rounded-md shadow-md py-4 px-7 cell:text-2xl cell:mx-2`}
+          >
             <p className="cell:text-xl">Transferencia Bancaria</p>
             <p className="cell:text-xl whitespace-pre-line">
               {datosTransferencia?.owner}

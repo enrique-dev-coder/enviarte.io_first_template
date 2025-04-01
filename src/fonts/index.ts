@@ -8,6 +8,7 @@ import {
   Sofia,
   Allura,
   Montserrat,
+  Parisienne,
 } from "next/font/google";
 import localFont from "next/font/local";
 export const bavaria = localFont({
@@ -40,3 +41,4 @@ export const courgette = Courgette({ weight: "400", subsets: ["latin"] });
 export const sofia = Sofia({ weight: "400", subsets: ["latin"] });
 export const allura = Allura({ weight: "400", subsets: ["latin"] });
 export const montse = Montserrat({ subsets: ["latin"] });
+export const paris = Parisienne({ weight: "400", subsets: ["latin"] });
