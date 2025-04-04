@@ -198,7 +198,7 @@ const Body = ({
         Con el respeto que ustedes y nosotros nos merecemos nuestro fotógrafo
         está en todo su derecho de pedirles que se muevan si obstruyen en alguna
         toma importante, sabemos que todos quieren tener un recuerdo especial de
-        este día tan especial y no les quitamos las untenciones simplemente les
+        este día tan especial y no les quitamos las intenciones simplemente les
         pedimos respetar el trabajo de nuestro fotógrafo que con mucho esfuerzo
         contratamos, gracias!!{" "}
       </motion.h2>
