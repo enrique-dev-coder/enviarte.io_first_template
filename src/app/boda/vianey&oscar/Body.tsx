@@ -397,7 +397,7 @@ const Body = ({
             >
               <div className="flex bg-[#014b66] text-white items-center justify-around m-4 p-2 rounded-md text-[20px]">
                 <Image alt="whats logo" src={whatsLogo} className="w-[20%]" />
-                MANA DRESS STUDIO
+                MANANA DRESS STUDIO
                 <br /> 8443063924
               </div>
             </motion.a>
