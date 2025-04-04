@@ -14,6 +14,7 @@ const PlaceCard = ({
   bgButtonColor,
   titleFont,
   horaDos,
+  horaTres,
   borderColor,
   buttonTextColor = "text-white",
 }: {
@@ -34,6 +35,7 @@ const PlaceCard = ({
   borderColor?: string | undefined;
   titleFont: NextFont | undefined;
   horaDos?: string | undefined;
+  horaTres?: string | undefined;
   buttonTextColor?: string | "text-white";
 }) => {
   return show ? (
@@ -71,6 +73,9 @@ const PlaceCard = ({
         </p>
         <p className=" text-2xl cell:text-xl cell:px-2 cell:font-bold">
           {horaDos}
+        </p>
+        <p className=" text-2xl cell:text-xl cell:px-2 cell:font-bold">
+          {horaTres}
         </p>
         <div className=" flex items-center cell:w-[90%] cell:mx-auto cell:flex-col">
           <MapPin className=" text-black font-bold " />

@@ -23,6 +23,11 @@ import DressCodeHombres from "/public/assets/images/suit_icon-removebg-preview.p
 import Sobre from "/public/assets/images/email.png";
 import whatsLogo from "/public/assets/images/micayrosy/whatslogo-removebg-preview.png";
 import imgCas from "/public/assets/images/vianey&oscar/cas.jpeg";
+import imgVestidos from "/public/assets/images/vianey&oscar/vestidos.jpg";
+import imgHyatLogo from "/public/assets/images/vianey&oscar/hyattlogo.png";
+import imgHyattQR from "/public/assets/images/vianey&oscar/QR_hyatt.png";
+import imgVOCOlogo from "/public/assets/images/vianey&oscar/VOCO.png";
+import imgVOCOQR from "/public/assets/images/vianey&oscar/qrvoco2.png";
 
 const Body = ({
   nombre,
@@ -137,8 +142,9 @@ const Body = ({
         direccion={
           "Blvd. Eulalio Gutiérrez Treviño 1695-N° 1695, El Rosario, 25297 Saltillo, Coah."
         }
-        hora={"Civil: 7:00 pm "}
-        horaDos="Fiesta: 8:00 pm"
+        hora="Cocktail: 6:30 pm"
+        horaDos="Civil: 7:00 pm "
+        horaTres="Recepción: 8:00 pm"
         nombre={{
           content: "Recepciones El Nogal",
           font: montse,
@@ -187,6 +193,20 @@ const Body = ({
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
+        className={`${lora.className} text-center text-[#014b66] px-2 text-5xl cell:text-xl py-4 `}
+      >
+        Con el respeto que ustedes y nosotros nos merecemos nuestro fotógrafo
+        está en todo su derecho de pedirles que se muevan si obstruyen en alguna
+        toma importante, sabemos que todos quieren tener un recuerdo especial de
+        este día tan especial y no les quitamos las untenciones simplemente les
+        pedimos respetar el trabajo de nuestro fotógrafo que con mucho esfuerzo
+        contratamos, gracias!!{" "}
+      </motion.h2>
+      <motion.h2
+        initial={{ opacity: 0, y: 5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
         className={`${lora.className} text-center text-[#014b66] font-bold   text-5xl cell:text-4xl py-4 `}
       >
         Itinerario
@@ -202,7 +222,13 @@ const Body = ({
           },
           {
             id: 3,
-            evento: "🥂 Civil",
+            evento: "🥂 Cocktail",
+            hora: "6:30 pm",
+            Icon: "coctel",
+          },
+          {
+            id: 3,
+            evento: "✨ Civil",
             hora: "7:00 pm",
             Icon: "recepcion",
           },
@@ -353,6 +379,29 @@ const Body = ({
           <p className="text-center text-[#014b66] underline text-xl mb-4 cell:text-xl cell:mb-1">
             DEJEN EL BLANCO PARA LA NOVIA
           </p>
+          {/* Info Extra */}
+          <div className="bg-white">
+            <p className="text-center text-[#014b66]   px-4 py-2  font-medium text-lg">
+              Pregunta en MANANA DRESS STUDIO por el precio especial que
+              tendremos para nuestra boda en renta de vestidos.
+            </p>
+            <div>
+              <Image src={imgVestidos} alt="Cas" className="w-[50%] mx-auto" />
+            </div>
+            <motion.a
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              transition={{ ease: "easeInOut", duration: 1 }}
+              viewport={{ once: true }}
+              href="https://api.whatsapp.com/send?phone=5218443063924&text=servicio%20de%20renta%20de%20vestidos%20para%20la%20boda%20de%20Vianey%20%26%20Alejandro"
+            >
+              <div className="flex bg-[#014b66] text-white items-center justify-around m-4 p-2 rounded-md text-[20px]">
+                <Image alt="whats logo" src={whatsLogo} className="w-[20%]" />
+                MANA DRESS STUDIO
+                <br /> 8443063924
+              </div>
+            </motion.a>
+          </div>
           <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">
             {" "}
             <Image alt="boda" src={DressCodeHombres} className="w-[35%]" />
@@ -369,6 +418,7 @@ const Body = ({
               <ul className=" list-disc">
                 <li>Botas vaqueras</li>
                 <li>Pantalones de mezclilla </li>
+                <li>sombreros (vaqueros o derivados)</li>
               </ul>
             </div>
           </div>
@@ -379,6 +429,106 @@ const Body = ({
             <p className="text-center text-[#014b66]  text-xl cell:text-xl cell:mb-1">
               (Evítanos la pena de que se le niegue la entrada)
             </p>
+          </div>
+        </div>
+      </div>
+      <div className=" bg-white">
+        <motion.h2
+          initial={{ opacity: 0, y: 5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeInOut", duration: 1 }}
+          viewport={{ once: true }}
+          className={`${lora.className} text-center text-[#014b66] font-bold    text-5xl cell:text-4xl py-4 `}
+        >
+          Sugerencias de hoteles
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeInOut", duration: 1 }}
+          viewport={{ once: true }}
+          className={`${lora.className} text-center text-[#014b66] font-medium  text-5xl cell:text-xl py-4 px-2 `}
+        >
+          Porque sabemos el esfuerzo que harán por venir a acompañarnos a todos
+          nuestros invitados de fuera, les tenemos precio especial en los
+          siguientes hoteles escaneando el código QR que se muestra a
+          continuación:{" "}
+        </motion.p>
+        {/* Hyatt */}
+        <div className="flex flex-col justify-center items-center py-4">
+          <div>
+            <Image src={imgHyatLogo} alt="boda" />
+          </div>
+          <div>
+            <Image src={imgHyattQR} alt="boda" />
+          </div>
+          <div>
+            <p
+              className={`${lora.className} text-center text-[#014b66] font-medium  text-5xl cell:text-2xl py-4 px-2 `}
+            >
+              CODIGO: G-ANOA
+            </p>
+          </div>
+          <div className="w-[88%] bg-[#014b66] text-white  rounded-md py-2 px-4">
+            <div className="mb-2">
+              <h2 className="text-xl">Reservaciones:</h2>
+              <p>lauranavely.garzalucio@hyatt.com</p>
+              <p>andrea.balderas@hyatt.com</p>
+            </div>
+            <div className="mb-3">
+              <p className="text-xl">Teléfono:</p>
+              <p>844 601 5985 </p>
+            </div>
+            <div className="mb-2">
+              <p>Dirección:</p>
+              <p>BLVD. VENUSTIANO CARRANZA 6075 COL. RANCHO DE PEÑA</p>
+              <div className="w-full my-2">
+                <a href="https://maps.app.goo.gl/pXjeCAdk4dDB5DiZ9">
+                  <button className="bg-white w-full text-center text-[#014b66] font-medium text-xl py-2 rounded-lg">
+                    Como llegar
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* VOCO */}
+        <div className="flex flex-col justify-center items-center">
+          <div>
+            <Image className="py-2" src={imgVOCOlogo} alt="boda" />
+          </div>
+          <div>
+            <Image src={imgVOCOQR} alt="boda" />
+          </div>
+          <div>
+            <p
+              className={`${lora.className} text-center text-[#014b66] font-medium  text-5xl cell:text-2xl py-4 px-2 `}
+            >
+              CODIGO: BAO
+            </p>
+          </div>
+          <div className="w-[88%] bg-[#014b66] text-white  rounded-md py-2 px-4">
+            <div className="mb-2">
+              <h2 className="text-xl">Reservaciones:</h2>
+              <p>a.balderas@ahg.com.mx</p>
+              <p>mdtph@ahg.com.mx</p>
+            </div>
+            <div className="mb-3">
+              <p className="text-xl">Teléfonos:</p>
+              <p>844 438 7000 </p>
+              <p>844 599 5418 </p>
+            </div>
+            <div className="mb-2">
+              <p>Dirección:</p>
+              <p>BLVD. VENUSTIANO CARRANZA 8800 COL. VALLE HERMOSO</p>
+              <div className="w-full my-2">
+                <a href="https://maps.app.goo.gl/LN33jEWp911qxRth8">
+                  <button className="bg-white w-full text-center text-[#014b66] font-medium text-xl py-2 rounded-lg">
+                    Como llegar
+                  </button>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

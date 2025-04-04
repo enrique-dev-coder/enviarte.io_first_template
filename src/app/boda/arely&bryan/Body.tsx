@@ -39,7 +39,7 @@ const bgOlive = "bg-[#a54068]";
 const Body = () => {
   return (
     <InvitationContainer
-      spBackground="none"
+      spBackground="grainy"
       songLink="/assets/songs/arelyybryan.mp3"
     >
       <IngresarBoton
