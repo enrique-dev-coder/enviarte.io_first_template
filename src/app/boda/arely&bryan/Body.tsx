@@ -11,7 +11,7 @@ import GraciasBanner from "@/app/InvitationTemplates/TemplateComponents/Customiz
 import { lora, champagne, dancing, paris } from "@/fonts";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
+import PadrinosDeBoda from "@/app/InvitationTemplates/TemplateComponents/Customized/PadrinosDeBoda";
 import Hero from "./Hero";
 import Contador from "./Contador";
 //images
@@ -39,7 +39,7 @@ const bgOlive = "bg-[#a54068]";
 const Body = () => {
   return (
     <InvitationContainer
-      spBackground="grainy"
+      spBackground="none"
       songLink="/assets/songs/arelyybryan.mp3"
     >
       <IngresarBoton
@@ -212,7 +212,7 @@ const Body = () => {
           {
             id: 2,
             evento: "Misa ",
-            hora: "4:00 pm",
+            hora: "4:30 pm",
             Icon: "church",
           },
           {
@@ -224,19 +224,19 @@ const Body = () => {
           {
             id: 4,
             evento: " Cena",
-            hora: "9:30 pm",
+            hora: "8:45 pm",
             Icon: "dinner",
           },
           {
             id: 5,
             evento: "Baile!",
-            hora: "10:30 pm",
+            hora: "9:30 pm",
             Icon: "party",
           },
           {
             id: 6,
             evento: "Cierre del evento",
-            hora: "1:30 am",
+            hora: "1:00 am",
             Icon: "flores",
           },
         ]}
@@ -258,6 +258,36 @@ const Body = () => {
       >
         <Image src={img5} alt="boda" />
       </motion.div>
+      <PadrinosDeBoda
+        showSlider={true}
+        cardStyling={{ titleColor: textOlive, titleFont: dancing }}
+        padrinos={[
+          {
+            madrinasRamos: false,
+            madrina: "Rosa Eugenia Fernandez Arteaga",
+            padrino: "Luis Horacio Maury Maya",
+            tema: "Padrinos de Velación",
+          },
+          {
+            madrinasRamos: false,
+            madrina: "María Luisa Guadalupe Zafra de Chapa",
+            padrino: "Eduardo Chapa Escamilla",
+            tema: "Padrinos de Anillos",
+          },
+          {
+            madrinasRamos: false,
+            madrina: "Olivia Esther Hernández Sánchez",
+            padrino: "Hiram Abbif Villegas Gómez",
+            tema: "Padrinos de Arras",
+          },
+          {
+            madrinasRamos: false,
+            madrina: "Marina Morales Reyna",
+            padrino: "Aaron Reyna Saldañ",
+            tema: "Padrinos de Lazo",
+          },
+        ]}
+      />
       <MesaDeRegalos
         customBorder={"border-[#a54068]"}
         FraseAgradecimientoFinalColor=""
