@@ -377,7 +377,7 @@ const Body = () => {
             >
               Wedding Planner <br /> Viviana Amare
             </p>
-            <a href="https://api.whatsapp.com/send?phone=5218447006000">
+            <a href="https://api.whatsapp.com/send?phone=5218447006000&text=Hola!%20Me%20gustar%C3%ADa%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Fernanda%20y%20Daniel">
               <button
                 className={`${bgOlive} border border-[#b08968] flex items-center gap-3  my-3 rounded-full px-4 py-2`}
               >
