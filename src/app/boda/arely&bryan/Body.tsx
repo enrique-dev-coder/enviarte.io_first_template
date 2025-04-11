@@ -173,14 +173,16 @@ const Body = () => {
         borderColor=""
         buttonTextColor={"text-white"}
         desc={"Ceremonia Civil y Recepción"}
-        direccion={"Pendiente, me la pasan porfa"}
+        direccion={
+          "Juan F. González 231, Sin Nombre de Col 19, 25299 Saltillo, Coah."
+        }
         hora={"8:00 pm "}
         nombre={{
           content: "Salón Villa de San Juán",
           color: textOlive,
           font: lora,
         }}
-        ubicacion={"https://maps.app.goo.gl/8chzHxdv15be3rkX9"}
+        ubicacion={"https://maps.app.goo.gl/RW2NaGpUb14cXMS38?g_st=iw"}
       />
       <motion.div
         initial={{ opacity: 0, y: 5 }}
@@ -270,7 +272,7 @@ const Body = () => {
           },
           {
             madrinasRamos: false,
-            madrina: "María Luisa Guadalupe Zafra de Chapa",
+            madrina: "Eva Marina Luisa Guadalupe Zafra de Chapa",
             padrino: "Eduardo Chapa Escamilla",
             tema: "Padrinos de Anillos",
           },
