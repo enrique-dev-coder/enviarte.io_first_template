@@ -77,7 +77,7 @@ const ConfirmacionForm = ({
     });
 
   const usuarioClickEnPases = watch("pasesConfirmados");
-
+  console.log(usuarioClickEnPases);
   const ArrayPases = Array.from(
     { length: Number(pasesAsignados) || 2 },
     (_, index) => index + 1
@@ -190,7 +190,11 @@ const ConfirmacionForm = ({
                   <button
                     type="submit"
                     disabled={!usuarioClickEnPases}
-                    className={`${styling.confirmButton.backgroundColor} ${styling.confirmButton.disabledBackgroundColor} text-white px-6 text-lg rounded-full py-2 cell:w-full`}
+                    className={`${
+                      usuarioClickEnPases
+                        ? styling.confirmButton.backgroundColor
+                        : styling.confirmButton.disabledBackgroundColor
+                    } text-white px-6 text-lg rounded-full py-2 cell:w-full`}
                   >
                     Confirmar
                   </button>

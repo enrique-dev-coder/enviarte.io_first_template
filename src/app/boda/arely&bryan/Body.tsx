@@ -37,7 +37,17 @@ import DressCodeHombres from "/public/assets/images/suit_icon-removebg-preview.p
 const textOlive = "text-[#96305a]";
 const bgOlive = "bg-[#a54068]";
 // redeploy x2
-const Body = () => {
+const Body = ({
+  nombre,
+  tel,
+  pasesAsignados,
+  invitationIdForQuery,
+}: {
+  nombre: string;
+  tel: string;
+  pasesAsignados: string;
+  invitationIdForQuery: { id: string };
+}) => {
   return (
     <InvitationContainer
       spBackground="none"
@@ -468,10 +478,10 @@ const Body = () => {
         <Image src={img10} alt="boda" />
       </motion.div>
       <ConfirmacionForm
-        invitationId={{ id: "1" }}
-        nombreInvitado={"Enrique Alvarado"}
-        pasesAsignados={"4"}
-        telInvitado={"8441753173"}
+        invitationId={{ id: invitationIdForQuery.id }}
+        nombreInvitado={nombre}
+        pasesAsignados={pasesAsignados}
+        telInvitado={tel}
         styling={{
           confirmButton: {
             backgroundColor: bgOlive,
