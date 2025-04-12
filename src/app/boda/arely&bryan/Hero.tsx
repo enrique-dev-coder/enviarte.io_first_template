@@ -59,6 +59,9 @@ const Hero = () => {
               <h1 className="   text-white font-semibold  text-[32px] leading-[60px] ">
                 20 de Diciembre de 2025
               </h1>
+              <h1 className="   text-white font-semibold  text-[32px] leading-[60px] ">
+                Saltillo, Coahuila
+              </h1>
             </motion.div>
           </div>
         </motion.div>

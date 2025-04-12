@@ -27,6 +27,7 @@ import img9 from "/public/assets/images/arely&bryan/img9.jpeg";
 import img10 from "/public/assets/images/arely&bryan/img10.jpeg";
 import img11 from "/public/assets/images/arely&bryan/img12.jpeg";
 import img13 from "/public/assets/images/arely&bryan/img13.jpeg";
+import FiestaLogo from "/public/assets/images/arely&bryan/Fiesta_Inn_logo.svg";
 
 import { WhatsIcon } from "@/components/Dashboard/EnviarLista/Icons";
 import Sobre from "/public/assets/images/email.png";
@@ -378,6 +379,62 @@ const Body = () => {
         </p>
         <p className="  text-4xl mb-4 cell:mb-1 cell:text-xl">Traje Formal</p>
       </div>
+      <motion.h2
+        initial={{ opacity: 0, y: 5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+        className={`${dancing.className} text-center ${textOlive} font-bold   text-5xl cell:text-4xl py-4 `}
+      >
+        Recomendación de hospedaje{" "}
+      </motion.h2>
+      <div className="flex flex-col justify-center items-center py-4">
+        <div className=" w-[80%]">
+          <Image src={FiestaLogo} alt="hotel" />
+        </div>
+        <motion.h2
+          initial={{ opacity: 0, y: 5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeInOut", duration: 1 }}
+          viewport={{ once: true }}
+          className={`${lora.className} text-center ${textOlive} font-bold   text-5xl cell:text-4xl py-4 `}
+        >
+          Fiesta Inn Saltillo{" "}
+        </motion.h2>
+
+        <div>
+          <p
+            className={`${lora.className} text-center ${textOlive} font-medium  text-5xl cell:text-2xl py-4 px-2 `}
+          >
+            CODIGO:
+            <br /> G1TED7
+          </p>
+        </div>
+        <div className={`w-[88%] ${textOlive}  rounded-md py-2 px-4`}>
+          <div className="mb-2 text-center text-xl font-semibold">
+            <h2>Reservaciones:</h2>
+            <p>443 310 8073</p>
+            <p>443 310 8052</p>
+          </div>
+
+          <div className="mb-2 text-center text-xl font-semibold">
+            <p>Dirección:</p>
+            <p>
+              Carr. Monterrey - Saltillo No. 6607, Zona Industrial, 25270
+              Saltillo, Coah.{" "}
+            </p>
+            <div className="w-full my-4">
+              <a href="https://maps.app.goo.gl/hEuSbe5J7m1Lpqb56">
+                <button
+                  className={`${bgOlive}  w-full text-center text-white font-medium text-xl py-2 rounded-lg`}
+                >
+                  Como llegar
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className=" shadow-md text-center border-2  rounded-md m-2 p-2 border-[#a54068] ">
         <motion.h2
           initial={{ opacity: 0, y: 5 }}
@@ -436,6 +493,15 @@ const Body = () => {
       >
         <Image src={img13} alt="boda" />
       </motion.div>
+      <motion.h2
+        initial={{ opacity: 0, y: 5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+        className={`${paris.className} text-center ${textOlive}    text-5xl  font-semibold cell:text-4xl py-4 `}
+      >
+        Estaríamos muy agradecidos de contar con tu presencia
+      </motion.h2>
     </InvitationContainer>
   );
 };
