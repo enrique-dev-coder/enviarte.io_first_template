@@ -36,7 +36,7 @@ import DressCodeHombres from "/public/assets/images/suit_icon-removebg-preview.p
 
 const textOlive = "text-[#96305a]";
 const bgOlive = "bg-[#a54068]";
-// redeploy x2
+
 const Body = ({
   nombre,
   tel,
@@ -75,12 +75,12 @@ const Body = ({
           styling: { color: textOlive, size: "text-4xl" },
         }}
         name={{
-          content: "Enrique Alvarado",
+          content: nombre,
           font: lora,
           styling: { color: textOlive, size: "text-xl" },
         }}
         pases={{
-          content: "2 pases",
+          content: `${pasesAsignados} pases`,
           font: lora,
           styling: { color: textOlive, size: "text-xl" },
         }}
