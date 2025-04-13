@@ -75,12 +75,12 @@ const Body = ({
           styling: { color: textOlive, size: "text-4xl" },
         }}
         name={{
-          content: nombre,
+          content: nombre || "Nombre invitado",
           font: lora,
           styling: { color: textOlive, size: "text-xl" },
         }}
         pases={{
-          content: `${pasesAsignados} pases`,
+          content: `${pasesAsignados || "Numero"} pases`,
           font: lora,
           styling: { color: textOlive, size: "text-xl" },
         }}
