@@ -277,13 +277,13 @@ const Body = ({
         padrinos={[
           {
             madrinasRamos: false,
-            madrina: "Rosa Eugenia Fernandez Arteaga",
+            madrina: "Rosa Eugenia Fernández Arteaga",
             padrino: "Luis Horacio Maury Maya",
             tema: "Padrinos de Velación",
           },
           {
             madrinasRamos: false,
-            madrina: "Eva Marina Luisa Guadalupe Zafra de Chapa",
+            madrina: "María Luisa Guadalupe Zafra de Chapa",
             padrino: "Eduardo Chapa Escamilla",
             tema: "Padrinos de Anillos",
           },
@@ -295,8 +295,8 @@ const Body = ({
           },
           {
             madrinasRamos: false,
-            madrina: "Marina Morales Reyna",
-            padrino: "Aaron Reyna Saldañ",
+            madrina: "Eva Marina Morales Reyna",
+            padrino: "Aaron Reyna Saldaña",
             tema: "Padrinos de Lazo",
           },
         ]}
