@@ -153,7 +153,7 @@ const Body = ({
         </div>
       </div>
       <Contador
-        fechaEvento={new Date("2025-08-09T00:00:00")}
+        fechaEvento={new Date("2025-12-20T00:00:00")}
         fechaString="Sábado, 20 de Diciembre de 2025"
         fotoContador="bg-[url('/assets/images/arely&bryan/img4.jpeg')]"
       />
