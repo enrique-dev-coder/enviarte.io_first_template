@@ -13,7 +13,7 @@ async function EnviarAtravesDeLaWhatsAp(
 ) {
   try {
     return await axios.post(
-      `https://graph.facebook.com/v19.0/${process.env.ACCOUNT_ID}/messages`,
+      `https://graph.facebook.com/v22.0/${process.env.ACCOUNT_ID}/messages`,
       {
         messaging_product: "whatsapp",
         to: `+52${tel}`, // numero de telefono
@@ -86,54 +86,57 @@ export async function POST(req: NextRequest) {
     });
   // console.log(verificarSiLaInvitacionYaFueEnviada);
   // TEST
-  // if (!verificarSiLaInvitacionYaFueEnviada) {
-  try {
-    const respuestaWhatsapp = await EnviarAtravesDeLaWhatsAp(
-      body.tel,
-      body.whatsMessage,
-      body.nombreWhats,
-      body.linkInvitacion,
-      body.evento,
-      body.linkFoto
-    );
-    // debug
-    // console.log(respuestaWhatsapp.data);
-    if (respuestaWhatsapp?.status === 400) {
+  if (!verificarSiLaInvitacionYaFueEnviada) {
+    try {
+      const respuestaWhatsapp = await EnviarAtravesDeLaWhatsAp(
+        body.tel,
+        body.whatsMessage,
+        body.nombreWhats,
+        body.linkInvitacion,
+        body.evento,
+        body.linkFoto
+      );
+      // debug
+      // console.log(respuestaWhatsapp.data);
+      // console.log(respuestaWhatsapp);
+      if (respuestaWhatsapp?.status === 400) {
+        return NextResponse.json(
+          {
+            message:
+              "Lo sentimos no se pudo enviar el mensaje de WhatsApp probablemente el numero no exista",
+          },
+          { status: 400 }
+        );
+      }
+      const invitacionCreada = await prisma.invitacionEnviadaConWhatsApp.create(
+        {
+          data: {
+            nombre: body.nombre,
+            tel: body.tel,
+            invitacionId: body.invitacionId,
+          },
+        }
+      );
+
       return NextResponse.json(
         {
-          message:
-            "Lo sentimos no se pudo enviar el mensaje de WhatsApp probablemente el numero no exista",
+          invitacionCreadaenBD: { ...invitacionCreada },
+          enviadoPorWhats: respuestaWhatsapp.data.messages[0].message_status,
         },
-        { status: 400 }
+        {
+          status: 200,
+        }
       );
+    } catch (error) {
+      return NextResponse.json({ message: error.message }, { status: 500 });
     }
-    const invitacionCreada = await prisma.invitacionEnviadaConWhatsApp.create({
-      data: {
-        nombre: body.nombre,
-        tel: body.tel,
-        invitacionId: body.invitacionId,
-      },
-    });
-
+  } else {
     return NextResponse.json(
       {
-        invitacionCreadaenBD: { ...invitacionCreada },
-        enviadoPorWhats: respuestaWhatsapp.data.messages[0].message_status,
+        message:
+          "Ya enviaste una invitacion a ese numero, sólo puedes enviar 1 invitacion por numero",
       },
-      {
-        status: 200,
-      }
+      { status: 500 }
     );
-  } catch (error) {
-    return NextResponse.json({ message: error.message }, { status: 500 });
   }
-  // } else {
-  //   return NextResponse.json(
-  //     {
-  //       message:
-  //         "Ya enviaste una invitacion a ese numero, sólo puedes enviar 1 invitacion por numero",
-  //     },
-  //     { status: 500 }
-  //   );
-  // }
 }
