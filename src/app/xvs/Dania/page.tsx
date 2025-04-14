@@ -4,17 +4,17 @@ import prisma from "../../../../prisma";
 
 export const metadata = {
   metadataBase: new URL("https://www.invitandofacil.com"),
-  title: "Arely & Bryan",
+  title: "Xvs Dania",
   description: "Invitaciones digitales para eventos",
   openGraph: {
-    siteName: "Arely & Bryan",
-    title: "Arely & Bryan - Nuestra Boda",
+    siteName: "Xvs Dania",
+    title: "Xvs Dania",
     description:
       "Te invitamos a celebrar nuestra boda. Haz clic para más detalles.",
-    url: "https://www.invitandofacil.com/boda/arely&bryan",
+    url: "https://www.invitandofacil.com/xvs/Dania",
     images: [
       {
-        url: "https://www.invitandofacil.com/assets/images/arely&bryan/hero.jpeg",
+        url: "https://www.invitandofacil.com/assets/images/xvs/Dania/hero.jpeg",
         width: 256,
         height: 425,
         alt: "Imagen de la boda de Arely y Bryan ",
@@ -43,7 +43,7 @@ const page = async ({ searchParams }: any) => {
   const headersList = headers();
   const pathname = headersList.get("x-pathname"); // ejemplo: /boda/danielayjosepablo
   const invitationIdForQuery = await getInvitationId(pathname as string); // { id: '65df62e264903d5c4bb5053e' }
-  console.log(invitationIdForQuery);
+
   return (
     <Body
       nombre={nombre}
