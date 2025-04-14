@@ -76,7 +76,8 @@ const Body = ({
           viewport={{ once: true }}
           className={`w-full ${textOlive} text-center cell:text-4xl my-4 py-4 `}
         >
-          "<span className={`${dancing.className}  text-6xl`}>Guárdame</span>
+          &quot;
+          <span className={`${dancing.className}  text-6xl`}>Guárdame</span>
           <br />
           <span className={`${montse.className}  text-2xl uppercase`}>
             {" "}
@@ -104,7 +105,7 @@ const Body = ({
           <span className={`${dancing.className}  text-5xl uppercase`}>
             alas
           </span>
-          "
+          &quot;
           <br />
         </motion.p>
         <motion.p
