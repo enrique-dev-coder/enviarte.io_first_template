@@ -253,7 +253,7 @@ const Body = () => {
         ShowSobres={true}
         ShowTransferencia={true}
         datosTransferencia={{
-          numero: `Fernanda Michelle Medina Ramírez\n 4915 6694 1164 1499`,
+          numero: `Fernanda Michelle Medina Ramírez\n Banorte \n 4915 6694 1164 1499`,
           owner: "",
         }}
         SobresImg={Sobre}
