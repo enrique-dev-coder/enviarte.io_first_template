@@ -48,7 +48,7 @@ const Body = ({
     >
       <IngresarBoton
         buttonText="Ingresar"
-        extraClases="!justify-start !mt-[16px] !bg-transparent"
+        extraClases="  !bg-transparent"
         font={champagne}
         novia="XVs"
         novio="Leyda"
@@ -180,7 +180,7 @@ const Body = ({
         borderColor=""
         buttonTextColor={"text-white"}
         desc={"Fiesta"}
-        direccion={"C. 5 #2785, Lourdes, 25070 Saltillo, Coah."}
+        direccion={"Calle 5 #2785, Lourdes, 25070 Saltillo, Coah."}
         hora={"8:30 pm "}
         nombre={{
           content: "Cazamya Recepciones",
@@ -369,7 +369,7 @@ const Body = ({
             <p
               className={`${lora.className} ${textOlive} text-4xl cell:text-2xl text-center font-bold`}
             >
-              Wedding Planner <br /> Viviana Amare
+              Planner <br /> Viviana Amare
             </p>
             <a href="https://api.whatsapp.com/send?phone=5218447006000&text=Hola!%20Me%20gustar%C3%ADa%20confirmar%20mi%20asistencia%20a%20los%20quinces%20de%20Leyda">
               <button
