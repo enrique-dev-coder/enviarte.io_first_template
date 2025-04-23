@@ -13,6 +13,7 @@ import Hero from "./Hero";
 import Contador from "./Contador";
 //images
 import img1 from "/public/assets/images/xvs/Leyda/Hero.jpeg";
+import img1v1 from "/public/assets/images/xvs/Leyda/img1.jpeg";
 import img2 from "/public/assets/images/xvs/Leyda/img2.jpeg";
 import img5 from "/public/assets/images/xvs/Leyda/img5.jpeg";
 import img6 from "/public/assets/images/xvs/Leyda/img6.jpeg";
@@ -128,7 +129,7 @@ const Body = ({
             Con la bendición de mis papás
           </motion.h2>
           <p className={`text-2xl font-bold ${lilaFuerte}`}>
-            Johana Elizabeth Vazquez <br />y <br /> Pedro Alejandro Lopez
+            Johana Elizabeth Vázquez <br />y <br /> Pedro Alejandro López
             Perales
           </p>
         </motion.div>
@@ -136,7 +137,7 @@ const Body = ({
       <Contador
         fechaEvento={new Date("2025-06-13T00:00:00")}
         fechaString="Sábado, 13 de Junio de 2025"
-        fotoContador="bg-[url('/assets/images/xvs/Leyda/img1.jpeg')]"
+        fotoContador="bg-[url('/assets/images/xvs/Leyda/img5.jpeg')]"
       />
 
       <PlaceCard
@@ -147,14 +148,16 @@ const Body = ({
         borderColor=""
         buttonTextColor={"text-white"}
         desc={"Misa"}
-        direccion={"Saltillo, Coah. Zona Centro "}
-        hora={"5:00 pm "}
+        direccion={
+          "Calle Gral. Manuel Pérez Treviño 425, Zona Centro, 25000 Saltillo, Coah."
+        }
+        hora={"5:20 pm "}
         nombre={{
           content: "Santuario Guadalupe",
           color: textOlive,
           font: lora,
         }}
-        ubicacion={"https://maps.app.goo.gl/LZN2LQvn6ytamDVJ8"}
+        ubicacion={"https://maps.app.goo.gl/CLTg9FkwtbLUTpg86"}
       />
       <motion.div
         initial={{ opacity: 0, y: 5 }}
@@ -195,7 +198,7 @@ const Body = ({
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
       >
-        <Image src={img5} alt="boda" />
+        <Image src={img1v1} alt="boda" />
       </motion.div>
 
       <ItinerarioScrollable
@@ -289,7 +292,7 @@ const Body = ({
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
       >
-        <Image src={img8} alt="boda" />
+        <Image src={img12} alt="boda" />
       </motion.div>
       <motion.h2
         initial={{ opacity: 0, y: 5 }}
@@ -316,6 +319,9 @@ const Body = ({
           Mujeres
         </p>
         <p className="  text-4xl mb-4 cell:text-xl cell:mb-1">Vestido</p>
+        <p className="  underline text-4xl mb-4 cell:text-2xl cell:mb-1 text-center py-4">
+          **Se reserva el color lila, morado y rosa.{" "}
+        </p>
       </div>
       <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">
         {" "}
@@ -325,6 +331,15 @@ const Body = ({
         </p>
         <p className="  text-4xl mb-4 cell:mb-1 cell:text-xl">Traje </p>
       </div>
+      <motion.h2
+        initial={{ opacity: 0, y: 5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+        className={`${champagne.className} text-center ${textOlive}    text-5xl cell:text-3xl py-1 `}
+      >
+        No Niños
+      </motion.h2>
       <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
@@ -339,7 +354,7 @@ const Body = ({
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
       >
-        <Image src={img12} alt="boda" />
+        <Image src={img8} alt="boda" />
       </motion.div>
       <div>
         <motion.p
