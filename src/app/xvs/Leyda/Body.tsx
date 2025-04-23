@@ -207,7 +207,7 @@ const Body = ({
           {
             id: 2,
             evento: "Misa ",
-            hora: "5:00 pm",
+            hora: "5:20 pm",
             Icon: "church",
           },
           {
