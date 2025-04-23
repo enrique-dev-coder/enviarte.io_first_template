@@ -43,7 +43,6 @@ const page = async ({ searchParams }: any) => {
   const headersList = headers();
   const pathname = headersList.get("x-pathname"); // ejemplo: /boda/danielayjosepablo
   const invitationIdForQuery = await getInvitationId(pathname as string); // { id: '65df62e264903d5c4bb5053e' }
-
   return (
     <Body
       nombre={nombre}

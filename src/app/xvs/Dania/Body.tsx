@@ -118,70 +118,34 @@ const Body = ({
           Salmo 17:8
         </motion.p>
       </div>
-      {/* <div className=" bg-white py-8">
-        <motion.h2
-          initial={{ opacity: 0, y: 5 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ ease: "easeInOut", duration: 1 }}
-          viewport={{ once: true }}
-          className={` ${textOlive} text-center  text-[28px]    py-4 `}
-        >
-          Con la bendición de nuestros padres
-        </motion.h2>
-        <div>
-          <motion.div
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            transition={{ ease: "easeInOut", duration: 0.5, delay: 0.5 }}
-            viewport={{ once: true }}
-            className="flex flex-col gap-1 w-[300px] cell:w-full   py-4 my-2 text-center cell:text-2xl cell:text-center"
-          >
-            <p className={`text-2xl font-bold ${textOlive}`}>
-              Papás de la novia
-            </p>
-            <p className={`${dancing.className} text-[28px]  font-medium`}>
-              Matilde Sánchez Medina{" "}
-            </p>
-            <p
-              className={`${dancing.className} text-[28px] text-gray-800 font-medium`}
-            >
-              y
-            </p>
-            <p
-              className={`${dancing.className} text-[28px] text-gray-800 font-medium`}
-            >
-              Ramón Morales Reyna
-            </p>
-          </motion.div>
-          <motion.div
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            transition={{ ease: "easeInOut", duration: 0.5, delay: 0.5 }}
-            viewport={{ once: true }}
-            className="flex flex-col gap-1 my-2 w-[300px] cell:w-full bg-white py-4 text-center cell:text-2xl cell:text-center"
-          >
-            <p className={`text-2xl font-bold ${textOlive}`}>Papás del novio</p>
-            <p className={`${dancing.className} text-[28px]  font-medium`}>
-              Julia Esther Fernández Arteaga
-            </p>
-            <p
-              className={`${dancing.className} text-[28px] text-gray-800 font-medium`}
-            >
-              y
-            </p>
-            <p
-              className={`${dancing.className} text-[28px] text-gray-800 font-medium`}
-            >
-              Lucano García Pérez{" "}
-            </p>
-          </motion.div>
-        </div>
-      </div> */}
+
       <Contador
         fechaEvento={new Date("2025-05-31T00:00:00")}
         fechaString="Sábado, 31 de Mayo de 2025"
         fotoContador="bg-[url('/assets/images/xvs/Dania/img6.jpeg')]"
       />
+      <div>
+        <motion.div
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          transition={{ ease: "easeInOut", duration: 0.5, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="flex flex-col gap-1 w-[300px] cell:w-full   py-4 my-2 text-center cell:text-2xl cell:text-center"
+        >
+          <motion.h2
+            initial={{ opacity: 0, y: 5 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ ease: "easeInOut", duration: 1 }}
+            viewport={{ once: true }}
+            className={` ${textOlive} text-center  text-[28px]    py-4 `}
+          >
+            Con la bendición de mis papás
+          </motion.h2>
+          <p className={`text-2xl font-bold ${textOlive}`}>
+            Felix Piña y Nidia García
+          </p>
+        </motion.div>
+      </div>
       <PlaceCard
         show={true}
         titleColor={textOlive}
