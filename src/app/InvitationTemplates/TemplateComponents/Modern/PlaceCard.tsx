@@ -17,6 +17,8 @@ const PlaceCard = ({
   horaTres,
   borderColor,
   buttonTextColor = "text-white",
+  bgCard = "bg-white",
+  descColor = "text-black",
 }: {
   show: boolean;
   desc: string | undefined;
@@ -37,13 +39,14 @@ const PlaceCard = ({
   horaDos?: string | undefined;
   horaTres?: string | undefined;
   buttonTextColor?: string | "text-white";
+  bgCard?: string | "bg-white";
+  descColor?: string | "text-black";
 }) => {
   return show ? (
     <section className="py-6">
       <div
-        className="flex flex-col gap-2 justify-center items-center bg-white w-[45%] py-6 shadow-lg mx-auto 
-      cell:w-full
-      "
+        className={`flex flex-col gap-2 justify-center items-center ${bgCard} w-[45%] py-6 shadow-lg mx-auto 
+      cell:w-full`}
       >
         <motion.h2
           initial={{ opacity: 0, y: 5 }}
@@ -78,8 +81,10 @@ const PlaceCard = ({
           {horaTres}
         </p>
         <div className=" flex items-center cell:w-[90%] cell:mx-auto cell:flex-col">
-          <MapPin className=" text-black font-bold " />
-          <p className=" text-xl text-center cell:text-base ">{direccion}</p>
+          <MapPin className={`${descColor} font-bold`} />
+          <p className={`${descColor} text-xl text-center cell:text-base`}>
+            {direccion}
+          </p>
         </div>
         <a href={ubicacion}>
           <button
