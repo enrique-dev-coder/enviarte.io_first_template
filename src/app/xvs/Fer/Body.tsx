@@ -6,7 +6,7 @@ import PlaceCard from "@/app/InvitationTemplates/TemplateComponents/Modern/Place
 import MesaDeRegalos from "@/app/InvitationTemplates/TemplateComponents/Customized/CommonComponents/MesaDeRegalos";
 import SongButtonPlayer from "@/app/InvitationTemplates/Common/SongButtonPlayer";
 import ItinerarioScrollable from "@/app/InvitationTemplates/TemplateComponents/Customized/Itinerarios/ItinerarioScrollable";
-import { lora, champagne, montse } from "@/fonts";
+import { lora, champagne, montse, paris } from "@/fonts";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Hero from "./Hero";
@@ -25,8 +25,8 @@ import RegaloImg from "/public/assets/images/xvs/Fer/regalorojo.png";
 
 import { WhatsIcon } from "@/components/Dashboard/EnviarLista/Icons";
 import Sobre from "/public/assets/images/email.png";
-import DressCodeMujeres from "/public/assets/images/xvs/Fer/vestidoRojo.png";
-import DressCodeHombres from "/public/assets/images/xvs/Fer/trajeRojo.png";
+import DressCodeMujeres from "/public/assets/images/xvs/Fer/vestidoBlanco.png";
+import DressCodeHombres from "/public/assets/images/xvs/Fer/trajeBlanco.png";
 
 const textOlive = "text-white";
 const bgOlive = "bg-[#FF0000]";
@@ -52,7 +52,7 @@ const Body = ({
         bgCuadrito="bg-black"
         buttonText="Ingresar"
         extraClases="!justify-start !mt-[16px]  !bg-transparent"
-        font={champagne}
+        font={paris}
         novia="XVs"
         novio="Fer"
         join=""
@@ -368,7 +368,7 @@ const Body = ({
             Hombres
           </p>
           <p className={`font-bold text-4xl ${textOlive} pb-8 cell:text-2xl`}>
-            Traje{" "}
+            Formal{" "}
           </p>
         </div>
         {/* <motion.h2

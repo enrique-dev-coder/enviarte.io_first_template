@@ -40,7 +40,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 5 }}
               animate={controls}
               transition={{ ease: "easeInOut", duration: 1 }}
-              className={`${champagne.className}  text-white font-bold`}
+              className={`${paris.className}  text-white font-bold`}
             >
               <h1 className="  text-white font-semibold  text-[64px] leading-[60px] ">
                 XVs
@@ -52,9 +52,11 @@ const Hero = () => {
               initial={{ opacity: 0, y: 5 }}
               animate={controls}
               transition={{ ease: "easeInOut", duration: 1 }}
-              className={`${montse.className} text-[28px] text-white font-bold pb-10`}
+              className={`${champagne.className} text-[28px] text-white font-bold pb-10`}
             >
-              <h1 className="   text-white font-semibold  text-[24px] leading-[60px] ">
+              <h1
+                className={`${montse.className} text-white font-bold  text-[32px] leading-[60px] `}
+              >
                 7 de Junio de 2025{" "}
               </h1>
             </motion.div>
