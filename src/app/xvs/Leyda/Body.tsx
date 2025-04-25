@@ -136,7 +136,7 @@ const Body = ({
       </div>
       <Contador
         fechaEvento={new Date("2025-06-13T00:00:00")}
-        fechaString="Sábado, 13 de Junio de 2025"
+        fechaString="Viernes, 13 de Junio de 2025"
         fotoContador="bg-[url('/assets/images/xvs/Leyda/img5.jpeg')]"
       />
 
@@ -319,8 +319,10 @@ const Body = ({
           Mujeres
         </p>
         <p className="  text-4xl mb-4 cell:text-xl cell:mb-1">Vestido</p>
-        <p className="  underline text-4xl mb-4 cell:text-2xl cell:mb-1 text-center py-4">
-          **Se reserva el color lila, morado y rosa.{" "}
+        <p
+          className={`${textOlive} text-4xl mb-4  font-semibold cell:text-3xl cell:mb-1 text-center px-4 my-2"`}
+        >
+          Nos reservamos el color, lila morado y rosa para la quinceañera.{" "}
         </p>
       </div>
       <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">
@@ -336,9 +338,11 @@ const Body = ({
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
-        className={`${champagne.className} text-center ${textOlive}    text-5xl cell:text-3xl py-1 `}
+        className={`${champagne.className} text-center ${textOlive} px-4 font-bold   text-5xl cell:text-3xl py-3 `}
       >
-        No Niños
+        Sabemos que los niños son importantes, pero creemos que papá y mamá
+        también necesitan un día libre.
+        <br /> Por favor no niños.{" "}
       </motion.h2>
       <motion.div
         initial={{ scale: 0 }}
