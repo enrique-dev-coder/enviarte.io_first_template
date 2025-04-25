@@ -322,7 +322,7 @@ const Body = ({
         <p
           className={`${textOlive} text-4xl mb-4  font-semibold cell:text-3xl cell:mb-1 text-center px-4 my-2"`}
         >
-          Nos reservamos el color, lila morado y rosa para la quinceañera.{" "}
+          Nos reservamos los colores lila, morado y rosa para la quinceañera.{" "}
         </p>
       </div>
       <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">
