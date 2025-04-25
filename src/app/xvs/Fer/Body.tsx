@@ -28,7 +28,7 @@ import Sobre from "/public/assets/images/email.png";
 import DressCodeMujeres from "/public/assets/images/xvs/Fer/vestidoRojo.png";
 import DressCodeHombres from "/public/assets/images/xvs/Fer/trajeRojo.png";
 
-const textOlive = "text-[#FF0000]";
+const textOlive = "text-white";
 const bgOlive = "bg-[#FF0000]";
 const lilaFuerte = "text-[#FF0000]";
 
@@ -45,7 +45,7 @@ const Body = ({
 }) => {
   return (
     <InvitationContainer
-      spBackground="grainy"
+      spBackground="flowers"
       songLink="/assets/songs/xvsFer.mp3"
     >
       <IngresarBoton
@@ -131,7 +131,7 @@ const Body = ({
             >
               Con la bendición de mis papás
             </motion.h2>
-            <p className={`text-2xl font-bold ${lilaFuerte}`}>
+            <p className={`text-2xl font-bold ${textOlive}`}>
               Olga Patricia Escareño
               <br />y <br /> Angel Ramírez Salas
             </p>
@@ -150,7 +150,7 @@ const Body = ({
           descColor={textOlive}
           titleColor={textOlive}
           titleFont={champagne}
-          bgButtonColor={"transparent"}
+          bgButtonColor={bgOlive}
           borderColor="border-[#FF0000]"
           buttonTextColor={textOlive}
           desc={"Misa"}
@@ -187,7 +187,7 @@ const Body = ({
           show={true}
           titleColor={textOlive}
           titleFont={champagne}
-          bgButtonColor={"transparent"}
+          bgButtonColor={bgOlive}
           borderColor="border-[#FF0000]"
           buttonTextColor={textOlive}
           desc={"Fiesta"}
@@ -428,9 +428,9 @@ const Body = ({
               </p>
               <a href="https://api.whatsapp.com/send?phone=5218447006000&text=Hola!%20Me%20gustar%C3%ADa%20confirmar%20mi%20asistencia%20a%20los%20quinces%20de%20Leyda">
                 <button
-                  className={` border border-[#FF0000] flex items-center gap-3  my-3 rounded-full px-4 py-2`}
+                  className={` ${bgOlive}  flex items-center gap-3  my-3 rounded-full px-4 py-2`}
                 >
-                  <WhatsIcon className="fill-red-500 text-2xl " />
+                  <WhatsIcon className="fill-white text-2xl " />
                   <p className={`text-3xl ${textOlive}`}>844 700 6000</p>
                 </button>
               </a>
