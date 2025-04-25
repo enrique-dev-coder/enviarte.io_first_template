@@ -426,7 +426,7 @@ const Body = ({
               >
                 Planner <br /> Viviana Amare
               </p>
-              <a href="https://api.whatsapp.com/send?phone=5218447006000&text=Hola!%20Me%20gustar%C3%ADa%20confirmar%20mi%20asistencia%20a%20los%20quinces%20de%20Leyda">
+              <a href="https://api.whatsapp.com/send?phone=5218447006000&text=Hola!%20Me%20gustar%C3%ADa%20confirmar%20mi%20asistencia%20a%20los%20quinces%20de%20Fer">
                 <button
                   className={` ${bgOlive}  flex items-center gap-3  my-3 rounded-full px-4 py-2`}
                 >

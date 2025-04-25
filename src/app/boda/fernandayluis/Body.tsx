@@ -14,7 +14,6 @@ import { motion } from "framer-motion";
 import Hero from "./Hero";
 import Contador from "./Contador";
 //images
-import imgBanner from "/public/assets/images/erikayenrique/IMG_0243.png";
 import img1 from "/public/assets/images/fernandayluis/img1.jpeg";
 import img2 from "/public/assets/images/fernandayluis/img2.jpeg";
 import img3 from "/public/assets/images/fernandayluis/img3.jpeg";
@@ -24,24 +23,26 @@ import img6 from "/public/assets/images/fernandayluis/img6.jpeg";
 import img7 from "/public/assets/images/fernandayluis/img7.jpeg";
 import img8 from "/public/assets/images/fernandayluis/img8.jpeg";
 import img9 from "/public/assets/images/fernandayluis/img9.jpeg";
+import img10 from "/public/assets/images/fernandayluis/img10.jpeg";
+import img11 from "/public/assets/images/fernandayluis/img11.jpeg";
 
 import { WhatsIcon } from "@/components/Dashboard/EnviarLista/Icons";
 import Sobre from "/public/assets/images/email.png";
 import DressCodeMujeres from "/public/assets/images/vestidolargo.png";
 import DressCodeHombres from "/public/assets/images/suit_icon-removebg-preview.png";
-import { PointerIcon } from "lucide-react";
+
 const textOlive = "text-[#b08968]";
 const bgOlive = "bg-[#CC6844]";
-// redeploy x2
+
 const Body = () => {
   return (
     <InvitationContainer
       spBackground="none"
-      songLink="/assets/songs/erikayenrique2.mp3"
+      songLink="/assets/songs/fernandayluis.mp3"
     >
       <IngresarBoton
         buttonText="Ingresar"
-        extraClases="!justify-start !mt-[16px] !bg-transparent"
+        extraClases=" !mt-[16px] !bg-transparent"
         font={dancing}
         novia="Fernanda"
         novio="Luis"
@@ -75,7 +76,7 @@ const Body = () => {
               Papás de la novia
             </p>
             <p className={`${dancing.className} text-[28px]  font-medium`}>
-              Esperanza Pérez Esquivel
+              Viviana del Consuelo Alvizar Padilla
             </p>
             <p
               className={`${dancing.className} text-[28px] text-gray-800 font-medium`}
@@ -85,7 +86,7 @@ const Body = () => {
             <p
               className={`${dancing.className} text-[28px] text-gray-800 font-medium`}
             >
-              José Ángel Gámez Lozano
+              Jaime Gabriel Méndez Hernández
             </p>
           </motion.div>
           <motion.div
@@ -97,7 +98,7 @@ const Body = () => {
           >
             <p className={`text-2xl font-bold ${textOlive}`}>Papás del novio</p>
             <p className={`${dancing.className} text-[28px]  font-medium`}>
-              María Del Socorro Sánchez Ríos
+              María de los Ángeles Huerta Sánchez
             </p>
             <p
               className={`${dancing.className} text-[28px] text-gray-800 font-medium`}
@@ -107,7 +108,7 @@ const Body = () => {
             <p
               className={`${dancing.className} text-[28px] text-gray-800 font-medium`}
             >
-              Juan Alberto Molina Galindo
+              Marcelo Cervantes Anguiano
             </p>
           </motion.div>
         </div>
@@ -118,7 +119,6 @@ const Body = () => {
         fechaString="Viernes, 27 de Junio de 2025"
         fotoContador="bg-[url('/assets/images/fernandayluis/img12.jpeg')]"
       />
-      {/* FALTA */}
       <PlaceCard
         show={true}
         titleColor={textOlive}
@@ -126,15 +126,15 @@ const Body = () => {
         bgButtonColor={bgOlive}
         desc={"Ceremonia Religiosa"}
         direccion={
-          "Calle Gral. Manuel Pérez Treviño 425, Zona Centro, 25000 Saltillo, Coah."
+          "Blvd. Pedro Figueroa s/n, Real de Peña, 25210 Saltillo, Coah."
         }
-        hora={"4:00 pm "}
+        hora={"6:00 pm "}
         nombre={{
-          content: "Santuario de Guadalupe",
+          content: "Iglesia san Pablo Apóstol",
           color: textOlive,
           font: lora,
         }}
-        ubicacion={"https://maps.app.goo.gl/71RHo1dBTJYxe1uX8"}
+        ubicacion={"https://maps.app.goo.gl/hVNLwr29zPeKF7fe6"}
       />
       <PlaceCard
         show={true}
@@ -191,7 +191,7 @@ const Body = () => {
           {
             id: 2,
             evento: "Ceremonia Religiosa ",
-            hora: "5:00 pm",
+            hora: "6:00 pm",
             Icon: "recepcion",
           },
           {
@@ -221,22 +221,22 @@ const Body = () => {
         ]}
         sectionStyling={{
           lineColor: bgOlive,
-          lineBg: "bg-[#b08968]/20",
-          circleColor: "stroke-[#b08968]",
+          lineBg: "bg-[#CC6844]/20",
+          circleColor: "stroke-[#CC6844]",
           circleBg: "bg-gray-50",
-          circleSoftStroke: "stroke-[#b08968]/20",
+          circleSoftStroke: "stroke-[#CC6844]/20",
           iconColor: "text-gray-900",
           cardBg: "bg-white",
         }}
       />
-      <motion.div
+      {/* <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
       >
         <Image src={img6} alt="boda" />
-      </motion.div>
+      </motion.div> */}
 
       <MesaDeRegalos
         FraseAgradecimientoFinalColor=""
@@ -327,6 +327,9 @@ const Body = () => {
           Mujeres
         </p>
         <p className="  text-4xl mb-4 cell:text-xl cell:mb-1">Vestido Largo</p>
+        <p className="  text-4xl text-center p-4 mb-4 cell:text-xl cell:mb-1">
+          Los colores claros y sobre todo blanco quedan reservados para la novia
+        </p>
       </div>
 
       <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">
@@ -352,36 +355,47 @@ const Body = () => {
           whileInView={{ scale: 1 }}
           transition={{ ease: "easeInOut", duration: 1 }}
           viewport={{ once: true }}
-          className={`${textOlive} uppercase text-center ${champagne.className}  text-[28px] p-4 font-bold`}
+          className={`${textOlive}  uppercase text-center  text-[24px] p-4 font-bold`}
         >
           Confirma tu asistencia en el siguiente botón
         </motion.p>
       </div>
+
       <div className="relative">
         <div className="  py-2">
           <div className="flex flex-col justify-center items-center py-2">
-            <a href="https://api.whatsapp.com/send?phone=5218447006000">
+            <p
+              className={`${lora.className} ${textOlive} text-4xl cell:text-2xl text-center font-bold`}
+            >
+              Wedding Planner <br /> Viviana Amare
+            </p>
+            <a href="https://api.whatsapp.com/send?phone=5218447006000&text=Hola!%20Me%20gustar%C3%ADa%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Fernanda%20y%20Luis">
               <button
-                className={`${bgOlive} text-white flex items-center gap-3  my-3 rounded-full px-4 py-2`}
+                className={` ${bgOlive}  flex items-center gap-3  my-3 rounded-full px-4 py-2`}
               >
-                <PointerIcon />
-                <p className=" text-3xl text-white">Confirmar</p>
+                <WhatsIcon className="fill-white text-2xl " />
+                <p className={`text-3xl text-white`}>844 700 6000</p>
               </button>
             </a>
           </div>
         </div>
       </div>
-      <div className="relative pb-4">
-        <div>
-          <div className="flex flex-col justify-center items-center py-2">
-            <p
-              className={`${lora.className}  text-4xl cell:text-2xl text-center font-bold`}
-            >
-              Wedding Planner <br /> Viviana Amare
-            </p>
-          </div>
-        </div>
-      </div>
+      <motion.div
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <Image src={img10} alt="boda" />
+      </motion.div>
+      <motion.div
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <Image src={img11} alt="boda" />
+      </motion.div>
       <SongButtonPlayer backgroundColor={bgOlive} />
     </InvitationContainer>
   );
