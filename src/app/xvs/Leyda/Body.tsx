@@ -21,8 +21,7 @@ import img7 from "/public/assets/images/xvs/Leyda/img7.jpeg";
 import img8 from "/public/assets/images/xvs/Leyda/img8.jpeg";
 import img11 from "/public/assets/images/xvs/Leyda/img11.jpeg";
 import img12 from "/public/assets/images/xvs/Leyda/img12.jpeg";
-import img9 from "/public/assets/images/xvs/Leyda/img9.jpeg";
-
+import imgExtra from "/public/assets/images/xvs/Leyda/extra.jpeg";
 import { WhatsIcon } from "@/components/Dashboard/EnviarLista/Icons";
 import Sobre from "/public/assets/images/email.png";
 import DressCodeMujeres from "/public/assets/images/vestidolargo.png";
@@ -174,7 +173,7 @@ const Body = ({
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
       >
-        <Image src={img8} alt="boda" />
+        <Image src={imgExtra} alt="boda" />
       </motion.div>
       <PlaceCard
         show={true}
@@ -295,14 +294,6 @@ const Body = ({
       >
         <Image src={img12} alt="boda" />
       </motion.div>
-      <motion.div
-        initial={{ scale: 0 }}
-        whileInView={{ scale: 1 }}
-        transition={{ ease: "easeInOut", duration: 1 }}
-        viewport={{ once: true }}
-      >
-        <Image src={img11} alt="boda" />
-      </motion.div>
       <motion.h2
         initial={{ opacity: 0, y: 5 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -359,7 +350,7 @@ const Body = ({
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
       >
-        <Image src={img2} alt="boda" />
+        <Image src={img11} alt="boda" />
       </motion.div>
       <motion.div
         initial={{ scale: 0 }}
@@ -367,7 +358,7 @@ const Body = ({
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
       >
-        <Image src={img9} alt="boda" />
+        <Image src={img8} alt="boda" />
       </motion.div>
       <div>
         <motion.p
