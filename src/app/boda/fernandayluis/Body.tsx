@@ -275,14 +275,6 @@ const Body = () => {
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
       >
-        <Image src={img6} alt="boda" />
-      </motion.div>
-      <motion.div
-        initial={{ scale: 0 }}
-        whileInView={{ scale: 1 }}
-        transition={{ ease: "easeInOut", duration: 1 }}
-        viewport={{ once: true }}
-      >
         <Image src={img7} alt="boda" />
       </motion.div>
       <motion.div
@@ -345,9 +337,11 @@ const Body = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
-        className={`${lora.className} text-center ${textOlive} font-bold underline   text-5xl cell:text-4xl py-4 `}
+        className={`${champagne.className} text-center ${textOlive} px-4 font-bold   text-5xl cell:text-3xl py-3 `}
       >
-        NO NIÑOS
+        Sabemos que los niños son importantes, pero creemos que papá y mamá
+        también necesitan un día libre.
+        <br /> Por favor no niños.{" "}
       </motion.h2>
       <div>
         <motion.p
@@ -386,7 +380,7 @@ const Body = () => {
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
       >
-        <Image src={img10} alt="boda" />
+        <Image src={img4} alt="boda" />
       </motion.div>
       <motion.div
         initial={{ scale: 0 }}
@@ -394,7 +388,7 @@ const Body = () => {
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
       >
-        <Image src={img11} alt="boda" />
+        <Image src={img6} alt="boda" />
       </motion.div>
       <SongButtonPlayer backgroundColor={bgOlive} />
     </InvitationContainer>
