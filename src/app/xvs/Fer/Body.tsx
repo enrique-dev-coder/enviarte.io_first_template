@@ -49,6 +49,7 @@ const Body = ({
       songLink="/assets/songs/xvsFer.mp3"
     >
       <IngresarBoton
+        showSobre={true}
         bgCuadrito="bg-black"
         buttonText="Ingresar"
         extraClases="!justify-start !mt-[16px]  !bg-transparent"
