@@ -379,7 +379,7 @@ const Body = ({
           viewport={{ once: true }}
           className={`${textOlive}  uppercase text-center ${champagne.className}  text-[28px] p-4 font-bold`}
         >
-          Fecha límite de confirmación 20 de Junio de 2025
+          Fecha límite de confirmación 23 de Mayo de 2025
         </motion.p>
       </div>
       <div className="relative">
