@@ -91,7 +91,7 @@ const Body = ({
           buttonTextColor={"text-white"}
           desc={"Misa de Acción de Gracias"}
           direccion={
-            "Calle Gral. Manuel Pérez Treviño 425, Zona Centro, 25000 Saltillo, Coah."
+            "Guillermo Purcell 10, Altos de Bella Unión, 25350 Arteaga, Coah."
           }
           hora={"6:30 pm "}
           nombre={{
@@ -218,6 +218,18 @@ const Body = ({
         también necesitan un día libre.
         <br /> Por favor no niños.{" "}
       </motion.h2> */}
+      <div>
+        <motion.p
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          transition={{ ease: "easeInOut", duration: 1 }}
+          viewport={{ once: true }}
+          className={`text-[#A569BD]   text-center ${dancing.className}  text-[28px] p-4 font-bold`}
+        >
+          Este momento es tan especial para mí que quiero vivirlo a tu lado,
+          Deseando contar con tu presencia.{" "}
+        </motion.p>
+      </div>
       <div>
         <motion.p
           initial={{ scale: 0 }}
