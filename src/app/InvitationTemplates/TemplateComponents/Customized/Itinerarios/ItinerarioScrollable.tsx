@@ -9,11 +9,14 @@ import { EventoItinerario } from "../types";
 import CivilImg from "/public/assets/images/couple.png";
 import Coctel from "/public/assets/images/champagne-glass.png";
 import Flowers from "/public/assets/images/bouquet.png";
+import Regalo from "/public/assets/images/gift.png";
+import cake from "/public/assets/images/cake.png";
 
 const CivilIcon = () => <Image src={CivilImg} alt="boda" width={36} />;
 const CoctelIcon = () => <Image src={Coctel} alt="boda" width={36} />;
 const FlowersIcon = () => <Image src={Flowers} alt="boda" width={36} />;
-
+const RegaloIcon = () => <Image src={Regalo} alt="boda" width={36} />;
+const CakeIcon = () => <Image src={cake} alt="pastel" width={36} />;
 const Icons = {
   church: <ChurchIcon size={36} />,
   party: <PartyPopperIcon size={36} />,
@@ -23,6 +26,8 @@ const Icons = {
   civil: <CivilIcon />,
   coctel: <CoctelIcon />,
   flores: <FlowersIcon />,
+  regalo: <RegaloIcon />,
+  cake: <CakeIcon />,
 };
 // Tipado explícito para las claves del objeto Icons
 type IconKey = keyof typeof Icons;

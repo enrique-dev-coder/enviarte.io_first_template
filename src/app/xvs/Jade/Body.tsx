@@ -7,15 +7,12 @@ import MesaDeRegalos from "@/app/InvitationTemplates/TemplateComponents/Customiz
 import SongButtonPlayer from "@/app/InvitationTemplates/Common/SongButtonPlayer";
 import ItinerarioScrollable from "@/app/InvitationTemplates/TemplateComponents/Customized/Itinerarios/ItinerarioScrollable";
 import { lora, champagne, montse, dancing, paris } from "@/fonts";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import Hero from "./Hero";
 import Contador from "./Contador";
 import { WhatsIcon } from "@/components/Dashboard/EnviarLista/Icons";
 import Sobre from "/public/assets/images/email.png";
-import DressCodeMujeres from "/public/assets/images/vestidolargo.png";
-import DressCodeHombres from "/public/assets/images/suit_icon-removebg-preview.png";
-import Flowers from "./Flowers";
+
 import Papas from "./Papas";
 
 const textOlive = "text-[#b579ae]";
@@ -128,6 +125,56 @@ const Body = ({
           ubicacion={"https://maps.app.goo.gl/owDgPK6sM9hg4bbc8"}
         />
       </div>
+      <ItinerarioScrollable
+        showItinerario={true}
+        eventData={[
+          {
+            id: 2,
+            evento: "Ceremonia Acción \n de Gracias ",
+            hora: "6:30 pm",
+            Icon: "church",
+          },
+          {
+            id: 4,
+            evento: " Cena",
+            hora: "8:00 pm",
+            Icon: "dinner",
+          },
+          {
+            id: 1,
+            evento: `Inicio de Fiesta`,
+            hora: "9:00 pm",
+            Icon: "party",
+          },
+          {
+            id: 5,
+            evento: "Pastel",
+            hora: "9:00 pm",
+            Icon: "cake",
+          },
+          {
+            id: 5,
+            evento: "Regalo Sorpresa",
+            hora: "12:00 am",
+            Icon: "regalo",
+          },
+          {
+            id: 6,
+            evento: "Final del evento",
+            hora: "1:00 am",
+            Icon: "flores",
+          },
+        ]}
+        sectionStyling={{
+          lineColor: "bg-[#cc90c7]",
+          lineBg: "bg-[#cc90c7]/20",
+          circleColor: "stroke-[#cc90c7]",
+          circleBg: "bg-gray-50",
+          circleSoftStroke: "stroke-[#cc90c7]/20",
+          iconColor: "text-gray-900",
+          cardBg: "bg-white",
+        }}
+      />
       <div className="relative">
         <div className="absolute z-[-1] top-[20%] left-[20%] h-[200px] w-[200px] rounded-full bg-gradient-radial from-[#F8C6DE]/60 to-transparent blur-2xl sm:h-[300px] sm:w-[300px]"></div>
         <div className="absolute z-[-1] bottom-[10%] right-[10%] h-[180px] w-[180px] rounded-full bg-gradient-radial from-[#E27EA6]/50 to-transparent blur-2xl sm:h-[280px] sm:w-[280px]"></div>
@@ -166,65 +213,13 @@ const Body = ({
           linkLiverpool=""
         />
       </div>
-      <motion.h2
-        initial={{ opacity: 0, y: 5 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ ease: "easeInOut", duration: 1 }}
-        viewport={{ once: true }}
-        className={`${
-          dancing.className
-        } text-center ${"text-[#A569BD]"} font-bold   text-5xl cell:text-4xl py-4 `}
-      >
-        Dress Code
-      </motion.h2>
-      <motion.h2
-        initial={{ opacity: 0, y: 5 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ ease: "easeInOut", duration: 1 }}
-        viewport={{ once: true }}
-        className={`${montse.className} text-center ${textOlive} font-bold underline   text-5xl cell:text-4xl py-4 `}
-      >
-        Formal
-      </motion.h2>
-      <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">
-        {" "}
-        <Image alt="boda" src={DressCodeMujeres} className="w-[50%]" />
-        <p className={`font-bold text-4xl ${textOlive} cell:text-2xl`}>
-          Mujeres
-        </p>
-        <p className="  text-4xl mb-4 cell:text-xl cell:mb-1">Vestido</p>
-        {/* <p
-          className={`${textOlive} text-4xl mb-4  font-semibold cell:text-3xl cell:mb-1 text-center px-4 my-2"`}
-        >
-          Nos reservamos los colores lila, morado y rosa para la quinceañera.{" "}
-        </p> */}
-      </div>
-      <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">
-        {" "}
-        <Image alt="boda" src={DressCodeHombres} className="w-[35%]" />
-        <p className={`font-bold text-4xl ${textOlive} cell:text-2xl`}>
-          Hombres
-        </p>
-        <p className="  text-4xl mb-4 cell:mb-1 cell:text-xl">Traje </p>
-      </div>
-      {/* <motion.h2
-        initial={{ opacity: 0, y: 5 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ ease: "easeInOut", duration: 1 }}
-        viewport={{ once: true }}
-        className={`${champagne.className} text-center ${textOlive} px-4 font-bold   text-5xl cell:text-3xl py-3 `}
-      >
-        Sabemos que los niños son importantes, pero creemos que papá y mamá
-        también necesitan un día libre.
-        <br /> Por favor no niños.{" "}
-      </motion.h2> */}
       <div>
         <motion.p
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           transition={{ ease: "easeInOut", duration: 1 }}
           viewport={{ once: true }}
-          className={`text-[#A569BD]   text-center ${dancing.className}  text-[28px] p-4 font-bold`}
+          className={`text-[#7D3C98]   text-center ${dancing.className}  text-[32px] p-4 font-bold`}
         >
           Este momento es tan especial para mí que quiero vivirlo a tu lado,
           Deseando contar con tu presencia.{" "}
@@ -241,17 +236,6 @@ const Body = ({
           Confirma tu asistencia en el siguiente botón
         </motion.p>
       </div>
-      {/* <div>
-        <motion.p
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
-          transition={{ ease: "easeInOut", duration: 1 }}
-          viewport={{ once: true }}
-          className={`${textOlive}  uppercase text-center ${champagne.className}  text-[28px] p-4 font-bold`}
-        >
-          Fecha límite de confirmación 23 de Mayo de 2025
-        </motion.p>
-      </div> */}
       <div className="relative">
         <div className="  py-2">
           <div className="flex flex-col justify-center items-center py-2">
