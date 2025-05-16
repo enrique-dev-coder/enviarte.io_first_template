@@ -114,7 +114,7 @@ const Body = ({
           buttonTextColor={"text-white"}
           desc={"Recepción"}
           direccion={
-            "Calle Gral. Manuel Pérez Treviño 425, Zona Centro, 25000 Saltillo, Coah."
+            "Guillermo Purcell 10, Altos de Bella Unión, 25350 Arteaga, Coah."
           }
           hora={"8:30 pm "}
           nombre={{
@@ -141,17 +141,18 @@ const Body = ({
             Icon: "dinner",
           },
           {
-            id: 1,
-            evento: `Inicio de Fiesta`,
-            hora: "9:00 pm",
-            Icon: "party",
-          },
-          {
             id: 5,
             evento: "Pastel",
             hora: "9:00 pm",
             Icon: "cake",
           },
+          {
+            id: 1,
+            evento: `Vals,corona,zapatillas\n,brindis,muñeca y regalo`,
+            hora: "10:15 pm",
+            Icon: "coctel",
+          },
+
           {
             id: 5,
             evento: "Regalo Sorpresa",
@@ -159,9 +160,15 @@ const Body = ({
             Icon: "regalo",
           },
           {
+            id: 5,
+            evento: "Show Interactivo",
+            hora: "12:15 am",
+            Icon: "party",
+          },
+          {
             id: 6,
             evento: "Final del evento",
-            hora: "1:00 am",
+            hora: "2:00 am",
             Icon: "flores",
           },
         ]}
