@@ -4,22 +4,14 @@ import prisma from "../../../../prisma";
 
 export const metadata = {
   metadataBase: new URL("https://www.invitandofacil.com"),
-  title: "Xvs Leyda",
+  title: "Xvs Jade",
   description: "Invitaciones digitales para eventos",
   openGraph: {
-    siteName: "Xvs Leyda",
-    title: "Xvs Leyda",
+    siteName: "Xvs Jade",
+    title: "Xvs Jade",
     description:
       "Te invitamos a celebrar nuestra boda. Haz clic para más detalles.",
-    url: "https://www.invitandofacil.com/xvs/Leyda",
-    images: [
-      {
-        url: "https://www.invitandofacil.com/assets/images/xvs/Leyda/img12.jpeg",
-        width: 256,
-        height: 425,
-        alt: "Imagen de la boda de Arely y Bryan ",
-      },
-    ],
+    url: "https://www.invitandofacil.com/xvs/Jade",
   },
 };
 
