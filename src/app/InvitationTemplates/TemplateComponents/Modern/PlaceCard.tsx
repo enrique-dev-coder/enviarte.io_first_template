@@ -19,9 +19,11 @@ const PlaceCard = ({
   buttonTextColor = "text-white",
   bgCard = "bg-white",
   descColor = "text-black",
+  shadowCard = true,
 }: {
   show: boolean;
   desc: string | undefined;
+  shadowCard?: boolean;
   nombre:
     | {
         content: string;
@@ -45,7 +47,9 @@ const PlaceCard = ({
   return show ? (
     <section className="py-6">
       <div
-        className={`flex flex-col gap-2 justify-center items-center ${bgCard} w-[45%] py-6 shadow-lg mx-auto 
+        className={`flex flex-col gap-2 justify-center items-center ${bgCard} w-[45%] py-6 ${
+          shadowCard && "shadow-lg"
+        }  mx-auto 
       cell:w-full`}
       >
         <motion.h2

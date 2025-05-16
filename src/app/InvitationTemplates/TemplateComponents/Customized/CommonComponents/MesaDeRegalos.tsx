@@ -6,6 +6,7 @@ import { dancing } from "@/fonts";
 import { NextFont } from "next/dist/compiled/@next/font";
 import liverpool from "/public/assets/images/liverpool.webp";
 import amazon from "/public/assets/images/amazon.webp";
+import Regalo from "/public/assets/images/gift.png";
 
 const MesaDeRegalos = ({
   backGround,
@@ -36,8 +37,10 @@ const MesaDeRegalos = ({
   linkLiverpool = "",
   customBorder = "",
   bgLiverpoolButton = "",
+  bgCard = "bg-white",
 }: {
   backGround: string;
+  bgCard?: string;
   ShowFraseDeAgradecimientoInicio: boolean;
   FraseAgradecimientoInicioColor: string | undefined;
   FraseAgradecimientoInicioSize: string | undefined;
@@ -114,15 +117,21 @@ const MesaDeRegalos = ({
           </div>
         )}
         {ShowRegalo && (
-          <div className=" flex items-center gap-2  cell:justify-center cell:flex-col">
-            <p className={`text-3xl cell:text-xl ${SobresTextColor}`}>
-              o Regalo
-            </p>
+          <div
+            className={` w-[400px] ${bgCard} cell:w-[90%] text-center flex flex-col items-center text-3xl border 
+              ${customBorder ? customBorder : "border-slate-700"} 
+              rounded-md shadow-md py-4 px-7 cell:text-2xl cell:mx-2`}
+          >
+            <div className=" flex items-center gap-2  cell:justify-center cell:flex-col">
+              <Image alt="sobre" src={Regalo} className="w-[22%]" />
+
+              <p className={`text-3xl ${SobresTextColor}`}> Regalo</p>
+            </div>
           </div>
         )}
         {ShowSobres && SobresType === "modern" && (
           <div
-            className={` w-[400px] bg-white cell:w-[90%] text-center flex flex-col items-center text-3xl border 
+            className={` w-[400px] ${bgCard} cell:w-[90%] text-center flex flex-col items-center text-3xl border 
               ${customBorder ? customBorder : "border-slate-700"} 
               rounded-md shadow-md py-4 px-7 cell:text-2xl cell:mx-2`}
           >
