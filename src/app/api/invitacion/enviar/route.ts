@@ -84,6 +84,7 @@ export async function POST(req: NextRequest) {
         invitacionId: body.invitacionId,
       },
     });
+  console.log(verificarSiLaInvitacionYaFueEnviada);
   // console.log(verificarSiLaInvitacionYaFueEnviada);
   // TEST
   if (!verificarSiLaInvitacionYaFueEnviada) {
@@ -96,6 +97,7 @@ export async function POST(req: NextRequest) {
         body.evento,
         body.linkFoto
       );
+      console.log(respuestaWhatsapp);
       // debug
       // console.log(respuestaWhatsapp.data);
       // console.log(respuestaWhatsapp);
@@ -117,6 +119,7 @@ export async function POST(req: NextRequest) {
           },
         }
       );
+      console.log(invitacionCreada);
 
       return NextResponse.json(
         {
