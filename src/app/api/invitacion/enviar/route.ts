@@ -19,48 +19,11 @@ async function EnviarAtravesDeLaWhatsAp(
         to: `+52${tel}`, // numero de telefono
         type: "template",
         template: {
-          name: "invitacion_boda_img", // nombre de la plantilla
+          name: "hello_world", // nombre de la plantilla
           language: {
-            code: "es_MX",
+            code: "en_US",
             policy: "deterministic",
           },
-          components: [
-            // media id vianey oscar 828470702708422
-            {
-              type: "header",
-              parameters: [
-                {
-                  type: "image",
-                  image: {
-                    link: linkFoto,
-                  },
-                },
-              ],
-            },
-            {
-              type: "body", // variables para el body
-              parameters: [
-                // intro
-                {
-                  type: "text",
-                  text: `${nombreWhats}`,
-                },
-                {
-                  // params del link nombre=Enriquetel
-                  type: "text",
-                  text: `${message}`,
-                },
-                {
-                  type: "text",
-                  text: `${linkInvitacion}`,
-                },
-                {
-                  type: "text",
-                  text: `${evento}`,
-                },
-              ],
-            },
-          ],
         },
       },
       {
