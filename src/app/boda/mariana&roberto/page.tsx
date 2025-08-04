@@ -14,7 +14,7 @@ export const metadata = {
     url: "https://www.invitandofacil.com/boda/mariana&roberto",
     images: [
       {
-        url: "https://www.invitandofacil.com/assets/images/marianaybeto/Hero.png",
+        url: "https://www.invitandofacil.com/assets/images/marianaybeto/Hero.jpg",
         width: 256,
         height: 425,
         alt: "Imagen de la boda de Arely y Bryan ",

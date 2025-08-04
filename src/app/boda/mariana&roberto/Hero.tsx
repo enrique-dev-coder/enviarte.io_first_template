@@ -15,7 +15,7 @@ const Hero = () => {
         style={{
           backgroundImage: `url(${imgHero.src})`,
         }}
-        className=" h-screen  bg-cover bg-center   bg-no-repeat  bg-blend-overlay bg-black/40 "
+        className=" h-screen  bg-cover bg-center   bg-no-repeat  bg-blend-overlay bg-black/20 "
       >
         <motion.div
           initial={{ opacity: 0, y: 5 }}
