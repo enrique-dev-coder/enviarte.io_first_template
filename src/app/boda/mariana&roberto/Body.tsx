@@ -221,14 +221,14 @@ const Body = ({
         borderColor=""
         buttonTextColor={"text-white"}
         desc={"Civil"}
-        direccion={" Me la pasan porfa, con la ubicacion de google"}
+        direccion={"Dolores Hidalgo 34307 Dolores Hidalgo 34307, 34307 Dgo."}
         hora={"8:00 pm "}
         nombre={{
-          content: " Salon tapihal vivero terraza  ",
+          content: " Salon Tapihal Vivero Terraza  ",
           color: textOlive,
           font: lora,
         }}
-        ubicacion={"https://maps.app.goo.gl/gwevZwHCgNtRgNuB7"}
+        ubicacion={"https://maps.app.goo.gl/vHDy9gxhYxT4ZSNz9"}
       />
       <PlaceCard
         show={true}
@@ -242,11 +242,11 @@ const Body = ({
         direccion={"Dolores Hidalgo 34307 Dolores Hidalgo 34307, 34307 Dgo."}
         hora={"9:00 pm "}
         nombre={{
-          content: " Salon tapihal vivero terraza  ",
+          content: " Salon Tapihal Vivero Terraza  ",
           color: textOlive,
           font: lora,
         }}
-        ubicacion={"https://share.google/qbNID0BQIZBkyhQ8S"}
+        ubicacion={"https://maps.app.goo.gl/vHDy9gxhYxT4ZSNz9"}
       />
 
       <motion.div
