@@ -56,8 +56,8 @@ const Body = ({
         buttonText="Ingresar"
         extraClases="!justify-start !mt-[16px] !bg-transparent"
         font={paris}
-        novia="Arely"
-        novio="Bryan"
+        novia="Mariana"
+        novio="Roberto"
         join="&"
         color={{
           bgColor: bgOlive,
@@ -239,14 +239,14 @@ const Body = ({
         borderColor=""
         buttonTextColor={"text-white"}
         desc={"Rececpción"}
-        direccion={" Me la pasan porfa, con la ubicacion de google"}
+        direccion={"Dolores Hidalgo 34307 Dolores Hidalgo 34307, 34307 Dgo."}
         hora={"9:00 pm "}
         nombre={{
           content: " Salon tapihal vivero terraza  ",
           color: textOlive,
           font: lora,
         }}
-        ubicacion={"https://maps.app.goo.gl/gwevZwHCgNtRgNuB7"}
+        ubicacion={"https://share.google/qbNID0BQIZBkyhQ8S"}
       />
 
       <motion.div
@@ -304,7 +304,7 @@ const Body = ({
           ]}
           sectionStyling={{
             lineColor: "bg-[#590b17]",
-            lineBg: "bg-[##590b17]/20",
+            lineBg: "bg-[#590b17]/20",
             circleColor: "stroke-[#590b17]",
             circleBg: "bg-gray-50",
             circleSoftStroke: "stroke-[#590b17]/20",
@@ -374,7 +374,7 @@ const Body = ({
         ShowFraseDeAgradecimientoInicio={true}
         ShowRegalo={false}
         ShowSobres={true}
-        ShowTransferencia={true}
+        ShowTransferencia={false}
         datosTransferencia={{
           numero: `Cuenta BBVA\n 4152 3139 5795 4915`,
           owner: "",
@@ -383,11 +383,11 @@ const Body = ({
         SobresTextColor={textOlive}
         SobresTextContent="Lluvia de sobres"
         SobresType="modern"
-        ShowLiverpool={false}
-        liverpoolNoEvento="51605247"
+        ShowLiverpool={true}
+        liverpoolNoEvento="51612156"
         showAmazon={false}
         bgLiverpoolButton={bgOlive}
-        linkLiverpool="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51605247"
+        linkLiverpool="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51612156"
       />
       <motion.div
         initial={{ scale: 0 }}
@@ -433,6 +433,12 @@ const Body = ({
           <p className="  text-4xl mb-4 cell:text-xl cell:mb-1">
             Vestido Largo
           </p>
+          <div className="p-4">
+            <p className="  border-2 border-[#62745c]  rounded   font-medium  text-4xl text-center p-4 mb-4 cell:text-xl cell:mb-1">
+              Los colores claros y sobre todo blanco quedan reservados para la
+              novia y las damas.
+            </p>
+          </div>
         </div>
         <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">
           {" "}
@@ -443,7 +449,7 @@ const Body = ({
           <p className="  text-4xl mb-4 cell:mb-1 cell:text-xl">Traje Formal</p>
         </div>
       </div>
-      {/* <motion.h2
+      <motion.h2
         initial={{ opacity: 0, y: 5 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ ease: "easeInOut", duration: 1 }}
@@ -453,44 +459,26 @@ const Body = ({
         Recomendación de hospedaje{" "}
       </motion.h2>
       <div className="flex flex-col justify-center items-center py-4">
-        <div className=" w-[80%]">
-          <Image src={FiestaLogo} alt="hotel" />
-        </div>
         <motion.h2
           initial={{ opacity: 0, y: 5 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeInOut", duration: 1 }}
           viewport={{ once: true }}
-          className={`${lora.className} text-center ${textOlive} font-bold   text-5xl cell:text-4xl py-4 `}
+          className={`${lora.className} text-center text-[#62745c] font-bold   text-5xl cell:text-4xl py-4 `}
         >
-          Fiesta Inn Saltillo{" "}
+          Hampton Inn by Hilton Durango{" "}
         </motion.h2>
-
-        <div>
-          <p
-            className={`${lora.className} text-center ${textOlive} font-medium  text-5xl cell:text-2xl py-4 px-2 `}
-          >
-            CODIGO:
-            <br /> G1TED7
-          </p>
-        </div>
         <div className={`w-[88%] ${textOlive}  rounded-md py-2 px-4`}>
-          <div className="mb-2 text-center text-xl font-semibold">
-            <h2>Reservaciones:</h2>
-            <p>443 310 8073</p>
-            <p>443 310 8052</p>
-          </div>
-
           <div className="mb-2 text-center text-xl font-semibold">
             <p>Dirección:</p>
             <p>
-              Carr. Monterrey - Saltillo No. 6607, Zona Industrial, 25270
-              Saltillo, Coah.{" "}
+              Av. Heroico Colegio Militar 101, Nueva Vizcaya, 34080 Durango,
+              Dgo.{" "}
             </p>
             <div className="w-full my-4">
-              <a href="https://maps.app.goo.gl/hEuSbe5J7m1Lpqb56">
+              <a href="https://maps.app.goo.gl/rrp5BmrkD6ZbjLXw8">
                 <button
-                  className={`${bgOlive}  w-full text-center text-white font-medium text-xl py-2 rounded-lg`}
+                  className={`bg-[#62745c]  w-full text-center text-white font-medium text-xl py-2 rounded-lg`}
                 >
                   Como llegar
                 </button>
@@ -498,7 +486,33 @@ const Body = ({
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
+      <div className="flex flex-col justify-center items-center py-4">
+        <motion.h2
+          initial={{ opacity: 0, y: 5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeInOut", duration: 1 }}
+          viewport={{ once: true }}
+          className={`${lora.className} text-center text-[#62745c] font-bold   text-5xl cell:text-4xl py-4 `}
+        >
+          Hotel Gobernador{" "}
+        </motion.h2>
+        <div className={`w-[88%] ${textOlive}  rounded-md py-2 px-4`}>
+          <div className="mb-2 text-center text-xl font-semibold">
+            <p>Dirección:</p>
+            <p>Av. 20 de Noviembre 257, Zona Centro, 34000 Durango, Dgo. </p>
+            <div className="w-full my-4">
+              <a href="https://maps.app.goo.gl/6TTbgiaH4Q1FQDYRA">
+                <button
+                  className={`bg-[#62745c]  w-full text-center text-white font-medium text-xl py-2 rounded-lg`}
+                >
+                  Como llegar
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className=" shadow-md text-center border-2  rounded-md m-2 p-2 border-[#62745c] ">
         <motion.h2
           initial={{ opacity: 0, y: 5 }}
