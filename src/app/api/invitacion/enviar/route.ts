@@ -13,17 +13,39 @@ async function EnviarAtravesDeLaWhatsAp(
 ) {
   try {
     return await axios.post(
-      `https://graph.facebook.com/v22.0/${process.env.ACCOUNT_ID}/messages`,
+      `https://graph.facebook.com/v23.0/${process.env.ACCOUNT_ID}/messages`,
       {
         messaging_product: "whatsapp",
-        to: `+52${tel}`, // numero de telefono
+        to: `+52${tel}`,
         type: "template",
         template: {
-          name: "hello_world", // nombre de la plantilla
+          name: "boda_img_2",
           language: {
-            code: "en_US",
+            code: "es_MX",
             policy: "deterministic",
           },
+          components: [
+            {
+              type: "header",
+              parameters: [
+                {
+                  type: "image",
+                  image: {
+                    link: { linkFoto },
+                  },
+                },
+              ],
+            },
+            {
+              type: "body",
+              parameters: [
+                { type: "text", text: `${nombreWhats}` },
+                { type: "text", text: `${linkInvitacion}` },
+                { type: "text", text: `${message}` },
+                { type: "text", text: `${evento}` },
+              ],
+            },
+          ],
         },
       },
       {
@@ -47,7 +69,7 @@ export async function POST(req: NextRequest) {
         invitacionId: body.invitacionId,
       },
     });
-  console.log(verificarSiLaInvitacionYaFueEnviada);
+  // console.log(verificarSiLaInvitacionYaFueEnviada);
   // console.log(verificarSiLaInvitacionYaFueEnviada);
   // TEST
   if (!verificarSiLaInvitacionYaFueEnviada) {
@@ -60,10 +82,10 @@ export async function POST(req: NextRequest) {
         body.evento,
         body.linkFoto
       );
-      console.log(respuestaWhatsapp);
       // debug
-      // console.log(respuestaWhatsapp.data);
-      // console.log(respuestaWhatsapp);
+      // console.log(body.linkFoto);
+      // console.log(respuestaWhatsapp.response);
+      // console.log(respuestaWhatsapp.response.data);
       if (respuestaWhatsapp?.status === 400) {
         return NextResponse.json(
           {
@@ -82,7 +104,7 @@ export async function POST(req: NextRequest) {
           },
         }
       );
-      console.log(invitacionCreada);
+      // console.log(invitacionCreada);
 
       return NextResponse.json(
         {
