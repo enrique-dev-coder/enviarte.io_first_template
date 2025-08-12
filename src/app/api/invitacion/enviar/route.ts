@@ -31,7 +31,7 @@ async function EnviarAtravesDeLaWhatsAp(
                 {
                   type: "image",
                   image: {
-                    link: { linkFoto },
+                    link: linkFoto,
                   },
                 },
               ],
