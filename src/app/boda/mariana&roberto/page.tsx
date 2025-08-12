@@ -46,10 +46,10 @@ const page = async ({ searchParams }: any) => {
   console.log(invitationIdForQuery);
   return (
     <Body
-      nombre={"ing. Enrique Alvarado"}
-      tel={"8441753173"}
-      pasesAsignados={"2"}
-      invitationIdForQuery={{ id: "1" }}
+      nombre={nombre}
+      tel={tel}
+      pasesAsignados={pasesAsignados}
+      invitationIdForQuery={invitationIdForQuery}
     />
   );
 };
