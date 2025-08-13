@@ -5,6 +5,7 @@ import {
   PartyPopperIcon,
   SendIcon,
   UtensilsIcon,
+  ForwardIcon,
 } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useCookies } from "react-cookie";
@@ -23,6 +24,12 @@ const menuLinks = [
     link: "/dashboard/invitados",
     icon: <PartyPopperIcon />,
     title: "Invitados Confirmados",
+  },
+  {
+    id: "4",
+    link: "/dashboard/invitacionesenviadas",
+    icon: <ForwardIcon />,
+    title: "Invitaciones Enviadas",
   },
   {
     id: "3",
