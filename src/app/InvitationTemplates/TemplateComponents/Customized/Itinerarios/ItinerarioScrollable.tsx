@@ -66,7 +66,7 @@ function Item({
       <div className="flex justify-center items-center  cell:ml-[0%] cell:gap-5 ml-[-82%] h-[200px] gap-10">
         <div
           className={`
-            w-[250px] cell:w-full cell:mr-0 cell:order-2 px-4 py-2 relative rounded-md shadow-md 
+            w-[250px] cell:w-[184px] cell:mr-0 cell:order-2 px-4 py-2 relative rounded-md shadow-md 
             ${cardBg} 
             cell:h-auto h-[100px]
             cell:py-1 

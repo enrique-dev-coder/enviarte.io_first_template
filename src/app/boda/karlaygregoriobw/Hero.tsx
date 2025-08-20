@@ -13,6 +13,7 @@ const InvitationHero1 = () => {
     <div
       style={{
         backgroundImage: "url(../../../assets/images/karlaygregorio/hero.jpeg)",
+        filter: "grayscale(100%)",
       }}
       className="
        w-full h-screen

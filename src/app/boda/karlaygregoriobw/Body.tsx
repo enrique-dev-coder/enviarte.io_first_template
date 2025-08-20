@@ -18,13 +18,13 @@ import Contador from "./Contador";
 import imgBanner from "/public/assets/images/karlaygregorio/img1.jpeg";
 import img1 from "/public/assets/images/karlaygregorio/img1.jpeg";
 import img2 from "/public/assets/images/karlaygregorio/img2.jpeg";
-import crossgold from "/public/assets/images/crossgold.png";
+import crossgold from "/public/assets/images/cross.png";
 import Sobre from "/public/assets/images/email.png";
 import DressCodeMujeres from "/public/assets/images/vestidolargo.png";
 import DressCodeHombres from "/public/assets/images/suit_icon-removebg-preview.png";
 
-const textOlive = "text-[#808000]";
-const bgOlive = "bg-[#937416]";
+const textOlive = "text-[#000]";
+const bgOlive = "bg-[#000]";
 
 const Body = ({
   nombre,
@@ -83,7 +83,7 @@ const Body = ({
           <span className={`${dancing.className}  text-6xl`}>El amor</span>
           <br />
           <span
-            className={`${montse.className} text-[#937416] text-2xl uppercase`}
+            className={`${montse.className} text-[#000] text-2xl uppercase`}
           >
             {" "}
             es paciente y bondadoso,{" "}
@@ -95,7 +95,7 @@ const Body = ({
           </span>
           <br />
           <span
-            className={`${montse.className} text-[#937416]  text-2xl uppercase`}
+            className={`${montse.className} text-[#000]  text-2xl uppercase`}
           >
             no se desvanece{" "}
           </span>
@@ -114,7 +114,7 @@ const Body = ({
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
       >
-        <Image src={imgBanner} alt="boda" />
+        <Image src={imgBanner} alt="boda" className=" grayscale" />
       </motion.div>
       <div className=" bg-white py-8">
         <motion.h2
@@ -135,17 +135,17 @@ const Body = ({
             className="flex flex-col gap-1 w-[300px] cell:w-full   py-4 my-2 text-center cell:text-2xl cell:text-center"
           >
             <p
-              className={`${dancing.className} text-[#937416]  text-[28px]  font-bold`}
+              className={`${dancing.className} text-[#000]  text-[28px]  font-bold`}
             >
               Esmeralda Ponce{" "}
             </p>
             <p
-              className={`${dancing.className} text-[#937416]  text-[28px]  font-bold`}
+              className={`${dancing.className} text-[#000]  text-[28px]  font-bold`}
             >
               +
             </p>
             <p
-              className={`${dancing.className} text-[#937416]  text-[28px]  font-bold`}
+              className={`${dancing.className} text-[#000]  text-[28px]  font-bold`}
             >
               Jaime Esquivel{" "}
             </p>
@@ -158,17 +158,17 @@ const Body = ({
             className="flex flex-col gap-1 my-2 w-[300px] cell:w-full bg-white py-4 text-center cell:text-2xl cell:text-center"
           >
             <p
-              className={`${dancing.className} text-[#937416]  text-[28px] capitalize font-bold`}
+              className={`${dancing.className} text-[#000]  text-[28px] capitalize font-bold`}
             >
               Graciana Reyes
             </p>
             <p
-              className={`${dancing.className} text-[#937416]  text-[28px]  font-bold`}
+              className={`${dancing.className} text-[#000]  text-[28px]  font-bold`}
             >
               +
             </p>
             <p
-              className={`${dancing.className} text-[#937416]  text-[28px] flex justify-center items-center  font-bold`}
+              className={`${dancing.className} text-[#000]  text-[28px] flex justify-center items-center  font-bold`}
             >
               Gregorio Bautista{" "}
               <span>
@@ -263,11 +263,11 @@ const Body = ({
           },
         ]}
         sectionStyling={{
-          lineColor: "bg-[#808000]",
-          lineBg: "bg-[#808000]/20",
-          circleColor: "stroke-[#808000]",
+          lineColor: "bg-[#000]",
+          lineBg: "bg-[#000]/20",
+          circleColor: "stroke-[#000]",
           circleBg: "bg-gray-50",
-          circleSoftStroke: "stroke-[#808000]/20",
+          circleSoftStroke: "stroke-[#000]/20",
           iconColor: "text-gray-900",
           cardBg: "bg-white",
         }}
@@ -303,7 +303,7 @@ const Body = ({
         ]}
       /> */}
       <MesaDeRegalos
-        customBorder={"border-[#937416]"}
+        customBorder={"border-[#000]"}
         FraseAgradecimientoFinalColor=""
         FraseAgradecimientoFinalFont={undefined}
         FraseAgradecimientoFinalSize=""
@@ -347,7 +347,7 @@ const Body = ({
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
       >
-        <Image src={img2} alt="boda" />
+        <Image src={img2} alt="boda" className="grayscale" />
       </motion.div>
 
       <motion.h2
@@ -374,11 +374,11 @@ const Body = ({
         <p className={`font-bold text-4xl ${textOlive} cell:text-2xl`}>
           Mujeres
         </p>
-        <p className="  text-4xl mb-4 cell:text-xl cell:mb-1 text-[#937416]">
+        <p className="  text-4xl mb-4 cell:text-xl cell:mb-1 text-[#000]">
           Vestido Largo
         </p>
         <div className="p-4">
-          <p className="  border-2 border-[#937416] text-[#937416] rounded   font-medium  text-4xl text-center p-4 mb-4 cell:text-xl cell:mb-1">
+          <p className="  border-2 border-[#000] text-[#000] rounded   font-medium  text-4xl text-center p-4 mb-4 cell:text-xl cell:mb-1">
             *Los colores colores verde olivo y sobre todo blanco quedan
             reservados para la novia y las damas.
           </p>
@@ -390,11 +390,11 @@ const Body = ({
         <p className={`font-bold text-4xl ${textOlive} cell:text-2xl`}>
           Hombres
         </p>
-        <p className="  text-4xl mb-4 cell:mb-1 cell:text-xl text-[#937416]">
+        <p className="  text-4xl mb-4 cell:mb-1 cell:text-xl text-[#000]">
           Traje Formal
         </p>
         <div className="p-4">
-          <p className="  rounded text-[#937416]   font-medium  text-4xl text-center p-4 mb-4 cell:text-xl cell:mb-1">
+          <p className="  rounded text-[#000]   font-medium  text-4xl text-center p-4 mb-4 cell:text-xl cell:mb-1">
             * No Mezclilla
           </p>
         </div>
@@ -452,7 +452,7 @@ const Body = ({
           </div>
         </div>
       </div> */}
-      <div className=" shadow-md text-center border-2  rounded-md m-2 p-2 border-[#937416] ">
+      <div className=" shadow-md text-center border-2  rounded-md m-2 p-2 border-[#000] ">
         <motion.h2
           initial={{ opacity: 0, y: 5 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -184,7 +184,9 @@ const MesaDeRegalos = ({
               Mesa de Regalo Amazon
             </p>
             <a
-              className=" bg-black text-white rounded-full px-4 py-2 my-2"
+              className={`${
+                bgLiverpoolButton ? bgLiverpoolButton : "bg-black"
+              }  text-white rounded-full px-4 py-2 my-2`}
               href={linkAmazon}
               target="_blank"
               rel="nofollow noopener"
