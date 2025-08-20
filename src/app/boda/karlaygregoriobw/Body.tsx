@@ -137,7 +137,7 @@ const Body = ({
             <p
               className={`${dancing.className} text-[#000]  text-[28px]  font-bold`}
             >
-              Esmeralda Ponce{" "}
+              Jaime Esquivel{" "}
             </p>
             <p
               className={`${dancing.className} text-[#000]  text-[28px]  font-bold`}
@@ -147,7 +147,7 @@ const Body = ({
             <p
               className={`${dancing.className} text-[#000]  text-[28px]  font-bold`}
             >
-              Jaime Esquivel{" "}
+              Esmeralda Ponce{" "}
             </p>
           </motion.div>
           <motion.div
@@ -158,9 +158,12 @@ const Body = ({
             className="flex flex-col gap-1 my-2 w-[300px] cell:w-full bg-white py-4 text-center cell:text-2xl cell:text-center"
           >
             <p
-              className={`${dancing.className} text-[#000]  text-[28px] capitalize font-bold`}
+              className={`${dancing.className} text-[#000]  text-[28px] flex justify-center items-center  font-bold`}
             >
-              Graciana Reyes
+              Gregorio Bautista{" "}
+              <span>
+                <Image src={crossgold} alt="cross" className=" w-10" />
+              </span>
             </p>
             <p
               className={`${dancing.className} text-[#000]  text-[28px]  font-bold`}
@@ -168,12 +171,9 @@ const Body = ({
               +
             </p>
             <p
-              className={`${dancing.className} text-[#000]  text-[28px] flex justify-center items-center  font-bold`}
+              className={`${dancing.className} text-[#000]  text-[28px] capitalize font-bold`}
             >
-              Gregorio Bautista{" "}
-              <span>
-                <Image src={crossgold} alt="cross" className=" w-10" />
-              </span>
+              Graciana Reyes
             </p>
           </motion.div>
         </div>
@@ -247,7 +247,7 @@ const Body = ({
             id: 4,
             evento: " Vals",
             hora: "9:00 pm",
-            Icon: "dinner",
+            Icon: "dance",
           },
           {
             id: 4,
@@ -379,8 +379,8 @@ const Body = ({
         </p>
         <div className="p-4">
           <p className="  border-2 border-[#000] text-[#000] rounded   font-medium  text-4xl text-center p-4 mb-4 cell:text-xl cell:mb-1">
-            *Los colores colores verde olivo y sobre todo blanco quedan
-            reservados para la novia y las damas.
+            *Los colores verde olivo y sobre todo blanco quedan reservados para
+            la novia y las damas.
           </p>
         </div>
       </div>
@@ -477,7 +477,7 @@ const Body = ({
         styling={{
           confirmButton: {
             backgroundColor: bgOlive,
-            disabledBackgroundColor: "bg-[#a54068]/50",
+            disabledBackgroundColor: "bg-[#000]/50",
           },
           section: {
             backgroundColor: "bg-white",
