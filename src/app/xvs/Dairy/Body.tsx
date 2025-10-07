@@ -105,14 +105,14 @@ const Body = ({
               className={` text-2xl font-bold  ${analogist.className} ${lilaFuerte}`}
             >
               Israel Fuentes
-              <br />y <br /> Pedro Alejandro López Perales
+              <br />y <br /> Gaby Contreras
             </p>
           </motion.div>
         </div>
       </div>
 
       <Contador
-        fechaEvento={new Date("2025-11-07T00:00:00")}
+        fechaEvento={new Date("2025-11-01T00:00:00")}
         fechaString="Sabado, 01 de Noviembre de 2025"
         fotoContador="bg-[url('/assets/images/xvs/Dairy/img7.jpeg')]"
       />
@@ -132,7 +132,7 @@ const Body = ({
           buttonTextColor={"text-[#FDECEF]"}
           desc={"Ceremonia Religiosa"}
           direccion={"Emilio Arizpe de la Masa #1899 Rancho el Mimbre"}
-          hora={"7:20 pm "}
+          hora={"7:30 pm "}
           nombre={{
             content: "Capilla de Hacienda el Mimbre",
             color: textOlive,
@@ -213,7 +213,7 @@ const Body = ({
             {
               id: 4,
               evento: " Cena",
-              hora: "10:00 pm",
+              hora: "9:50 pm",
               Icon: "dinner",
             },
           ]}
@@ -377,7 +377,7 @@ const Body = ({
           viewport={{ once: true }}
           className={`${textOlive}  uppercase text-center ${champagne.className}  text-[28px] p-4 font-bold`}
         >
-          Fecha límite de confirmación 24 de Octubre de 2025
+          Fecha límite de confirmación 20 de Octubre de 2025
         </motion.p>
       </div>
       <div className="relative">
