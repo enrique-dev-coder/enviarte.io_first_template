@@ -1,6 +1,6 @@
 "use client";
 import { useTimer } from "react-timer-hook";
-import { champagne, paris, analogist } from "@/fonts";
+import { champagne, paris, analogist, lora } from "@/fonts";
 import { motion } from "framer-motion";
 
 const Numero = ({ num, desc }: { num: any; desc: string }) => {
@@ -10,7 +10,7 @@ const Numero = ({ num, desc }: { num: any; desc: string }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ ease: "easeInOut", duration: 1 }}
       viewport={{ once: true }}
-      className={`${analogist.className} font-bold flex flex-col justify-center items-center text-[#FDECEF]`}
+      className={`${lora.className} font-bold flex flex-col justify-center items-center text-[#FDECEF]`}
     >
       <div
         className={` w-[80px] h-[80px] cell:w-[48px] flex justify-center items-center rounded-lg px-2`}

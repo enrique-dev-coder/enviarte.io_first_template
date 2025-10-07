@@ -6,7 +6,7 @@ import PlaceCard from "@/app/InvitationTemplates/TemplateComponents/Modern/Place
 import MesaDeRegalos from "@/app/InvitationTemplates/TemplateComponents/Customized/CommonComponents/MesaDeRegalos";
 import SongButtonPlayer from "@/app/InvitationTemplates/Common/SongButtonPlayer";
 import ItinerarioScrollable from "@/app/InvitationTemplates/TemplateComponents/Customized/Itinerarios/ItinerarioScrollable";
-import { lora, champagne, montse, paris, analogist } from "@/fonts";
+import { champagne, montse, paris, lora, allura } from "@/fonts";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Hero from "./Hero";
@@ -49,7 +49,7 @@ const Body = ({
     >
       <IngresarBoton
         buttonText="Ingresar"
-        extraClases="  !bg-transparent"
+        extraClases="!justify-start !mt-[16px]   !bg-transparent"
         font={paris}
         novia="Dairy"
         novio="Crisbel"
@@ -75,7 +75,7 @@ const Body = ({
           className={`w-full text-center px-6 pt-6`}
         >
           <span
-            className={`${analogist.className} text-4xl font-medium bg-gradient-to-r from-[#D55D8D] to-[#D4A142] bg-clip-text text-transparent`}
+            className={`${lora.className} text-4xl font-medium bg-gradient-to-r from-[#D55D8D] to-[#D4A142] bg-clip-text text-transparent`}
           >
             La vida esta hecha de momentos inolvidables, y uno de los mas
             especiales está por llegar.
@@ -105,12 +105,12 @@ const Body = ({
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ ease: "easeInOut", duration: 1 }}
               viewport={{ once: true }}
-              className={` ${textOlive} ${analogist.className} font-semibold text-center  text-[28px]    py-4 `}
+              className={` ${textOlive} ${lora.className} font-semibold text-center  text-[28px]    py-4 `}
             >
               Con la bendición de mis papás
             </motion.h2>
             <p
-              className={` text-2xl font-bold  ${analogist.className} ${lilaFuerte}`}
+              className={` text-2xl font-bold  ${lora.className} ${lilaFuerte}`}
             >
               Israel Fuentes
               <br />y <br /> Gaby Contreras
@@ -121,7 +121,7 @@ const Body = ({
 
       <Contador
         fechaEvento={new Date("2025-11-01T00:00:00")}
-        fechaString="Sabado, 01 de Noviembre de 2025"
+        fechaString="Sábado, 01 de Noviembre de 2025"
         fotoContador="bg-[url('/assets/images/xvs/Dairy/img7.jpeg')]"
       />
       <div
@@ -144,7 +144,7 @@ const Body = ({
           nombre={{
             content: "Capilla de Hacienda el Mimbre",
             color: textOlive,
-            font: analogist,
+            font: lora,
           }}
           ubicacion={"https://maps.app.goo.gl/gMXJBKp4fnMe5MQz9"}
         />
@@ -162,7 +162,7 @@ const Body = ({
           nombre={{
             content: " Hacienda el Mimbre ",
             color: textOlive,
-            font: analogist,
+            font: lora,
           }}
           ubicacion={"https://maps.app.goo.gl/gMXJBKp4fnMe5MQz9"}
         />
@@ -243,7 +243,7 @@ const Body = ({
           className={`w-full text-center px-6 pt-6`}
         >
           <span
-            className={`${analogist.className} text-4xl font-medium bg-gradient-to-r from-[#D55D8D] to-[#D4A142] bg-clip-text text-transparent`}
+            className={`${lora.className} text-4xl font-medium bg-gradient-to-r from-[#D55D8D] to-[#D4A142] bg-clip-text text-transparent`}
           >
             Disfruta la fiesta el resto de la noche!!!
           </span>
@@ -328,7 +328,7 @@ const Body = ({
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeInOut", duration: 1 }}
           viewport={{ once: true }}
-          className={`${analogist.className} text-center ${textOlive} font-bold underline   text-5xl cell:text-6xl py-4 `}
+          className={`${lora.className} text-center ${textOlive} font-bold underline   text-5xl cell:text-6xl py-4 `}
         >
           Formal
         </motion.h2>
@@ -336,22 +336,22 @@ const Body = ({
           {" "}
           <Image alt="boda" src={DressCodeMujeres} className="w-[50%]" />
           <p
-            className={`${analogist.className} font-bold text-4xl ${textOlive} cell:text-4xl`}
+            className={`${lora.className} font-bold text-4xl ${textOlive} cell:text-4xl`}
           >
             Mujeres
           </p>
           <p className="  text-4xl mb-4 cell:text-4xl cell:mb-1">Vestido</p>
           <p
-            className={`text-pink-400 ${analogist.className} bg-white    rounded-md border border-pink-500 text-4xl p-4 m-4  font-semibold cell:text-3xl cell:mb-1 text-center px-4 my-2"`}
+            className={`text-pink-400 ${lora.className} bg-white    rounded-md border border-pink-500 text-4xl p-4 m-4  font-semibold cell:text-3xl cell:mb-1 text-center px-4 my-2"`}
           >
-            ❗❗ Nos reservamos el color rosa para la quinceañera{" "}
+            Nos reservamos el color rosa para la quinceañera{" "}
           </p>
         </div>
         <div className="w-6/12 flex flex-col justify-center items-center cell:w-full">
           {" "}
           <Image alt="boda" src={DressCodeHombres} className="w-[35%]" />
           <p
-            className={`${analogist.className} font-bold text-4xl ${textOlive} cell:text-4xl`}
+            className={`${lora.className} font-bold text-4xl ${textOlive} cell:text-4xl`}
           >
             Hombres
           </p>
@@ -372,9 +372,9 @@ const Body = ({
           whileInView={{ scale: 1 }}
           transition={{ ease: "easeInOut", duration: 1 }}
           viewport={{ once: true }}
-          className={`${textOlive}  text-center ${analogist.className}  text-[28px] p-4 `}
+          className={`${textOlive}  text-center ${lora.className}  text-[28px] p-4 `}
         >
-          Confirma tu asistencia en el siguiente boton
+          Confirma tu asistencia en el siguiente botón
         </motion.p>
       </div>
       <div>
@@ -385,7 +385,7 @@ const Body = ({
           viewport={{ once: true }}
           className={`${textOlive}  uppercase text-center ${champagne.className}  text-[28px] p-4 font-bold`}
         >
-          Fecha límite de confirmación 20 de Octubre de 2025
+          Fecha límite de confirmación 17 de Octubre de 2025
         </motion.p>
       </div>
       <div className="relative">

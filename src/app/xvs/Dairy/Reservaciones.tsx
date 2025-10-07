@@ -1,6 +1,6 @@
 "use client";
 import { useTimer } from "react-timer-hook";
-import { champagne, paris, analogist } from "@/fonts";
+import { champagne, paris, analogist, lora } from "@/fonts";
 import { motion } from "framer-motion";
 
 const Reservaciones = ({
@@ -39,7 +39,7 @@ const Reservaciones = ({
           whileInView={{ scale: 1 }}
           transition={{ ease: "easeInOut", duration: 1 }}
           viewport={{ once: true }}
-          className={`${analogist.className} text-[#FDECEF]  text-center text-3xl font-bold mb-[32px] 
+          className={`${lora.className} text-[#FDECEF]  text-center text-3xl font-bold mb-[32px] 
 
            cell:mb-[18px] cell:w-[80%] cell:mx-auto`}
         >
@@ -60,7 +60,7 @@ const Reservaciones = ({
           whileInView={{ scale: 1 }}
           transition={{ ease: "easeInOut", duration: 1 }}
           viewport={{ once: true }}
-          className={`${analogist.className} text-[#FDECEF]  text-center text-6xl font-bold mb-[32px] 
+          className={`${lora.className} text-[#FDECEF]  text-center text-6xl font-bold mb-[32px] 
 
            cell:mb-[18px] cell:w-[80%] cell:mx-auto`}
         >
