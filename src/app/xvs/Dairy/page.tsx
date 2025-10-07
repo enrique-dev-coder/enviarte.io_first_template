@@ -4,11 +4,11 @@ import prisma from "../../../../prisma";
 
 export const metadata = {
   metadataBase: new URL("https://www.invitandofacil.com"),
-  title: "Xvs Leyda",
+  title: "Xvs Dairy",
   description: "Invitaciones digitales para eventos",
   openGraph: {
     siteName: "Xvs Dairy ",
-    title: "Xvs Leyda",
+    title: "Xvs Dairy",
     description: "Te invitamos a  mis xvs.",
     url: "https://www.invitandofacil.com/xvs/Leyda",
     images: [
