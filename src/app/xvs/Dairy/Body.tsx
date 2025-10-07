@@ -19,7 +19,7 @@ import img1v1 from "/public/assets/images/xvs/Leyda/img1.jpeg";
 import img2 from "/public/assets/images/xvs/Leyda/img2.jpeg";
 import img4 from "/public/assets/images/xvs/Dairy/img4.jpeg";
 import img6 from "/public/assets/images/xvs/Dairy/img2.jpeg";
-import img7 from "/public/assets/images/xvs/Dairy/img8.jpeg";
+import img7 from "/public/assets/images/xvs/Dairy/img7.jpeg";
 import img8 from "/public/assets/images/xvs/Dairy/img3.jpeg";
 import img12 from "/public/assets/images/xvs/Dairy/img1.jpeg";
 import { WhatsIcon } from "@/components/Dashboard/EnviarLista/Icons";
@@ -209,7 +209,7 @@ const Body = ({
             {
               id: 2,
               evento: "Ceremonia religiosa ",
-              hora: "7:20 pm",
+              hora: "7:30 pm",
               Icon: "church",
             },
             {
