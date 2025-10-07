@@ -17,7 +17,7 @@ import fondoBonito from "/public/assets/images/xvs/Dairy/fondobonito.jpg";
 import img1 from "/public/assets/images/xvs/Leyda/Hero.jpeg";
 import img1v1 from "/public/assets/images/xvs/Leyda/img1.jpeg";
 import img2 from "/public/assets/images/xvs/Leyda/img2.jpeg";
-import img5 from "/public/assets/images/xvs/Leyda/img5.jpeg";
+import img4 from "/public/assets/images/xvs/Dairy/img4.jpeg";
 import img6 from "/public/assets/images/xvs/Dairy/img2.jpeg";
 import img7 from "/public/assets/images/xvs/Dairy/img8.jpeg";
 import img8 from "/public/assets/images/xvs/Dairy/img3.jpeg";
@@ -84,6 +84,14 @@ const Body = ({
           <br />
           <br />
         </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeInOut", duration: 1 }}
+          viewport={{ once: true }}
+        >
+          <Image src={img4} alt="boda" />
+        </motion.div>
         <div>
           <motion.div
             initial={{ scale: 0 }}
