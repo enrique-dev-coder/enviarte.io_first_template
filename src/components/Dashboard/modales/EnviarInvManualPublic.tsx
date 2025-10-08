@@ -21,7 +21,11 @@ import {
 
 import { objetoAParametrosURL } from "@/utils/operaciones";
 
-const EnviarInvManual = ({ invitacionLink }: { invitacionLink: string }) => {
+const EnviarInvManualPublic = ({
+  invitacionLink,
+}: {
+  invitacionLink: string;
+}) => {
   const {
     register,
     handleSubmit,
@@ -37,25 +41,19 @@ const EnviarInvManual = ({ invitacionLink }: { invitacionLink: string }) => {
 
   const generatedLinkRef = useRef(null);
 
-  // TODO: mejorar el multidioma
-
-  const validacionIngles =
-    invitacionLink === "https://www.invitandofacil.com/xvs/patita";
-
   // TODO: ver si puedo quitar que se cierre el modal cuando se le pica en el overlay
   return (
     <div>
       <Dialog>
         <DialogTrigger>
-          <button className=" shadow-sm rounded-md h-[110px] bg-purple-200 flex flex-col items-center justify-center  text-purple-950 gap-1 py-2 px-6 ">
-            <PencilRulerIcon size={40} />
-            <p className="font-medium">
-              Genera un link personalizado para un invitado
+          <button className=" shadow-sm rounded-full  bg-white flex flex-col items-center justify-center   gap-1 py-3 px-4 ">
+            <p className="font-medium ">
+              ✨ Genera un link personalizado para un invitado
             </p>{" "}
           </button>
         </DialogTrigger>
         <DialogContent
-          className="bg-white "
+          className="bg-white cell:w-[320px] "
           clearFormState={() => {
             reset({ nombre: "", tel: "", pasesAsignados: "" });
             setShowLink(false);
@@ -63,21 +61,20 @@ const EnviarInvManual = ({ invitacionLink }: { invitacionLink: string }) => {
         >
           <DialogHeader>
             <DialogTitle>
-              <p className=" tracking-wide">
-                Rellena los campos, después envia tu link personalizado usando
+              <p className=" tracking-wide cell:text-xs">
+                Rellena los campos, después envía tu link personalizado usando
                 tu WhatsApp 🥳
               </p>
             </DialogTitle>
-            <DialogDescription>
+            <DialogDescription className="w-[100%]">
               <form
                 onSubmit={handleSubmit((data) => {
                   setShowLink(true);
                   setGeneratedLink(
-                    `${
-                      !linkEnglish
-                        ? invitacionLink
-                        : "https://www.invitandofacil.com/xvs/en/patita"
-                    }?${objetoAParametrosURL(data)}`
+                    `${data.linkInvitacion}?${objetoAParametrosURL({
+                      nombre: data.nombre,
+                      pasesAsignados: data.pasesAsignados,
+                    })}`
                   );
                 })}
                 className="py-1 flex flex-col gap-4 "
@@ -91,30 +88,22 @@ const EnviarInvManual = ({ invitacionLink }: { invitacionLink: string }) => {
                     {...register("nombre")}
                     type="text"
                     required
-                    className="rounded focus:ring-purple-950  focus:border-1 focus:border-purple-950 placeholder:text-sm"
-                    placeholder="ej. Enrique Alvarado, Dra. Anabell Alvarado, Sr. Gustavo"
+                    className="rounded focus:ring-purple-950  focus:border-1 focus:border-purple-950 placeholder:text-sm cell:text-xs"
+                    placeholder="ej. Enrique Alvarado, Dra. Anabell Alvarado"
                   />
                 </div>
                 <div className="flex w-[95%] gap-2">
                   <div className="flex flex-col gap-1 w-[70%]">
-                    <label className="font-medium">
-                      Teléfono de tu invitado {"(Opcional)"}
-                    </label>
+                    <label className="font-medium">Link de tu invitacion</label>
                     <input
-                      {...register("tel", {
-                        pattern: {
-                          value: /^[0-9]{10}$/,
-                          message:
-                            "Porfavor, escribe tu celular solo con números, recuerda deben ser 10 digitos :)",
-                        },
-                      })}
+                      {...register("linkInvitacion")}
                       type="text"
                       className="rounded  focus:ring-purple-950  focus:border-1 focus:border-purple-950 placeholder:text-sm"
-                      placeholder="ej. 8441753174"
+                      placeholder="ej. https://www.invitandofacil.com/boda/mariana&roberto"
                     />
                     <>
                       <p className=" text-sm  text-red-500 px-2">
-                        {errors?.tel?.message}
+                        {errors?.linkInvitacion?.message}
                       </p>
                     </>
                   </div>
@@ -126,31 +115,19 @@ const EnviarInvManual = ({ invitacionLink }: { invitacionLink: string }) => {
                     <input
                       {...register("pasesAsignados")}
                       required
-                      className="rounded focus:ring-purple-950  focus:border-1 focus:border-purple-950"
+                      className="rounded focus:ring-purple-950  focus:border-1 focus:border-purple-950 cell:text-xs"
                       type="number"
                       placeholder="ej. 2"
                     />
                   </div>
                 </div>
-                {validacionIngles ? (
-                  <div>
-                    <button
-                      onClick={() => setLinkEnglish(!linkEnglish)}
-                      className={`cursor-pointer ${
-                        linkEnglish ? "bg-purple-900" : "bg-purple-900/40"
-                      }  text-white rounded-full px-4`}
-                    >
-                      Usa Link en Ingles
-                    </button>
-                  </div>
-                ) : null}
                 <button
                   // dato curioso:
                   // usar el type submit para que no se pongan lo que envias como params en la url
                   // nombre=Enrique&tel=8441753173&pasesAsignados=1
                   type="submit"
                   disabled={disableButton}
-                  className=" disabled:bg-purple-950/50 bg-purple-950 w-[95%] text-white flex justify-center items-center py-2 rounded-md shadow-sm gap-1"
+                  className=" disabled:bg-purple-950/50 bg-purple-950 w-[95%] text-white flex justify-center items-center py-2 rounded-md shadow-sm gap-1 cell:text-xs"
                 >
                   <MousePointerClickIcon />
                   <p>Link personalizado de tu invitacion</p>
@@ -175,7 +152,6 @@ const EnviarInvManual = ({ invitacionLink }: { invitacionLink: string }) => {
                   </div>
 
                   <div className="flex  border-2 border-solid  border-purple-950 rounded-sm  cursor-pointer items-center bg-white p-2 m-2 ">
-                    {/*si esto empieza ya con el link se desborda el texto , por obras misteriosas de html y css*/}
                     <p
                       ref={generatedLinkRef}
                       className="text-sm  text-wrap w-[90%]"
@@ -203,4 +179,4 @@ const EnviarInvManual = ({ invitacionLink }: { invitacionLink: string }) => {
   );
 };
 
-export default EnviarInvManual;
+export default EnviarInvManualPublic;

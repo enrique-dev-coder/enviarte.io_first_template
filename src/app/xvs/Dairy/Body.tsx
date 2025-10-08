@@ -168,8 +168,8 @@ const Body = ({
         />
       </div>
       <Reservaciones
-        nombreInvitado="Fam.Prueba"
-        pases="4"
+        nombreInvitado={nombre}
+        pases={pasesAsignados}
         fotoContador="bg-[url('/assets/images/xvs/Dairy/img9.jpeg')]"
       />
       {/* <motion.div
