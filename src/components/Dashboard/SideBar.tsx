@@ -6,6 +6,7 @@ import {
   SendIcon,
   UtensilsIcon,
   ForwardIcon,
+  AlarmClock,
 } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useCookies } from "react-cookie";
@@ -30,6 +31,12 @@ const menuLinks = [
     link: "/dashboard/invitacionesenviadas",
     icon: <ForwardIcon />,
     title: "Invitaciones Enviadas",
+  },
+  {
+    id: "5",
+    link: "/dashboard/recordatorio",
+    icon: <AlarmClock />,
+    title: "Enviar Recordatorio",
   },
   {
     id: "3",
