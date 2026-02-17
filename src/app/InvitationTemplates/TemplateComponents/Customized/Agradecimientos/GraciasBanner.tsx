@@ -32,6 +32,7 @@ const GraciasBanner = ({
       }
     | undefined;
 }) => {
+  console.log(name);
   return showBanner ? (
     <div className=" bg-white py-8">
       <motion.h2
@@ -48,7 +49,7 @@ const GraciasBanner = ({
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ ease: "easeInOut", duration: 1 }}
         viewport={{ once: true }}
-        className={`${name?.font.className} ${frase?.styling.color}  ${frase?.styling.size} text-center py-4 px-8`}
+        className={`${name?.font.className} ${frase?.styling.color}  ${frase?.styling.size} text-center py-4 px-8 font-semibold`}
       >
         {name?.content}
       </motion.p>
