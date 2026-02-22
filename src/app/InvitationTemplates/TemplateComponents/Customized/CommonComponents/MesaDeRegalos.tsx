@@ -147,7 +147,7 @@ const MesaDeRegalos = ({
         )}
         {ShowLiverpool && (
           <div
-            className={` w-[400px] bg-white cell:w-[90%] text-center flex flex-col items-center text-3xl border 
+            className={` w-[400px] ${bgCard} cell:w-[90%] text-center flex flex-col items-center text-3xl border 
          ${customBorder ? customBorder : "border-slate-700"} 
          rounded-md shadow-md py-4 px-7 cell:text-2xl cell:mx-2`}
           >

@@ -342,8 +342,9 @@ const Body = ({
           },
         ]}
       /> */}
-      {/* <MesaDeRegalos
-        customBorder={"border-[#a54068]"}
+      <MesaDeRegalos
+        bgCard={extraBg}
+        customBorder={"border-[#FF9D23]"}
         FraseAgradecimientoFinalColor=""
         FraseAgradecimientoFinalFont={undefined}
         FraseAgradecimientoFinalSize=""
@@ -361,10 +362,10 @@ const Body = ({
         SectionTitleColor={textOlive}
         SectionTitleFont={dancing}
         ShowFraseDeAgradecimientoFinal={false}
-        ShowFraseDeAgradecimientoInicio={true}
+        ShowFraseDeAgradecimientoInicio={false}
         ShowRegalo={false}
         ShowSobres={true}
-        ShowTransferencia={true}
+        ShowTransferencia={false}
         datosTransferencia={{
           numero: `Cuenta BBVA\n 4152 3139 5795 4915`,
           owner: "",
@@ -373,13 +374,14 @@ const Body = ({
         SobresTextColor={textOlive}
         SobresTextContent="Lluvia de sobres"
         SobresType="modern"
-        backGround=""
+        backGround={extraBg}
         ShowLiverpool={true}
-        liverpoolNoEvento="51605247"
+        liverpoolNoEvento="51953387"
         showAmazon={false}
         bgLiverpoolButton={bgOlive}
-        linkLiverpool="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51605247"
-      /> */}
+        linkLiverpool="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51953387
+        "
+      />
       {/* <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
