@@ -119,7 +119,7 @@ function Item({
           <div>
             <div
               className={`${circleBg}
-            w-[70px] shadow-sm flex justify-center items-center h-[70px]  z-30  rounded-full
+            w-[70px]  flex justify-center items-center h-[70px]  z-30  rounded-full
             `}
             >
               <div

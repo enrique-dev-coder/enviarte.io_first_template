@@ -44,13 +44,17 @@ const page = async ({ searchParams }: any) => {
   const pathname = headersList.get("x-pathname"); // ejemplo: /boda/danielayjosepablo
   const invitationIdForQuery = await getInvitationId(pathname as string); // { id: '65df62e264903d5c4bb5053e' }
   console.log(invitationIdForQuery);
+  const extraBg = "bg-[#f2ebe2]";
+
   return (
-    <Body
-      nombre={"Invitado"}
-      tel={"8441753173"}
-      pasesAsignados={"2"}
-      invitationIdForQuery={{ id: "2" }}
-    />
+    <div className={`${extraBg} `}>
+      <Body
+        nombre={"Invitado"}
+        tel={"8441753173"}
+        pasesAsignados={"2"}
+        invitationIdForQuery={{ id: "2" }}
+      />
+    </div>
   );
 };
 

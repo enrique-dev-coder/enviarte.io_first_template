@@ -8,8 +8,10 @@ const GraciasBanner = ({
   frase,
   name,
   pases,
+  backgroundSection,
 }: {
   showBanner: boolean | undefined;
+  backgroundSection?: string | undefined;
   frase:
     | {
         content: string;
@@ -32,9 +34,8 @@ const GraciasBanner = ({
       }
     | undefined;
 }) => {
-  console.log(name);
   return showBanner ? (
-    <div className=" bg-white py-8">
+    <div className={`${backgroundSection || "bg-white"} py-8`}>
       <motion.h2
         initial={{ opacity: 0, y: 5 }}
         whileInView={{ opacity: 1, y: 0 }}

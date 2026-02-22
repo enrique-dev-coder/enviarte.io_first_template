@@ -46,6 +46,8 @@ import DressCodeHombres from "/public/assets/images/suit_icon-removebg-preview.p
 const textOlive = "text-[#FFB22C]";
 const bgOlive = "bg-[#FFB22C]";
 const thirdColor = "text-[#FF9D23]";
+const extraBg = "bg-[#f2ebe2]";
+
 const Body = ({
   nombre,
   tel,
@@ -60,23 +62,25 @@ const Body = ({
   return (
     <InvitationContainer
       spBackground="none"
-      songLink="/assets/songs/arelyybryan.mp3"
+      songLink="/assets/songs/luzygustavo.mp3"
     >
       <IngresarBoton
         buttonText="Ingresar"
+        bgCuadrito={extraBg}
         extraClases="!justify-start !mt-[16px] !bg-transparent "
         font={paris}
         novia="Luz"
         novio="Gustavo"
         join="y"
         color={{
-          bgColor: bgOlive,
-          titleColor: textOlive,
+          bgColor: "bg-[#FF9D23]",
+          titleColor: thirdColor,
           textButtonColor: "text-white",
         }}
       />
       <Hero />
       <GraciasBanner
+        backgroundSection={extraBg}
         showBanner={true}
         frase={{
           content: "Invitación válida para:",
@@ -102,7 +106,7 @@ const Body = ({
       >
         <Image src={imgBanner} alt="boda" />
       </motion.div>
-      <div className=" bg-white py-8">
+      <div className={`${extraBg} py-8`}>
         <motion.h2
           initial={{ opacity: 0, y: 5 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -113,7 +117,7 @@ const Body = ({
         >
           Con la bendición de nuestros padres
         </motion.h2>
-        <div>
+        <div className={`${extraBg} py-8`}>
           <motion.div
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
@@ -129,7 +133,7 @@ const Body = ({
             <p
               className={`${lora.className} text-[24px] text-stone-600  font-medium`}
             >
-              María Concepción Morales Velázquez{" "}
+              Concepción Morales Velázquez{" "}
             </p>
             <p
               className={`${lora.className} text-[24px] text-stone-600  font-medium`}
@@ -150,7 +154,7 @@ const Body = ({
             whileInView={{ scale: 1 }}
             transition={{ ease: "easeInOut", duration: 0.5, delay: 0.5 }}
             viewport={{ once: true }}
-            className="flex flex-col gap-1 my-2 w-[300px] cell:w-full bg-white py-4 text-center cell:text-2xl cell:text-center"
+            className="flex flex-col gap-1 my-2 w-[300px] cell:w-full py-4 text-center cell:text-2xl cell:text-center"
           >
             <p
               className={`${paris.className} text-4xl font-bold ${thirdColor}`}
@@ -189,6 +193,7 @@ const Body = ({
         <Image src={img16} alt="boda" />
       </motion.div>
       <PlaceCard
+        bgCard={extraBg}
         show={true}
         titleColor={textOlive}
         titleFont={dancing}
@@ -197,18 +202,19 @@ const Body = ({
         buttonTextColor={"text-white"}
         desc={"Misa"}
         direccion={
-          "Blvd. Pedro Figueroa s/n, Real de Peña, 25210 Saltillo, Coah."
+          "C. María Trinidad Sánchez 975, Los Valdez, 25209 Saltillo, Coah."
         }
         hora={"5:00 pm "}
         nombre={{
-          content: "Parroquia San Pablo Apostol",
+          content: "Parroquia Santiago Apostol",
           color: textOlive,
           font: lora,
         }}
-        ubicacion={"https://maps.app.goo.gl/bLcrrrbvTBSeXFB68"}
+        ubicacion={"https://maps.app.goo.gl/eTghhnXbgQdopXvK9"}
       />
       <PlaceCard
         show={true}
+        bgCard={extraBg}
         titleColor={textOlive}
         titleFont={dancing}
         bgButtonColor={bgOlive}
@@ -225,6 +231,7 @@ const Body = ({
         ubicacion={"https://maps.app.goo.gl/pydsCXpQHtfbGhaj6"}
       />
       <PlaceCard
+        bgCard={extraBg}
         show={true}
         titleColor={textOlive}
         titleFont={dancing}
@@ -276,13 +283,13 @@ const Body = ({
           },
           {
             id: 1,
-            evento: `Recepción`,
+            evento: `Civil`,
             hora: "6:30 pm",
             Icon: "recepcion",
           },
           {
             id: 4,
-            evento: " Cena",
+            evento: "Recepción",
             hora: "8:00 pm",
             Icon: "dinner",
           },
@@ -291,7 +298,7 @@ const Body = ({
           lineColor: "bg-[#FFB22C]",
           lineBg: "bg-[#FFB22C]/20",
           circleColor: "stroke-[#FFB22C]",
-          circleBg: "bg-gray-50",
+          circleBg: extraBg,
           circleSoftStroke: "stroke-[#FFB22C]/20",
           iconColor: "text-gray-900",
           cardBg: "bg-white",
@@ -423,13 +430,13 @@ const Body = ({
         </p>
         <p className="  text-4xl mb-4 cell:mb-1 cell:text-xl">Traje Formal</p>
       </div>
-      {/* <div className=" shadow-md text-center border-2  rounded-md m-2 p-2 border-[#a54068] ">
+      <div className=" shadow-md text-center border-2  rounded-md m-2 p-2 border-[#FF9D23] ">
         <motion.h2
           initial={{ opacity: 0, y: 5 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeInOut", duration: 1 }}
           viewport={{ once: true }}
-          className={`${dancing.className} text-center ${textOlive}    text-5xl cell:text-3xl py-1 `}
+          className={`${lora.className} text-center ${textOlive}    text-5xl cell:text-3xl py-1 `}
         >
           No Niños
         </motion.h2>
@@ -438,7 +445,7 @@ const Body = ({
           Queremos que vivas este momento tan especial junto a nosotros, por
           ello hemos decidido que el evento sea solo para adultos.
         </p>
-      </div> */}
+      </div>
       <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
