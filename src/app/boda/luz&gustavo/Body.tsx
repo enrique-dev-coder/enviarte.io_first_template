@@ -43,9 +43,9 @@ import Sobre from "/public/assets/images/email.png";
 import DressCodeMujeres from "/public/assets/images/vestidolargo.png";
 import DressCodeHombres from "/public/assets/images/suit_icon-removebg-preview.png";
 
-const textOlive = "text-[#FFB22C]";
-const bgOlive = "bg-[#FFB22C]";
-const thirdColor = "text-[#FF9D23]";
+const textOlive = "text-[#7A553A]";
+const bgOlive = "bg-[#7A553A]";
+const thirdColor = "text-[#7A553A]";
 const extraBg = "bg-[#f2ebe2]";
 
 const Body = ({
@@ -73,7 +73,7 @@ const Body = ({
         novio="Gustavo"
         join="y"
         color={{
-          bgColor: "bg-[#FF9D23]",
+          bgColor: "bg-[#7A553A]",
           titleColor: thirdColor,
           textButtonColor: "text-white",
         }}
@@ -113,7 +113,7 @@ const Body = ({
           transition={{ ease: "easeInOut", duration: 1 }}
           viewport={{ once: true }}
           style={{ lineHeight: "3rem" }}
-          className={`${paris.className} ${thirdColor} text-center  text-[42px]    py-4 `}
+          className={`${lora.className} ${thirdColor} text-center  text-[42px]    py-4 `}
         >
           Con la bendición de nuestros padres
         </motion.h2>
@@ -295,11 +295,11 @@ const Body = ({
           },
         ]}
         sectionStyling={{
-          lineColor: "bg-[#FFB22C]",
-          lineBg: "bg-[#FFB22C]/20",
-          circleColor: "stroke-[#FFB22C]",
+          lineColor: "bg-[#7A553A]",
+          lineBg: "bg-[#7A553A]/20",
+          circleColor: "stroke-[#7A553A]",
           circleBg: extraBg,
-          circleSoftStroke: "stroke-[#FFB22C]/20",
+          circleSoftStroke: "stroke-[#7A553A]/20",
           iconColor: "text-gray-900",
           cardBg: "bg-white",
         }}
@@ -442,7 +442,6 @@ const Body = ({
         >
           No Niños
         </motion.h2>
-        <p>Niños en casa descansando y padres disfrutando.</p>
         <p>
           Queremos que vivas este momento tan especial junto a nosotros, por
           ello hemos decidido que el evento sea solo para adultos.
@@ -464,6 +463,26 @@ const Body = ({
       >
         <Image src={img10} alt="boda" />
       </motion.div>
+      <motion.h2
+        initial={{ opacity: 0, y: 5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+        style={{ lineHeight: "3rem" }}
+        className={`${lora.className} ${thirdColor} text-center  text-[42px]    py-4 `}
+      >
+        Fecha límite de confirmación
+      </motion.h2>
+      <motion.h2
+        initial={{ opacity: 0, y: 5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        viewport={{ once: true }}
+        style={{ lineHeight: "3rem" }}
+        className={`${lora.className} ${thirdColor} font-bold text-center  text-[42px]    py-4 `}
+      >
+        15 de abril de 2026
+      </motion.h2>
       <ConfirmacionForm
         invitationId={{ id: invitationIdForQuery.id }}
         nombreInvitado={nombre}
@@ -475,7 +494,7 @@ const Body = ({
             disabledBackgroundColor: "bg-[#FF9D23]/50",
           },
           section: {
-            backgroundColor: "bg-white",
+            backgroundColor: extraBg,
             carita: "no",
             textColor: thirdColor,
           },

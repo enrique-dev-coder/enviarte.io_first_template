@@ -15,9 +15,9 @@ const Numero = ({ num, desc }: { num: any; desc: string }) => {
       <div
         className={` w-[80px] h-[80px] cell:w-[48px] cell:h-[48px] flex justify-center items-center rounded-lg px-2`}
       >
-        <p className=" text-5xl  cell:text-3xl text-[#FF9D23]  ">{num}</p>{" "}
+        <p className=" text-5xl  cell:text-3xl text-[#7A553A]  ">{num}</p>{" "}
       </div>
-      <p className="text-xl uppercase cell:text-sm text-[#FF9D23] ">{desc}</p>
+      <p className="text-xl uppercase cell:text-sm text-[#7A553A]  ">{desc}</p>
     </motion.div>
   );
 };
@@ -53,7 +53,7 @@ const Contador = ({
           whileInView={{ scale: 1 }}
           transition={{ ease: "easeInOut", duration: 1 }}
           viewport={{ once: true }}
-          className={`${dancing.className} text-[#FF9D23]  text-center text-[40px] mb-[8px] 
+          className={`${dancing.className} text-[#7A553A]  text-center text-[40px] mb-[8px] 
           cell:text-[42px] cell:mb-[0px] cell:w-[80%] cell:mx-auto`}
         >
           Save the Date!
@@ -63,7 +63,7 @@ const Contador = ({
           whileInView={{ scale: 1 }}
           transition={{ ease: "easeInOut", duration: 1 }}
           viewport={{ once: true }}
-          className={`${lora.className} text-[#FF9D23]   text-center text-[22px] font-bold mb-[32px] 
+          className={`${lora.className} text-[#7A553A]   text-center text-[22px] font-bold mb-[32px] 
 
            cell:mb-[8px] cell:w-full cell:mx-auto`}
         >
@@ -72,7 +72,7 @@ const Contador = ({
       </div>
       <div className="bg-white/90 w-11/12 text-white py-2 px-4 rounded-md">
         <p
-          className={`${lora.className} text-[#FF9D23]   text-center text-3xl cell:text-3xl`}
+          className={`${lora.className} text-[#7A553A]   text-center text-3xl cell:text-3xl`}
         >
           Sólo faltan:
         </p>
