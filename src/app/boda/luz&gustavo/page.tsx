@@ -49,10 +49,10 @@ const page = async ({ searchParams }: any) => {
   return (
     <div className={`${extraBg} `}>
       <Body
-        nombre={"Invitado"}
-        tel={"8441753173"}
-        pasesAsignados={"2"}
-        invitationIdForQuery={{ id: "2" }}
+        nombre={nombre}
+        tel={tel}
+        pasesAsignados={pasesAsignados}
+        invitationIdForQuery={invitationIdForQuery}
       />
     </div>
   );
