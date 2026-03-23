@@ -80,7 +80,7 @@ const ConfirmacionForm = ({
   console.log(usuarioClickEnPases);
   const ArrayPases = Array.from(
     { length: Number(pasesAsignados) || 2 },
-    (_, index) => index + 1
+    (_, index) => index + 1,
   ); // [1,2]
 
   return (
@@ -140,71 +140,73 @@ const ConfirmacionForm = ({
         </div>
         {/* seccion de confirmacion de pases */}
         <>
-          {/* {cookies?.invitandofacil_invitado?.id ? (
+          {cookies?.invitandofacil_invitado?.id ? (
             <div
               className={`${dancing.className} text-center text-2xl font-bold`}
             >
               Muchas gracias por confirmar tu asistencia, si cambias de opinion
               favor de comunicarte con nosotros{" "}
             </div>
-          ) : ( */}
-          <>
-            <div className={`${inter.className} flex flex-col  w-full gap-4 `}>
-              <label className="text-xl font-medium cell:text-lg">
-                Personas que asistirán:
-              </label>
-              <div className="flex gap-2 cell:flex-col flex-wrap">
-                <div className="flex gap-2  items-center">
-                  <div className="flex gap-2 items-center">
-                    <input
-                      {...register("pasesConfirmados")}
-                      type="radio"
-                      id="0"
-                      value="0"
-                    />
-                    <label className=" font-bold">
-                      No asistiré {styling?.section.carita === "si" && "😥"}
-                    </label>
+          ) : (
+            <>
+              <div
+                className={`${inter.className} flex flex-col  w-full gap-4 `}
+              >
+                <label className="text-xl font-medium cell:text-lg">
+                  Personas que asistirán:
+                </label>
+                <div className="flex gap-2 cell:flex-col flex-wrap">
+                  <div className="flex gap-2  items-center">
+                    <div className="flex gap-2 items-center">
+                      <input
+                        {...register("pasesConfirmados")}
+                        type="radio"
+                        id="0"
+                        value="0"
+                      />
+                      <label className=" font-bold">
+                        No asistiré {styling?.section.carita === "si" && "😥"}
+                      </label>
+                    </div>
                   </div>
+                  {ArrayPases.map((i) => (
+                    <div key={i} className="flex gap-2 items-center">
+                      <input
+                        {...register("pasesConfirmados")}
+                        type="radio"
+                        id={i}
+                        value={i}
+                        className=""
+                      />
+                      <label className=" font-bold">{`${i} ${
+                        i === 1 ? "persona" : "personas"
+                      }`}</label>
+                    </div>
+                  ))}
                 </div>
-                {ArrayPases.map((i) => (
-                  <div key={i} className="flex gap-2 items-center">
-                    <input
-                      {...register("pasesConfirmados")}
-                      type="radio"
-                      id={i}
-                      value={i}
-                      className=""
-                    />
-                    <label className=" font-bold">{`${i} ${
-                      i === 1 ? "persona" : "personas"
-                    }`}</label>
-                  </div>
-                ))}
               </div>
-            </div>
-            <div className="py-2 cell:w-full">
-              {!isPending ? (
-                <button
-                  type="submit"
-                  disabled={!usuarioClickEnPases}
-                  className={`${
-                    usuarioClickEnPases
-                      ? styling.confirmButton.backgroundColor
-                      : styling.confirmButton.disabledBackgroundColor
-                  } text-white px-6 text-lg rounded-full py-2 cell:w-full`}
-                >
-                  Confirmar
-                </button>
-              ) : (
-                <div className="flex  gap-2">
-                  <Loader className=" animate-spin" />
-                  <p>Confirmando ...</p>
-                </div>
-              )}
-            </div>
-          </>
-          {/* )} */}
+              <div className="py-2 cell:w-full">
+                {!isPending ? (
+                  <button
+                    type="submit"
+                    disabled={!usuarioClickEnPases}
+                    className={`${
+                      usuarioClickEnPases
+                        ? styling.confirmButton.backgroundColor
+                        : styling.confirmButton.disabledBackgroundColor
+                    } text-white px-6 text-lg rounded-full py-2 cell:w-full`}
+                  >
+                    Confirmar
+                  </button>
+                ) : (
+                  <div className="flex  gap-2">
+                    <Loader className=" animate-spin" />
+                    <p>Confirmando ...</p>
+                  </div>
+                )}
+              </div>
+            </>
+          )}
         </>
       </form>
       {confirmacion ? (
