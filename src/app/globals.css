@@ -30,3 +30,11 @@ circle {
 .textShadow {
   text-shadow: 2px 2px 8px #371612;
 }
+
+.triangle-top {
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+
+.triangle-bottom {
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+}
