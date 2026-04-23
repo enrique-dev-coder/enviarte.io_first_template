@@ -4,11 +4,11 @@ import prisma from "../../../../prisma";
 
 export const metadata = {
   metadataBase: new URL("https://www.invitandofacil.com"),
-  title: "Luz & Gustavo",
+  title: "Guadalupe & Salvador",
   description: "Invitaciones digitales para eventos",
   openGraph: {
-    siteName: "Luz & Gustavo",
-    title: "Luz & Gustavo - Nuestra Boda",
+    siteName: "Guadalupe & Salvador",
+    title: "Guadalupe & Salvador - Nuestra Boda",
     description:
       "Te invitamos a celebrar nuestra boda. Haz clic para más detalles.",
     url: "https://www.invitandofacil.com/boda/luz&gustavo",
