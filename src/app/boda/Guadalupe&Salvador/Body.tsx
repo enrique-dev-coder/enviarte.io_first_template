@@ -241,8 +241,8 @@ export function Invitacion() {
               </div>
 
               <p className="mt-6 uppercase text-[14px] text-gray-600 italic">
-                "El amor no consiste en mirar al otro, sino en mirar juntos en
-                la misma dirección"
+                &quot;El amor no consiste en mirar al otro, sino en mirar juntos
+                en la misma dirección&quot;
               </p>
               <p className="text-[14px] uppercase text-gray-500 mt-1">
                 — Antoine de Saint-Exupéry
