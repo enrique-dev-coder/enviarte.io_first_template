@@ -36,7 +36,7 @@ const Hero = () => {
             >
               {/* S (ATRÁS) */}
               <span
-                className="absolute text-[232px] translate-x-[48px] translate-y-[70px] text-white tracking-wide z-0 opacity-80"
+                className="absolute text-[232px] translate-x-[48px] translate-y-[90px] text-white tracking-wide z-0 opacity-80"
                 style={{
                   textShadow: `
         0 0 8px rgba(201,168,106,0.4),
@@ -45,7 +45,7 @@ const Hero = () => {
       `,
                 }}
               >
-                S
+                A
               </span>
 
               {/* G (ADELANTE) */}
