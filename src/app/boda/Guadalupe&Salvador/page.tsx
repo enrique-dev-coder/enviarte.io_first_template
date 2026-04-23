@@ -14,7 +14,7 @@ export const metadata = {
     url: "https://www.invitandofacil.com/boda/luz&gustavo",
     images: [
       {
-        url: "https://www.invitandofacil.com/assets/images/luz&gustavo/img1.jpeg",
+        url: "https://www.invitandofacil.com/assets/images/guadalupeysalvador/img1.jpeg",
         width: 256,
         height: 425,
         alt: "Imagen de la boda de Arely y Bryan ",
@@ -43,7 +43,6 @@ const page = async ({ searchParams }: any) => {
   const headersList = headers();
   const pathname = headersList.get("x-pathname"); // ejemplo: /boda/danielayjosepablo
   const invitationIdForQuery = await getInvitationId(pathname as string); // { id: '65df62e264903d5c4bb5053e' }
-  console.log(invitationIdForQuery);
   const extraBg = "bg-[#f2ebe2]";
 
   return (
