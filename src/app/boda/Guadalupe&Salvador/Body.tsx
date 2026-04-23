@@ -69,7 +69,7 @@ const Body = ({
         extraClases=" !mt-[16px] !bg-transparent "
         font={paris}
         novia="Guadalupe"
-        novio="Salvador"
+        novio="Alejandro"
         join="y"
         color={{
           bgColor: "bg-[#6b705c]",
