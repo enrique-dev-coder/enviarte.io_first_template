@@ -43,9 +43,7 @@ const MainContainer = ({
   const { allowScroll } = useContext(StylesContext);
   return (
     <main
-      className={`${
-        play.className
-      } max-w-[1580px] mx-auto ${spBackground} relative 
+      className={`${play.className} max-w-[600px] mx-auto ${spBackground} relative 
       ${!allowScroll && "w-screen h-screen !overflow-hidden"}`}
     >
       {children}

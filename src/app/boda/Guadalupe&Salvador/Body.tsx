@@ -236,7 +236,7 @@ export function Invitacion() {
                 <h1
                   className={`${paris.className} text-4xl font-bold text-gray-700`}
                 >
-                  Alejandro
+                  Salvador Alejandro
                 </h1>
               </div>
 
