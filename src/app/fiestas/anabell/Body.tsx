@@ -141,6 +141,7 @@ const Title = () => {
   return (
     <motion.div variants={container} className="text-center">
       <motion.p
+        translate="no"
         variants={item}
         className={`${RetroDolly.className} text-3xl italic ${color1}`}
       >
@@ -148,6 +149,7 @@ const Title = () => {
       </motion.p>
 
       <motion.p
+        translate="no"
         variants={item}
         className={`${RetroDolly.className} text-[88px] font-black italic ${color2}`}
         style={{ textShadow: "4px 4px 0px #d83a85", lineHeight: "60px" }}
@@ -156,6 +158,7 @@ const Title = () => {
       </motion.p>
 
       <motion.p
+        translate="no"
         variants={item}
         className={`${RetroDolly.className} text-3xl italic ${color1}`}
       >
@@ -189,6 +192,7 @@ const Datos = () => {
 
       <motion.div variants={item} className="py-2">
         <p
+          translate="no"
           className={`${ClassicDolly.className} ${color1} text-center text-3xl underline`}
         >
           Dress Code: Pink
