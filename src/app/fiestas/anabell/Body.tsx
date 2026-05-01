@@ -187,7 +187,7 @@ const Datos = () => {
         variants={item}
         className={`${RetroDolly.className} text-4xl text-center font-black italic ${color1}`}
       >
-        Estas invitado a mi fiesta!
+        <p translate="no"> Estas invitado a mi fiesta!</p>
       </motion.div>
 
       <motion.div variants={item} className="py-2">
