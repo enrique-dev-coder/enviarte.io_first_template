@@ -81,7 +81,7 @@ const Body = () => {
   return (
     <InvitationContainer
       spBackground="none"
-      songLink="/assets/songs/anabell.mp3"
+      songLink="/assets/songs/anabellcut.mp3"
     >
       <div
         className={`${invitationbg} h-screen flex flex-col justify-center items-center overflow-hidden relative`}
