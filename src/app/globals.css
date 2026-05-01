@@ -60,3 +60,18 @@ circle {
   color: transparent;
   animation: shine 2.5s linear infinite;
 }
+
+@keyframes typing {
+  from {
+    width: 0ch;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}

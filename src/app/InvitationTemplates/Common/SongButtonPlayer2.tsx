@@ -8,8 +8,8 @@ const SongButtonPlayer = ({ backgroundColor }: { backgroundColor: string }) => {
   const { playing, setPlaying } = useContext(AudioPlayerContext);
 
   return (
-    <div className="fixed top-6 left-6 z-50">
-      <div className="fixed top-6 left-6 z-50 group">
+    <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-6 right-6 z-50 group">
         <div className="relative flex items-center justify-center">
           {/* 💬 Tooltip */}
 
