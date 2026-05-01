@@ -34,6 +34,18 @@ export const champagne = localFont({
   src: "../../public/customFonts/Champagne&Limousines.ttf",
 });
 
+export const ClassicDolly = localFont({
+  src: "../../public/customFonts/Classic_Dolly.ttf",
+});
+
+export const ModernDolly = localFont({
+  src: "../../public/customFonts/Modern_Dolly.ttf",
+});
+
+export const RetroDolly = localFont({
+  src: "../../public/customFonts/Retro_Dolly.ttf",
+});
+
 export const inter = Inter({ subsets: ["latin"] });
 export const greatVibes = Great_Vibes({ weight: "400", subsets: ["latin"] });
 export const dancing = Dancing_Script({ subsets: ["latin"] });
