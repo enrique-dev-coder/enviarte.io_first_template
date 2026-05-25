@@ -16,6 +16,7 @@ import cierre from "/public/assets/images/guadalupeysalvador/baileit.png";
 import ceremonia from "/public/assets/images/guadalupeysalvador/ceremoniait.png";
 import cake from "/public/assets/images/guadalupeysalvador/cake.png";
 import envelope from "/public/assets/images/guadalupeysalvador/et_envelope.png";
+import cierre2 from "/public/assets/images/champagne-glass.png";
 
 import {
   lora,
@@ -283,7 +284,7 @@ export function Invitacion({
                 <h1
                   className={`${paris.className} text-4xl font-bold ${accentTextColor}`}
                 >
-                  Guadalupe Catalina
+                  Dariana
                 </h1>
 
                 <p
@@ -295,7 +296,7 @@ export function Invitacion({
                 <h1
                   className={`${paris.className} text-4xl font-bold ${accentTextColor}`}
                 >
-                  Salvador Alejandro
+                  Mario
                 </h1>
               </div>
 
@@ -534,14 +535,20 @@ export function TarjetitaDressCode({
         </div>
 
         <p className="uppercase tracking-widest mt-1 text-center text-[14px]">
-          Ellas: Vestido Largo
+          Mujeres: Vestido Largo
         </p>
 
         <p className="uppercase tracking-widest mt-1 text-center text-[14px]">
-          Ellos: Traje
+          Hombre: Traje
         </p>
         <p className="uppercase tracking-widest mt-1 text-center text-[14px]">
           No Mezclilla
+        </p>
+        <p className="uppercase tracking-widest mt-1 text-center text-[14px]">
+          * El tono blanco se reserva a la novia
+        </p>
+        <p className="uppercase tracking-widest mt-1 text-center text-[14px]">
+          * El tono baby Blue se reserva a las damas
         </p>
       </div>
     </motion.div>
@@ -656,11 +663,9 @@ export function Itinerario({
               >
                 <div className="flex items-center mb-12 relative">
                   <div className="w-1/2 text-right pr-6">
-                    <p className="text-[14px]">6:00 P.M.</p>
+                    <p className="text-[14px]">7:00 P.M.</p>
 
-                    <p className="uppercase text-sm tracking-widest">
-                      Ceremonia Religiosa
-                    </p>
+                    <p className="uppercase text-sm tracking-widest">Misa</p>
                   </div>
 
                   <div className="relative z-10">
@@ -715,10 +720,10 @@ export function Itinerario({
                   </div>
 
                   <div className="w-1/2 pl-6">
-                    <p className="text-[14px]">8:00 P.M.</p>
+                    <p className="text-[14px]">9:00 P.M.</p>
 
                     <p className="uppercase text-sm tracking-widest">
-                      Ceremonia Civil
+                      Inicio Recepción
                     </p>
                   </div>
                 </div>
@@ -734,10 +739,10 @@ export function Itinerario({
               >
                 <div className="flex items-center mb-12 relative">
                   <div className="w-1/2 text-right pr-6">
-                    <p className="text-[14px]">8:30 P.M.</p>
+                    <p className="text-[14px]">9:15 P.M.</p>
 
                     <p className="uppercase text-sm tracking-widest">
-                      Recepción
+                      Vals de novios
                     </p>
                   </div>
 
@@ -793,13 +798,12 @@ export function Itinerario({
                   </div>
 
                   <div className="w-1/2 pl-6">
-                    <p className="text-[14px]">10:00 P.M.</p>
+                    <p className="text-[14px]">10:30 P.M.</p>
 
                     <p className="uppercase text-sm tracking-widest">Cena</p>
                   </div>
                 </div>
               </motion.div>
-
               {/* ITEM 5 */}
               <motion.div
                 initial={{ opacity: 0, y: 5 }}
@@ -810,9 +814,11 @@ export function Itinerario({
               >
                 <div className="flex items-center mb-12 relative">
                   <div className="w-1/2 text-right pr-6">
-                    <p className="text-[14px]">1:30 A.M.</p>
+                    <p className="text-[14px]">11:15 P.M.</p>
 
-                    <p className="uppercase text-sm tracking-widest">Cierre</p>
+                    <p className="uppercase text-sm tracking-widest">
+                      Tradiciones
+                    </p>
                   </div>
 
                   <div className="relative z-10">
@@ -833,6 +839,44 @@ export function Itinerario({
                         maskPosition: "center",
                       }}
                     />
+                  </div>
+                </div>
+              </motion.div>
+              {/* ITEM 6 */}
+              <motion.div
+                initial={{ opacity: 0, y: 5 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ ease: "easeInOut", duration: 1 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="flex items-center mb-12 relative">
+                  <div className="w-1/2 text-right pr-6">
+                    <div
+                      className={`w-12 h-12 opacity-80 ml-auto ${iconColor}`}
+                      style={{
+                        WebkitMaskImage: `url(${cierre2.src})`,
+                        maskImage: `url(${cierre2.src})`,
+                        WebkitMaskRepeat: "no-repeat",
+                        maskRepeat: "no-repeat",
+                        WebkitMaskSize: "contain",
+                        maskSize: "contain",
+                        WebkitMaskPosition: "center",
+                        maskPosition: "center",
+                      }}
+                    />
+                  </div>
+
+                  <div className="relative z-10">
+                    <div className={`w-3 h-3 rounded-full ${circleColor}`} />
+                  </div>
+
+                  <div className="w-1/2 pl-6">
+                    <p className="text-[14px]">2:00 A.M.</p>
+
+                    <p className="uppercase text-sm tracking-widest">
+                      Fin del Evento
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -883,7 +927,9 @@ export function TarjetitaConfirmacion({
           <p className="uppercase tracking-widest mt-3 font-semibold text-center">
             Favor de confirmar tu asistencia antes del
             <br />
-            <b>6 de Junio de 2026</b>
+            <b>01 de julio de 2026</b>
+            <br />
+            <b>Con nuestra WEDDING planner</b>
           </p>
 
           <div className="flex justify-center mt-6">
