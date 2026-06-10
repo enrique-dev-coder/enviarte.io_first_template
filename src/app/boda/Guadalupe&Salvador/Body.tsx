@@ -333,7 +333,7 @@ export function TarjetitaRecepcion() {
             Villa Santa Fe{" "}
           </p>
           <p className="text-lg tracking-widest mt-1 text-center font-bold">
-            8:00 pm{" "}
+            8:30 pm{" "}
           </p>
 
           <div className="mt-6 flex justify-center">
@@ -495,7 +495,7 @@ export function Itinerario() {
                 </div>
 
                 <div className="w-1/2 pl-6">
-                  <p className="text-[14px]">8:00 P.M.</p>
+                  <p className="text-[14px]">8:30 P.M.</p>
                   <p className="uppercase text-sm tracking-widest">
                     Ceremonia Civil
                   </p>
