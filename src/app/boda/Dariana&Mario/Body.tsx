@@ -934,7 +934,7 @@ export function TarjetitaConfirmacion({
 
           <div className="flex justify-center mt-6">
             <a
-              href="https://wa.link/z5klwe"
+              href="https://wa.link/7vj2e6"
               className={`${buttonBgColor} ${buttonTextColor} px-6 py-2 tracking-widest shadow-md hover:shadow-lg transition`}
             >
               Confirmar
