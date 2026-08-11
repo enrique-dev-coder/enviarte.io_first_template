@@ -10,7 +10,7 @@ import { colorPalette } from "@/types";
 import Image from "next/image";
 import sobreIzq from "/public/assets/images/sobres/sobre_Izq.png";
 import sobreDer from "/public/assets/images/sobres/sobrederecha.png";
-import Sello from "/public/assets/images/sobres/selloFer.png";
+import Sello from "/public/assets/images/sobres/selloCarta.png";
 
 const IngresarBoton = ({
   novio,
@@ -22,6 +22,8 @@ const IngresarBoton = ({
   extraClases = "",
   bgCuadrito = "bg-zinc-50",
   showSobre = false,
+  selloColor,
+  selloText,
 }: {
   novio: string;
   novia: string;
@@ -37,6 +39,9 @@ const IngresarBoton = ({
   showSobre?: boolean;
   extraClases?: string | undefined;
   bgCuadrito?: string;
+  // Nuevas props
+  selloColor?: string;
+  selloText?: string;
 }) => {
   const { setPlaying } = useContext(AudioPlayerContext);
   const [showModal, setShowModal] = useState(true);
@@ -113,7 +118,51 @@ const IngresarBoton = ({
                 onClick={handleModalButtonClick}
                 style={{ cursor: "pointer" }}
               >
-                <Image src={Sello} alt="sello carta" />
+                {/* Sello */}
+                <div className="relative w-full aspect-square">
+                  {/* Imagen original: conserva textura, sombras y detalles */}
+                  <Image
+                    src={Sello}
+                    alt="sello carta"
+                    fill
+                    className="object-contain"
+                  />
+
+                  {/* Capa de color */}
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      backgroundColor: selloColor,
+                      mixBlendMode: "color",
+                      WebkitMaskImage: `url(${Sello.src})`,
+                      maskImage: `url(${Sello.src})`,
+                      WebkitMaskSize: "contain",
+                      maskSize: "contain",
+                      WebkitMaskPosition: "center",
+                      maskPosition: "center",
+                      WebkitMaskRepeat: "no-repeat",
+                      maskRepeat: "no-repeat",
+                    }}
+                  />
+
+                  {/* Texto del sello */}
+                  {selloText && (
+                    <div
+                      className={`absolute inset-0 flex items-center justify-center text-center pointer-events-none ${font.className}`}
+                    >
+                      <span
+                        className="font-semibold leading-tight px-[20%]"
+                        style={{
+                          color: "#fff",
+                          textShadow: "0 2px 3px rgba(0,0,0,0.35)",
+                        }}
+                      >
+                        {selloText}
+                      </span>
+                    </div>
+                  )}
+                </div>
+
                 {/* Tooltip */}
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
