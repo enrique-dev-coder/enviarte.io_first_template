@@ -47,7 +47,7 @@ const Body = ({
 }) => {
   return (
     <InvitationContainer
-      spBackground="flowers"
+      spBackground="none"
       songLink="/assets/songs/xvsanghy.mp3"
     >
       <IngresarBoton
@@ -68,6 +68,265 @@ const Body = ({
         }}
       />
       <Hero />
+      <div className="w-full flex justify-center py-8 px-4">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ ease: "easeOut", duration: 0.8 }}
+          viewport={{ once: true }}
+          className="
+      relative
+      w-full
+      max-w-[850px]
+      p-[3px]
+      rounded-[24px]
+      overflow-hidden
+      shadow-[0_10px_40px_rgba(150,190,220,0.22)]
+    "
+          style={{
+            background: `
+        linear-gradient(
+          110deg,
+          #e7a1aa 0%,
+          #f0c5c9 20%,
+          #d7c5ed 50%,
+          #b5dff2 80%,
+          #d7a1ad 100%
+        )
+      `,
+          }}
+        >
+          {/* Interior */}
+          <div
+            className="
+        relative
+        overflow-hidden
+        rounded-[21px]
+        px-8
+        py-10
+        cell:px-5
+        cell:py-8
+      "
+            style={{
+              background: `
+          radial-gradient(
+            ellipse at 0% 0%,
+            rgba(244, 180, 190, 0.55) 0%,
+            rgba(244, 180, 190, 0.20) 20%,
+            transparent 45%
+          ),
+          radial-gradient(
+            ellipse at 100% 20%,
+            rgba(170, 215, 245, 0.55) 0%,
+            rgba(170, 215, 245, 0.20) 22%,
+            transparent 48%
+          ),
+          radial-gradient(
+            ellipse at 50% 100%,
+            rgba(205, 190, 240, 0.35) 0%,
+            rgba(205, 190, 240, 0.15) 25%,
+            transparent 50%
+          ),
+          rgba(255, 255, 255, 0.82)
+        `,
+            }}
+          >
+            {/* Borde interior */}
+            <div
+              className="
+          pointer-events-none
+          absolute
+          inset-[10px]
+          rounded-[16px]
+          border
+          border-white/80
+        "
+            />
+
+            {/* Esquina superior izquierda */}
+            <div
+              className="
+          absolute
+          top-[10px]
+          left-[10px]
+          w-16
+          h-16
+          border-t-2
+          border-l-2
+          rounded-tl-[16px]
+          border-[#E3A5AF]
+          opacity-80
+        "
+            />
+
+            {/* Esquina superior derecha */}
+            <div
+              className="
+          absolute
+          top-[10px]
+          right-[10px]
+          w-16
+          h-16
+          border-t-2
+          border-r-2
+          rounded-tr-[16px]
+          border-[#B6DDF0]
+          opacity-80
+        "
+            />
+
+            {/* Esquina inferior izquierda */}
+            <div
+              className="
+          absolute
+          bottom-[10px]
+          left-[10px]
+          w-16
+          h-16
+          border-b-2
+          border-l-2
+          rounded-bl-[16px]
+          border-[#E3A5AF]
+          opacity-80
+        "
+            />
+
+            {/* Esquina inferior derecha */}
+            <div
+              className="
+          absolute
+          bottom-[10px]
+          right-[10px]
+          w-16
+          h-16
+          border-b-2
+          border-r-2
+          rounded-br-[16px]
+          border-[#B6DDF0]
+          opacity-80
+        "
+            />
+
+            {/* Decoración superior */}
+            <div className="relative flex justify-center items-center mb-5">
+              <div
+                className="
+            absolute
+            w-[35%]
+            h-[1px]
+            left-0
+            bg-gradient-to-r
+            from-transparent
+            via-[#D9A0A8]
+            to-[#CFC5F0]
+          "
+              />
+
+              <div
+                className="
+            absolute
+            w-[35%]
+            h-[1px]
+            right-0
+            bg-gradient-to-l
+            from-transparent
+            via-[#B5DDF2]
+            to-[#CFC5F0]
+          "
+              />
+
+              <span
+                className="
+            relative
+            z-10
+            px-4
+            text-2xl
+            text-[#C78F9A]
+          "
+              >
+                ✦
+              </span>
+            </div>
+
+            {/* Texto */}
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                ease: "easeOut",
+                duration: 1,
+                delay: 0.2,
+              }}
+              viewport={{ once: true }}
+              className={`
+          relative
+          z-10
+          ${champagne.className}
+          text-center
+          text-[25px]
+          leading-[1.65]
+          font-semibold
+          cell:text-[19px]
+          cell:leading-[1.55]
+        `}
+              style={{
+                background:
+                  "linear-gradient(90deg, #B86F7D 0%, #8C719B 50%, #527A9A 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              Querido invitado estamos felices de compartir este momento con
+              todos ustedes donde nuestros hijos hoy dejan una etapa de su vida
+              para dirigirse a un mundo nuevo lleno de ilusiones pero sobre todo
+              decisiones, esperamos contar con su presencia este día tan
+              importante y significativo para nosotros.
+            </motion.p>
+
+            {/* Decoración inferior */}
+            <div className="relative flex justify-center items-center mt-6">
+              <div
+                className="
+            absolute
+            w-[35%]
+            h-[1px]
+            left-0
+            bg-gradient-to-r
+            from-transparent
+            via-[#D9A0A8]
+            to-[#CFC5F0]
+          "
+              />
+
+              <div
+                className="
+            absolute
+            w-[35%]
+            h-[1px]
+            right-0
+            bg-gradient-to-l
+            from-transparent
+            via-[#B5DDF2]
+            to-[#CFC5F0]
+          "
+              />
+
+              <span
+                className="
+            relative
+            z-10
+            px-4
+            text-xl
+            text-[#C78F9A]
+          "
+              >
+                ✦
+              </span>
+            </div>
+          </div>
+        </motion.div>
+      </div>
       {/* <div className="my-5">
         <motion.p
           initial={{ opacity: 0, y: 5 }}
@@ -118,6 +377,12 @@ const Body = ({
           Salmo 17:8
         </motion.p>
       </div> */}
+
+      <Contador
+        fechaEvento={new Date("2026-09-18T00:00:00")}
+        fechaString="Viernes, 18 de Septiembre de 2026"
+        fotoContador="bg-[url('/assets/images/xvs/angyraul/img8.jpeg')]"
+      />
       <div>
         <motion.div
           initial={{ scale: 0 }}
@@ -184,17 +449,12 @@ const Body = ({
           <p
             className={`    ${champagne.className} text-2xl font-bold text-[#33485A]`}
           >
-            Jose Raul Cortes Medina <br />
+            José Raúl Cortés Medina <br />
             y <br />
-            Ma de los Angeles Mtz Gaytan
+            Ma de los Angeles Mtz Gaytán
           </p>
         </motion.div>
       </div>
-      <Contador
-        fechaEvento={new Date("2026-09-18T00:00:00")}
-        fechaString="Viernes, 18 de Septiembre de 2026"
-        fotoContador="bg-[url('/assets/images/xvs/angyraul/img8.jpeg')]"
-      />
       <motion.div
         initial={{ opacity: 0, y: 5 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -261,20 +521,9 @@ const Body = ({
         cell:text-3xl
       "
           >
-            Recepción
+            Trei Recepciones
           </motion.h2>
 
-          <p
-            className="
-        text-[#40566B]
-        text-2xl
-        font-bold
-        cell:text-xl
-        cell:px-2
-      "
-          >
-            Trei Recepciones
-          </p>
           <p
             className="
         text-[#40566B]
@@ -388,51 +637,55 @@ const Body = ({
       >
         <Image src={img7} alt="boda" />
       </motion.div>
-
-      {/* <ItinerarioScrollable
+      <ItinerarioScrollable
         showItinerario={true}
         eventData={[
           {
-            id: 2,
-            evento: "Misa ",
-            hora: "5:20 pm",
-            Icon: "church",
+            id: 1,
+            evento: ` Inicio de Recepción `,
+            hora: "8:30 pm",
+            Icon: "coctel",
           },
           {
-            id: 1,
-            evento: `Recepción`,
-            hora: "8:30 pm",
-            Icon: "recepcion",
+            id: 2,
+            evento: ` Vals de Entrada`,
+            hora: "9:15 pm",
+            Icon: "dance",
           },
           {
             id: 4,
             evento: " Cena",
-            hora: "9:30 pm",
+            hora: "10:00 pm",
             Icon: "dinner",
           },
           {
             id: 5,
             evento: "Fiesta",
-            hora: "10:20 pm",
+            hora: "11:00 pm",
             Icon: "party",
           },
           {
             id: 6,
             evento: "Cierre del evento",
-            hora: "1:30 am",
+            hora: "2:00 am",
             Icon: "flores",
           },
         ]}
         sectionStyling={{
-          lineColor: "bg-[#cc90c7]",
-          lineBg: "bg-[#cc90c7]/20",
-          circleColor: "stroke-[#cc90c7]",
+          lineColor: "bg-[#e0929e]",
+          lineBg: "bg-[#e0929e]/20",
+          circleColor: "stroke-[#e0929e]",
           circleBg: "bg-gray-50",
-          circleSoftStroke: "stroke-[#cc90c7]/20",
+          circleSoftStroke: "stroke-[#e0929e]/20",
           iconColor: "text-gray-900",
           cardBg: "bg-white",
         }}
-      /> */}
+        cardGradient={true}
+        textFont={champagne.className}
+        textColor="text-[#40566B]"
+        showRombito={false}
+        textSize="text-xl"
+      />
 
       <div>
         <motion.div

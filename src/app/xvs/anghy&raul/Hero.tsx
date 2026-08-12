@@ -45,7 +45,7 @@ const Hero = () => {
               <h1 className="  text-[#FFF0F0] font-semibold  text-[24px] leading-[30px] ">
                 XVs
                 <br />
-                Anghy & Raul
+                Raul & Anghy
               </h1>
             </motion.div>
             <motion.div
