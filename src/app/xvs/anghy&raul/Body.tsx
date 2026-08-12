@@ -737,17 +737,6 @@ const Body = ({
       >
         <Image src={img8} alt="boda" />
       </motion.div>
-      <div>
-        <motion.p
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
-          transition={{ ease: "easeInOut", duration: 1 }}
-          viewport={{ once: true }}
-          className={`${textOlive}  uppercase text-center ${champagne.className}  text-[28px] p-4 font-bold`}
-        >
-          Confirma tu asistencia en el siguiente botón
-        </motion.p>
-      </div>
       {/* <div>
         <motion.p
           initial={{ scale: 0 }}
@@ -759,24 +748,116 @@ const Body = ({
           Fecha límite de confirmación 23 de Mayo de 2025
         </motion.p>
       </div> */}
-      <div className="relative">
-        <div className="  py-2">
-          <div className="flex flex-col justify-center items-center py-2">
-            <p
-              className={`${lora.className} ${textOlive} text-4xl cell:text-2xl text-center font-bold`}
+      <div className="relative py-4">
+        <motion.div
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          transition={{ ease: "easeInOut", duration: 0.5, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="
+      flex
+      flex-col
+      justify-center
+      items-center
+      w-[300px]
+      cell:w-full
+      mx-auto
+      py-5
+      px-4
+      rounded-2xl
+      overflow-hidden
+      border border-white/70
+      shadow-[0_8px_30px_rgba(150,190,220,0.18)]
+    "
+          style={{
+            background: `
+        radial-gradient(
+          ellipse at 0% 0%,
+          rgba(244, 180, 190, 0.65) 0%,
+          rgba(244, 180, 190, 0.30) 18%,
+          transparent 45%
+        ),
+        radial-gradient(
+          ellipse at 100% 20%,
+          rgba(170, 215, 245, 0.60) 0%,
+          rgba(170, 215, 245, 0.25) 20%,
+          transparent 48%
+        ),
+        radial-gradient(
+          ellipse at 50% 100%,
+          rgba(205, 190, 240, 0.35) 0%,
+          rgba(205, 190, 240, 0.15) 20%,
+          transparent 50%
+        ),
+        rgba(255, 255, 255, 0.4)
+      `,
+          }}
+        >
+          <div>
+            <motion.p
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              transition={{ ease: "easeInOut", duration: 1 }}
+              viewport={{ once: true }}
+              className={`${textOlive}  uppercase text-center ${champagne.className}  text-[28px] p-4 font-bold`}
             >
-              Planner <br /> Viviana Amare
-            </p>
-            <a href="https://api.whatsapp.com/send?phone=5218421088081&text=Confirmo%20mi%20asistencia%20para%20los%20Xvs%20de%20Anghy%20y%20Raul">
-              <button
-                className={`${bgOlive} border border-[#b579ae] flex items-center gap-3  my-3 rounded-full px-4 py-2`}
-              >
-                <WhatsIcon className="fill-white text-2xl " />
-                <p className=" text-3xl text-white ">842 108 8081</p>
-              </button>
-            </a>
+              Confirma tu asistencia en el siguiente botón
+            </motion.p>
           </div>
-        </div>
+          <motion.p
+            initial={{ opacity: 0, y: 5 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ ease: "easeInOut", duration: 1 }}
+            viewport={{ once: true }}
+            className={`
+        ${lora.className}
+        text-[#40566B]
+        text-3xl
+        cell:text-2xl
+        text-center
+        font-bold
+      `}
+          >
+            Amare Planners
+          </motion.p>
+
+          <motion.a
+            href="https://api.whatsapp.com/send?phone=5218421088081&text=Confirmo%20mi%20asistencia%20para%20los%20Xvs%20de%20Anghy%20y%20Raul"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, y: 5 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 0.8,
+              delay: 0.3,
+            }}
+            viewport={{ once: true }}
+            className="
+        flex
+        items-center
+        gap-3
+        my-3
+        rounded-full
+        px-5
+        py-2
+        bg-[#40566B]
+        border
+        border-white/70
+        shadow-md
+        transition-all
+        duration-300
+        hover:scale-105
+        hover:bg-[#33485A]
+      "
+          >
+            <WhatsIcon className="fill-white text-2xl" />
+
+            <span className="text-xl text-white font-semibold">
+              842 108 8081
+            </span>
+          </motion.a>
+        </motion.div>
       </div>
       <motion.div
         initial={{ scale: 0 }}
