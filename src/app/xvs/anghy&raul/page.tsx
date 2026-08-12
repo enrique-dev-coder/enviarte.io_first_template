@@ -11,10 +11,10 @@ export const metadata = {
     title: "Xvs Angy y Raul",
     description:
       "Te invitamos a celebrar nuestra boda. Haz clic para más detalles.",
-    url: "https://www.invitandofacil.com/xvs/angy&raul",
+    url: "https://www.invitandofacil.com/xvs/anghy&raul",
     images: [
       {
-        url: "https://www.invitandofacil.com/assets/images/xvs/xvsangyraul/img8.jpeg",
+        url: "https://www.invitandofacil.com/assets/images/xvs/angyraul/img8.jpeg",
         width: 256,
         height: 425,
         alt: "Imagen de la boda de Arely y Bryan ",
