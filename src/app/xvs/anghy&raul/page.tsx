@@ -7,8 +7,8 @@ export const metadata = {
   title: "Xvs Angy y Raul",
   description: "Invitaciones digitales para eventos",
   openGraph: {
-    siteName: "Xvs Angy y Raul",
-    title: "Xvs Angy y Raul",
+    siteName: "Xvs Anghy y Raul",
+    title: "Xvs Anghy y Raul",
     description:
       "Te invitamos a celebrar nuestra boda. Haz clic para más detalles.",
     url: "https://www.invitandofacil.com/xvs/anghy&raul",
