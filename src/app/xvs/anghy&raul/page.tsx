@@ -14,7 +14,7 @@ export const metadata = {
     url: "https://www.invitandofacil.com/xvs/anghy&raul",
     images: [
       {
-        url: "https://www.invitandofacil.com/assets/images/xvs/angyraul/img2re2.png",
+        url: "https://www.invitandofacil.com/assets/images/xvs/angyraul/img2re2c.png",
         width: 256,
         height: 425,
         alt: "Imagen de la boda de Arely y Bryan ",
