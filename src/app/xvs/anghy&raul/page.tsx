@@ -7,14 +7,14 @@ export const metadata = {
   title: "Xvs Anghy y Raul",
   description: "Invitaciones digitales para eventos",
   openGraph: {
-    siteName: "Xvs Anghy y Raul",
-    title: "Xvs Anghy y Raul",
+    siteName: "Xvs Raul y Anghy  ",
+    title: "Xvs Raul y Anghy",
     description:
       "Te invitamos a celebrar nuestra fiesta. Haz clic para más detalles.",
     url: "https://www.invitandofacil.com/xvs/anghy&raul",
     images: [
       {
-        url: "https://www.invitandofacil.com/assets/images/xvs/angyraul/img2re.png",
+        url: "https://www.invitandofacil.com/assets/images/xvs/angyraul/img2re2.png",
         width: 256,
         height: 425,
         alt: "Imagen de la boda de Arely y Bryan ",

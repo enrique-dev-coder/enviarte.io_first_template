@@ -53,7 +53,7 @@ const Body = ({
       <IngresarBoton
         showSobre={true}
         selloColor="#b8cfd9"
-        selloText="Anghy & Raul"
+        selloText="Raul & Anghy"
         bgCuadrito="bg-[#FFF0F0]"
         buttonText="Ingresar"
         extraClases="  !bg-transparent"

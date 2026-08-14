@@ -15,9 +15,9 @@ const SongButtonPlayer = ({ backgroundColor }: { backgroundColor: string }) => {
         className={` w-12 h-12 rounded-l-lg  flex justify-center items-center ${backgroundColor} `}
       >
         {!playing ? (
-          <Volume2Icon fill="#ffffff" className="  text-white  w-[60px]" />
-        ) : (
           <VolumeXIcon fill="#ffffff" className="  text-white  w-[60px]" />
+        ) : (
+          <Volume2Icon fill="#ffffff" className="  text-white  w-[60px]" />
         )}
       </button>
     </div>
