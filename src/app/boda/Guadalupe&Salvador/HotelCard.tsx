@@ -1,1 +1,0 @@
-import { champagne } from "@/fonts";
