@@ -26,6 +26,7 @@ const Body = (props: SuperModernInvitationProps) => {
     secondaryColor,
     titleColorSecondary,
     textColorSecondary,
+    previewMode = false,
     couple,
     event,
     adultOnly,
@@ -45,9 +46,13 @@ const Body = (props: SuperModernInvitationProps) => {
     "--super-modern-main-color": mainColor,
   } as CSSProperties;
   return (
-    <InvitationContainer spBackground="none" songLink={media.songUrl ?? ""}>
+    <InvitationContainer
+      spBackground="none"
+      songLink={media.songUrl ?? ""}
+      allowScroll={previewMode}
+    >
       <div style={themeStyle}>
-        <IngresarBoton
+        {!previewMode && <IngresarBoton
           buttonText="Ingresar"
           bgCuadrito="bg-white"
           extraClases="!mt-[16px] !bg-transparent"
@@ -60,8 +65,12 @@ const Body = (props: SuperModernInvitationProps) => {
             titleColor: "text-[var(--super-modern-main-color)]",
             textButtonColor: "text-white",
           }}
+        />}
+        <Hero
+          imageUrl={media.heroImageUrl}
+          initials={initials}
+          previewMode={previewMode}
         />
-        <Hero imageUrl={media.heroImageUrl} initials={initials} />
         <Invitacion {...props} />
         <Foto url={photos[0]} alt={alt} />
         <section className="bg-gradient-to-br from-[#f3ede5] via-white to-[#e9e2d8] py-10">
@@ -158,7 +167,7 @@ const Body = (props: SuperModernInvitationProps) => {
             />
           </div>
         </section>
-        <SongButtonPlayer backgroundColor="bg-[var(--super-modern-main-color)]" />
+        {!previewMode && <SongButtonPlayer backgroundColor="bg-[var(--super-modern-main-color)]" />}
         <Foto url={photos[6]} alt={alt} />
       </div>
     </InvitationContainer>

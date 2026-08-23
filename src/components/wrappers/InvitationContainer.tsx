@@ -13,16 +13,18 @@ const InvitationContainer = ({
   children,
   songLink,
   spBackground = "grainy",
+  allowScroll = false,
 }: {
   children: ReactNode;
   songLink: string;
   spBackground?: coolBackground;
+  allowScroll?: boolean;
 }) => {
   return (
     <InvitationDataProvider>
       <AudioContextProvider songLink={songLink}>
         <StartAnimationProvider>
-          <StylingContextProvider>
+          <StylingContextProvider allowScrollInitially={allowScroll}>
             <MainContainer spBackground={spBackground}>
               {children}
             </MainContainer>

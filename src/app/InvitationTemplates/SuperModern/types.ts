@@ -20,6 +20,8 @@ export type SuperModernInvitationProps = {
   titleColorSecondary?: string;
   /** Color opcional para el texto en secciones con fondo mainColor. */
   textColorSecondary?: string;
+  /** Solo para el editor: muestra la invitación sin modal ni audio. */
+  previewMode?: boolean;
   couple: {
     firstPerson: string;
     secondPerson: string;

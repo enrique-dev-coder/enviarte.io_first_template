@@ -8,9 +8,11 @@ import { StartAnimation } from "@/contexts/AnimationContext";
 const Hero = ({
   imageUrl,
   initials,
+  previewMode = false,
 }: {
   imageUrl: string;
   initials: { first: string; second: string };
+  previewMode?: boolean;
 }) => {
   const { controls } = useContext(StartAnimation);
   return (
@@ -20,7 +22,7 @@ const Hero = ({
     >
       <motion.div
         initial={{ opacity: 0, y: 5 }}
-        animate={controls}
+        animate={previewMode ? { opacity: 1, y: 0 } : controls}
         transition={{ ease: "easeInOut", duration: 1 }}
         className="flex h-full items-end justify-center pb-20"
       >

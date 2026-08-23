@@ -10,8 +10,14 @@ export const StylesContext = createContext<StylesContextType>({
   setAllowScroll: () => {},
 });
 
-const StylingContextProvider = ({ children }: { children: ReactNode }) => {
-  const [allowScroll, setAllowScroll] = useState(false);
+const StylingContextProvider = ({
+  children,
+  allowScrollInitially = false,
+}: {
+  children: ReactNode;
+  allowScrollInitially?: boolean;
+}) => {
+  const [allowScroll, setAllowScroll] = useState(allowScrollInitially);
 
   return (
     <StylesContext.Provider value={{ allowScroll, setAllowScroll }}>
