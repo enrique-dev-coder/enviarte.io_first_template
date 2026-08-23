@@ -12,6 +12,14 @@ export type InvitationScheduleItem = {
 };
 
 export type SuperModernInvitationProps = {
+  /** Color principal en formato CSS, por ejemplo: #6b705c o rgb(107, 112, 92). */
+  mainColor: string;
+  /** Color secundario opcional para textos sobre fondos claros. */
+  secondaryColor?: string;
+  /** Color opcional para los títulos de las secciones. */
+  titleColorSecondary?: string;
+  /** Color opcional para el texto en secciones con fondo mainColor. */
+  textColorSecondary?: string;
   couple: {
     firstPerson: string;
     secondPerson: string;

@@ -7,6 +7,8 @@ export const metadata = {
 };
 
 const invitation: SuperModernInvitationProps = {
+  mainColor: "#b7410E",
+  secondaryColor: "#1F2E3D",
   couple: {
     firstPerson: "Guadalupe",
     secondPerson: "Salvador",
