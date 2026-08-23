@@ -15,6 +15,7 @@ export async function POST(request: NextRequest) {
         name: true,
         password: true,
         invitacionId: true,
+        rol: true,
       },
     });
     if (verificarUsuario === null) {
@@ -23,13 +24,13 @@ export async function POST(request: NextRequest) {
           acceso: false,
           motivo: "Usuario no encontrado",
         },
-        { status: 500 }
+        { status: 500 },
       );
     }
     if (verificarUsuario.password === body.password) {
       return NextResponse.json(
         { acceso: true, verificarUsuario },
-        { status: 200 }
+        { status: 200 },
       );
     }
     if (verificarUsuario.password !== body.password) {
@@ -39,7 +40,7 @@ export async function POST(request: NextRequest) {
           motivo:
             "Contraseña o nombre incorrectos,porfavor vuelve a intentarlo",
         },
-        { status: 500 }
+        { status: 500 },
       );
     }
   } catch (error) {
