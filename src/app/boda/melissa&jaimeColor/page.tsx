@@ -55,7 +55,7 @@ const invitation: SuperModernInvitationProps = {
       time: "7:00 PM",
       address:
         "Sor Juana Inés de La Cruz 1410, Torrecillas, 25298 Saltillo, Coah.",
-      mapsUrl: "Hacienda torrecillas ",
+      mapsUrl: "https://maps.app.goo.gl/k7RjUmBE5hJDnzMy7",
     },
   },
   quote: {
@@ -101,7 +101,7 @@ const invitation: SuperModernInvitationProps = {
     },
   ],
   confirmation: {
-    deadline: "6 de junio de 2026",
+    deadline: "30 de agosto de 2026",
     url: "https://wa.link/5kmg8x",
     message:
       "Celebrar nuestro amor es un sueño hecho realidad y nos encantará contar contigo.",
