@@ -22,6 +22,10 @@ export type SuperModernInvitationProps = {
   textColorSecondary?: string;
   /** Solo para el editor: muestra la invitación sin modal ni audio. */
   previewMode?: boolean;
+  /** Por defecto las fotografías se muestran en blanco y negro. */
+  imagesInGrayscale?: boolean;
+  /** Clases Tailwind adicionales para personalizar el botón de ingreso. */
+  enterButtonExtraClasses?: string;
   couple: {
     firstPerson: string;
     secondPerson: string;

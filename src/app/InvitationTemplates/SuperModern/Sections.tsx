@@ -53,7 +53,13 @@ export function Invitacion({
   titleColorSecondary,
 }: Pick<
   SuperModernInvitationProps,
-  "couple" | "families" | "quote" | "media" | "mainColor" | "secondaryColor" | "titleColorSecondary"
+  | "couple"
+  | "families"
+  | "quote"
+  | "media"
+  | "mainColor"
+  | "secondaryColor"
+  | "titleColorSecondary"
 >) {
   return (
     <div className="flex items-center justify-center bg-gradient-to-br from-[#f3ede5] via-[#ffffff] to-[#e9e2d8] py-10">
@@ -76,14 +82,20 @@ export function Invitacion({
         <motion.div {...reveal}>
           <div className="relative mx-auto mt-[140px] w-11/12 border-gray-300 bg-white p-3 text-center shadow-lg">
             <div className="border-2 border-[var(--super-modern-main-color)] px-[20px] pb-[40px] pt-[60px]">
-              <p style={secondaryTextStyle(secondaryColor)} className="mx-auto w-11/12 text-center text-[14px] uppercase tracking-widest text-gray-600">
+              <p
+                style={secondaryTextStyle(secondaryColor)}
+                className="mx-auto w-11/12 text-center text-[14px] uppercase tracking-widest text-gray-600"
+              >
                 Con la bendición de Dios y de nuestros padres
               </p>
-              <div style={secondaryTextStyle(secondaryColor)} className="mt-6 text-[14px] leading-5 text-gray-700">
+              <div
+                style={secondaryTextStyle(secondaryColor)}
+                className="mt-6 text-[14px] leading-5 text-gray-700"
+              >
                 {families?.firstPersonParents?.length ? (
                   <>
                     <p className="uppercase font-semibold">
-                      Padres de {couple.firstPerson}
+                      Padres de la novia
                     </p>
                     {families.firstPersonParents.map((parent) => (
                       <p className="uppercase" key={parent}>
@@ -95,7 +107,7 @@ export function Invitacion({
                 {families?.secondPersonParents?.length ? (
                   <>
                     <p className="mt-4 uppercase font-semibold">
-                      Padres de {couple.secondPerson}
+                      Padres de el novio
                     </p>
                     {families.secondPersonParents.map((parent) => (
                       <p className="uppercase" key={parent}>
@@ -127,11 +139,17 @@ export function Invitacion({
               </div>
               {quote && (
                 <>
-                  <p style={secondaryTextStyle(secondaryColor)} className="mt-6 text-[14px] uppercase italic text-gray-600">
+                  <p
+                    style={secondaryTextStyle(secondaryColor)}
+                    className="mt-6 text-[14px] uppercase italic text-gray-600"
+                  >
                     &quot;{quote.text}&quot;
                   </p>
                   {quote.author && (
-                    <p style={secondaryTextStyle(secondaryColor)} className="mt-1 text-[14px] uppercase text-gray-500">
+                    <p
+                      style={secondaryTextStyle(secondaryColor)}
+                      className="mt-1 text-[14px] uppercase text-gray-500"
+                    >
                       — {quote.author}
                     </p>
                   )}
@@ -193,26 +211,50 @@ export function SeccionCeremonia({
               : undefined,
           }}
         >
-          <p style={secondaryTextStyle(textColorSecondary)} className="pt-4 text-center text-[14px] tracking-wide">
+          <p
+            style={secondaryTextStyle(textColorSecondary)}
+            className="pt-4 text-center text-[14px] tracking-wide"
+          >
             ACOMPAÑANOS EL DÍA
           </p>
           <div className="mt-2 text-center">
-            <p style={secondaryTextStyle(textColorSecondary)} className="font-bold tracking-widest">{month}</p>
+            <p
+              style={secondaryTextStyle(textColorSecondary)}
+              className="font-bold tracking-widest"
+            >
+              {month}
+            </p>
           </div>
           <div className="my-2 flex items-center justify-center gap-2 uppercase">
-            <div style={secondaryTextStyle(textColorSecondary)} className="border-y-2 border-white text-[14px]">{weekday}</div>
+            <div
+              style={secondaryTextStyle(textColorSecondary)}
+              className="border-y-2 border-white text-[14px]"
+            >
+              {weekday}
+            </div>
             <div
               className="mt-[-22px] text-[58px]"
-              style={{ lineHeight: "0px", ...secondaryTextStyle(textColorSecondary) }}
+              style={{
+                lineHeight: "0px",
+                ...secondaryTextStyle(textColorSecondary),
+              }}
             >
               {day}
             </div>
-            <div style={secondaryTextStyle(textColorSecondary)} className="border-y-2 border-white text-[14px]">
+            <div
+              style={secondaryTextStyle(textColorSecondary)}
+              className="border-y-2 border-white text-[14px]"
+            >
               {location.time}
             </div>
           </div>
           <div className="text-center">
-            <p style={secondaryTextStyle(textColorSecondary)} className="font-bold tracking-widest">{year}</p>
+            <p
+              style={secondaryTextStyle(textColorSecondary)}
+              className="font-bold tracking-widest"
+            >
+              {year}
+            </p>
           </div>
           <div className="mt-6 flex justify-center">
             {iconUrl && (
@@ -220,9 +262,22 @@ export function SeccionCeremonia({
             )}
           </div>
           <div className="mt-4 text-center">
-            <p style={titleTextStyle(titleColorSecondary)} className={`${paris.className} text-3xl`}>Ceremonia Religiosa</p>
-            <p style={secondaryTextStyle(textColorSecondary)} className="mt-1 text-center tracking-widest">{location.name}</p>
-            <p style={secondaryTextStyle(textColorSecondary)} className="mt-1 text-center tracking-widest">
+            <p
+              style={titleTextStyle(titleColorSecondary)}
+              className={`${paris.className} text-3xl`}
+            >
+              Ceremonia Religiosa
+            </p>
+            <p
+              style={secondaryTextStyle(textColorSecondary)}
+              className="mt-1 text-center tracking-widest"
+            >
+              {location.name}
+            </p>
+            <p
+              style={secondaryTextStyle(textColorSecondary)}
+              className="mt-1 text-center tracking-widest"
+            >
               {location.address}
             </p>
           </div>
@@ -258,23 +313,39 @@ export function TarjetitaRecepcion({
     <motion.div {...reveal}>
       <div className="mx-auto my-8 w-[320px] max-w-sm rounded-3xl bg-white text-[var(--super-modern-main-color)] shadow-md">
         <div className="p-4 text-center">
-          <p style={titleTextStyle(titleColorSecondary)} className={`${paris.className} text-3xl`}>Recepción</p>
-          <p style={secondaryTextStyle(secondaryColor)} className="mt-1 text-center text-lg font-bold tracking-widest">
+          <p
+            style={titleTextStyle(titleColorSecondary)}
+            className={`${paris.className} text-3xl`}
+          >
+            Recepción
+          </p>
+          <p
+            style={secondaryTextStyle(secondaryColor)}
+            className="mt-1 text-center text-lg font-bold tracking-widest"
+          >
             {location.name}
           </p>
-          <p style={secondaryTextStyle(secondaryColor)} className="mt-1 text-center text-lg font-bold tracking-widest">
+          <p
+            style={secondaryTextStyle(secondaryColor)}
+            className="mt-1 text-center text-lg font-bold tracking-widest"
+          >
             {location.time}
           </p>
-            <div className="mt-6 flex justify-center">
-              {iconUrl && (
-                <MainColorIcon
-                  src={iconUrl}
-                  label="recepción"
-                  className="h-[64px] w-[64px]"
-                />
-              )}
+          <div className="mt-6 flex justify-center">
+            {iconUrl && (
+              <MainColorIcon
+                src={iconUrl}
+                label="recepción"
+                className="h-[64px] w-[64px]"
+              />
+            )}
           </div>
-          <p style={secondaryTextStyle(secondaryColor)} className="mt-1 text-center tracking-widest">{location.address}</p>
+          <p
+            style={secondaryTextStyle(secondaryColor)}
+            className="mt-1 text-center tracking-widest"
+          >
+            {location.address}
+          </p>
           <div className="mt-6 flex justify-center">
             <a
               href={location.mapsUrl}
@@ -306,7 +377,12 @@ export function Tarjetita({
   return (
     <motion.div {...reveal}>
       <div className="w-[280px] rounded-3xl bg-[var(--super-modern-main-color)] p-4 text-white shadow-md">
-        <p style={titleTextStyle(titleColorSecondary)} className={`${paris.className} text-center text-xl`}>{title}</p>
+        <p
+          style={titleTextStyle(titleColorSecondary)}
+          className={`${paris.className} text-center text-xl`}
+        >
+          {title}
+        </p>
         <div className="mt-2 flex justify-center">
           {iconUrl && (
             <img
@@ -316,7 +392,10 @@ export function Tarjetita({
             />
           )}
         </div>
-        <p style={secondaryTextStyle(textColorSecondary)} className="mt-1 text-center text-[10px] uppercase tracking-widest">
+        <p
+          style={secondaryTextStyle(textColorSecondary)}
+          className="mt-1 text-center text-[10px] uppercase tracking-widest"
+        >
           {message}
         </p>
       </div>
@@ -339,10 +418,16 @@ export function TarjetitaDressCode({
   return (
     <motion.div {...reveal}>
       <div className="w-[280px] rounded-3xl bg-white p-4 text-[var(--super-modern-main-color)] shadow-md">
-        <p style={titleTextStyle(titleColorSecondary)} className={`${paris.className} text-center text-xl`}>{title}</p>
+        <p
+          style={titleTextStyle(titleColorSecondary)}
+          className={`${paris.className} text-center text-xl`}
+        >
+          {title}
+        </p>
         {details.slice(0, 1).map((detail) => (
           <p
-            style={secondaryTextStyle(secondaryColor)} className="mt-1 text-center text-[14px] font-bold uppercase tracking-widest"
+            style={secondaryTextStyle(secondaryColor)}
+            className="mt-1 text-center text-[14px] font-bold uppercase tracking-widest"
             key={detail}
           >
             {detail}
@@ -359,7 +444,8 @@ export function TarjetitaDressCode({
         </div>
         {details.slice(1).map((detail) => (
           <p
-            style={secondaryTextStyle(secondaryColor)} className="mt-1 text-center text-[14px] uppercase tracking-widest"
+            style={secondaryTextStyle(secondaryColor)}
+            className="mt-1 text-center text-[14px] uppercase tracking-widest"
             key={detail}
           >
             {detail}
@@ -385,11 +471,19 @@ export function Tarjetita2({
   return (
     <motion.div {...reveal}>
       <div className="w-[280px] rounded-3xl bg-[var(--super-modern-main-color)] p-4 text-white shadow-md">
-        <p style={titleTextStyle(titleColorSecondary)} className={`${paris.className} text-center text-xl`}>{title}</p>
+        <p
+          style={titleTextStyle(titleColorSecondary)}
+          className={`${paris.className} text-center text-xl`}
+        >
+          {title}
+        </p>
         <div className="mt-6 flex justify-center">
           {iconUrl && <img src={iconUrl} alt="regalo" className="w-[64px]" />}
         </div>
-        <p style={secondaryTextStyle(textColorSecondary)} className="mt-1 text-center text-[14px] uppercase tracking-widest">
+        <p
+          style={secondaryTextStyle(textColorSecondary)}
+          className="mt-1 text-center text-[14px] uppercase tracking-widest"
+        >
           {description}
         </p>
       </div>
@@ -448,11 +542,11 @@ export function Itinerario({
                         </>
                       ) : (
                         item.iconUrl && (
-                      <MainColorIcon
-                        src={item.iconUrl}
-                        label={item.title}
-                        className="ml-auto h-12 w-12 opacity-80"
-                      />
+                          <MainColorIcon
+                            src={item.iconUrl}
+                            label={item.title}
+                            className="ml-auto h-12 w-12 opacity-80"
+                          />
                         )
                       )}
                     </div>
@@ -462,11 +556,11 @@ export function Itinerario({
                     <div className={`w-1/2 ${textFirst ? "" : "pl-6"}`}>
                       {textFirst ? (
                         item.iconUrl && (
-                    <MainColorIcon
-                      src={item.iconUrl}
-                      label={item.title}
-                      className="ml-[24px] h-12 w-12 opacity-80"
-                    />
+                          <MainColorIcon
+                            src={item.iconUrl}
+                            label={item.title}
+                            className="ml-[24px] h-12 w-12 opacity-80"
+                          />
                         )
                       ) : (
                         <>
@@ -501,13 +595,22 @@ export function TarjetitaConfirmacion({
     <motion.div {...reveal}>
       <div className="mx-auto my-8 w-[320px] max-w-sm rounded-3xl bg-white text-[var(--super-modern-main-color)] shadow-md">
         <div className="p-4 text-center">
-          <p style={titleTextStyle(titleColorSecondary)} className={`${paris.className} text-3xl`}>
+          <p
+            style={titleTextStyle(titleColorSecondary)}
+            className={`${paris.className} text-3xl`}
+          >
             Confirmación de Asistencia
           </p>
-          <p style={secondaryTextStyle(secondaryColor)} className="mt-1 text-center text-sm tracking-widest uppercase">
+          <p
+            style={secondaryTextStyle(secondaryColor)}
+            className="mt-1 text-center text-sm tracking-widest uppercase"
+          >
             {confirmation.message ?? "Nos encantará celebrar contigo."}
           </p>
-          <p style={secondaryTextStyle(secondaryColor)} className="mt-3 text-center font-semibold uppercase tracking-widest">
+          <p
+            style={secondaryTextStyle(secondaryColor)}
+            className="mt-3 text-center font-semibold uppercase tracking-widest"
+          >
             Favor de confirmar tu asistencia antes del <br />
             <b>{confirmation.deadline}</b>
           </p>
@@ -526,10 +629,18 @@ export function TarjetitaConfirmacion({
     </motion.div>
   );
 }
-export function Foto({ url, alt }: { url?: string; alt: string }) {
+export function Foto({
+  url,
+  alt,
+  imagesInGrayscale = true,
+}: {
+  url?: string;
+  alt: string;
+  imagesInGrayscale?: boolean;
+}) {
   return url ? (
     <motion.div {...reveal}>
-      <img src={url} alt={alt} className="grayscale" />
+      <img src={url} alt={alt} className={imagesInGrayscale ? "grayscale" : ""} />
     </motion.div>
   ) : null;
 }

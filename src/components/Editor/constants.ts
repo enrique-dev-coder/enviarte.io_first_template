@@ -2,6 +2,7 @@ import type { SuperModernInvitationProps } from "@/app/InvitationTemplates/Super
 
 export const DEFAULT_INVITATION: SuperModernInvitationProps = {
   mainColor: "#b7410E", secondaryColor: "#1F2E3D",
+  imagesInGrayscale: true, enterButtonExtraClasses: "!mt-[16px] !bg-transparent",
   couple: { firstPerson: "Guadalupe", secondPerson: "Salvador", initials: { first: "G", second: "A" } },
   families: { firstPersonParents: ["Claudia Cristina Hernández Nuñez", "Manuel de Jesús Castor"], secondPersonParents: ["Laura Alicia Garza Ortiz", "Antonio Salvador Fuentes Rodríguez"] },
   event: { date: "2026-06-13T00:00:00-06:00", displayDate: "Sábado, 13 de junio de 2026", ceremony: { name: "Ceremonia Religiosa · San Pablo Apóstol", time: "6:00 PM", address: "Blvd. Pedro Figueroa s/n, Real de Peña, 25210 Saltillo, Coah.", mapsUrl: "https://maps.app.goo.gl/n5oSRZC9nHh9ZgUo7" }, reception: { name: "Villa Santa Fe", time: "8:30 PM", address: "Blvd. Jorge Reyna Masso Masso #214, 25904 Saltillo, Coah.", mapsUrl: "https://maps.app.goo.gl/EX6nRYEJp4NKxFAx7" } },

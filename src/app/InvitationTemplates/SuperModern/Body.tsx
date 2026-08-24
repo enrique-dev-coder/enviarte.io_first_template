@@ -27,6 +27,8 @@ const Body = (props: SuperModernInvitationProps) => {
     titleColorSecondary,
     textColorSecondary,
     previewMode = false,
+    imagesInGrayscale = true,
+    enterButtonExtraClasses = "!mt-[16px] !bg-transparent",
     couple,
     event,
     adultOnly,
@@ -55,7 +57,7 @@ const Body = (props: SuperModernInvitationProps) => {
         {!previewMode && <IngresarBoton
           buttonText="Ingresar"
           bgCuadrito="bg-white"
-          extraClases="!mt-[16px] !bg-transparent"
+          extraClases={enterButtonExtraClasses}
           font={paris}
           novia={couple.firstPerson}
           novio={couple.secondPerson}
@@ -70,9 +72,10 @@ const Body = (props: SuperModernInvitationProps) => {
           imageUrl={media.heroImageUrl}
           initials={initials}
           previewMode={previewMode}
+          imagesInGrayscale={imagesInGrayscale}
         />
         <Invitacion {...props} />
-        <Foto url={photos[0]} alt={alt} />
+        <Foto url={photos[0]} alt={alt} imagesInGrayscale={imagesInGrayscale} />
         <section className="bg-gradient-to-br from-[#f3ede5] via-white to-[#e9e2d8] py-10">
           {event.ceremony && (
             <SeccionCeremonia
@@ -95,7 +98,7 @@ const Body = (props: SuperModernInvitationProps) => {
             />
           )}
         </section>
-        <Foto url={photos[1]} alt={alt} />
+        <Foto url={photos[1]} alt={alt} imagesInGrayscale={imagesInGrayscale} />
         {(adultOnly || dressCode || gift) && (
           <section className="bg-gradient-to-br from-[#f3ede5] via-white to-[#e9e2d8] py-10">
             <div className="mx-auto max-w-sm">
@@ -135,8 +138,8 @@ const Body = (props: SuperModernInvitationProps) => {
             </div>
           </section>
         )}
-        <Foto url={photos[2]} alt={alt} />
-        <Foto url={photos[3]} alt={alt} />
+        <Foto url={photos[2]} alt={alt} imagesInGrayscale={imagesInGrayscale} />
+        <Foto url={photos[3]} alt={alt} imagesInGrayscale={imagesInGrayscale} />
         <section className="bg-gradient-to-br from-[#f3ede5] via-white to-[#e9e2d8] py-10">
           <Itinerario
             items={schedule}
@@ -144,7 +147,7 @@ const Body = (props: SuperModernInvitationProps) => {
             titleColorSecondary={titleColorSecondary}
           />
         </section>
-        <Foto url={photos[4]} alt={alt} />
+        <Foto url={photos[4]} alt={alt} imagesInGrayscale={imagesInGrayscale} />
         {confirmation && (
           <section className="bg-gradient-to-br from-[#f3ede5] via-white to-[#e9e2d8] py-10">
             <TarjetitaConfirmacion
@@ -154,7 +157,7 @@ const Body = (props: SuperModernInvitationProps) => {
             />
           </section>
         )}
-        <Foto url={photos[5]} alt={alt} />
+        <Foto url={photos[5]} alt={alt} imagesInGrayscale={imagesInGrayscale} />
         <section className="bg-gradient-to-br from-[#f3ede5] via-white to-[#e9e2d8] py-10">
           <div className="mx-auto max-w-sm">
             <Contador
@@ -168,7 +171,7 @@ const Body = (props: SuperModernInvitationProps) => {
           </div>
         </section>
         {!previewMode && <SongButtonPlayer backgroundColor="bg-[var(--super-modern-main-color)]" />}
-        <Foto url={photos[6]} alt={alt} />
+        <Foto url={photos[6]} alt={alt} imagesInGrayscale={imagesInGrayscale} />
       </div>
     </InvitationContainer>
   );

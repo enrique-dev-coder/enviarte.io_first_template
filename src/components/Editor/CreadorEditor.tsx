@@ -55,6 +55,22 @@ export default function CreadorEditor({
         </button>
       </div>
       <div className="grid max-h-[calc(100vh-9rem)] gap-3 overflow-y-auto pr-1">
+        <Section title="Presentación">
+          <label className="flex cursor-pointer items-center justify-between gap-3 rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-700">
+            <span>Imágenes en blanco y negro</span>
+            <input
+              type="checkbox"
+              checked={invitation.imagesInGrayscale ?? true}
+              onChange={(event) => update("imagesInGrayscale", event.target.checked)}
+              className="h-4 w-4 accent-[#b7410E]"
+            />
+          </label>
+          <Field
+            label="Clases extra del botón Ingresar"
+            value={invitation.enterButtonExtraClasses}
+            onChange={(value) => update("enterButtonExtraClasses", value)}
+          />
+        </Section>
         <Section title="Colores">
           <div className="grid grid-cols-2 gap-3">
             <Field

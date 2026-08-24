@@ -9,16 +9,18 @@ const Hero = ({
   imageUrl,
   initials,
   previewMode = false,
+  imagesInGrayscale = true,
 }: {
   imageUrl: string;
   initials: { first: string; second: string };
   previewMode?: boolean;
+  imagesInGrayscale?: boolean;
 }) => {
   const { controls } = useContext(StartAnimation);
   return (
     <div
       style={{ backgroundImage: `url(${imageUrl})` }}
-      className="h-screen bg-cover bg-center bg-no-repeat grayscale"
+      className={`h-screen bg-cover bg-center bg-no-repeat ${imagesInGrayscale ? "grayscale" : ""}`}
     >
       <motion.div
         initial={{ opacity: 0, y: 5 }}
