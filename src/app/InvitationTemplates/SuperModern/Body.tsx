@@ -118,6 +118,7 @@ const Body = (props: SuperModernInvitationProps) => {
                   <TarjetitaDressCode
                     title={dressCode.title}
                     details={dressCode.details}
+                    restrictions={dressCode.restrictions}
                     iconUrl={media.icons?.dressCode}
                     secondaryColor={secondaryColor}
                     titleColorSecondary={titleColorSecondary}

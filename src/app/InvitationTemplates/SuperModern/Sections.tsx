@@ -405,12 +405,14 @@ export function Tarjetita({
 export function TarjetitaDressCode({
   title = "Código de Vestimenta",
   details = [],
+  restrictions,
   iconUrl,
   secondaryColor,
   titleColorSecondary,
 }: {
   title?: string;
   details?: string[];
+  restrictions?: string;
   iconUrl?: string;
   secondaryColor?: string;
   titleColorSecondary?: string;
@@ -451,6 +453,14 @@ export function TarjetitaDressCode({
             {detail}
           </p>
         ))}
+        {restrictions && (
+          <p
+            style={secondaryTextStyle(secondaryColor)}
+            className="mt-2 text-center text-[14px] font-bold uppercase tracking-widest"
+          >
+            {restrictions}
+          </p>
+        )}
       </div>
     </motion.div>
   );

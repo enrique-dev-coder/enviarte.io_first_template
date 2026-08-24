@@ -8,7 +8,7 @@ export const DEFAULT_INVITATION: SuperModernInvitationProps = {
   event: { date: "2026-06-13T00:00:00-06:00", displayDate: "Sábado, 13 de junio de 2026", ceremony: { name: "Ceremonia Religiosa · San Pablo Apóstol", time: "6:00 PM", address: "Blvd. Pedro Figueroa s/n, Real de Peña, 25210 Saltillo, Coah.", mapsUrl: "https://maps.app.goo.gl/n5oSRZC9nHh9ZgUo7" }, reception: { name: "Villa Santa Fe", time: "8:30 PM", address: "Blvd. Jorge Reyna Masso Masso #214, 25904 Saltillo, Coah.", mapsUrl: "https://maps.app.goo.gl/EX6nRYEJp4NKxFAx7" } },
   quote: { text: "El amor no consiste en mirar al otro, sino en mirar juntos en la misma dirección", author: "Antoine de Saint-Exupéry" },
   adultOnly: { message: "Queremos que se relajen, bailen y celebren a lo grande con nosotros. Esta vez la fiesta será solo para adultos." },
-  dressCode: { details: ["Etiqueta", "Ellas: Vestido largo", "Ellos: Traje"] }, gift: { description: "Lluvia de sobres" },
+  dressCode: { details: ["Etiqueta", "Ellas: Vestido largo", "Ellos: Traje"], restrictions: "No mezclilla" }, gift: { description: "Lluvia de sobres" },
   schedule: [
     { time: "6:00 P.M.", title: "Ceremonia religiosa", iconUrl: "/assets/images/guadalupeysalvador/churchitinerario.png" },
     { time: "8:30 P.M.", title: "Ceremonia civil", iconUrl: "/assets/images/guadalupeysalvador/ceremoniait.png" },

@@ -67,6 +67,7 @@ const invitation: SuperModernInvitationProps = {
   },
   dressCode: {
     details: ["Etiqueta", "Ellas: Vestido largo", "Ellos: Traje "],
+    restrictions: "NO MEZCLILLA",
   },
   gift: {
     description: "Lluvia de sobres",

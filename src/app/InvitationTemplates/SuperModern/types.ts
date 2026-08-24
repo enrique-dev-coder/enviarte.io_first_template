@@ -46,6 +46,8 @@ export type SuperModernInvitationProps = {
   dressCode?: {
     title?: string;
     details?: string[];
+    /** Restricción opcional, por ejemplo: "No mezclilla". */
+    restrictions?: string;
   };
   adultOnly?: {
     title?: string;

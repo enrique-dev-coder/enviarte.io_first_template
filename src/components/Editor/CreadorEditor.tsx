@@ -335,6 +335,16 @@ export default function CreadorEditor({
             }
           />
           <Field
+            label="Restricción de vestimenta (opcional)"
+            value={invitation.dressCode?.restrictions}
+            onChange={(value) =>
+              update("dressCode", {
+                ...invitation.dressCode,
+                restrictions: value,
+              })
+            }
+          />
+          <Field
             label="Título de regalo"
             value={invitation.gift?.title}
             onChange={(value) =>
