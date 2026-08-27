@@ -25,9 +25,11 @@ const invitation: SuperModernInvitationProps = {
   secondaryColor: "#1F2E3D",
   imagesInGrayscale: false,
   enterButtonExtraClasses: "!mt-[-200px] !bg-transparent",
+  optionalTextButton: "Enter",
   couple: {
     firstPerson: "Melissa",
     secondPerson: "Jaime",
+    connector: "&",
     initials: {
       first: "M",
       second: "J",
@@ -40,10 +42,19 @@ const invitation: SuperModernInvitationProps = {
       "Jaime Escamilla Fuentes",
     ],
   },
+  invitationText: {
+    blessing: "With the blessing of God and our parents",
+    firstPersonParentsTitle: "Parents of the bride",
+    secondPersonParentsTitle: "Parents of the groom",
+  },
   event: {
     date: "2026-10-03T00:00:00-06:00",
-    displayDate: "Sábado, 03 de Octubre de 2026",
+    displayDate: "Saturday, October 3, 2026",
+    locale: "en-US",
     ceremony: {
+      optionalTitle: "Religious Ceremony",
+      optionalTextButton: "DIRECTIONS",
+      optionalIntroText: "JOIN US ON",
       name: "Parroquia San Charbel",
       time: "4:00 PM",
       address:
@@ -51,6 +62,8 @@ const invitation: SuperModernInvitationProps = {
       mapsUrl: "https://maps.app.goo.gl/w4EsZgkMBB7K7CwG8",
     },
     reception: {
+      optionalTitle: "Reception",
+      optionalTextButton: "DIRECTIONS",
       name: "Hacienda Torrecillas ",
       time: "7:00 PM",
       address:
@@ -59,52 +72,67 @@ const invitation: SuperModernInvitationProps = {
     },
   },
   quote: {
-    text: "El amor no consiste en mirar al otro, sino en mirar juntos en la misma dirección",
+    text: "Love does not consist of gazing at each other, but in looking outward together in the same direction",
     author: "Antoine de Saint-Exupéry",
   },
   adultOnly: {
+    optionalTitle: "Adults-only event",
     message:
-      "Queremos que se relajen, bailen y celebren a lo grande con nosotros. Esta vez la fiesta será solo para adultos.",
+      "We want you to relax, dance, and celebrate with us to the fullest. This time, the celebration will be for adults only.",
   },
   dressCode: {
-    details: ["Etiqueta", "Ellas: Vestido largo", "Ellos: Traje "],
-    restrictions: "NO MEZCLILLA",
+    optionalTitle: "Dress Code",
+    details: ["Black Tie", "Women: Long dress", "Men: Suit"],
+    restrictions: "NO DENIM",
   },
   gift: {
-    description: "Lluvia de sobres",
+    optionalTitle: "Gift",
+    description: "Envelope rain",
   },
   schedule: [
     {
       time: "4:00 P.M.",
-      title: "Ceremonia religiosa",
+      title: "Religious Ceremony",
       iconUrl: "/assets/images/guadalupeysalvador/churchitinerario.png",
     },
     {
       time: "6:00 P.M.",
-      title: "Ceremonia civil",
+      title: "Civil Ceremony",
       iconUrl: "/assets/images/guadalupeysalvador/ceremoniait.png",
     },
     {
       time: "7:00 P.M.",
-      title: "Recepción",
+      title: "Reception",
       iconUrl: "/assets/images/guadalupeysalvador/baileit.png",
     },
     {
       time: "8:00 P.M.",
-      title: "Cena",
+      title: "Dinner",
       iconUrl: "/assets/images/guadalupeysalvador/cena.png",
     },
     {
       time: "2:00 A.M.",
-      title: "Cierre Evento",
+      title: "End of Event",
       iconUrl: "/assets/images/guadalupeysalvador/cake.png",
     },
   ],
   confirmation: {
-    deadline: "30 de agosto de 2026",
+    optionalTitle: "RSVP",
+    optionalTextButton: "Confirm",
+    optionalDeadlineText: "Please confirm your attendance by",
+    deadline: "August 30, 2026",
     url: "https://wa.link/5kmg8x",
     message:
-      "Celebrar nuestro amor es un sueño hecho realidad y nos encantará contar contigo.",
+      "Celebrating our love is a dream come true, and we would love to have you there with us.",
+  },
+  itinerary: { optionalTitle: "Schedule" },
+  countdown: {
+    optionalTitle: "Get ready!",
+    optionalDatePrefix: "See you on",
+    optionalDaysLabel: "days",
+    optionalHoursLabel: "hours",
+    optionalMinutesLabel: "minutes",
+    optionalSecondsLabel: "seconds",
   },
   media: {
     heroImageUrl: "/assets/images/Melissa&Jaime/img1.jpeg",

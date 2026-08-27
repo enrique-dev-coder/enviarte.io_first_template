@@ -47,6 +47,7 @@ export function Invitacion({
   couple,
   families,
   quote,
+  invitationText,
   media,
   mainColor,
   secondaryColor,
@@ -56,6 +57,7 @@ export function Invitacion({
   | "couple"
   | "families"
   | "quote"
+  | "invitationText"
   | "media"
   | "mainColor"
   | "secondaryColor"
@@ -86,7 +88,7 @@ export function Invitacion({
                 style={secondaryTextStyle(secondaryColor)}
                 className="mx-auto w-11/12 text-center text-[14px] uppercase tracking-widest text-gray-600"
               >
-                Con la bendición de Dios y de nuestros padres
+                {invitationText?.blessing ?? "Con la bendición de Dios y de nuestros padres"}
               </p>
               <div
                 style={secondaryTextStyle(secondaryColor)}
@@ -95,7 +97,7 @@ export function Invitacion({
                 {families?.firstPersonParents?.length ? (
                   <>
                     <p className="uppercase font-semibold">
-                      Padres de la novia
+                      {invitationText?.firstPersonParentsTitle ?? "Padres de la novia"}
                     </p>
                     {families.firstPersonParents.map((parent) => (
                       <p className="uppercase" key={parent}>
@@ -107,7 +109,7 @@ export function Invitacion({
                 {families?.secondPersonParents?.length ? (
                   <>
                     <p className="mt-4 uppercase font-semibold">
-                      Padres de el novio
+                      {invitationText?.secondPersonParentsTitle ?? "Padres de el novio"}
                     </p>
                     {families.secondPersonParents.map((parent) => (
                       <p className="uppercase" key={parent}>
@@ -172,6 +174,7 @@ export function SeccionCeremonia({
   secondaryColor,
   titleColorSecondary,
   textColorSecondary,
+  locale = "es-MX",
 }: {
   location: InvitationLocation;
   eventDate: string | Date;
@@ -181,20 +184,21 @@ export function SeccionCeremonia({
   secondaryColor?: string;
   titleColorSecondary?: string;
   textColorSecondary?: string;
+  locale?: string;
 }) {
   const date = new Date(eventDate);
   const timeZone = "America/Mexico_City";
-  const month = new Intl.DateTimeFormat("es-MX", {
+  const month = new Intl.DateTimeFormat(locale, {
     month: "long",
     timeZone,
   })
     .format(date)
     .toUpperCase();
-  const weekday = new Intl.DateTimeFormat("es-MX", {
+  const weekday = new Intl.DateTimeFormat(locale, {
     weekday: "long",
     timeZone,
   }).format(date);
-  const dateParts = new Intl.DateTimeFormat("es-MX", {
+  const dateParts = new Intl.DateTimeFormat(locale, {
     timeZone,
   }).formatToParts(date);
   const day = dateParts.find((part) => part.type === "day")?.value;
@@ -215,7 +219,7 @@ export function SeccionCeremonia({
             style={secondaryTextStyle(textColorSecondary)}
             className="pt-4 text-center text-[14px] tracking-wide"
           >
-            ACOMPAÑANOS EL DÍA
+            {location.optionalIntroText ?? "ACOMPAÑANOS EL DÍA"}
           </p>
           <div className="mt-2 text-center">
             <p
@@ -266,7 +270,7 @@ export function SeccionCeremonia({
               style={titleTextStyle(titleColorSecondary)}
               className={`${paris.className} text-3xl`}
             >
-              Ceremonia Religiosa
+              {location.optionalTitle ?? "Ceremonia Religiosa"}
             </p>
             <p
               style={secondaryTextStyle(textColorSecondary)}
@@ -289,7 +293,7 @@ export function SeccionCeremonia({
               className="bg-white px-6 py-2 tracking-widest text-gray-700 shadow-md transition hover:shadow-lg"
               style={secondaryTextStyle(secondaryColor)}
             >
-              ¿CÓMO LLEGAR?
+              {location.optionalTextButton ?? "¿CÓMO LLEGAR?"}
             </a>
           </div>
         </div>
@@ -317,7 +321,7 @@ export function TarjetitaRecepcion({
             style={titleTextStyle(titleColorSecondary)}
             className={`${paris.className} text-3xl`}
           >
-            Recepción
+            {location.optionalTitle ?? "Recepción"}
           </p>
           <p
             style={secondaryTextStyle(secondaryColor)}
@@ -353,7 +357,7 @@ export function TarjetitaRecepcion({
               rel="noreferrer"
               className="bg-[var(--super-modern-main-color)] px-6 py-2 tracking-widest text-white shadow-md transition hover:shadow-lg"
             >
-              ¿CÓMO LLEGAR?
+              {location.optionalTextButton ?? "¿CÓMO LLEGAR?"}
             </a>
           </div>
         </div>
@@ -363,12 +367,14 @@ export function TarjetitaRecepcion({
 }
 export function Tarjetita({
   title = "Evento solo para adultos",
+  optionalTitle,
   message,
   iconUrl,
   titleColorSecondary,
   textColorSecondary,
 }: {
   title?: string;
+  optionalTitle?: string;
   message: string;
   iconUrl?: string;
   titleColorSecondary?: string;
@@ -381,7 +387,7 @@ export function Tarjetita({
           style={titleTextStyle(titleColorSecondary)}
           className={`${paris.className} text-center text-xl`}
         >
-          {title}
+          {optionalTitle ?? title}
         </p>
         <div className="mt-2 flex justify-center">
           {iconUrl && (
@@ -404,6 +410,7 @@ export function Tarjetita({
 }
 export function TarjetitaDressCode({
   title = "Código de Vestimenta",
+  optionalTitle,
   details = [],
   restrictions,
   iconUrl,
@@ -411,6 +418,7 @@ export function TarjetitaDressCode({
   titleColorSecondary,
 }: {
   title?: string;
+  optionalTitle?: string;
   details?: string[];
   restrictions?: string;
   iconUrl?: string;
@@ -424,7 +432,7 @@ export function TarjetitaDressCode({
           style={titleTextStyle(titleColorSecondary)}
           className={`${paris.className} text-center text-xl`}
         >
-          {title}
+          {optionalTitle ?? title}
         </p>
         {details.slice(0, 1).map((detail) => (
           <p
@@ -467,12 +475,14 @@ export function TarjetitaDressCode({
 }
 export function Tarjetita2({
   title = "Regalo",
+  optionalTitle,
   description,
   iconUrl,
   titleColorSecondary,
   textColorSecondary,
 }: {
   title?: string;
+  optionalTitle?: string;
   description: string;
   iconUrl?: string;
   titleColorSecondary?: string;
@@ -485,7 +495,7 @@ export function Tarjetita2({
           style={titleTextStyle(titleColorSecondary)}
           className={`${paris.className} text-center text-xl`}
         >
-          {title}
+          {optionalTitle ?? title}
         </p>
         <div className="mt-6 flex justify-center">
           {iconUrl && <img src={iconUrl} alt="regalo" className="w-[64px]" />}
@@ -503,10 +513,12 @@ export function Tarjetita2({
 
 export function Itinerario({
   items,
+  optionalTitle,
   textureImageUrl,
   titleColorSecondary,
 }: {
   items: InvitationScheduleItem[];
+  optionalTitle?: string;
   textureImageUrl?: string;
   titleColorSecondary?: string;
 }) {
@@ -527,7 +539,7 @@ export function Itinerario({
             style={titleTextStyle(titleColorSecondary)}
             className={`${paris.className} my-10 text-center text-4xl font-bold`}
           >
-            Itinerario
+            {optionalTitle ?? "Itinerario"}
           </h2>
           <div className="relative mb-10">
             <div className="absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-gray-400" />
@@ -609,7 +621,7 @@ export function TarjetitaConfirmacion({
             style={titleTextStyle(titleColorSecondary)}
             className={`${paris.className} text-3xl`}
           >
-            Confirmación de Asistencia
+            {confirmation.optionalTitle ?? "Confirmación de Asistencia"}
           </p>
           <p
             style={secondaryTextStyle(secondaryColor)}
@@ -621,7 +633,7 @@ export function TarjetitaConfirmacion({
             style={secondaryTextStyle(secondaryColor)}
             className="mt-3 text-center font-semibold uppercase tracking-widest"
           >
-            Favor de confirmar tu asistencia antes del <br />
+            {confirmation.optionalDeadlineText ?? "Favor de confirmar tu asistencia antes del"} <br />
             <b>{confirmation.deadline}</b>
           </p>
           <div className="mt-6 flex justify-center">
@@ -631,7 +643,7 @@ export function TarjetitaConfirmacion({
               rel="noreferrer"
               className="bg-[var(--super-modern-main-color)] px-6 py-2 tracking-widest text-white shadow-md transition hover:shadow-lg"
             >
-              Confirmar
+              {confirmation.optionalTextButton ?? "Confirmar"}
             </a>
           </div>
         </div>

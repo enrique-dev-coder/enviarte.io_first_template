@@ -29,6 +29,7 @@ const Body = (props: SuperModernInvitationProps) => {
     previewMode = false,
     imagesInGrayscale = true,
     enterButtonExtraClasses = "!mt-[16px] !bg-transparent",
+    optionalTextButton,
     couple,
     event,
     adultOnly,
@@ -55,13 +56,13 @@ const Body = (props: SuperModernInvitationProps) => {
     >
       <div style={themeStyle}>
         {!previewMode && <IngresarBoton
-          buttonText="Ingresar"
+          buttonText={optionalTextButton ?? "Ingresar"}
           bgCuadrito="bg-white"
           extraClases={enterButtonExtraClasses}
           font={paris}
           novia={couple.firstPerson}
           novio={couple.secondPerson}
-          join={couple.connector === "&" ? "y" : (couple.connector ?? "y")}
+          join={couple.connector ?? "y"}
           color={{
             bgColor: "bg-[var(--super-modern-main-color)]",
             titleColor: "text-[var(--super-modern-main-color)]",
@@ -81,6 +82,7 @@ const Body = (props: SuperModernInvitationProps) => {
             <SeccionCeremonia
               location={event.ceremony}
               eventDate={event.date}
+              locale={event.locale}
               textureImageUrl={media.textureImageUrl}
               iconUrl={media.icons?.church}
               mainColor={mainColor}
@@ -106,6 +108,7 @@ const Body = (props: SuperModernInvitationProps) => {
                 {adultOnly && (
                   <Tarjetita
                     title={adultOnly.title}
+                    optionalTitle={adultOnly.optionalTitle}
                     message={adultOnly.message}
                     iconUrl={media.icons?.adultOnly}
                     titleColorSecondary={titleColorSecondary}
@@ -117,6 +120,7 @@ const Body = (props: SuperModernInvitationProps) => {
                 {dressCode && (
                   <TarjetitaDressCode
                     title={dressCode.title}
+                    optionalTitle={dressCode.optionalTitle}
                     details={dressCode.details}
                     restrictions={dressCode.restrictions}
                     iconUrl={media.icons?.dressCode}
@@ -129,6 +133,7 @@ const Body = (props: SuperModernInvitationProps) => {
                 {gift && (
                   <Tarjetita2
                     title={gift.title}
+                    optionalTitle={gift.optionalTitle}
                     description={gift.description}
                     iconUrl={media.icons?.gift}
                     titleColorSecondary={titleColorSecondary}
@@ -144,6 +149,7 @@ const Body = (props: SuperModernInvitationProps) => {
         <section className="bg-gradient-to-br from-[#f3ede5] via-white to-[#e9e2d8] py-10">
           <Itinerario
             items={schedule}
+            optionalTitle={props.itinerary?.optionalTitle}
             textureImageUrl={media.textureImageUrl}
             titleColorSecondary={titleColorSecondary}
           />
@@ -164,8 +170,14 @@ const Body = (props: SuperModernInvitationProps) => {
             <Contador
               fechaEvento={event.date}
               fechaString={event.displayDate}
+              optionalDatePrefix={props.countdown?.optionalDatePrefix}
+              optionalDaysLabel={props.countdown?.optionalDaysLabel}
+              optionalHoursLabel={props.countdown?.optionalHoursLabel}
+              optionalMinutesLabel={props.countdown?.optionalMinutesLabel}
+              optionalSecondsLabel={props.countdown?.optionalSecondsLabel}
               textureImageUrl={media.textureImageUrl}
               mainColor={mainColor}
+              optionalTitle={props.countdown?.optionalTitle}
               titleColorSecondary={titleColorSecondary}
               textColorSecondary={textColorSecondary}
             />

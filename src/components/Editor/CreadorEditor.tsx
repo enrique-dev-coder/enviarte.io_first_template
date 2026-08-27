@@ -70,6 +70,11 @@ export default function CreadorEditor({
             value={invitation.enterButtonExtraClasses}
             onChange={(value) => update("enterButtonExtraClasses", value)}
           />
+          <Field
+            label="Texto del botón Ingresar"
+            value={invitation.optionalTextButton}
+            onChange={(value) => update("optionalTextButton", value)}
+          />
         </Section>
         <Section title="Colores">
           <div className="grid grid-cols-2 gap-3">
@@ -192,6 +197,13 @@ export default function CreadorEditor({
                 update("event", { ...invitation.event, displayDate: value })
               }
             />
+            <Field
+              label="Idioma de fecha (locale)"
+              value={invitation.event.locale}
+              onChange={(value) =>
+                update("event", { ...invitation.event, locale: value })
+              }
+            />
           </div>
           <Field
             label="Lugar de ceremonia"
@@ -303,9 +315,12 @@ export default function CreadorEditor({
           />
           <Field
             label="Título solo adultos"
-            value={invitation.adultOnly?.title}
+            value={invitation.adultOnly?.optionalTitle ?? invitation.adultOnly?.title}
             onChange={(value) =>
-              update("adultOnly", { ...invitation.adultOnly!, title: value })
+              update("adultOnly", {
+                ...invitation.adultOnly!,
+                optionalTitle: value,
+              })
             }
           />
           <Field
@@ -318,9 +333,12 @@ export default function CreadorEditor({
           />
           <Field
             label="Título de vestimenta"
-            value={invitation.dressCode?.title}
+            value={invitation.dressCode?.optionalTitle ?? invitation.dressCode?.title}
             onChange={(value) =>
-              update("dressCode", { ...invitation.dressCode, title: value })
+              update("dressCode", {
+                ...invitation.dressCode,
+                optionalTitle: value,
+              })
             }
           />
           <Field
@@ -335,6 +353,93 @@ export default function CreadorEditor({
             }
           />
           <Field
+            label="Texto de bendición"
+            multiline
+            value={invitation.invitationText?.blessing}
+            onChange={(value) =>
+              update("invitationText", {
+                ...invitation.invitationText,
+                blessing: value,
+              })
+            }
+          />
+          <div className="grid grid-cols-2 gap-3">
+            <Field
+              label="Título padres primera persona"
+              value={invitation.invitationText?.firstPersonParentsTitle}
+              onChange={(value) =>
+                update("invitationText", {
+                  ...invitation.invitationText,
+                  firstPersonParentsTitle: value,
+                })
+              }
+            />
+            <Field
+              label="Título padres segunda persona"
+              value={invitation.invitationText?.secondPersonParentsTitle}
+              onChange={(value) =>
+                update("invitationText", {
+                  ...invitation.invitationText,
+                  secondPersonParentsTitle: value,
+                })
+              }
+            />
+          </div>
+          <div className="grid grid-cols-2 gap-3">
+            <Field
+              label="Título recepción"
+              value={reception.optionalTitle}
+              onChange={(value) =>
+                update("event", {
+                  ...invitation.event,
+                  reception: { ...reception, optionalTitle: value },
+                })
+              }
+            />
+            <Field
+              label="Botón recepción"
+              value={reception.optionalTextButton}
+              onChange={(value) =>
+                update("event", {
+                  ...invitation.event,
+                  reception: { ...reception, optionalTextButton: value },
+                })
+              }
+            />
+          </div>
+          <div className="grid grid-cols-2 gap-3">
+            <Field
+              label="Título ceremonia"
+              value={ceremony.optionalTitle}
+              onChange={(value) =>
+                update("event", {
+                  ...invitation.event,
+                  ceremony: { ...ceremony, optionalTitle: value },
+                })
+              }
+            />
+            <Field
+              label="Botón ceremonia"
+              value={ceremony.optionalTextButton}
+              onChange={(value) =>
+                update("event", {
+                  ...invitation.event,
+                  ceremony: { ...ceremony, optionalTextButton: value },
+                })
+              }
+            />
+            <Field
+              label="Texto superior ceremonia"
+              value={ceremony.optionalIntroText}
+              onChange={(value) =>
+                update("event", {
+                  ...invitation.event,
+                  ceremony: { ...ceremony, optionalIntroText: value },
+                })
+              }
+            />
+          </div>
+          <Field
             label="Restricción de vestimenta (opcional)"
             value={invitation.dressCode?.restrictions}
             onChange={(value) =>
@@ -346,9 +451,9 @@ export default function CreadorEditor({
           />
           <Field
             label="Título de regalo"
-            value={invitation.gift?.title}
+            value={invitation.gift?.optionalTitle ?? invitation.gift?.title}
             onChange={(value) =>
-              update("gift", { ...invitation.gift!, title: value })
+              update("gift", { ...invitation.gift!, optionalTitle: value })
             }
           />
           <Field
@@ -370,6 +475,36 @@ export default function CreadorEditor({
             }
           />
           <div className="grid grid-cols-2 gap-3">
+            <Field
+              label="Título confirmación"
+              value={invitation.confirmation?.optionalTitle}
+              onChange={(value) =>
+                update("confirmation", {
+                  ...invitation.confirmation!,
+                  optionalTitle: value,
+                })
+              }
+            />
+            <Field
+              label="Botón confirmación"
+              value={invitation.confirmation?.optionalTextButton}
+              onChange={(value) =>
+                update("confirmation", {
+                  ...invitation.confirmation!,
+                  optionalTextButton: value,
+                })
+              }
+            />
+            <Field
+              label="Texto antes de fecha límite"
+              value={invitation.confirmation?.optionalDeadlineText}
+              onChange={(value) =>
+                update("confirmation", {
+                  ...invitation.confirmation!,
+                  optionalDeadlineText: value,
+                })
+              }
+            />
             <Field
               label="Fecha límite"
               value={invitation.confirmation?.deadline}
@@ -394,6 +529,16 @@ export default function CreadorEditor({
           </div>
         </Section>
         <Section title="Itinerario">
+          <Field
+            label="Título del itinerario"
+            value={invitation.itinerary?.optionalTitle}
+            onChange={(value) =>
+              update("itinerary", {
+                ...invitation.itinerary,
+                optionalTitle: value,
+              })
+            }
+          />
           {invitation.schedule?.map((item, index) => (
             <div className="grid grid-cols-[90px_1fr] gap-3" key={index}>
               <Field
@@ -440,6 +585,34 @@ export default function CreadorEditor({
               </div>
             </div>
           ))}
+        </Section>
+        <Section title="Contador">
+          <Field
+            label="Título del contador"
+            value={invitation.countdown?.optionalTitle}
+            onChange={(value) =>
+              update("countdown", {
+                ...invitation.countdown,
+                optionalTitle: value,
+              })
+            }
+          />
+          <Field
+            label="Texto antes de la fecha"
+            value={invitation.countdown?.optionalDatePrefix}
+            onChange={(value) =>
+              update("countdown", {
+                ...invitation.countdown,
+                optionalDatePrefix: value,
+              })
+            }
+          />
+          <div className="grid grid-cols-2 gap-3">
+            <Field label="Etiqueta días" value={invitation.countdown?.optionalDaysLabel} onChange={(value) => update("countdown", { ...invitation.countdown, optionalDaysLabel: value })} />
+            <Field label="Etiqueta horas" value={invitation.countdown?.optionalHoursLabel} onChange={(value) => update("countdown", { ...invitation.countdown, optionalHoursLabel: value })} />
+            <Field label="Etiqueta minutos" value={invitation.countdown?.optionalMinutesLabel} onChange={(value) => update("countdown", { ...invitation.countdown, optionalMinutesLabel: value })} />
+            <Field label="Etiqueta segundos" value={invitation.countdown?.optionalSecondsLabel} onChange={(value) => update("countdown", { ...invitation.countdown, optionalSecondsLabel: value })} />
+          </div>
         </Section>
         <Section title="Imágenes, música e íconos">
           <Field

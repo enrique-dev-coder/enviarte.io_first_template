@@ -9,6 +9,12 @@ const Contador = ({
   fechaString,
   textureImageUrl,
   mainColor,
+  optionalTitle,
+  optionalDatePrefix,
+  optionalDaysLabel,
+  optionalHoursLabel,
+  optionalMinutesLabel,
+  optionalSecondsLabel,
   titleColorSecondary,
   textColorSecondary,
 }: {
@@ -16,6 +22,12 @@ const Contador = ({
   fechaString: string;
   textureImageUrl?: string;
   mainColor: string;
+  optionalTitle?: string;
+  optionalDatePrefix?: string;
+  optionalDaysLabel?: string;
+  optionalHoursLabel?: string;
+  optionalMinutesLabel?: string;
+  optionalSecondsLabel?: string;
   titleColorSecondary?: string;
   textColorSecondary?: string;
 }) => {
@@ -32,10 +44,10 @@ const Contador = ({
   }, [target]);
   const seconds = Math.floor(remaining / 1000);
   const values = [
-    [Math.floor(seconds / 86400), "días"],
-    [Math.floor((seconds % 86400) / 3600), "horas"],
-    [Math.floor((seconds % 3600) / 60), "minutos"],
-    [seconds % 60, "segundos"],
+    [Math.floor(seconds / 86400), optionalDaysLabel ?? "días"],
+    [Math.floor((seconds % 86400) / 3600), optionalHoursLabel ?? "horas"],
+    [Math.floor((seconds % 3600) / 60), optionalMinutesLabel ?? "minutos"],
+    [seconds % 60, optionalSecondsLabel ?? "segundos"],
   ] as const;
   return (
     <div
@@ -46,9 +58,9 @@ const Contador = ({
       }}
     >
       <div className="px-4 pt-4 text-center">
-        <p style={titleColorSecondary ? { color: titleColorSecondary } : undefined} className={`${paris.className} text-4xl font-bold`}>¡Prepárate!</p>
+        <p style={titleColorSecondary ? { color: titleColorSecondary } : undefined} className={`${paris.className} text-4xl font-bold`}>{optionalTitle ?? "¡Prepárate!"}</p>
         <p style={textColorSecondary ? { color: textColorSecondary } : undefined} className={`${lora.className} text-xs uppercase`}>
-          Nos vemos el {fechaString}
+          {optionalDatePrefix ?? "Nos vemos el"} {fechaString}
         </p>
       </div>
       <div className="flex justify-center gap-2 px-3 pb-4 pt-3 sm:gap-4">

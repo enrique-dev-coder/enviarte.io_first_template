@@ -3,6 +3,10 @@ export type InvitationLocation = {
   address: string;
   time: string;
   mapsUrl: string;
+  optionalTitle?: string;
+  optionalTextButton?: string;
+  /** Texto opcional encima de la fecha de la ceremonia. */
+  optionalIntroText?: string;
 };
 
 export type InvitationScheduleItem = {
@@ -26,6 +30,8 @@ export type SuperModernInvitationProps = {
   imagesInGrayscale?: boolean;
   /** Clases Tailwind adicionales para personalizar el botón de ingreso. */
   enterButtonExtraClasses?: string;
+  /** Texto opcional del botón inicial de ingreso. */
+  optionalTextButton?: string;
   couple: {
     firstPerson: string;
     secondPerson: string;
@@ -36,32 +42,54 @@ export type SuperModernInvitationProps = {
     firstPersonParents?: string[];
     secondPersonParents?: string[];
   };
+  invitationText?: {
+    blessing?: string;
+    firstPersonParentsTitle?: string;
+    secondPersonParentsTitle?: string;
+  };
   event: {
     date: string | Date;
     displayDate: string;
+    /** Locale de la fecha de ceremonia. Por defecto: es-MX. */
+    locale?: string;
     ceremony?: InvitationLocation;
     reception?: InvitationLocation;
   };
   quote?: { text: string; author?: string };
   dressCode?: {
     title?: string;
+    optionalTitle?: string;
     details?: string[];
     /** Restricción opcional, por ejemplo: "No mezclilla". */
     restrictions?: string;
   };
   adultOnly?: {
     title?: string;
+    optionalTitle?: string;
     message: string;
   };
   gift?: {
     title?: string;
+    optionalTitle?: string;
     description: string;
   };
   schedule?: InvitationScheduleItem[];
   confirmation?: {
+    optionalTitle?: string;
     deadline: string;
     url: string;
     message?: string;
+    optionalTextButton?: string;
+    optionalDeadlineText?: string;
+  };
+  itinerary?: { optionalTitle?: string };
+  countdown?: {
+    optionalTitle?: string;
+    optionalDatePrefix?: string;
+    optionalDaysLabel?: string;
+    optionalHoursLabel?: string;
+    optionalMinutesLabel?: string;
+    optionalSecondsLabel?: string;
   };
   media: {
     heroImageUrl: string;
