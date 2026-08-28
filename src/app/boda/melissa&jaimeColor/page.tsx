@@ -6,13 +6,13 @@ export const metadata = {
   description: "Invitaciones digitales para eventos",
   openGraph: {
     siteName: "Melissa & Jaime",
-    title: "Melissa & Jaime - Our wedding",
+    title: "Melissa & Jaime - Nuestra Boda",
     description:
       "Te invitamos a celebrar nuestra boda. Haz clic para más detalles.",
     url: "https://www.invitandofacil.com/boda/melissa&jaimeColor",
     images: [
       {
-        url: "https://www.invitandofacil.com/assets/images/Melissa&Jaime/img10.jpeg",
+        url: "https://www.invitandofacil.com/assets/images/Melissa&Jaime/img1.jpeg",
         width: 256,
         height: 425,
         alt: "Imagen de la boda de Arely y Bryan ",
