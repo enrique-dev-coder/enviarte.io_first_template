@@ -62,7 +62,7 @@ const Body = ({
   return (
     <InvitationContainer
       spBackground="none"
-      songLink="/assets/songs/cinthiayomar.mp3"
+      songLink="/assets/songs/cinthyayomar2.mp3"
     >
       <IngresarBoton
         buttonText="Ingresar"
