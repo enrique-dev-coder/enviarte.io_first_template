@@ -378,7 +378,12 @@ export function Tarjetita() {
     </motion.div>
   );
 }
+
 export function TarjetitaDressCode() {
+  const coloresMujeres = ["#AFBFA5", "#99AA8C", "#7D906F", "#607252"];
+
+  const coloresHombres = ["#B4A9A6", "#716563", "#637454", "#343538"];
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 5 }}
@@ -386,57 +391,97 @@ export function TarjetitaDressCode() {
       transition={{ ease: "easeInOut", duration: 1 }}
       viewport={{ once: true }}
     >
-      <div className="text-[#6b705c] bg-white shadow-md w-[280px] rounded-3xl p-4">
-        <p className={`${paris.className} text-xl text-center`}>
+      <div className="text-[#6b705c] bg-white shadow-md w-[280px] rounded-3xl p-5">
+        {/* Título */}
+        <p className={`${paris.className} text-2xl text-center`}>
           Código de Vestimenta
         </p>
 
-        <p className="uppercase tracking-widest mt-1 text-center text-[14px] font-bold">
-          Etiqueta
-        </p>
+        <div className="w-full h-[1px] bg-[#6b705c]/40 mt-3 mb-5" />
 
-        <div className="mt-2 flex justify-center">
+        {/* Mensaje de los novios */}
+        <div className="text-center space-y-4">
+          <p className="text-[12px] leading-relaxed">
+            Su apoyo y consideración nos ayudarán a crear la armonía y el
+            ambiente que soñamos para este día tan importante en nuestras vidas.
+          </p>
+
+          <p className="text-[12px] leading-relaxed">
+            ¡Gracias por ser parte de nuestra historia y por ayudarnos a hacer
+            de este día un recuerdo aún más bonito!
+          </p>
+
+          <p className={`${paris.className} text-lg`}>
+            Con mucho cariño, los novios.
+          </p>
+        </div>
+
+        {/* Icono decorativo */}
+        <div className="mt-5 flex justify-center">
           <img
             src={dresscode.src}
-            alt="Código de vestimenta"
-            className="w-[72px]"
+            alt="Código de vestimenta formal"
+            className="w-[65px] object-contain"
           />
         </div>
 
-        <p className="uppercase tracking-widest mt-1 text-center text-[14px]">
-          Ellas: Vestido Largo
-        </p>
-
-        <p className="uppercase tracking-widest mt-1 text-center text-[14px]">
-          Ellos: Traje
-        </p>
-
-        {/* Color reservado para damas */}
-        <div className="mt-4">
-          <p className="uppercase tracking-widest text-center text-[11px]">
-            Color reservado para las damas
+        {/* Paleta de mujeres */}
+        <div className="mt-6 text-center">
+          <p className="uppercase tracking-wider text-[11px] font-semibold">
+            Paleta de colores sugerida a mujeres
           </p>
 
-          <div className="flex items-center justify-center gap-2 mt-2">
-            <span className="w-4 h-4 rounded-full bg-[#046307] border border-[#6b705c]/20" />
-            <span className="uppercase tracking-widest text-[12px] font-semibold">
-              Esmeralda
-            </span>
+          <p className="uppercase tracking-widest mt-2 text-[12px]">
+            Vestido largo formal
+          </p>
+
+          <div className="flex items-center justify-center gap-3 mt-4">
+            {coloresMujeres.map((color, index) => (
+              <span
+                key={index}
+                className="w-11 h-11 rounded-full border border-black/5 shadow-sm"
+                style={{ backgroundColor: color }}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Separador */}
+        <div className="w-full h-[1px] bg-[#6b705c]/20 my-6" />
+
+        {/* Paleta de hombres */}
+        <div className="text-center">
+          <p className="uppercase tracking-wider text-[11px] font-semibold">
+            Paleta de colores sugerida a hombres
+          </p>
+
+          <p className="uppercase tracking-widest mt-2 text-[12px]">
+            Traje formal
+          </p>
+
+          <div className="flex items-center justify-center gap-3 mt-4">
+            {coloresHombres.map((color, index) => (
+              <span
+                key={index}
+                className="w-11 h-11 rounded-full border border-black/5 shadow-sm"
+                style={{ backgroundColor: color }}
+              />
+            ))}
           </div>
         </div>
 
         {/* Colores exclusivos de la novia */}
-        <div className="mt-4 pt-3 border-t border-[#6b705c]/20">
-          <p className="uppercase tracking-widest text-center text-[11px] font-bold">
-            Color blanco y beige
-            <br />
-            exclusivo para la novia
+        <div className="mt-7 pt-4 border-t border-[#6b705c]/20">
+          <p className="uppercase tracking-wider text-center text-[11px] leading-relaxed">
+            Los colores <span className="font-bold">blanco y beige</span> son
+            reservados para la novia
           </p>
         </div>
       </div>
     </motion.div>
   );
 }
+
 export function Tarjetita2() {
   return (
     <motion.div
@@ -624,7 +669,7 @@ export function TarjetitaConfirmacion() {
 
           <p className=" uppercase tracking-widest mt-3 font-semibold text-center">
             Favor de confirmar tu asistencia antes del <br />{" "}
-            <b>1 de Octubre de 2026</b>{" "}
+            <b>25 de Octubre de 2026</b>{" "}
           </p>
           <div className="flex justify-center mt-6">
             <a
