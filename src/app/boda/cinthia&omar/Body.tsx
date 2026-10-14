@@ -382,7 +382,12 @@ export function Tarjetita() {
 export function TarjetitaDressCode() {
   const coloresMujeres = ["#AFBFA5", "#99AA8C", "#7D906F", "#607252"];
 
-  const coloresHombres = ["#B4A9A6", "#716563", "#637454", "#343538"];
+  const coloresHombres = [
+    "#858585", // Gris medio, claramente gris
+    "#829477", // Verde salvia
+    "#536747", // Verde olivo oscuro
+    "#171717", // Negro intenso
+  ];
 
   return (
     <motion.div
