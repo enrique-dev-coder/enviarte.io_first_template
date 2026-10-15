@@ -676,9 +676,14 @@ export function TarjetitaConfirmacion() {
             Favor de confirmar tu asistencia antes del <br />{" "}
             <b>25 de Octubre de 2026</b>{" "}
           </p>
+
           <div className="flex justify-center mt-6">
             <a
-              href="https://w.app/sngjiv"
+              href={`https://wa.me/528421088081?text=${encodeURIComponent(
+                "Confirmo mi asistencia a la boda de Cinthia y Omar",
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-[#6b705c] text-white px-6 py-2 tracking-widest shadow-md hover:shadow-lg transition"
             >
               Confirmar
