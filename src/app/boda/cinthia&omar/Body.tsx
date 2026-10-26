@@ -674,7 +674,7 @@ export function TarjetitaConfirmacion() {
 
           <p className=" uppercase tracking-widest mt-3 font-semibold text-center">
             Favor de confirmar tu asistencia antes del <br />{" "}
-            <b>25 de Octubre de 2026</b>{" "}
+            <b>30 de Octubre de 2026</b>{" "}
           </p>
 
           <div className="flex justify-center mt-6">
